@@ -1,0 +1,7 @@
+<ul class="{{ css_classes }} currency-menu-list">
+    {% for currency in currencies %}
+        <li {% if( currency == selected_currency) %} class="current" {% endif %} >
+            <a rel="{{ currency }}">{{ get_formatted_price( currency, format )|raw }}</a>
+        </li>
+    {% endfor %}
+</ul>

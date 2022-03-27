@@ -1,0 +1,18 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.5 8.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #010101;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <title>Widok</title>
+  <g>
+    <path class="cls-1" d="M3.9,3.9H0V0H3.9Zm4.6,0H4.6V0H8.5ZM3.9,8.5H0V4.6H3.9Zm4.6,0H4.6V4.6H8.5Z"/>
+    <path class="cls-2" d="M5.17,7.93V5.17H7.93V7.93Zm-4.6,0V5.17H3.33V7.93Zm4.6-4.6V.57H7.93V3.33Zm-4.6,0V.57H3.33V3.33Z"/>
+  </g>
+</svg>

@@ -1,0 +1,26 @@
+@font-face {
+    font-family: "Founders Grotesk";
+    src: url("../fonts/FoundersGrotesk-Medium.woff2") format("woff2"),
+        url("../fonts/FoundersGrotesk-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Founders Grotesk";
+    src: url("../fonts/FoundersGrotesk-Light.woff2") format("woff2"),
+        url("../fonts/FoundersGrotesk-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Recoleta";
+    src: url("../fonts/Recoleta-Regular.woff2") format("woff2"),
+        url("../fonts/Recoleta-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
