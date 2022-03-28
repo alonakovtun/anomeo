@@ -73,24 +73,24 @@ function headerHideOnScrollAnimation() {
 
     let prevScrollpos = window.pageYOffset;
 
-    window.addEventListener(
-        "scroll",
-        () => {
-            let currentScrollPos = window.pageYOffset;
+    // window.addEventListener(
+    //     "scroll",
+    //     () => {
+    //         let currentScrollPos = window.pageYOffset;
 
-            if (currentScrollPos >= window.innerHeight && !activeHeaderPopup) {
-                if (prevScrollpos >= currentScrollPos) {
-                    headerEl.classList.remove("hidden");
-                    topBannerEl.classList.remove("hidden");
-                } else {
-                    headerEl.classList.add("hidden");
-                    topBannerEl.classList.add("hidden");
-                }
-                prevScrollpos = currentScrollPos;
-            }
-        },
-        { passive: true }
-    );
+    //         if (currentScrollPos >= window.innerHeight && !activeHeaderPopup) {
+    //             if (prevScrollpos >= currentScrollPos) {
+    //                 headerEl.classList.remove("hidden");
+    //                 topBannerEl.classList.remove("hidden");
+    //             } else {
+    //                 headerEl.classList.add("hidden");
+    //                 topBannerEl.classList.add("hidden");
+    //             }
+    //             prevScrollpos = currentScrollPos;
+    //         }
+    //     },
+    //     { passive: true }
+    // );
 }
 
 function flipAnimateBigLogoTransition() {

@@ -4,7 +4,7 @@
 // css vars
 :root {
     --ak-main-spacing: 30px;
-    --ak-accent-color: #ea431f;
+    --ak-accent-color: #000;
     --ak-header-height: 70px;
 
     @include media-breakpoint-up(lg) {
@@ -76,7 +76,7 @@ p {
 }
 
 a {
-    color: #000;
+    color: #15818b;
     text-decoration: none;
     outline: none !important;
     text-decoration: none;
@@ -199,7 +199,7 @@ label {
     }
 
     .title {
-        font-family: "Recoleta";
+        font-family: "Din Pro";
         font-size: 20px;
         font-weight: 300;
         margin: 0;

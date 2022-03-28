@@ -20,9 +20,9 @@
 	<meta name="google-site-verification" content="JSHuIsfCNPggH2r6KvzlLkNvPJ6mYd4Gya8Q-wvkAEM" />
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
-	<link rel="preload" href="<?= get_template_directory_uri(); ?>/assets/fonts/FoundersGrotesk-Medium.woff2" as="font" type="font/woff2" crossorigin>
-	<link rel="preload" href="<?= get_template_directory_uri(); ?>/assets/fonts/FoundersGrotesk-Light.woff2" as="font" type="font/woff2" crossorigin>
-	<link rel="preload" href="<?= get_template_directory_uri(); ?>/assets/fonts/Recoleta-Regular.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="<?= get_template_directory_uri(); ?>/assets/fonts/DIN_Pro_Bold.otf" as="font" type="font/opentype" crossorigin>
+	<link rel="preload" href="<?= get_template_directory_uri(); ?>/assets/fonts/DIN_Pro_Light.otf" as="font" type="font/opentype" crossorigin>
+	<link rel="preload" href="<?= get_template_directory_uri(); ?>/assets/fonts/DIN_Pro.otf" as="font" type="font/opentype" crossorigin>
 
 	<?php wp_head(); ?>
 
@@ -42,31 +42,24 @@
 		<header id="masthead" class="site-header">
 			<div class="r-wrap">
 				<div id="header-inner" class="site-header__inner">
-					<ul class="site-header__left-menu">
-
-						<?
-						wp_nav_menu(array(
-							'theme_location' => 'header-menu',
-							'container' => '',
-							'items_wrap' => '%3$s'
-						));
-						?>
-
-						<li class="menu-item"><a id="search-toggle" href=""><? _e('Search', 'anomeo'); ?></a></li>
-					</ul>
-
-					<div class="site-header__logo-col">
+				<div class="site-header__logo-col">
 						<a href="<?= get_home_url(); ?>" class="logo-link">
-							<img class="logo" src="<?= get_template_directory_uri(); ?>/assets/img/logo-text.svg" alt="Anka Krystyniak logo">
-							<img class="big-logo" src="<?= get_template_directory_uri(); ?>/assets/img/logo-text.svg" alt="Anka Krystyniak logo">
+							<img class="logo" src="<?= get_template_directory_uri(); ?>/assets/img/logo-text.svg" alt="Anomeo logo">
+							<img class="big-logo" src="<?= get_template_directory_uri(); ?>/assets/img/logo-text.svg" alt="Anomeo logo">
 						</a>
 					</div>
+					<ul class="site-header__left-menu">
+
+						<li class="menu-item"><a href="/shop/"><? _e('Shop', 'anomeo'); ?></a></li>
+						<li class="menu-item"><a href="/about/"><? _e('About', 'anomeo'); ?></a></li>
+
+					</ul>
 
 					<ul class="site-header__right-menu">
-						<li class="menu-item wishlist-menu-item"><a href="<?= wc_get_account_endpoint_url('wishlist'); ?>"><span class="icon"></span></a></li>
-						<li class="menu-item"><a href="<?= get_permalink(get_option('woocommerce_myaccount_page_id')); ?>"><? _e('Account', 'anomeo'); ?></a></li>
-						<li class="menu-item"><a id="multi-lang-popup-toggle" href=""><?= get_lang_menu_item_text(); ?></a></li>
-						<li class="menu-item"><?= get_desktop_cart_icon(); ?></li>
+						<li class="menu-item icon-menu-item"><a href="<?= wc_get_account_endpoint_url('wishlist'); ?>"><span class="icon icon-wishlist"></span></a></li>
+						<li class="menu-item icon-menu-item"><a id="search-toggle" href=""><span class="icon icon-search "></span></a></li>
+						<li class="menu-item icon-menu-item"><a href="<?= get_permalink(get_option('woocommerce_myaccount_page_id')); ?>"><span class="icon icon-account"></span></a></li>
+						<li class="menu-item icon-menu-item"><?= get_desktop_cart_icon(); ?></li>
 					</ul>
 
 					<ul class="site-header__mobile-col">

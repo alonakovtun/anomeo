@@ -15,22 +15,59 @@
 <div class="ak-popups-overlay"></div>
 <footer id="colophon" class="site-footer">
 
-	<? get_template_part('template-parts/newsletter-section'); ?>
+	<!-- <? get_template_part('template-parts/newsletter-section'); ?> -->
+	<div class="footer-top">
+		<div class="newsletter">
+			<p class="newsletter_text">
+				Sign up to our newsletter and stay update
+			</p>
+			<a class="open__newsletter" href="#"><span class="icon icon-open"></a>
+		</div>
+		<div class="contact">
+			<p class="contact_text footer-title">
+				Contact Us
+			</p>
+			<ul class="footer-list">
+				<li class="footer-list-item"><a href="mailto:customercare@anomeo.com">customercare@anomeo.com</a></li>
+				<li class="footer-list-item"><a href="tel:123456789">/SG/</a></li>
+				<li class="footer-list-item"><a href="tel:123456789">/MY/</a></li>
+				<li class="footer-list-item"><a href="tel:123456789">/ID/</a></li>
+				<li class="footer-list-item"><a href="tel:123456789">/NZ/</a></li>
+				<li class="footer-list-item"><a href="tel:123456789">/AU/</a></li>
+			</ul>
+		</div>
+		<div class="customer_service">
+			<p class="contact_text footer-title">
+				Customer Service
+			</p>
+			<ul class="footer-list">
+				<li class="footer-list-item"><a href="#">FAQ</a></li>
+				<li class="footer-list-item"><a href="#">Order Tracking</a></li>
+				<li class="footer-list-item"><a href="#">Delivery</a></li>
+				<li class="footer-list-item"><a href="#">Returns</a></li>
+				<li class="footer-list-item"><a href="#">Privacy Policy</a></li>
+				<li class="footer-list-item"><a href="#">Terms & Conditions</a></li>
+			</ul>
+		</div>
+		<div class="follow">
+			<p class="contact_text footer-title">
+				Follow Us
+			</p>
+			<ul class="footer-list">
+				<li class="footer-list-item"><a href="#"><span class="icon icon-instagram"></a></li>
+				<li class="footer-list-item"><a href="#"><span class="icon icon-facebook"></a></li>
+			</ul>
+			<a class="language" href="">Change language</a>
+		</div>
+	
+	</div>
 
 	<div class="site-footer__menu">
 		<div class="r-wrap">
 			<ul>
 				<li class="menu-item menu-item-mobile-only">
-					<p><span class="copyright">© </span>ANKA KRYSTYNIAK 2012-<?= date("Y"); ?></p>
+					<p><span class="copyright">© </span>2022. Anomeo. All rights reserved</p>
 				</li>
-
-				<?
-				wp_nav_menu(array(
-					'theme_location' => 'footer-menu',
-					'container' => '',
-					'items_wrap' => '%3$s'
-				));
-				?>
 
 				<li class="menu-item menu-item-studio-link">
 					<a href="https://parishendzelstudio.com" target="_blank" rel="noopener">by PH STUDIO</a>

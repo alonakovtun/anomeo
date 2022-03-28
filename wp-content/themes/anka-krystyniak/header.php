@@ -19,12 +19,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="google-site-verification" content="JSHuIsfCNPggH2r6KvzlLkNvPJ6mYd4Gya8Q-wvkAEM" />
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link  rel="stylesheet"  href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
 
 	<link rel="preload" href="<?= get_template_directory_uri(); ?>/assets/fonts/FoundersGrotesk-Medium.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="preload" href="<?= get_template_directory_uri(); ?>/assets/fonts/FoundersGrotesk-Light.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="preload" href="<?= get_template_directory_uri(); ?>/assets/fonts/Recoleta-Regular.woff2" as="font" type="font/woff2" crossorigin>
 
 	<?php wp_head(); ?>
+
+	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-46126759-1"></script>

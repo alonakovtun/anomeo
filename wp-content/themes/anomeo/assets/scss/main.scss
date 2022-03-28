@@ -180,7 +180,7 @@
         }
     }
 
-    .wishlist-menu-item {
+    .icon-menu-item {
         a {
             display: flex;
             align-items: center;
@@ -193,7 +193,24 @@
             height: 12px;
             background-size: contain;
             background-repeat: no-repeat;
-            background-image: url(../img/wishlist-menu.svg);
+            &-wishlist{
+                background-image: url(../img/Wishlist-04.svg);
+            }
+            &-search{
+                background-image: url(../img/Search-05.svg);
+            }
+            &-account{
+                background-image: url(../img/Account-03.svg);
+            }
+            &-cart{
+                background-image: url(../img/Card-02.svg);
+            }
+            &-instagram{
+                background-image: url(../img/FB_IG_footer_desktop-11.svg);
+            }
+            &-facebook{
+                background-image: url(../img/FB_IG_footer_desktop-12.svg);
+            }
 
             @include media-breakpoint-up(xl) {
                 width: 20px;
@@ -1160,7 +1177,7 @@
     &__text-wrap {
         font-size: 26px;
         line-height: 1.1;
-        font-family: "Recoleta";
+        font-family: "Din Pro";
 
         position: absolute;
         top: 50px;
@@ -1336,28 +1353,28 @@
     &__menu {
         display: flex;
         align-items: center;
+        font-size: 15px;
         align-content: center;
-        height: 50px;
-        background-color: var(--ak-accent-color);
-        color: #ffffff;
-        text-transform: uppercase;
+        height: 25px;
+        background-color: #f2f7fa;
+        color: #138796;
 
         @include media-breakpoint-up(sm) {
-            height: var(--ak-header-height);
+            height: 25px;
         }
 
         a,
         p {
             display: block;
-            color: #ffffff;
+            color: #138796;
             margin: 0;
 
-            font-size: 16px;
+            font-size: 12px;
             font-weight: 300;
             line-height: 1;
 
             @include media-breakpoint-up(xl) {
-                font-size: 25px;
+                font-size: 12px;
             }
         }
 
@@ -1429,12 +1446,10 @@
         bottom: 40px;
         left: var(--ak-main-spacing);
 
-        font-size: 32px;
+        font-size: 20px;
 
         line-height: 1;
-        font-family: "Recoleta";
-        text-transform: uppercase;
-
+        font-family: "Din Pro";
         max-width: 65%;
 
         @include media-breakpoint-up(sm) {
@@ -1451,16 +1466,35 @@
 
         p {
             margin-bottom: 10px;
+            color: #fff;
 
             @include media-breakpoint-up(xl) {
                 margin-bottom: 40px;
+            }
+        }
+
+        a{
+            font-family: 'Din Pro Bold';
+            color: #fff;
+            font-size: 15px;
+            text-transform: uppercase;
+            position: absolute;
+            bottom: 55px;
+            padding: 10px 20px;
+            border-radius: 25px;
+            background-color: #f79c3f;
+        }
+
+        &.block-item{
+            a{
+                position: initial;
             }
         }
     }
 
     &__item-link {
         font-size: 20px;
-        font-family: "Founders Grotesk";
+        font-family: "Din Pro";
         text-decoration: underline;
         margin-bottom: 0 !important;
 
@@ -1699,6 +1733,9 @@
         flex-direction: column;
         width: 100%;
         overflow: hidden;
+        padding: 60px;
+        height: 50vh;
+        align-items: end;
 
         @include media-breakpoint-up(sm) {
             flex-direction: row;
@@ -1806,7 +1843,7 @@
                     }
 
                     .title {
-                        font-family: "Recoleta";
+                        font-family: "Din Pro";
                         font-size: 32px;
 
                         margin-bottom: 30px;
@@ -2347,7 +2384,7 @@
         color: var(--ak-accent-color);
 
         padding: 30px var(--ak-main-spacing);
-        font-family: "Recoleta";
+        font-family: "Din Pro";
         font-size: 20px;
 
         max-width: 35%;
@@ -2432,7 +2469,7 @@
         }
 
         .title {
-            font-family: "Recoleta";
+            font-family: "Din Pro";
         }
 
         .ak-product__price {
@@ -2927,7 +2964,7 @@
         }
 
         .col-left {
-            font-family: "Recoleta";
+            font-family: "Din Pro";
             font-weight: 400;
             font-size: 20px;
 
@@ -3021,7 +3058,7 @@
         }
 
         .title {
-            font-family: "Recoleta";
+            font-family: "Din Pro";
             font-weight: 400;
             font-size: 32px;
 
@@ -3041,7 +3078,7 @@
             .date-published {
                 color: var(--ak-accent-color);
 
-                font-family: "Founders Grotesk";
+                font-family: "Din Pro";
                 font-weight: 300;
                 font-size: 20px;
 
@@ -3125,7 +3162,7 @@
         }
 
         .title {
-            font-family: "Recoleta";
+            font-family: "Din Pro";
             font-weight: 400;
             font-size: 32px;
 
@@ -3221,7 +3258,7 @@
         }
 
         .date-published {
-            font-family: "Founders Grotesk";
+            font-family: "Din Pro";
             font-weight: 300;
             font-size: 20px;
 
@@ -3889,7 +3926,7 @@
 
         &--dashboard {
             text-transform: uppercase;
-            font-family: "Recoleta";
+            font-family: "Din Pro";
             font-size: 20px;
 
             @include media-breakpoint-up(xl) {
@@ -4286,7 +4323,7 @@
         color: var(--ak-accent-color);
 
         padding: 30px var(--ak-main-spacing);
-        font-family: "Recoleta";
+        font-family: "Din Pro";
         font-size: 20px;
 
         max-width: 35%;
@@ -4886,7 +4923,7 @@
     .woocommerce-order {
         padding: 50px var(--ak-main-spacing);
 
-        font-family: "Recoleta";
+        font-family: "Din Pro";
         font-weight: 300;
 
         &__container {
@@ -5237,7 +5274,7 @@
         &__order-online {
             border-bottom: 1px solid #b2b2b2;
 
-            font-family: "Recoleta";
+            font-family: "Din Pro";
             font-weight: 300;
             font-size: 20px;
 
@@ -5299,5 +5336,134 @@
                 color: var(--ak-accent-color);
             }
         }
+    }
+}
+
+.ak-page__title-row{
+    display: none;
+}
+
+.home_text{
+    text-transform: uppercase;
+    color: #15818b;
+
+    &--title{
+        font-family: "Din Pro Bold";
+        font-size: 20px;
+    }
+    &--content{
+        font-family: "Din Pro Light";
+        font-size: 35px;
+        width: 70%;
+    }
+}
+
+
+.color_bg{
+    padding: 3px 10px;
+    border-radius: 25px;
+
+    &.orange{
+        background-color: #f79c3f;
+    }
+    &.blue{
+        background-color: #88dbdf;
+    }
+}
+
+.home-orange-block{
+    height: 30px;background-color: #f79c3f;
+}
+
+.footer-top{
+    padding: 60px 120px 60px 60px;
+    display: flex;
+    justify-content: space-between;
+    color: #15818b;
+    text-transform: uppercase;
+
+    .footer-title{
+        font-size: 15px;
+        font-family: "Din Pro Bold";
+    }
+
+    .newsletter{
+        width: 40%;
+
+        .newsletter_text{
+            width: 42%;
+            font-size: 30px;
+        }
+
+        .open__newsletter{
+            background-color: #f79c3f;
+            border-radius: 50%;
+            .icon {
+                display: block;
+                width: 20px;
+                height: 20px;
+                background-size: contain;
+                background-repeat: no-repeat;
+        
+                &-open{
+                    background-image: url(../img/Newsletter_start-14.svg);
+                }
+        
+                @include media-breakpoint-up(xl) {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+    .contact{
+        .footer-list-item:first-child{
+            margin-bottom: 16px;
+        }
+    }
+    .follow {
+        .footer-list{
+            display: flex;
+            justify-content: space-between;
+            width: 55%;
+            margin-bottom: 20px;
+        }
+
+        .language{
+            color: #fff;
+            background-color: #15818b;
+            border-radius: 25px;
+            padding: 5px 10px;
+        }
+    }
+    
+}
+
+.footer-list{
+    text-transform: none;
+    .icon {
+        display: block;
+        width: 12px;
+        height: 12px;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        &-instagram{
+            background-image: url(../img/FB_IG_footer_desktop-11.svg);
+        }
+        &-facebook{
+            background-image: url(../img/FB_IG_footer_desktop-12.svg);
+        }
+
+        @include media-breakpoint-up(xl) {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    
+    
+    .footer-list-item{
+        font-size: 13px;
     }
 }
