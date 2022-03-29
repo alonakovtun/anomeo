@@ -1721,11 +1721,26 @@
     }
 
     .home-second-slider {
-        border-top: 26px solid var(--ak-accent-color);
-
-        @include media-breakpoint-up(sm) {
-            border-top: var(--ak-header-height) solid var(--ak-accent-color);
+        background-color: #138796;
+        img{
+            width: 20%;
+            margin-top: 8%;
         }
+        .fullwidth-slider__item-description{
+            text-transform: uppercase;
+            .text-title{
+                font-family: "Din Pro Bold";
+                font-size: 30px;
+            }
+    
+            .text-content{
+                font-size: 20px;
+                font-family: "Din Pro Light";
+            }
+        }
+
+        
+       
     }
 
     .boxes-row {
@@ -5465,5 +5480,17 @@
     
     .footer-list-item{
         font-size: 13px;
+    }
+}
+
+.home-blue-block{
+    background-color: #09616d;
+    padding: 30px 60px;
+    color: #fff;
+    .blue-block__content{
+        display: flex;
+        .blue-block__item--first{
+            width: 46%;
+        }
     }
 }

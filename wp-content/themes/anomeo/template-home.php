@@ -52,7 +52,32 @@ while (have_posts()) : the_post(); ?>
         endif; ?>
     </section>
 
-     <section class="home-orange-block">
+    <section class="home-orange-block">
+    </section>
+
+    <section class="home-second-slider fullwidth-slider">
+        <div class="swiper-wrapper">
+            <? if (have_rows('bottom_slider')) :
+                while (have_rows('bottom_slider')) : the_row(); ?>
+                    <div class="swiper-slide fullwidth-slider__item">
+                            <img src="<? the_sub_field('image'); ?>" class=" ">
+                            <div class="fullwidth-slider__item-description">
+                                <? the_sub_field('text'); ?>
+                            </div>
+                    </div>
+            <? endwhile;
+            endif; ?>
+        </div>
+        <div class="fullwidth-slider__button-prev"></div>
+        <div class="fullwidth-slider__button-next"></div>
+        <div class="swiper-pagination fullwidth-slider__pagination"></div>
+    </section>
+
+    <section class="home-blue-block">
+        <div class="blue-block__content">
+            <div class="blue-block__item blue-block__item--first">We care</div>
+            <div class="blue-block__item blue-block__item--second">Travel blue</div>
+        </div>
     </section>
 
     <!-- <section class="home-boxes-first-row boxes-row">
