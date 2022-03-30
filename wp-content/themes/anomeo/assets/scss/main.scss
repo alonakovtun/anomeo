@@ -3,6 +3,7 @@
 @import "libs";
 @import "base";
 @import "information";
+@import "account";
 
 .site-top-banner {
     position: fixed;
@@ -5525,51 +5526,3 @@
     }
 }
 
-.woocommerce-MyAccount-navigation{
-    padding: 43px 0px;
-    .woocommerce-MyAccount-navigation-link{
-        margin-bottom: 43px;
-    }
-}
-
-.woocommerce-MyAccount-navigation-link--customer-logout a{
-    color: #F89D3F;
-}
-
-.woocommerce{
-    display: flex;
-}
-
-.page__content-section {
-    min-height: max-content;
-    .r-wrap{
-        border-top: 1px solid #EAEAEA;
-    }
-
-    .my-account-page__content-section{
-        border-right: 1px solid #EAEAEA;
-        width: 84%;
-
-        padding-top: 43px;
-
-    }
-
-    .myaccount__content-wrap--dashboard{
-        width: 70%;
-        color: #128796;
-
-        .account-title{
-            opacity: 0.56;
-            font-size: 20px;
-            font-family: "Din Pro Bold";
-        }
-        .dashboard-title{
-            font-size: 36px;
-            font-family: "Din Pro Bold";
-        }
-        .dashboard-text{
-            font-size: 16px;
-            font-family: "Din Pro Light";
-        }
-    }
-}

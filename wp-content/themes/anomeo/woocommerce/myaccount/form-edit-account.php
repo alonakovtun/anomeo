@@ -26,13 +26,20 @@ do_action('woocommerce_before_edit_account_form'); ?>
 	</h1>
 </div>
 
-<form class="ak-my-account__edit-account woocommerce-EditAccountForm edit-account" action="" method="post" <?php do_action('woocommerce_edit_account_form_tag'); ?>>
+<p class="account-title">Account</p>
+<p class="address-title">Account details</p>
 
+<form class="ak-my-account__edit-account woocommerce-EditAccountForm edit-account" action="" method="post" <?php do_action('woocommerce_edit_account_form_tag'); ?>>
+<div>
+		</div>
 	<?php do_action('woocommerce_edit_account_form_start'); ?>
 
 	<div class="col">
 		<p class="col-title">
-			<?php esc_html_e('Information', 'anomeo'); ?>
+			<?php esc_html_e('Personal details', 'anomeo'); ?>
+			<?php wp_nonce_field('save_account_details', 'save-account-details-nonce'); ?>
+			<button type="submit" class="button form-submit-btn" name="save_account_details" value="<?php esc_attr_e('Save changes', 'woocommerce'); ?>"><?php esc_html_e('Save', 'woocommerce'); ?></button>
+			<input type="hidden" name="action" value="save_account_details" />
 		</p>
 
 		<p class="form-row form-row-first">
@@ -43,35 +50,31 @@ do_action('woocommerce_before_edit_account_form'); ?>
 		</p>
 
 		<p class="form-row form-row-wide">
-			<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="account_display_name" id="account_display_name" placeholder="<? _e('Username', 'anomeo'); ?>" value="<?php echo esc_attr($user->display_name); ?>" />
-		</p>
-
-		<p class="form-row form-row-wide">
 			<input type="email" class="woocommerce-Input woocommerce-Input--email input-text" name="account_email" id="account_email" autocomplete="email" placeholder="<? _e('Email', 'anomeo'); ?>" value="<?php echo esc_attr($user->user_email); ?>" />
 		</p>
 	</div>
 
 	<div class="col">
 		<p class="col-title">
-			<?php esc_html_e('Password change', 'woocommerce'); ?>
-		</p>
+			<?php esc_html_e('Password', 'woocommerce'); ?>
+			<?php wp_nonce_field('save_account_details', 'save-account-details-nonce'); ?>
+			<button type="submit" class="button form-submit-btn" name="save_account_details" value="<?php esc_attr_e('Save changes', 'woocommerce'); ?>"><?php esc_html_e('Save', 'woocommerce'); ?></button>
+			<input type="hidden" name="action" value="save_account_details" />
 
+		</p>
+		
 		<p class=" form-row form-row-wide">
-			<input type="password" class="woocommerce-Input woocommerce-Input--password input-text" name="password_current" id="password_current" autocomplete="off" placeholder="<? _e('Current password (leave blank to leave unchanged)', 'woocommerce'); ?>" />
+			<input type="password" class="woocommerce-Input woocommerce-Input--password input-text" name="password_current" id="password_current" autocomplete="off" placeholder="<? _e('Current password', 'woocommerce'); ?>" />
 		</p>
 		<p class="form-row form-row-wide">
-			<input type="password" class="woocommerce-Input woocommerce-Input--password input-text" name="password_1" id="password_1" autocomplete="off" placeholder="<? _e('New password (leave blank to leave unchanged)', 'woocommerce'); ?>" />
+			<input type="password" class="woocommerce-Input woocommerce-Input--password input-text" name="password_1" id="password_1" autocomplete="off" placeholder="<? _e('New password', 'woocommerce'); ?>" />
 		</p>
 		<p class="form-row form-row-wide">
 			<input type="password" class="woocommerce-Input woocommerce-Input--password input-text" name="password_2" id="password_2" autocomplete="off" placeholder="<? _e('Confirm new password', 'woocommerce'); ?>" />
 		</p>
 
 		<?php do_action('woocommerce_edit_account_form'); ?>
-		<div>
-			<?php wp_nonce_field('save_account_details', 'save-account-details-nonce'); ?>
-			<button type="submit" class="button form-submit-btn" name="save_account_details" value="<?php esc_attr_e('Save changes', 'woocommerce'); ?>"><?php esc_html_e('Save changes', 'woocommerce'); ?></button>
-			<input type="hidden" name="action" value="save_account_details" />
-		</div>
+		
 	</div>
 
 

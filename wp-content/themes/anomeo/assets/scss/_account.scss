@@ -1,0 +1,139 @@
+.woocommerce-MyAccount-navigation{
+    padding: 43px 0px;
+    .woocommerce-MyAccount-navigation-link{
+        margin-bottom: 43px;
+    }
+}
+
+.woocommerce-MyAccount-navigation-link--customer-logout a{
+    color: #F89D3F;
+}
+
+.woocommerce{
+    display: flex;
+}
+
+.page__content-section {
+    min-height: max-content;
+
+    .r-wrap{
+        border-top: 1px solid #EAEAEA;
+    }
+
+    .my-account-page__content-section{
+        border-right: 1px solid #EAEAEA;
+        width: 84%;
+        padding-top: 43px;
+
+        .account-title{
+            color: #128796;
+            opacity: 0.56;
+            font-size: 20px;
+            font-family: "Din Pro Bold";
+        }
+        .dashboard-title, .address-title{
+            color: #128796;
+            font-size: 36px;
+            font-family: "Din Pro Bold";
+        }
+
+    }
+
+    .myaccount__content-wrap--dashboard{
+        width: 70%;
+        color: #128796;
+
+        
+        .dashboard-text{
+            font-size: 16px;
+            font-family: "Din Pro Light";
+        }
+    }
+}
+
+.ak-my-account__addresses, .ak-my-account__edit-account{
+    display: flex;
+
+    .ak-my-account__address-item, .col{
+        width: 50%;
+
+        .ak-my-account__address-item-title, .col-title{
+            color: #148D9A;
+            font-size: 16px;
+            font-family: "Din Pro Light";
+        }
+        .my-account__flex, .col-title{
+            display: flex;
+            width: 60%;
+            align-items: baseline;
+            justify-content: space-between;
+            
+        }
+    }
+
+    .woocommerce-address-fields{
+        .form-row{
+            margin-bottom: 30px;
+        }
+        
+
+        .select2-container--default{
+            .select2-selection--single{
+                height: 23px;
+                border-bottom: none;
+            }
+            .select2-selection__rendered{
+                padding: 0;
+                font-size: 16px;
+                .select2-selection__placeholder{
+                    color: #148D9A;
+                }
+            }
+        } 
+        
+        
+    }
+}
+
+label{
+    display: none;
+}
+input, .select2{
+    border-radius: 27px;
+    border: 1px solid #BCBCBC;
+    padding: 16px 34px;
+    width: 60%!important;  
+    color: #148D9A;    
+    font-family: 'Din Pro Light';
+    
+    &::placeholder{
+        color: #148D9A;
+    }
+
+    .select2-selection__rendered{
+        color: #148D9A;
+    }
+}
+.form-submit-btn{
+    background-color: #FDA757;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 6px 10px;
+    cursor: pointer;
+
+}
+
+.select2-dropdown{
+    color: #148D9A;
+    .select2-search--dropdown{
+        input{
+            border-radius: 27px;
+            border: 1px solid #BCBCBC;
+            padding: 8px 17px;
+            color: #148D9A;
+        }
+    }
+    
+}

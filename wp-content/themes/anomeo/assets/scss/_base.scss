@@ -109,6 +109,12 @@ label {
     margin: 0;
 }
 
+input{
+    &:focus{
+        outline: none;
+    }
+}
+
 .img-responsive {
     display: block;
     max-width: 100%;
