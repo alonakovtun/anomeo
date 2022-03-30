@@ -26,15 +26,17 @@ do_action('woocommerce_before_edit_account_form'); ?>
 	</h1>
 </div>
 
-<p class="account-title">Account</p>
-<p class="address-title">Account details</p>
 
 <form class="ak-my-account__edit-account woocommerce-EditAccountForm edit-account" action="" method="post" <?php do_action('woocommerce_edit_account_form_tag'); ?>>
 <div>
 		</div>
 	<?php do_action('woocommerce_edit_account_form_start'); ?>
-
+	
 	<div class="col">
+		<div class="account-main-title">
+					<p class="account-title">Account</p>
+					<p class="address-title">Account details</p>
+		</div>
 		<p class="col-title">
 			<?php esc_html_e('Personal details', 'anomeo'); ?>
 			<?php wp_nonce_field('save_account_details', 'save-account-details-nonce'); ?>
@@ -55,6 +57,10 @@ do_action('woocommerce_before_edit_account_form'); ?>
 	</div>
 
 	<div class="col">
+	<div class="account-main-title hidden">
+					<p class="account-title">Account</p>
+					<p class="address-title">Account details</p>
+		</div>
 		<p class="col-title">
 			<?php esc_html_e('Password', 'woocommerce'); ?>
 			<?php wp_nonce_field('save_account_details', 'save-account-details-nonce'); ?>

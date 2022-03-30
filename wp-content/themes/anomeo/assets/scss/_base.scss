@@ -382,47 +382,6 @@ input{
     }
 }
 
-.ak-page__sub-menu-row {
-    position: relative;
-    display: flex;
-    align-items: flex-start;
-    align-content: center;
-    justify-content: flex-end;
-
-    width: 16%;
-    padding-left: var(--ak-main-spacing);
-    line-height: 1;
-
-    .menu,
-    .woocommerce-MyAccount-navigation > ul {
-        display: inline-block;
-        align-content: center;
-        align-items: center;
-        text-align: end;
-
-        .menu-item,
-        .menu-item a,
-        .woocommerce-MyAccount-navigation-link,
-        .woocommerce-MyAccount-navigation-link a {
-            cursor: pointer;
-
-            font-size: 16px;
-            font-weight: 300;
-            line-height: 1;
-
-            @include media-breakpoint-up(xl) {
-                font-size: 20px;
-            }
-
-            &.current-menu-parent,
-            &.current-menu-item,
-            &.is-active {
-                font-family: "Din Pro Bold";
-            }
-        }
-    }
-}
-
 .ak-product__price {
     font-size: 16px;
     line-height: 1;

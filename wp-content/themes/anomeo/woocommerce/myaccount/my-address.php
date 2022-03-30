@@ -36,16 +36,16 @@ $get_addresses = apply_filters(
 	</h1>
 </div>
 
-<p class="account-title">Account</p>
-<p class="address-title">Addresses</p>
-
 <section class="ak-my-account__addresses">
 	<?php foreach ($get_addresses as $name => $address_title) : ?>
 		<?php
 		$address_fields = ak_get_edit_account_address_fields($name, $customer_id);
 		?>
 		<div class="ak-my-account__address-item">
-			
+			<div class="account-main-title">
+				<p class="account-title">Account</p>
+				<p class="address-title">Addresses</p>
+			</div>
 			<form method="post" action="<?= wc_get_endpoint_url('edit-address', $name); ?>">
 			<div class="my-account__flex">
 				<p class="ak-my-account__address-item-title"><?php echo esc_html($address_title); ?></p>

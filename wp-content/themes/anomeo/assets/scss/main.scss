@@ -5404,7 +5404,7 @@
 }
 
 .footer-top{
-    padding: 60px 120px 60px 60px;
+    padding: var(--ak-main-spacing);
     display: flex;
     justify-content: space-between;
     color: #15818b;
@@ -5418,6 +5418,7 @@
     .footer-title{
         font-size: 14px;
         font-family: "Din Pro Bold";
+        margin-bottom: 23px;
         @include media-breakpoint-down(md) {
             margin-top: 20px;
         }
@@ -5460,18 +5461,16 @@
     }
     .contact{
         .footer-list-item:first-child{
-            margin-bottom: 16px;
+            margin-bottom: 23px;
         }
     }
     .follow {
         .footer-list{
             display: flex;
             justify-content: space-between;
-            width: 55%;
-            margin-bottom: 20px;
-            @include media-breakpoint-down(md) {
-                width: 23%;
-            }
+            width: 75px;
+            margin-bottom: 30px;
+
         }
 
         .language{
@@ -5479,6 +5478,7 @@
             background-color: #15818b;
             border-radius: 25px;
             padding: 5px 10px;
+            font-size: 12px;
         }
     }
     
@@ -5488,8 +5488,8 @@
     text-transform: none;
     .icon {
         display: block;
-        width: 12px;
-        height: 12px;
+        width: 17px;
+        height: 17px;
         background-size: contain;
         background-repeat: no-repeat;
 
