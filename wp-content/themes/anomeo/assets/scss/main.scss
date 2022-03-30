@@ -165,12 +165,12 @@
     .menu-item a {
         cursor: pointer;
 
-        font-size: 16px;
+        font-size: 18px;
         font-weight: 300;
         line-height: 1;
 
         @include media-breakpoint-up(xl) {
-            font-size: 25px;
+            font-size: 18px;
         }
 
         &.menu-open,
@@ -309,7 +309,7 @@
             margin-left: 35px;
 
             @include media-breakpoint-up(xl) {
-                margin-left: 70px;
+                margin-left: 47px;
             }
         }
     }
@@ -1357,8 +1357,8 @@
         font-size: 15px;
         align-content: center;
         height: 25px;
-        background-color: #f2f7fa;
-        color: #138796;
+        background-color: #EFF4F3;
+        color: #128796;
 
         @include media-breakpoint-up(sm) {
             height: 25px;
@@ -1367,7 +1367,7 @@
         a,
         p {
             display: block;
-            color: #138796;
+            color: #128796;
             margin: 0;
 
             font-size: 12px;
@@ -1397,7 +1397,6 @@
                 }
 
                 &:not(:first-of-type) {
-                    margin-left: 35px;
 
                     @include media-breakpoint-up(xl) {
                         margin-left: 70px;
@@ -1722,7 +1721,7 @@
     }
 
     .home-second-slider {
-        background-color: #138796;
+        background-color: #128796;
         img{
             width: 20%;
             margin-top: 8%;
@@ -5409,14 +5408,14 @@
     justify-content: space-between;
     color: #15818b;
     text-transform: uppercase;
-    border-top: 1px solid #707273;
+    border-top: 1px solid #EAEAEA;
 
     @include media-breakpoint-down(md) {
         display: block;
     }
 
     .footer-title{
-        font-size: 15px;
+        font-size: 14px;
         font-family: "Din Pro Bold";
         @include media-breakpoint-down(md) {
             margin-top: 20px;
@@ -5431,7 +5430,7 @@
 
         .newsletter_text{
             width: 42%;
-            font-size: 30px;
+            font-size: 20px;
             @include media-breakpoint-down(md) {
                 width: 100%;
             }
@@ -5452,8 +5451,8 @@
                 }
         
                 @include media-breakpoint-up(xl) {
-                    width: 50px;
-                    height: 50px;
+                    width: 30px;
+                    height: 30px;
                 }
             }
         }
@@ -5510,6 +5509,7 @@
     
     .footer-list-item{
         font-size: 13px;
+        margin-bottom: 5px;
     }
 }
 
@@ -5521,6 +5521,55 @@
         display: flex;
         .blue-block__item--first{
             width: 46%;
+        }
+    }
+}
+
+.woocommerce-MyAccount-navigation{
+    padding: 43px 0px;
+    .woocommerce-MyAccount-navigation-link{
+        margin-bottom: 43px;
+    }
+}
+
+.woocommerce-MyAccount-navigation-link--customer-logout a{
+    color: #F89D3F;
+}
+
+.woocommerce{
+    display: flex;
+}
+
+.page__content-section {
+    min-height: max-content;
+    .r-wrap{
+        border-top: 1px solid #EAEAEA;
+    }
+
+    .my-account-page__content-section{
+        border-right: 1px solid #EAEAEA;
+        width: 84%;
+
+        padding-top: 43px;
+
+    }
+
+    .myaccount__content-wrap--dashboard{
+        width: 70%;
+        color: #128796;
+
+        .account-title{
+            opacity: 0.56;
+            font-size: 20px;
+            font-family: "Din Pro Bold";
+        }
+        .dashboard-title{
+            font-size: 36px;
+            font-family: "Din Pro Bold";
+        }
+        .dashboard-text{
+            font-size: 16px;
+            font-family: "Din Pro Light";
         }
     }
 }

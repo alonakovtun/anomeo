@@ -29,11 +29,11 @@
 			</p>
 			<ul class="footer-list">
 				<li class="footer-list-item"><a href="mailto:customercare@anomeo.com">customercare@anomeo.com</a></li>
-				<li class="footer-list-item"><a href="tel:123456789">/SG/</a></li>
-				<li class="footer-list-item"><a href="tel:123456789">/MY/</a></li>
-				<li class="footer-list-item"><a href="tel:123456789">/ID/</a></li>
-				<li class="footer-list-item"><a href="tel:123456789">/NZ/</a></li>
-				<li class="footer-list-item"><a href="tel:123456789">/AU/</a></li>
+				<li class="footer-list-item"><a href="tel:123456789">/SG/ +65 6407 5414</a></li>
+				<li class="footer-list-item"><a href="tel:123456789">/MY/ +60 3 9212 5495</a></li>
+				<li class="footer-list-item"><a href="tel:123456789">/ID/ +62 855 7467 4602</a></li>
+				<li class="footer-list-item"><a href="tel:123456789">/NZ/ +64 0 801 1145</a></li>
+				<li class="footer-list-item"><a href="tel:123456789">/AU/ +61 2 7908 2644</a></li>
 			</ul>
 		</div>
 		<div class="customer_service">
