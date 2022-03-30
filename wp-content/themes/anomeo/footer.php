@@ -43,10 +43,10 @@
 			<ul class="footer-list">
 				<li class="footer-list-item"><a href="#">FAQ</a></li>
 				<li class="footer-list-item"><a href="#">Order Tracking</a></li>
-				<li class="footer-list-item"><a href="#">Delivery</a></li>
-				<li class="footer-list-item"><a href="#">Returns</a></li>
-				<li class="footer-list-item"><a href="#">Privacy Policy</a></li>
-				<li class="footer-list-item"><a href="#">Terms & Conditions</a></li>
+				<li class="footer-list-item"><a href="/delivery/">Delivery</a></li>
+				<li class="footer-list-item"><a href="/refund_returns/">Returns</a></li>
+				<li class="footer-list-item"><a href="/privacy-policy/">Privacy Policy</a></li>
+				<li class="footer-list-item"><a href="/terms-conditions/">Terms & Conditions</a></li>
 			</ul>
 		</div>
 		<div class="follow">

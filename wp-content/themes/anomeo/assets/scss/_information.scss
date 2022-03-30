@@ -1,0 +1,23 @@
+.information__container{
+    padding: 60px;
+    font-family: 'Din Pro Light';
+    width: 70%;
+    .information__title{
+        color:#15818b;
+        margin-bottom: 35px;
+    }
+    .information__subtitle{
+        font-family: 'Din Pro Bold';
+        color:#15818b;
+        text-transform: uppercase;
+    }
+    .information__content{
+        color:#707273;
+    }
+
+    @include media-breakpoint-down(md) {
+        width: 100%;
+        margin-bottom: 100px;
+    }
+
+}
