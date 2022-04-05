@@ -7,12 +7,12 @@
  */
 
 
-function anka_krystyniak_add_woocommerce_support()
+function anomeo_add_woocommerce_support()
 {
     add_theme_support('woocommerce');
 }
 
-add_action('after_setup_theme', 'anka_krystyniak_add_woocommerce_support');
+add_action('after_setup_theme', 'anomeo_add_woocommerce_support');
 
 
 /**
@@ -587,4 +587,186 @@ function ak_get_edit_account_address_fields($address_type = 'billing')
     }
 
     return  apply_filters('woocommerce_address_to_edit', $address, $load_address);
+}
+
+//new
+
+
+/**
+ * Display available attributes.
+ * 
+ * @return array|void
+ */
+function iconic_available_attributes() {
+	global $product;
+
+	if ( ! $product->is_type( 'variable' ) ) {
+		return;
+	}
+
+	$attributes = iconic_get_available_attributes( $product );
+
+	if ( empty( $attributes ) ) {
+		return;
+	}
+
+	foreach ( $attributes as $attribute ) {
+		?>
+		<div class="iconic-available-attributes">
+			<p class="iconic-available-attributes__title"><?php _e( 'Available', 'iconic' ); ?> <strong><?php echo $attribute['name']; ?></strong></p>
+
+			<ul class="iconic-available-attributes__values">
+				<?php foreach ( $attribute['values'] as $value ) { ?>
+					<li class="iconic-available-attributes__value <?php echo $value['available'] ? '' : 'iconic-available-attributes__value--unavailable'; ?>"><?php echo $value['name']; ?></li>
+				<?php } ?>
+			</ul>
+		</div>
+		<?php
+	}
+}
+
+add_action( 'woocommerce_shop_loop_item_title', 'iconic_available_attributes', 20 );
+
+/**
+ * Get available attributes.
+ *
+ * @param WC_Product_Variable $product
+ *
+ * @return array
+ */
+function iconic_get_available_attributes( $product ) {
+	static $available_attributes = array();
+
+	$product_id = $product->get_id();
+
+	if ( isset( $available_attributes[ $product_id ] ) ) {
+		return $available_attributes[ $product_id ];
+	}
+
+	$available_attributes[ $product_id ] = array();
+
+	$attributes = $product->get_variation_attributes();
+
+	if ( empty( $attributes ) ) {
+		return $available_attributes[ $product_id ];
+	}
+
+	$attributes_to_show = iconic_get_attributes_to_show();
+
+	foreach ( $attributes as $attribute => $values ) {
+		if ( ! in_array( $attribute, $attributes_to_show ) ) {
+			continue;
+		}
+
+		$available_attribute = iconic_get_available_attribute( $product, $attribute, $values );
+
+		if ( empty( $available_attribute ) ) {
+			continue;
+		}
+
+		$available_attributes[ $product_id ][] = $available_attribute;
+	}
+
+	return $available_attributes[ $product_id ];
+}
+
+
+/**
+ * Get attributes to show.
+ *
+ * @return array
+ */
+function iconic_get_attributes_to_show() {
+	return apply_filters( 'iconic_get_attributes_to_show', array(
+		'pa_color',
+	) );
+}
+
+/**
+ * Get available attribute.
+ *
+ * @param WC_Product_Variable $product
+ * @param string              $attribute
+ * @param array               $values
+ *
+ * @return array
+ */
+function iconic_get_available_attribute( $product, $attribute, $values ) {
+	$available_attribute = array(
+		'slug' => $attribute,
+	);
+
+	if ( ! taxonomy_exists( $attribute ) ) {
+		$available_attribute['name'] = $attribute;
+
+		foreach ( $values as $value ) {
+			$available_attribute['values'][ $value ] = array(
+				'name'      => $value,
+				'available' => iconic_has_available_variation( $product, $attribute, $value ),
+			);
+		}
+
+		return $available_attribute;
+	}
+
+	$taxonomy = get_taxonomy( $attribute );
+	$labels   = get_taxonomy_labels( $taxonomy );
+
+	$available_attribute['name']   = $labels->singular_name;
+	$available_attribute['values'] = array();
+
+	foreach ( $values as $value ) {
+		$term = get_term_by( 'slug', $value, $attribute );
+
+		if ( ! $term ) {
+			continue;
+		}
+
+		$available_attribute['values'][ $value ] = array(
+			'name'      => $term->name,
+			'available' => iconic_has_available_variation( $product, $attribute, $value ),
+		);
+	}
+
+	return $available_attribute;
+}
+
+/**
+ * Has available variation?
+ *
+ * @param WC_Product_Variable $product
+ * @param string              $attribute
+ * @param string              $value
+ *
+ * @return bool
+ */
+function iconic_has_available_variation( $product, $attribute, $value ) {
+	$available_variation = false;
+	$attribute           = 'attribute_' . sanitize_title( $attribute );
+	$variations          = $product->get_available_variations();
+
+	if ( empty( $variations ) ) {
+		return $available_variation;
+	}
+
+	foreach ( $variations as $variation ) {
+		foreach ( $variation['attributes'] as $variation_attribute_name => $variation_attribute_value ) {
+			if ( $attribute !== $variation_attribute_name ) {
+				continue;
+			}
+
+			if ( $value !== $variation_attribute_value && ! empty( $variation_attribute_value ) ) {
+				continue;
+			}
+
+			$available_variation = $variation['is_purchasable'] && $variation['is_in_stock'];
+			break;
+		}
+
+		if ( $available_variation ) {
+			break;
+		}
+	}
+
+	return $available_variation;
 }

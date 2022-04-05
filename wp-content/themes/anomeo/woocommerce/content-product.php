@@ -28,11 +28,14 @@ if (empty($product) || !$product->is_visible()) {
 <div <?php wc_product_class('ak-product-item', $product); ?>>
 
 	<?= get_wishlist_button(); ?>
-	<div class="tag">
+	<div class="tag"> 
 	<?php
 		if( get_field('sale') ) { ?>
 			<span class="tag-item">sale</span>
 		<? } ?>
+	</div>
+	<div class="colors">
+<? add_action('woocommerce_after_shop_loop_item_title', 'display_shop_loop_product_attributes');?>
 	</div>
 
 	<a href="<?= get_the_permalink(); ?>" class="ak-product-item__link">

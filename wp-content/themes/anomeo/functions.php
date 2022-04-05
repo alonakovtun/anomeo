@@ -13,7 +13,7 @@ if (!defined('_S_VERSION')) {
 	define('_S_VERSION', '1.0.0');
 }
 
-if (!function_exists('anka_krystyniak_setup')) :
+if (!function_exists('anomeo_setup')) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -21,7 +21,7 @@ if (!function_exists('anka_krystyniak_setup')) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function anka_krystyniak_setup()
+	function anomeo_setup()
 	{
 		/*
 		 * Make theme available for translation.
@@ -98,7 +98,7 @@ if (!function_exists('anka_krystyniak_setup')) :
 		show_admin_bar(false);
 	}
 endif;
-add_action('after_setup_theme', 'anka_krystyniak_setup');
+add_action('after_setup_theme', 'anomeo_setup');
 
 /**
  * Woocommerce related functions
@@ -170,3 +170,8 @@ function add_my_currency_symbol( $currency_symbol, $currency ) {
      }
      return $currency_symbol;
 }
+
+
+
+//new
+

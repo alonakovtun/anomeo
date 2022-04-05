@@ -9,7 +9,7 @@
 /**
  * Enqueue scripts and styles.
  */
-function anka_krystyniak_scripts()
+function anomeo_scripts()
 {
     wp_enqueue_style('anomeo-style', get_stylesheet_uri(), array(), _S_VERSION);
 
@@ -33,4 +33,4 @@ function anka_krystyniak_scripts()
     ));
     wp_enqueue_script('anomeo-scripts');
 }
-add_action('wp_enqueue_scripts', 'anka_krystyniak_scripts');
+add_action('wp_enqueue_scripts', 'anomeo_scripts');

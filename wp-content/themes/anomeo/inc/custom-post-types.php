@@ -6,7 +6,7 @@
  * @package anomeo
  */
 
-function add_anka_krystyniak_custom_post_types()
+function add_anomeo_custom_post_types()
 {
     register_post_type(
         'press_post',
@@ -33,7 +33,7 @@ function add_anka_krystyniak_custom_post_types()
         )
     );
 };
-add_action('init', 'add_anka_krystyniak_custom_post_types');
+add_action('init', 'add_anomeo_custom_post_types');
 
 
 function custom_taxonomy_flush_rewrite()

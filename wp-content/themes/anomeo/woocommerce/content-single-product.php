@@ -38,7 +38,7 @@ if (post_password_required()) {
 	</div>
 	<div class="ak-page__title-row">
 		<h1 class="title"><?= get_the_title(); ?></h1>
-		<p class="ak-product__price"><?= $product->get_price_html(); ?>&nbsp;</p>
+		
 	</div>
 
 	<div class="ak-product__main-info">
@@ -68,17 +68,23 @@ if (post_password_required()) {
 				<?= get_product_featured_categories_list($product->get_id()); ?>
 			</div>
 
-			<?= get_wishlist_button(); ?>
 		</div>
 
 		<div class="ak-product__main-info-col">
 			<div class="ak-product__description">
-				<? the_content(); ?>
+				<p class="title"><? the_title(); ?></p> 
+				<p class="ak-product__price"><?= $product->get_price_html(); ?>&nbsp;</p>
+				<? the_content(); ?> 
 			</div>
+			<!-- <div class="ak-product__description">
+			</div> -->
 
 			<div class="ak-product__add-to-cart">
 				<? woocommerce_template_single_add_to_cart(); ?>
+				<?= get_wishlist_button(); ?>
 			</div>
+			
+
 
 			<div class="ak-product__additional-info">
 				<? if (have_rows('product_additional_description_items', 'option')) : ?>

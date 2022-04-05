@@ -31,7 +31,7 @@ if ($product->is_in_stock()) : ?>
 	<form class="ak-product__add-to-cart-form cart" action="<?php echo esc_url(apply_filters('woocommerce_add_to_cart_form_action', $product->get_permalink())); ?>" method="post" enctype='multipart/form-data'>
 		<?php do_action('woocommerce_before_add_to_cart_button'); ?>
 
-		<button type="submit" class="single_add_to_cart_button button"><?php echo esc_html($product->single_add_to_cart_text()); ?><span class="price"><?= $product->get_price_html(); ?></span></button>
+		<button type="submit" class="single_add_to_cart_button button"><?php echo esc_html($product->single_add_to_cart_text()); ?></button>
 
 		<input type="hidden" name="add-to-cart" value="<?php echo absint($product->get_id()); ?>" />
 

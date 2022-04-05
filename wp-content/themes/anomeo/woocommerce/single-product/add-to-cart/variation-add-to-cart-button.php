@@ -16,9 +16,8 @@ global $product;
 	<?php do_action('woocommerce_before_add_to_cart_button'); ?>
 
 	<?
-	$btn_price = '<span class="price">' . $product->get_price_html() . '</span>';
-	$button_text = $product->single_add_to_cart_text() . ' ' . $btn_price;
-	$button_text_esc = esc_html($product->single_add_to_cart_text() . ' ' . $btn_price);
+	$button_text = $product->single_add_to_cart_text();
+	$button_text_esc = esc_html($product->single_add_to_cart_text());
 	?>
 
 	<button type="submit" class="single_add_to_cart_button button disabled" disabled data-btn_text='<?= $button_text_esc ?>'><?= $button_text; ?></button>
