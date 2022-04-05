@@ -28,6 +28,12 @@ if (empty($product) || !$product->is_visible()) {
 <div <?php wc_product_class('ak-product-item', $product); ?>>
 
 	<?= get_wishlist_button(); ?>
+	<div class="tag">
+	<?php
+		if( get_field('sale') ) { ?>
+			<span class="tag-item">sale</span>
+		<? } ?>
+	</div>
 
 	<a href="<?= get_the_permalink(); ?>" class="ak-product-item__link">
 
@@ -37,9 +43,10 @@ if (empty($product) || !$product->is_visible()) {
 
 
 		<div class="ak-product-item__description">
+			<p class="title"><?= get_the_title(); ?></p>
+
 			<? wc_get_template('loop/price.php'); ?>
 
-			<p class="title"><?= get_the_title(); ?></p>
 		</div>
 
 		<div class="ak-product-item__featured-cats-wrapper">

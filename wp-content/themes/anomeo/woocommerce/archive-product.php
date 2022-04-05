@@ -45,8 +45,12 @@ do_action('woocommerce_before_main_content');
 <? endif; ?>
 <?php
 if (woocommerce_product_loop()) { ?>
-
+	<div class="page-title__container">
+		<h1 class="page-title__title"><? _e('Shop', 'anomeo'); ?></h1>
+		<p class="page-title__subtitle "><? _e('All products', 'anomeo'); ?></p>
+	</div>
 	<section class="ak-products__filters-row">
+		
 		<div class="filter-col">
 			<button id="filter-toggle-btn" class="filters-toggle-btn"><? _e('Filters', 'anomeo'); ?></button>
 
@@ -63,9 +67,6 @@ if (woocommerce_product_loop()) { ?>
 			<? endif; ?>
 			<button class="filters-toggle-btn" id="sort-toggle-btn"><? _e('Sort', 'anomeo'); ?></button>
 		</div>
-
-
-		<button id="product-grid-view-toggle" class="filters-toggle-btn ak-products__grid-view-toggle"><? _e('Change layout', 'anomeo'); ?></button>
 
 		<div class="ak-filters-popup filter-row-popup">
 			<?php dynamic_sidebar('filters-sidebar'); ?>

@@ -62,7 +62,7 @@
     color: #F89D3F;
 }
 
-.woocommerce{
+.flex{
     display: flex;
     @include media-breakpoint-down(sm) {
         display: flex;
@@ -117,6 +117,7 @@
     }
 
     .myaccount__content-wrap--dashboard{
+        padding-top: 43px;
         width: 70%;
         color: #128796;
         @include media-breakpoint-down(sm) {

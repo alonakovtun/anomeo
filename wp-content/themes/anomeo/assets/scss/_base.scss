@@ -385,13 +385,11 @@ input{
 .ak-product__price {
     font-size: 16px;
     line-height: 1;
+    text-transform: none;
 
-    @include media-breakpoint-up(sm) {
-        font-size: 26px;
-    }
 
     @include media-breakpoint-up(xl) {
-        font-size: 41px;
+        font-size: 20px;
     }
 
     del {
@@ -454,7 +452,7 @@ input{
 
     border: none;
     background-color: transparent;
-    background-image: url("../img/wishlist-empty.svg");
+    background-image: url("../img/Wishlist-04.svg");
     background-repeat: no-repeat;
     background-size: contain;
 
@@ -479,7 +477,7 @@ input{
     }
 
     &.active {
-        background-image: url("../img/wishlist-filled.svg");
+        background-image: url("../img/Wishlist_fill-04.svg");
     }
 }
 
@@ -494,24 +492,23 @@ input{
 
     &__image-wrap {
         position: relative;
-
-        height: 0;
+        height: 460px;
         padding-top: 75%;
-
-        width: 100%;
-        max-width: 85%;
         margin: 0 auto;
-
         overflow: hidden;
+        
+        background-color: #F2F8F9;
 
         @include media-breakpoint-up(sm) {
-            padding-top: 77.777%;
-
-            max-width: 65%;
+            // padding-top: 13.777%;
+            padding-top: 0;
+            width: 80%;
+            margin: auto;
+            height: 500px;
         }
 
         img {
-            position: absolute;
+            position: inherit;
             top: 0;
             left: 0;
 
@@ -527,13 +524,15 @@ input{
 
         top: var(--ak-main-spacing);
         right: var(--ak-main-spacing);
+        z-index: 9;
 
         @include media-breakpoint-up(sm) {
             top: 50px;
         }
 
         @include media-breakpoint-up(xl) {
-            top: 60px;
+            top: 120px;
+            right: 90px;
         }
     }
 
@@ -541,14 +540,14 @@ input{
         display: flex;
         flex-direction: column;
 
-        padding: 60px var(--ak-main-spacing) 0;
+        padding: 90px 0;
 
         @include media-breakpoint-up(sm) {
-            padding: 100px var(--ak-main-spacing) 0;
+            // padding: 100px var(--ak-main-spacing) 0;
         }
 
         @include media-breakpoint-up(xl) {
-            padding-top: 120px;
+            // padding-top: 30px;
         }
     }
 
@@ -556,7 +555,9 @@ input{
         padding: 40px 0 20px;
 
         @include media-breakpoint-up(sm) {
-            padding: 60px 0 40px;
+            padding: 30px 0 16px;
+            width: 80%;
+            margin: auto;
         }
 
         p {
@@ -565,9 +566,14 @@ input{
 
         .title {
             font-size: 16px;
+            color: #6C6D6E;
+            font-family: 'Din Pro Light';
+            margin-bottom: 16px;
+            text-transform: none;
+            width: 55%;
 
             @include media-breakpoint-up(xl) {
-                font-size: 25px;
+                font-size: 20px;
             }
         }
     }
