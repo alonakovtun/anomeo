@@ -1446,24 +1446,16 @@
         position: absolute;
         bottom: 40px;
         left: var(--ak-main-spacing);
-
-        font-size: 20px;
+        width: 550px;
+        font-size: 50px;
 
         line-height: 1;
         font-family: "Din Pro";
         max-width: 65%;
+        @include media-breakpoint-down(sm) {
 
-        @include media-breakpoint-up(sm) {
-            font-size: 44px;
-
-            max-width: 50%;
         }
 
-        @include media-breakpoint-up(xl) {
-            bottom: 50px;
-
-            font-size: 54px;
-        }
 
         p {
             margin-bottom: 10px;
@@ -1477,13 +1469,12 @@
         a{
             font-family: 'Din Pro Bold';
             color: #fff;
-            font-size: 15px;
+            font-size: 18px;
             text-transform: uppercase;
             position: absolute;
-            bottom: 55px;
             padding: 10px 20px;
-            border-radius: 25px;
-            background-color: #f79c3f;
+            border-radius: 22px;
+            background-color: #F89D3F;
         }
 
         &.block-item{
@@ -1725,18 +1716,18 @@
         background-color: #128796;
         img{
             width: 20%;
-            margin-top: 8%;
+            margin-top: 13%;
         }
         .fullwidth-slider__item-description{
             text-transform: uppercase;
             .text-title{
                 font-family: "Din Pro Bold";
-                font-size: 30px;
+                font-size: 20px;
             }
     
             .text-content{
                 font-size: 20px;
-                font-family: "Din Pro Light";
+                font-family: "Din Pro";
             }
         }
 
@@ -1750,7 +1741,7 @@
         width: 100%;
         overflow: hidden;
         padding: 60px;
-        height: 50vh;
+        height: 70vh;
         align-items: end;
 
         @include media-breakpoint-up(sm) {
@@ -1940,7 +1931,6 @@
 
         font-size: 16px;
 
-        border-bottom: 1px solid #b2b2b2;
 
         @include media-breakpoint-up(xl) {
             font-size: 20px;
@@ -2334,11 +2324,9 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        padding: 0 var(--ak-main-spacing);
 
         .ak-product-item {
-            border-right: 1px solid #b2b2b2;
-            border-bottom: 1px solid #b2b2b2;
-
             transition: all 300ms ease;
         }
 
@@ -5373,23 +5361,23 @@
 
 .home_text{
     text-transform: uppercase;
-    color: #15818b;
+    color: #138997;
 
     &--title{
         font-family: "Din Pro Bold";
         font-size: 20px;
     }
     &--content{
-        font-family: "Din Pro Light";
-        font-size: 35px;
-        width: 70%;
+        font-family: "Din Pro";
+        font-size: 36px;
+        width: 60%;
     }
 }
 
 
 .color_bg{
-    padding: 3px 10px;
-    border-radius: 25px;
+    padding: 10px 10px 4px;
+    border-radius: 22px;
 
     &.orange{
         background-color: #f79c3f;
@@ -5400,8 +5388,29 @@
 }
 
 .home-orange-block{
-    height: 30px;background-color: #f79c3f;
+    display: flex;
+    justify-content: space-between;
+    height: 38px;
+    background-color: #f79c3f;
+    .home-orange-block__text{
+        color: #fff;
+        font-family: 'Din Pro Light';
+        font-size: 20px;
+        padding: 9px 69px;
+    }
 }
+
+
+    .home-category-block-title{
+        font-size: 72px;
+        font-family: "Din Pro Bold";
+        margin-bottom: 0!important;
+    }
+    .home-category-block-content{
+        font-size: 36px;
+        font-family: "Din Pro";
+    }
+
 
 .footer-top{
     padding: var(--ak-main-spacing);
@@ -5520,9 +5529,106 @@
     color: #fff;
     .blue-block__content{
         display: flex;
+        justify-content: space-between;
+        align-items: center;
         .blue-block__item--first{
-            width: 46%;
+            width: 23%;
+            font-family: "Din Pro";
+            font-size: 20px;
         }
+        .blue-block__item--second{
+            font-family: "Din Pro Light";
+            font-size: 16px;
+            width: 50%;
+        }
+    }
+}
+
+.about_block{
+    display: flex;
+    height: 90vh;
+
+    @include media-breakpoint-down(sm) {
+        display: block;   
+        height: auto;
+    }
+    .about_content{
+        padding: 70px;
+        background-color: #F2F8F9;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+            padding: 40px;
+        }
+         
+        .about-title{
+            color: #128796;
+            font-size: 36px;
+            width: 60%;
+            @include media-breakpoint-down(sm) {
+                width: 100%;
+                font-size: 25px;
+
+            }
+        }
+
+        p{
+            color: #6C6D6E;
+            font-family: "Din Pro Light";
+            font-size: 16px;
+            width: 70%; 
+            @include media-breakpoint-down(sm) {
+                width: 100%;
+            }
+        }
+    }
+
+    .about_img{
+        width: 50%;
+        // position: relative;
+        overflow: hidden;
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+        }
+        img{
+            // position: absolute;
+            // top: 0;
+            // left: 0;
+            // bottom: 0;
+            // right: 0;
+            margin: auto;
+            -o-object-fit: cover;
+            object-fit: cover;
+            -o-object-position: center center;
+            object-position: center center;
+            max-width: 100%;
+            max-height: none;
+            width: auto;
+            height: auto;
+            max-width: none;
+            max-height: none;
+            min-width: 100%;
+            min-height: 100%;
+            @include media-breakpoint-down(sm) {
+                height: 100vh;
+            }
+        }
+    }
+}
+
+.mobile{
+    display: none;
+    @include media-breakpoint-down(sm) {
+        display: block;
+    }
+}
+
+.desktop{
+    @include media-breakpoint-down(sm) {
+        display: none;
     }
 }
 

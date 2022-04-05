@@ -35,6 +35,8 @@ while (have_posts()) : the_post(); ?>
     </section>
 
     <section class="home-orange-block">
+        <p class="home-orange-block__text">FREE SHIPPING OVER 50$</p>
+        <p class="home-orange-block__text">FREE SHIPPING OVER 50$</p>
     </section>
 
     <section class="home-blocks">
@@ -53,6 +55,8 @@ while (have_posts()) : the_post(); ?>
     </section>
 
     <section class="home-orange-block">
+        <p class="home-orange-block__text">FREE SHIPPING OVER 50$</p>
+        <p class="home-orange-block__text">FREE SHIPPING OVER 50$</p>
     </section>
 
     <section class="home-second-slider fullwidth-slider">
@@ -75,8 +79,8 @@ while (have_posts()) : the_post(); ?>
 
     <section class="home-blue-block">
         <div class="blue-block__content">
-            <div class="blue-block__item blue-block__item--first">We care</div>
-            <div class="blue-block__item blue-block__item--second">Travel blue</div>
+            <div class="blue-block__item blue-block__item--first">WE CARE ABOUT OUR COSTUMER 24 MONTHS GUARANTEE</div>
+            <div class="blue-block__item blue-block__item--second">Travel blue offers products of the highest quality. Should any defect appear within 24 months from date purchase (batteries - 12 months from date of purchase) please return the product with proof of purchase to Travel Blues and we will repair or replace it free of charge. This worldwide guarantee does not affect your statutory rights.</div>
         </div>
     </section>
 
