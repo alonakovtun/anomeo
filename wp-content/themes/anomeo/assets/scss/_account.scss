@@ -36,6 +36,7 @@
             font-size: 16px;
             font-weight: 300;
             line-height: 1;
+            
 
             @include media-breakpoint-down(sm) {
                font-size: 20px;
@@ -82,7 +83,6 @@
                 border-bottom: 1px solid #EAEAEA;
             }
         }
-        border-top: 1px solid #EAEAEA;
     }
 
     .my-account-page__content-section{

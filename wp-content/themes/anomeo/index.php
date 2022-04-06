@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The main template file
  *
@@ -15,42 +16,80 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+<main id="primary" class="site-main blogs_page">
 
-		<?php
-		if ( have_posts() ) :
+	<?php
+	if (have_posts()) :
 
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-				<?php
-			endif;
+		if (is_home() && !is_front_page()) :
+	?>
+			<div class="page-title__container">
+				<h1 class="page-title__title"><? _e('About', 'anomeo'); ?></h1>
+				<p class="page-title__subtitle "><? _e('Blog', 'anomeo'); ?></p>
+			</div>
 
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+			<div class="blog-filter">
+				<div class="blog-catogories">
+					<div>
+						<div class="ak-page__sub-menu-row">
+							<?
+							wp_nav_menu(array(
+								'theme_location' => 'blog-categories-menu',
+								'container' => '',
+							));
+							?>
+						</div>
+					</div>
+				</div>
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+				<div class="blog-sort">
+					<?php
+					$args = array(
+						'order'    => (isset($_GET['dir']) ? $_GET['dir'] : 'ASC')
+					);
+					query_posts($args);
+					?>
+					<a href="<? get_permalink(); ?>?dir=DESC">The latest</a>
+					<a href="<? get_permalink(); ?>?dir=ASC">Oldest</a>
+				</div>
+			</div>
 
-			endwhile;
 
-			the_posts_navigation();
+	<?php
 
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
 
 		endif;
-		?>
 
-	</main><!-- #main -->
+		$posts_query = new WP_Query(array(
+			'post_type' => 'post',
+			'posts_per_page' => 4,
+			'post_status' => 'publish',
+		));
+
+		/* Start the Loop */?>
+		<section class="blog-page__blog-items" data-total_pages="<?= $posts_query->max_num_pages; ?>" data-config='<?= json_encode($posts_query->query_vars); ?>'>
+
+		<?
+        while ($posts_query->have_posts()) :
+            $posts_query->the_post();
+
+            get_template_part('template-parts/content', 'post');
+
+        endwhile; ?>
+		</section>
+
+		<?
+
+		the_posts_navigation();
+
+	else :
+
+		get_template_part('template-parts/content', 'none');
+
+	endif;
+	?>
+
+</main><!-- #main -->
 
 <?php
 get_sidebar();

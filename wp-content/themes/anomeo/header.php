@@ -48,12 +48,19 @@
 							<img class="big-logo" src="<?= get_template_directory_uri(); ?>/assets/img/logo-text.svg" alt="Anomeo logo">
 						</a>
 					</div>
+
 					<ul class="site-header__left-menu">
 
-						<li class="menu-item"><a href="/shop/"><? _e('Shop', 'anomeo'); ?></a></li>
-						<li class="menu-item"><a href="/about/"><? _e('About', 'anomeo'); ?></a></li>
+						<?
+						wp_nav_menu(array(
+							'theme_location' => 'header-menu',
+							'container' => '',
+							'items_wrap' => '%3$s'
+						));
+						?>
 
 					</ul>
+
 
 					<ul class="site-header__right-menu">
 						<li class="menu-item icon-menu-item"><a href="<?= wc_get_account_endpoint_url('wishlist'); ?>"><span class="icon icon-wishlist"></span></a></li>

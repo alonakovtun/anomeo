@@ -18,9 +18,12 @@
 
 
         <div class="ak-post-item__description">
-            <p class="title"><span><?= get_the_title(); ?></span> <span class="date-published"><?= get_the_date('d.m.Y'); ?></span></p>
-
-            <p class="read-more-link"><? _e('Read more', 'anomeo'); ?></p>
+            <div class="title">
+                <span class="title-item"><?= get_the_title(); ?></span>
+                <span class="date-published"><?= get_the_date('d.m.Y'); ?></span>
+            </div>
+            <?php the_content(); ?>
+            <span class="read-more-link"><? _e('Read more', 'anomeo'); ?></span>
         </div>
     </a>
 </article>

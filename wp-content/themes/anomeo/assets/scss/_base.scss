@@ -12,7 +12,7 @@
     }
 
     @include media-breakpoint-up(xl) {
-        --ak-header-height: 64px;
+        --ak-header-height: 100px;
         --ak-main-spacing: 60px;
     }
 }
@@ -134,7 +134,7 @@ input{
 .r-wrap {
     max-width: 100%;
     width: 100%;
-    margin: 0 auto;
+    // margin: 15px auto;
     padding: 0 var(--ak-main-spacing);
 }
 
