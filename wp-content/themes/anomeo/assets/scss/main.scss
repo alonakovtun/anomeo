@@ -224,7 +224,6 @@
         top: var(--ak-header-height);
         left: 0;
 
-        border-top: 1px solid #b2b2b2;
 
         visibility: hidden;
         opacity: 0;
@@ -390,7 +389,6 @@
         align-content: center;
 
         background-color: #ffffff;
-        border-bottom: 1px solid #b2b2b2;
         width: 100%;
 
         .woocommerce-product-search {
@@ -445,7 +443,6 @@
             width: 100%;
 
             padding: 0 var(--ak-main-spacing);
-            border-top: 1px solid #b2b2b2;
 
             text-transform: none;
 
@@ -493,7 +490,6 @@
     &__multi-lang-popup {
         display: flex;
         background-color: #ffffff;
-        border-bottom: 1px solid #b2b2b2;
         width: 100%;
         padding: 57px var(--ak-main-spacing);
 
@@ -551,7 +547,6 @@
         z-index: 100;
 
         background-color: #ffffff;
-        border-left: 1px solid #b2b2b2;
         border-top: 0;
         height: calc(100vh - var(--ak-header-height));
         width: 100%;
@@ -588,14 +583,12 @@
                 justify-content: flex-end;
                 height: calc(var(--ak-header-height) + 1px);
 
-                border-bottom: 1px solid #b2b2b2;
                 padding: 0 var(--ak-main-spacing);
 
                 font-size: 16px;
                 line-height: 1;
 
                 @include media-breakpoint-up(sm) {
-                    border-top: 1px solid #b2b2b2;
                     margin-top: var(--ak-header-height);
                 }
 
@@ -650,10 +643,6 @@
                 width: 100%;
                 max-width: 100%;
                 padding: var(--ak-main-spacing);
-
-                &:not(:last-of-type) {
-                    border-bottom: 1px solid #b2b2b2;
-                }
 
                 img {
                     width: 100%;
@@ -891,7 +880,6 @@
 
         width: 100%;
         padding: 30px var(--ak-main-spacing);
-        border-bottom: 1px solid #b2b2b2;
 
         font-size: 16px;
         line-height: 1;
@@ -899,7 +887,6 @@
 
         &.top-offset {
             margin-top: 76px;
-            border-top: 1px solid #b2b2b2;
         }
 
         &.menu-open,
@@ -1027,8 +1014,6 @@
         height: 100%;
         overflow-y: auto;
 
-        border-top: 1px solid #b2b2b2;
-
         .sub-menu {
             display: none;
             position: absolute;
@@ -1068,9 +1053,6 @@
             display: flex;
             width: 100%;
             padding: 30px var(--ak-main-spacing);
-
-            border-top: 1px solid #b2b2b2;
-            border-bottom: 1px solid #b2b2b2;
 
             .back-icon {
                 display: block;
@@ -1267,7 +1249,6 @@
 
         .input-text {
             border: 0;
-            border-bottom: 1px solid #b2b2b2;
             outline: none !important;
 
             width: 100%;
@@ -1628,7 +1609,7 @@
     &__item {
         display: flex;
 
-        border-left: 1px solid #b2b2b2;
+         
 
         .ak-product-item {
             width: 100%;
@@ -1781,10 +1762,8 @@
             }
 
             &:last-of-type {
-                border-top: 1px solid #b2b2b2;
 
                 @include media-breakpoint-up(sm) {
-                    border-left: 1px solid #b2b2b2;
                 }
             }
 
@@ -1909,7 +1888,6 @@
             .boxes-row__item {
                 &:last-of-type {
                     border-top: 0;
-                    border-bottom: 1px solid #b2b2b2;
                 }
             }
         }
@@ -1930,8 +1908,8 @@
     }
 
     .home-products-slider {
-        border-top: 1px solid #b2b2b2;
-        border-bottom: 1px solid #b2b2b2;
+        
+        
     }
 }
 
@@ -2019,7 +1997,6 @@
             padding: 20px var(--ak-main-spacing);
 
             background-color: #fff;
-            border-bottom: 1px solid #b2b2b2;
             text-transform: uppercase;
 
             z-index: 10;
@@ -2242,7 +2219,7 @@
 
                         padding: 20px var(--ak-main-spacing);
                         background-color: #fff;
-                        border-bottom: 1px solid #b2b2b2;
+                        
                     }
 
                     @include media-breakpoint-up(sm) {
@@ -2299,7 +2276,7 @@
         align-items: center;
         height: var(--ak-header-height);
         padding: 0 var(--ak-main-spacing);
-        border-bottom: 1px solid #b2b2b2;
+        
 
         @include media-breakpoint-up(sm) {
             display: none;
@@ -2490,7 +2467,6 @@
 // single product
 .single-product {
     .ak-page__breadcrumbs-row {
-        border-top: 1px solid #b2b2b2;
         border-bottom: 0;
     }
 
@@ -2872,7 +2848,7 @@
         &__related-products {
             .title-row {
                 padding: 20px var(--ak-main-spacing);
-                border-bottom: 1px solid #b2b2b2;
+                
 
                 @include media-breakpoint-up(sm) {
                     padding: 40px var(--ak-main-spacing);
@@ -2907,7 +2883,6 @@
             }
 
             .mobile-products-slider {
-                border-bottom: 1px solid #b2b2b2;
                 position: relative;
                 width: 100%;
                 max-width: 100%;
@@ -2919,8 +2894,6 @@
 
                 &__item {
                     display: flex;
-
-                    border-left: 1px solid #b2b2b2;
 
                     .ak-product-item {
                         width: 100%;
@@ -2944,7 +2917,7 @@
 
     .terms-page__content-section {
         padding: 40px 0;
-        border-bottom: 1px solid #b2b2b2;
+        
 
         overflow-wrap: break-word;
         font-size: 20px;
@@ -3026,14 +2999,14 @@
         }
 
         .col-right {
-            border-top: 1px solid #b2b2b2;
+            
 
             @include media-breakpoint-up(sm) {
                 padding-left: 40px;
                 padding-right: 40px;
 
                 border-top: 0;
-                border-left: 1px solid #b2b2b2;
+                 
             }
 
             @include media-breakpoint-up(xl) {
@@ -3043,7 +3016,7 @@
         }
 
         &.no-image {
-            border-bottom: 1px solid #b2b2b2;
+            
         }
     }
 
@@ -3160,8 +3133,8 @@
     display: block;
     overflow: hidden;
 
-    border-right: 1px solid #b2b2b2;
-    border-bottom: 1px solid #b2b2b2;
+    
+    
 
     p {
         margin: 0;
@@ -3263,7 +3236,7 @@
 .archive.category {
     .ak-page__sub-menu-row {
         border-top: 0;
-        border-bottom: 1px solid #b2b2b2;
+        
 
         @include media-breakpoint-down(sm) {
             display: none;
@@ -3326,6 +3299,10 @@
             flex-direction: row;
         }
 
+        @include media-breakpoint-down(sm) {
+            display: block;
+        }
+
         &--one_image_horizontal {
             @include media-breakpoint-up(sm) {
                 height: 100vh;
@@ -3357,7 +3334,7 @@
             }
 
             &:last-of-type {
-                border-bottom: 1px solid #b2b2b2;
+                
             }
 
             .post-content__image {
@@ -3369,7 +3346,7 @@
 
         &--two_images_vertical {
             &:last-of-type {
-                border-bottom: 1px solid #b2b2b2;
+                
             }
 
             .image-box {
@@ -3388,11 +3365,11 @@
                 }
 
                 &:first-of-type {
-                    border-bottom: 1px solid #b2b2b2;
+                    
 
                     @include media-breakpoint-up(sm) {
                         border-bottom: 0;
-                        border-right: 1px solid #b2b2b2;
+                        
                     }
                 }
 
@@ -3430,8 +3407,8 @@
         }
 
         &--text {
-            border-top: 1px solid #b2b2b2;
-            border-bottom: 1px solid #b2b2b2;
+            
+            
 
             &:first-of-type {
                 border-top: 0;
@@ -3439,24 +3416,19 @@
 
             .text-box {
                 padding: var(--ak-main-spacing);
-                width: 100%;
 
                 font-size: 20px;
-
-                @include media-breakpoint-up(sm) {
-                    width: 50%;
-                }
 
                 @include media-breakpoint-up(xl) {
                     font-size: 30px;
                 }
 
                 &:first-of-type {
-                    border-bottom: 1px solid #b2b2b2;
+                    
 
                     @include media-breakpoint-up(sm) {
                         border-bottom: 0;
-                        border-right: 1px solid #b2b2b2;
+                        
                     }
                 }
 
@@ -3477,33 +3449,103 @@
                         font-size: 40px;
                     }
                 }
+
+                &--left{
+                    width: 20%;
+                    @include media-breakpoint-down(sm) {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        flex-direction: row-reverse;
+                    }
+                    a {
+                        color: #138997;
+                        font-size: 16px;
+                        font-family: "Din Pro Light";
+                        text-decoration: none;
+                    }
+                }
+
+                &--right{
+                    width: 60%;
+                    @include media-breakpoint-down(sm) {
+                        width: 100%;
+                    }
+                    a {
+                        text-decoration: none;
+                    }
+                    p{
+                        font-size: 16px;
+                        color: #6C6D6E;
+                    }
+                    .post-date{
+                        color: #6C6D6E;
+                        font-size: 16px;
+                        font-family: "Din Pro Light";
+                    }
+
+                    .post-title{
+                        font-size: 36px;
+                        color: #128796;
+                        margin: 30px 0;
+                    }
+
+                    .post-content{
+                        color: #6C6D6E;
+                        font-size: 16px;
+                        font-family: "Din Pro Light";
+                    }
+
+                    
+                }
+
+               
             }
+
+            
         }
+    }
+
+    .post-content-img{
+        display: flex;
+        margin: auto;
+        @include media-breakpoint-down(sm) {
+            display: block;
+        }
+        img{
+            width: 484px;
+            height: 638px;
+            object-fit: cover;
+            margin: 0 9px;
+            @include media-breakpoint-down(sm) {
+                margin: 0;
+            }
+
+            &:last-child{
+                @include media-breakpoint-down(sm) {
+                    margin-top: 40px;
+                }
+            }
+            
+        }
+
+       
     }
 
     .related-posts {
         .section-title {
             display: block;
 
-            padding: 20px var(--ak-main-spacing);
-            border-bottom: 1px solid #b2b2b2;
-
-            text-transform: uppercase;
-            font-size: 20px;
-            line-height: 1;
-            margin: 0;
-
-            @include media-breakpoint-up(sm) {
-                padding: 40px var(--ak-main-spacing);
-
-                font-size: 16px;
+            padding: 88px var(--ak-main-spacing);
+            color: #128796;
+            font-size: 70px;
+            font-family: "Din Pro Bold";
+            width: 43%;
+            @include media-breakpoint-down(sm) {
+                font-size: 50px;
+                width: 100%;
             }
-
-            @include media-breakpoint-up(xl) {
-                padding: 60px var(--ak-main-spacing);
-
-                font-size: 25px;
-            }
+            
         }
 
         &__grid {
@@ -3512,7 +3554,6 @@
 
             @include media-breakpoint-up(sm) {
                 display: grid;
-                grid-template-columns: repeat(2, 1fr);
                 align-items: stretch;
                 grid-auto-rows: 1fr;
             }
@@ -3544,7 +3585,7 @@
         width: 50%;
 
         &:last-of-type {
-            border-left: 1px solid #b2b2b2;
+             
         }
     }
 
@@ -3557,7 +3598,7 @@
         flex-direction: column;
 
         padding: 30px var(--ak-main-spacing);
-        border-bottom: 1px solid #b2b2b2;
+        
 
         @include media-breakpoint-up(sm) {
             height: 100px;
@@ -3664,7 +3705,7 @@
 
     .input-text {
         border: 0;
-        border-bottom: 1px solid #b2b2b2;
+        
         outline: none !important;
 
         width: 100%;
@@ -3826,7 +3867,7 @@
             display: block;
 
             border: 0;
-            border-bottom: 1px solid #b2b2b2;
+            
             outline: none !important;
 
             width: 100%;
@@ -3873,7 +3914,7 @@
             display: flex;
             flex-direction: column;
 
-            border-bottom: 1px solid #b2b2b2;
+            
 
             @include media-breakpoint-up(sm) {
                 width: 50%;
@@ -3887,11 +3928,11 @@
 
             &:last-of-type {
                 @include media-breakpoint-up(sm) {
-                    border-left: 1px solid #b2b2b2;
+                     
                 }
 
                 @include media-breakpoint-down(sm) {
-                    border-top: 1px solid #b2b2b2;
+                    
                     margin-top: 40px;
                 }
             }
@@ -3902,7 +3943,7 @@
             width: 100%;
             padding: 20px var(--ak-main-spacing);
             margin: 0;
-            border-bottom: 1px solid #b2b2b2;
+            
 
             text-transform: uppercase;
             font-size: 18px;
@@ -3960,7 +4001,7 @@
 
     .myaccount__content-wrap {
         padding: 30px var(--ak-main-spacing);
-        border-bottom: 1px solid #b2b2b2;
+        
 
         @include media-breakpoint-up(xl) {
             padding: 60px var(--ak-main-spacing);
@@ -3998,7 +4039,7 @@
             flex-direction: column;
 
             margin-bottom: 70px;
-            border-top: 1px solid #b2b2b2;
+            
 
             &:first-of-type {
                 border-top: 0;
@@ -4008,7 +4049,7 @@
                 display: flex;
                 justify-content: space-between;
 
-                border-bottom: 1px solid #b2b2b2;
+                
                 padding: 30px var(--ak-main-spacing);
             }
 
@@ -4024,7 +4065,7 @@
         font-size: 18px;
         font-weight: 300;
 
-        border-bottom: 1px solid #b2b2b2;
+        
 
         @include media-breakpoint-down(sm) {
             display: none;
@@ -4041,7 +4082,7 @@
             font-weight: 300;
 
             &:not(:last-of-type) {
-                border-right: 1px solid #b2b2b2;
+                
             }
         }
 
@@ -4066,7 +4107,7 @@
         .woocommerce-orders-table__header {
             text-transform: uppercase;
 
-            border-bottom: 1px solid #b2b2b2;
+            
         }
 
         .button {
@@ -4078,13 +4119,13 @@
     .ak-my-account__order-details {
         display: flex;
 
-        border-bottom: 1px solid #b2b2b2;
+        
 
         .col {
             width: 50%;
 
             &-left {
-                border-right: 1px solid #b2b2b2;
+                
             }
         }
 
@@ -4093,7 +4134,7 @@
             width: 100%;
             padding: 20px var(--ak-main-spacing);
             margin: 0;
-            border-bottom: 1px solid #b2b2b2;
+            
 
             text-transform: uppercase;
             font-size: 18px;
@@ -4105,7 +4146,7 @@
             }
 
             &--border-top {
-                border-top: 1px solid #b2b2b2;
+                
             }
         }
 
@@ -4115,7 +4156,7 @@
 
         .address-row,
         .totals-row {
-            border-bottom: 1px solid #b2b2b2;
+            
 
             width: 100%;
             padding: 20px var(--ak-main-spacing);
@@ -4149,7 +4190,7 @@
 
             display: flex;
 
-            border-bottom: 1px solid #b2b2b2;
+            
 
             text-transform: uppercase;
             font-size: 16px;
@@ -4181,7 +4222,7 @@
 
                 padding: 50px var(--ak-main-spacing);
 
-                border-left: 1px solid #b2b2b2;
+                 
 
                 .title {
                     margin-bottom: 10px;
@@ -4203,7 +4244,7 @@
             width: 100%;
             padding: 20px var(--ak-main-spacing);
             margin: 0;
-            border-bottom: 1px solid #b2b2b2;
+            
 
             text-transform: uppercase;
             font-size: 18px;
@@ -4230,18 +4271,18 @@
             }
 
             &:first-of-type {
-                border-right: 1px solid #b2b2b2;
+                
             }
 
             &:last-of-type {
-                border-bottom: 1px solid #b2b2b2;
+                
 
                 @include media-breakpoint-down(sm) {
                     margin-top: 60px;
                     border-bottom: 0;
 
                     .ak-my-account__address-item-title {
-                        border-top: 1px solid #b2b2b2;
+                        
                     }
                 }
             }
@@ -4263,7 +4304,7 @@
             width: 100%;
             padding: 20px var(--ak-main-spacing);
             margin: 0;
-            border-bottom: 1px solid #b2b2b2;
+            
 
             text-transform: uppercase;
             font-size: 18px;
@@ -4281,12 +4322,12 @@
             }
 
             &:first-of-type {
-                border-right: 1px solid #b2b2b2;
+                
             }
 
             &:last-of-type {
                 @include media-breakpoint-up(sm) {
-                    border-bottom: 1px solid #b2b2b2;
+                    
                 }
             }
         }
@@ -4317,7 +4358,7 @@
         }
 
         &-container {
-            border-bottom: 1px solid #b2b2b2;
+            
         }
 
         .form-row {
@@ -4409,7 +4450,7 @@
             display: block;
 
             border: 0;
-            border-bottom: 1px solid #b2b2b2;
+            
             outline: none !important;
 
             width: 100%;
@@ -4467,7 +4508,7 @@
             width: 100%;
             padding: 20px var(--ak-main-spacing);
             margin: 0;
-            border-bottom: 1px solid #b2b2b2;
+            
 
             text-transform: uppercase;
             font-size: 18px;
@@ -4483,7 +4524,7 @@
             width: 100%;
             display: flex;
             flex-direction: column;
-            border-bottom: 1px solid #b2b2b2;
+            
 
             @include media-breakpoint-up(sm) {
                 width: 50%;
@@ -4491,7 +4532,7 @@
         }
 
         .col-1 {
-            border-right: 1px solid #b2b2b2;
+            
 
             @include media-breakpoint-down(sm) {
                 border-bottom: 0;
@@ -4500,7 +4541,7 @@
 
         .col-2 {
             @include media-breakpoint-down(sm) {
-                border-top: 1px solid #b2b2b2;
+                
                 margin-top: 40px;
             }
 
@@ -4518,7 +4559,7 @@
         }
 
         .continue-to-checkout-text {
-            border-bottom: 1px solid #b2b2b2;
+            
 
             width: 100%;
             padding: 20px var(--ak-main-spacing);
@@ -4587,7 +4628,7 @@
             display: flex;
             flex-direction: column;
 
-            border-bottom: 1px solid #b2b2b2;
+            
 
             text-transform: uppercase;
             font-size: 16px;
@@ -4663,7 +4704,7 @@
                 @include media-breakpoint-up(sm) {
                     padding: 50px var(--ak-main-spacing);
 
-                    border-left: 1px solid #b2b2b2;
+                     
                 }
 
                 .title {
@@ -4734,7 +4775,7 @@
                 align-content: center;
 
                 padding: 20px var(--ak-main-spacing);
-                border-bottom: 1px solid #b2b2b2;
+                
 
                 font-size: 16px;
                 font-weight: 300;
@@ -4827,7 +4868,7 @@
             position: relative;
             display: block;
 
-            border-bottom: 1px solid #b2b2b2;
+            
 
             .input-radio {
                 position: absolute;
@@ -5060,7 +5101,7 @@
     .ak-checkout__coupon-form {
         position: relative;
 
-        border-bottom: 1px solid #b2b2b2;
+        
 
         .coupon-form-title {
             position: absolute;
@@ -5191,7 +5232,7 @@
         font-weight: 300;
         line-height: 1;
 
-        border-bottom: 1px solid #b2b2b2;
+        
         padding: 20px var(--ak-main-spacing) 21px;
         margin: 0;
 
@@ -5267,7 +5308,7 @@
         }
 
         &--border-top {
-            border-top: 1px solid #b2b2b2;
+            
         }
     }
 
@@ -5287,9 +5328,9 @@
 
         &--left {
             @include media-breakpoint-up(sm) {
-                border-right: 1px solid #b2b2b2;
+                
 
-                border-bottom: 1px solid #b2b2b2;
+                
             }
 
             .woocommerce-checkout-review-order-table .products-list {
@@ -5298,7 +5339,7 @@
         }
 
         &--right {
-            border-bottom: 1px solid #b2b2b2;
+            
 
             @include media-breakpoint-down(sm) {
                 order: -1;
@@ -5326,7 +5367,7 @@
 
     .contact-page {
         &__order-online {
-            border-bottom: 1px solid #b2b2b2;
+            
 
             font-family: "Din Pro";
             font-weight: 300;
@@ -5364,7 +5405,7 @@
             @include media-breakpoint-up(sm) {
                 flex-direction: row;
 
-                border-bottom: 1px solid #b2b2b2;
+                
                 padding: 30px var(--ak-main-spacing);
             }
 
@@ -5375,7 +5416,7 @@
             }
 
             .store-item {
-                border-bottom: 1px solid #b2b2b2;
+                
                 padding: 30px var(--ak-main-spacing);
 
                 @include media-breakpoint-up(sm) {
