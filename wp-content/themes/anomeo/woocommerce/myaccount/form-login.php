@@ -27,28 +27,53 @@ do_action('woocommerce_before_customer_login_form'); ?>
 </div>
 
 <div class="ak-customer-login-form" id="customer_login">
+	<div class="login-box">
 
-	<div class="form-wraper col-1">
+		<div class="form-wraper col-1">
 
-		<h2 class="form-title"><?php esc_html_e('Login', 'anomeo'); ?></h2>
+			<div class="page-title__container">
+				<p class="page-title__subtitle "><?php esc_html_e('Login', 'anomeo'); ?></p>
+			</div>
 
-		<? get_template_part('template-parts/ak-login-form'); ?>
+			<? get_template_part('template-parts/ak-login-form'); ?>
 
+		</div>
+
+		<div class="form-wraper col-2">
+
+			<div class="page-title__container">
+				<p class="page-title__subtitle "><?php esc_html_e('Register', 'anomeo'); ?></p>
+			</div>
+
+			<div class="log-in__input-data">
+				<p class="log-in__right-mess">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+				</p>
+			</div>
+
+			<a class="woocommerce-button button woocommerce-form-login__submit button__trigger-register">
+				<?php esc_html_e('CREATE ACCOUNT', 'hedo'); ?>
+			</a>
+
+
+		</div>
 	</div>
 
-	<div class="form-wraper col-2">
-
-		<h2 class="form-title"><?php esc_html_e('Register', 'anomeo'); ?></h2>
+	<div class=" register-box">
+	<div class="page-title__container">
+				<p class="page-title__subtitle "><?php esc_html_e('Create an account', 'anomeo'); ?></p>
+			</div>
 
 		<form method="post" class="ak-form ak-form--register" <?php do_action('woocommerce_register_form_tag'); ?>>
 
 			<?php do_action('woocommerce_register_form_start'); ?>
 
-			<?php if ('no' === get_option('woocommerce_registration_generate_username')) : ?>
 
-				<input type="text" class="input-text" name="username" id="reg_username" autocomplete="username" placeholder="<?php esc_html_e('Username', 'woocommerce'); ?>" value="<?php echo (!empty($_POST['username'])) ? esc_attr(wp_unslash($_POST['username'])) : ''; ?>" />
+			<input type="text" class="input-text" name="name" id="reg_name" autocomplete="name" placeholder="<?php esc_html_e('Name', 'woocommerce'); ?>" value="<?php echo (!empty($_POST['name'])) ? esc_attr(wp_unslash($_POST['name'])) : ''; ?>" />
+			<input type="text" class="input-text" name="surname" id="reg_surname" autocomplete="surname" placeholder="<?php esc_html_e('Surname', 'woocommerce'); ?>" value="<?php echo (!empty($_POST['surname'])) ? esc_attr(wp_unslash($_POST['surname'])) : ''; ?>" />
 
-			<?php endif; ?>
+
+
+			
 
 			<input type="email" class="input-text <?= get_register_field_email_invalid_class(); ?>" name="email" id="reg_email" autocomplete="email" placeholder="<?php esc_html_e('Email', 'anomeo'); ?>" value="<?php echo (!empty($_POST['email'])) ? esc_attr(wp_unslash($_POST['email'])) : ''; ?>" />
 
@@ -60,7 +85,7 @@ do_action('woocommerce_before_customer_login_form'); ?>
 
 			<div class="woocommerce-form-row form-row">
 				<?php wp_nonce_field('woocommerce-register', 'woocommerce-register-nonce'); ?>
-				<button type="submit" class="woocommerce-Button woocommerce-button button woocommerce-form-register__submit disabled" disabled name="register" value="<?php esc_attr_e('Register', 'woocommerce'); ?>"><?php esc_html_e('Register', 'woocommerce'); ?></button>
+				<button type="submit" class="woocommerce-Button woocommerce-button button woocommerce-form-register__submit " name="register" value="<?php esc_attr_e('Register', 'woocommerce'); ?>"><?php esc_html_e('Register', 'woocommerce'); ?></button>
 			</div>
 
 			<label for="register-form-consent" class="ak-checkbox consent-checkbox">

@@ -18,16 +18,18 @@
 
     <?php do_action('woocommerce_login_form'); ?>
 
+    <div class="lost_password">
+        <a href="<?php echo esc_url(wp_lostpassword_url()); ?>"><?php esc_html_e('Have You forgotten your password?', 'anomeo'); ?></a>
+
+        <!-- <a href="<?= get_permalink(get_option('woocommerce_myaccount_page_id')); ?>" class="register-link"><?php esc_html_e('Register', 'woocommerce'); ?></a> -->
+    </div>
+
     <div class="form-row">
         <?php wp_nonce_field('woocommerce-login', 'woocommerce-login-nonce'); ?>
         <button type="submit" class="woocommerce-button button woocommerce-form-login__submit" name="login" value="<?php esc_attr_e('Log in', 'woocommerce'); ?>"><?php esc_html_e('Log in', 'woocommerce'); ?></button>
     </div>
 
-    <div class="lost_password">
-        <a href="<?php echo esc_url(wp_lostpassword_url()); ?>"><?php esc_html_e('Forgot password?', 'anomeo'); ?></a>
-
-        <a href="<?= get_permalink(get_option('woocommerce_myaccount_page_id')); ?>" class="register-link"><?php esc_html_e('Register', 'woocommerce'); ?></a>
-    </div>
+   
 
     <?php do_action('woocommerce_login_form_end'); ?>
 

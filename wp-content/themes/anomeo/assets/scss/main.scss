@@ -3703,20 +3703,17 @@
     flex-direction: column;
 
     .input-text {
-        border: 0;
+        border: 1px solid #BCBCBC;
+        border-radius: 27px;
+        margin-bottom: 30px;
+        color: #148D9A;
+        font-size: 16px;
+        text-transform: none;
+        padding: 16px var(--ak-main-spacing);
         
         outline: none !important;
 
-        width: 100%;
-        padding: 20px var(--ak-main-spacing);
 
-        text-transform: uppercase;
-        font-size: 16px;
-        font-weight: 300;
-
-        @include media-breakpoint-up(xl) {
-            font-size: 20px;
-        }
 
         &.invalid {
             border-color: var(--ak-accent-color);
@@ -3729,37 +3726,24 @@
     }
 
     .button {
-        position: relative;
-
         display: flex;
         align-items: center;
         align-content: center;
         justify-content: center;
 
-        width: 100%;
-        height: 100px;
+        width: 120px;
+        height: 50px;
 
         cursor: pointer;
-        color: #ffffff;
-        background-color: var(--ak-accent-color);
-        border: 1px solid var(--ak-accent-color);
+        color: #FFFFFF;
+        background-color: #F89D3F;
+        border-radius: 44px;
 
         font-size: 18px;
-        font-weight: 300;
+        font-family: "Din Pro Bold";
         text-transform: uppercase;
 
         transition: all 250ms ease;
-
-        @include media-breakpoint-up(xl) {
-            height: 140px;
-
-            font-size: 25px;
-        }
-
-        &:hover {
-            color: var(--ak-accent-color);
-            background-color: #ffffff;
-        }
 
         &.disabled {
             cursor: not-allowed;
@@ -3788,8 +3772,11 @@
         align-items: center;
         justify-content: space-between;
 
-        padding: 20px var(--ak-main-spacing);
-        margin: 0;
+        padding: 0;
+        margin-bottom: 25px;
+        font-size: 14px;
+        color: #148D9A;
+        font-family: 'Din Pro Light';
     }
 }
 
@@ -3903,11 +3890,6 @@
 
     .ak-customer-login-form {
         display: flex;
-        flex-direction: column;
-
-        @include media-breakpoint-up(sm) {
-            flex-direction: row;
-        }
 
         .form-wraper {
             display: flex;
@@ -5902,6 +5884,151 @@
         font-weight: 300;
         @include media-breakpoint-down(sm) {
             font-size: 28px;
+        }
+    }
+}
+
+.ak-customer-login-form {
+
+    .login-box{
+        display: flex;
+        @include media-breakpoint-down(sm) {
+            display: block;
+            
          }
+    }
+    
+
+    .col-1{
+        width: 50%;
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+            padding: 0 34px;
+         }
+    }
+
+    .col-2{
+        width: 50%;
+        background-color: #F2F8F9;
+        padding-left: 80px;
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+            padding: 0 34px 140px;
+
+         }
+
+        .log-in__input-data{
+            margin: 24px 0 34px;
+            .log-in__right-mess{
+                width: 60%;
+                color: #148D9A;
+                font-size: 16px;font-family: 'Din Pro Light';
+            }
+        }
+
+        
+    }
+
+    .button{
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+
+        width: 210px;
+        height: 50px;
+
+        cursor: pointer;
+        color: #FFFFFF;
+        background-color: #F89D3F;
+        border-radius: 44px;
+
+        font-size: 18px;
+        font-family: "Din Pro Bold";
+        text-transform: uppercase;
+
+        transition: all 250ms ease;
+
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+         }
+
+        &.disabled {
+            cursor: not-allowed;
+            pointer-events: none;
+            opacity: 0.45;
+        }
+
+        &.woocommerce-form-login__submit {
+            border-right: 0;
+
+            &:after {
+                content: " ";
+
+                position: absolute;
+                top: -1px;
+                right: -1px;
+                width: 1px;
+                height: calc(100% + 2px);
+                background-color: var(--ak-accent-color);
+            }
+        }
+    }
+
+    .page-title__container{
+        padding-left: 0;
+    }
+
+    .ak-form.ak-form--login{
+        margin-top: 45px;
+
+        input{
+            border: 1px solid #BCBCBC;
+            border-radius: 27px;
+            margin-bottom: 30px;
+            color: #148D9A;
+            font-size: 16px;
+            text-transform: none;
+            padding: 16px var(--ak-main-spacing);
+        }
+    }
+
+    .button{
+        margin-bottom: 290px;
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 40px;
+         }
+    }
+
+    .register-box{
+        display: none;
+        width: 40%;
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+            padding: 0 34px 194px;
+         }
+        .ak-form--register{
+            margin-top: 45px;
+        }
+
+    }
+}
+
+.woocommerce-account{
+    .r-wrap{
+        padding-right: 0;
+    }
+
+    .site-header{
+        .r-wrap{
+        padding-right: var(--ak-main-spacing);
+        }
+
+    }
+}
+
+.woocommerce-account.logged-in{
+    .r-wrap{
+        padding-right: var(--ak-main-spacing);;
     }
 }
