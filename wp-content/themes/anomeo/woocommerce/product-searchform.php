@@ -22,8 +22,13 @@ if (!defined('ABSPATH')) {
 
 ?>
 <form role="search" method="get" class="woocommerce-product-search" action="<?php echo esc_url(home_url('/')); ?>">
-	<input type="search" id="woocommerce-product-search-field-<?php echo isset($index) ? absint($index) : 0; ?>" class="search-field" placeholder="<?php echo esc_attr__('Type the phrase', 'anomeo'); ?>" value="<?php echo get_search_query(); ?>" name="s" />
-	<button type="submit" class="search-submit"></button>
+<div class="search_left">
+	<input type="search" id="woocommerce-product-search-field-<?php echo isset($index) ? absint($index) : 0; ?>" class="search-field" placeholder="<?php echo esc_attr__('Pillow', 'anomeo'); ?>" value="<?php echo get_search_query(); ?>" name="s" />
+	<button type="submit" class="search-submit"><? _e('Search', 'anomeo'); ?></button>
+	</div>
+	<div class="search_right">
+		<img class="hide_search" src="/wp-content/themes/anomeo/assets/img/Close_Pop_up-08.svg" alt="">
+	</div>
 	<input type="hidden" name="post_type" value="product" />
 </form>
 <? if (have_rows('search_suggestions_items', 'option')) : ?>

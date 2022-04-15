@@ -425,6 +425,20 @@ function initPopupOverlayScripts() {
     });
 }
 
+function hideSearchScript() {
+
+    const hideSearch = document.querySelector('.hide_search'),
+    searchPopup = document.querySelector('.site-header__search-popup');
+   
+    hideSearch.addEventListener('click', (e) => {
+        e.preventDefault();
+        if(searchPopup.classList.contains('open')){
+            searchPopup.classList.remove('open');
+        }
+    });
+   
+   }
+
 function initHeaderScripts() {
     initStartupAnimation();
     headerHideOnScrollAnimation();
@@ -433,11 +447,12 @@ function initHeaderScripts() {
     initSiteCookiesBannerScripts();
     initHeaderSubmenuHandlers();
     initSearchPopupHandlers();
-    initMultiLangPopupHandlers();
+    // initMultiLangPopupHandlers();
     initCartPopupHandlers();
     initCartItemQtyButtonsHandlers();
     initPopupOverlayScripts();
     initMobileMenuScripts();
+    hideSearchScript();
 }
 
 export { initHeaderScripts, toggleCartPopup };

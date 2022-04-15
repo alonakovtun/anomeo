@@ -394,45 +394,60 @@
         .woocommerce-product-search {
             position: relative;
             height: 150px;
-            padding: 20px var(--ak-main-spacing);
+            padding: 10px var(--ak-main-spacing);
 
             display: flex;
             align-content: center;
-            align-items: center;
-            justify-content: center;
+            align-items: end;
+            justify-content: space-between;
 
             width: 100%;
+
+            .search_left{
+                width: 70%;
+                display: flex;
+            }
+            .search_right{
+                img{
+                    width: 40px;
+                    height: 40px;
+                }
+            }
         }
 
         .search-field {
             justify-self: center;
 
-            border: 0;
+            border-color: #A2A2A2;
+            border-radius: 27px;
             outline: none !important;
 
             width: 100%;
-            max-width: 50%;
+            max-width: 40%;
+            padding: 10px 35px;
 
-            font-size: 25px;
+            font-size: 16px;
             font-weight: 300;
             line-height: 1;
-            text-transform: uppercase;
-            text-align: center;
+            font-family: "Din Pro Light";
         }
 
         .search-submit {
-            position: absolute;
-            top: calc(50% - 10px);
-            right: var(--ak-main-spacing);
+            margin-left: 20px;
 
             cursor: pointer;
             display: block;
-            width: 40px;
-            height: 20px;
+            width: 130px;
+            height: 40px;
             padding: 0;
+            border-radius: 44px;
 
-            background-image: url("../img/arrow.svg");
-            background-repeat: no-repeat;
+            color: #fff;
+            font-size: 18px;
+            font-family: "Din Pro Bold";
+            text-transform: uppercase;
+
+            background-color: #138997;
         }
 
         .search-form__suggestions {
@@ -448,16 +463,13 @@
 
             .title {
                 font-size: 16px;
-                font-weight: 300;
                 line-height: 1;
 
                 margin: 0;
                 margin-right: 20px;
-                
 
-                @include media-breakpoint-up(xl) {
-                    font-size: 20px;
-                }
+                color: #F89D3F;
+                
             }
 
             a {
@@ -6031,4 +6043,8 @@
     .r-wrap{
         padding-right: var(--ak-main-spacing);;
     }
+}
+
+.ak-checkbox{
+    display: block;
 }

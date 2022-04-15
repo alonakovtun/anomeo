@@ -40,8 +40,7 @@ do_action('woocommerce_before_edit_account_form'); ?>
 		<p class="col-title">
 			<?php esc_html_e('Personal details', 'anomeo'); ?>
 			<?php wp_nonce_field('save_account_details', 'save-account-details-nonce'); ?>
-			<button type="submit" class="button form-submit-btn" name="save_account_details" value="<?php esc_attr_e('Save changes', 'woocommerce'); ?>"><?php esc_html_e('Save', 'woocommerce'); ?></button>
-			<input type="hidden" name="action" value="save_account_details" />
+			<button type="submit" class="button form-submit-btn" name="save_account_details" value="<?php esc_attr_e('Save changes', 'woocommerce'); ?>"><?php esc_html_e('Save', 'woocommerce'); ?></button>			<input type="hidden" name="action" value="save_account_details" />
 		</p>
 
 		<p class="form-row form-row-first">

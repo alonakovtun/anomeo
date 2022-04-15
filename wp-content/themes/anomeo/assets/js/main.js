@@ -12,6 +12,7 @@ import { initPressPageScripts } from "./press";
 
 (function () {
     ready(() => {
+
         initHeaderScripts();
 
         initHomePageScripts();
@@ -32,21 +33,10 @@ import { initPressPageScripts } from "./press";
 
         initWishlistScripts();
 
+        
+
 
     });
 
-    const buttonTrigger = document.querySelector('.button__trigger-register'),
-    visibileBox = document.querySelector('.login-box'),
-    hiddenBox = document.querySelector('.register-box');
-
-
-
-    buttonTrigger.addEventListener('click', (e) => {
-    e.preventDefault();
-    setTimeout(() => {
-    visibileBox.style.display = 'none';
-    hiddenBox.style.display = 'block';
-    }, 1000)
-    });
 
 })();
