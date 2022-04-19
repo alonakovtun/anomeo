@@ -27,6 +27,7 @@ do_action('woocommerce_before_mini_cart'); ?>
 <div class="site-cart">
     <div class="site-cart__header">
         <a id="cart-popup-toggle" class="cart-close-btn"><? _e('Close', 'anomeo'); ?></a>
+        <p><? WC()->cart->cart_contents_count ?></p>
     </div>
 
     <?php if (!WC()->cart->is_empty()) : ?>

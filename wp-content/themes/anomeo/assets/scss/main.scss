@@ -265,15 +265,8 @@
 
     &__logo-col {
         .logo {
-            height: 12px;
-
-            @include media-breakpoint-up(sm) {
-                height: 16px;
-            }
-
-            @include media-breakpoint-up(xl) {
-                height: 22px;
-            }
+            height: 38px;
+            margin-bottom: 15px;
         }
 
         .big-logo {
@@ -609,7 +602,7 @@
             &__header {
                 display: flex;
                 align-items: center;
-                justify-content: flex-end;
+                justify-content: flex-start;
                 height: calc(var(--ak-header-height) + 1px);
 
                 padding: 0 var(--ak-main-spacing);

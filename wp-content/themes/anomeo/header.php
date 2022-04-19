@@ -44,8 +44,8 @@
 				<div id="header-inner" class="site-header__inner">
 				<div class="site-header__logo-col">
 						<a href="<?= get_home_url(); ?>" class="logo-link">
-							<img class="logo" src="<?= get_template_directory_uri(); ?>/assets/img/logo-text.svg" alt="Anomeo logo">
-							<img class="big-logo" src="<?= get_template_directory_uri(); ?>/assets/img/logo-text.svg" alt="Anomeo logo">
+							<img class="logo" src="<?= get_template_directory_uri(); ?>/assets/img/logo.svg" alt="Anomeo logo">
+							<img class="big-logo" src="<?= get_template_directory_uri(); ?>/assets/img/logo.svg" alt="Anomeo logo">
 						</a>
 					</div>
 
