@@ -217,6 +217,9 @@
                 background-image: url(../img/Card-02.svg);
                 width: 17px;
                 height: 23px;
+                text-align: center;
+                font-size: 13px;
+                line-height: 2.3;
             }
 
             &-instagram {
@@ -613,10 +616,6 @@
 
                 font-size: 16px;
                 line-height: 1;
-
-                @include media-breakpoint-up(sm) {
-                    margin-top: var(--ak-header-height);
-                }
 
                 @include media-breakpoint-up(xl) {
                     font-size: 20px;
@@ -6214,6 +6213,11 @@
             font-size: 20px;
             font-family: 'Din Pro';
         }
+    }
+
+    img{
+        height: auto;
+        width: 100%;
     }
 
     
