@@ -243,7 +243,7 @@ function toggleCartPopup(open) {
 function initCartPopupHandlers() {
     document.addEventListener("click", function (e) {
         if (e.target && e.target.id === "cart-popup-toggle") {
-            e.preventDefault();
+            // e.preventDefault();
             const cartPopoupEl = document.querySelector(
                 ".site-header__cart-popup"
             );

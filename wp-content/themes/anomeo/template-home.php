@@ -43,11 +43,11 @@ while (have_posts()) : the_post(); ?>
         <? if (have_rows('home_block_item')) :
             while (have_rows('home_block_item')) : the_row(); ?>
                 <div class="fullwidth-slider__item">
-                <? $link = get_field('link'); ?>
+                    <? $link = get_field('link'); ?>
                     <img src="<? the_sub_field('image'); ?>" class="fullwidth-slider__image">
                     <div class="fullwidth-slider__item-description block-item">
                         <? the_sub_field('name'); ?>
-                        <a href = "<? $link ?>">All Products</a>
+                        <a href="<? $link ?>">All Products</a>
                     </div>
                 </div>
         <? endwhile;
@@ -59,15 +59,35 @@ while (have_posts()) : the_post(); ?>
         <p class="home-orange-block__text">FREE SHIPPING OVER 50$</p>
     </section>
 
+    <section class="popular-items-block">
+        <div class="first-block">
+            <div class="top">
+                <div class="title"><? _e('Popular Items', 'anomeo'); ?></div>
+                <div class="button">
+                    <a href="/shop/"><? _e('ALL PRODUCTS', 'anomeo'); ?></a>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="second-block">
+            <? include get_template_directory() . '/template-parts/popular-product.php'; ?>
+        </div>
+
+    </section>
+
     <section class="home-second-slider fullwidth-slider">
         <div class="swiper-wrapper">
             <? if (have_rows('bottom_slider')) :
                 while (have_rows('bottom_slider')) : the_row(); ?>
-                    <div class="swiper-slide fullwidth-slider__item">
+                    <div class="swiper-slide ">
+                        <div class="slider2-block">
                             <img src="<? the_sub_field('image'); ?>" class=" ">
-                            <div class="fullwidth-slider__item-description">
+                            <div class="slider__item-description">
                                 <? the_sub_field('text'); ?>
                             </div>
+                        </div>
                     </div>
             <? endwhile;
             endif; ?>
@@ -83,108 +103,6 @@ while (have_posts()) : the_post(); ?>
             <div class="blue-block__item blue-block__item--second">Travel blue offers products of the highest quality. Should any defect appear within 24 months from date purchase (batteries - 12 months from date of purchase) please return the product with proof of purchase to Travel Blues and we will repair or replace it free of charge. This worldwide guarantee does not affect your statutory rights.</div>
         </div>
     </section>
-
-    <!-- <section class="home-boxes-first-row boxes-row">
-        <? if (have_rows('first_row_boxes')) :
-            while (have_rows('first_row_boxes')) : the_row();
-                $link = get_sub_field('link');
-                $link_url = get_sub_field('box_type') == 'product' ? get_permalink(get_sub_field('product')) : $link['url'];
-        ?>
-                <div class="boxes-row__item boxes-row__item--<?= get_sub_field('box_type'); ?>">
-                    <a href="<?= $link_url; ?>">
-                        <img src="<? the_sub_field('image'); ?>" class="boxes-row__image">
-
-                        <? if (get_sub_field('box_type') == 'product') :
-                            $_product = wc_get_product(get_sub_field('product'));
-                        ?>
-                            <div class="boxes-row__description">
-                                <div class="ak-product__price"><?= $_product->get_price_html(); ?></div>
-                                <p class="title"><?= $_product->get_title(); ?></p>
-                            </div>
-                        <? else : ?>
-                            <div class="boxes-row__description">
-                                <p class="title"><? the_sub_field('title'); ?></p>
-                                <p class="boxes-row__item-link"><?= $link['title'] ?></p>
-                            </div>
-                        <? endif; ?>
-                    </a>
-                </div>
-        <? endwhile;
-        endif; ?>
-    </section>
-
-    <section class="home-second-slider fullwidth-slider">
-        <div class="swiper-wrapper">
-            <? if (have_rows('second_slider')) :
-                while (have_rows('second_slider')) : the_row(); ?>
-                    <div class="swiper-slide fullwidth-slider__item">
-                        <? $link = get_sub_field('link'); ?>
-                        <a href="<?= $link['url']; ?>">
-                            <img src="<? the_sub_field('image'); ?>" class="fullwidth-slider__image">
-
-                            <div class="fullwidth-slider__item-description">
-                                <? the_sub_field('description'); ?>
-
-                                <p class="fullwidth-slider__item-link"><?= $link['title']; ?></p>
-                            </div>
-                        </a>
-                    </div>
-            <? endwhile;
-            endif; ?>
-        </div>
-        <div class="fullwidth-slider__button-prev"></div>
-        <div class="fullwidth-slider__button-next"></div>
-        <div class="swiper-pagination fullwidth-slider__pagination"></div>
-    </section>
-
-    <section class="home-boxes-second-row boxes-row">
-        <? if (have_rows('second_row_boxes')) :
-            while (have_rows('second_row_boxes')) : the_row();
-                $link = get_sub_field('link');
-                $link_url = get_sub_field('box_type') == 'product' ? get_permalink(get_sub_field('product')) : $link['url'];
-        ?>
-                <div class="boxes-row__item boxes-row__item--<?= get_sub_field('box_type'); ?>">
-                    <a href="<?= $link_url; ?>">
-                        <img src="<? the_sub_field('image'); ?>" class="boxes-row__image">
-
-                        <? if (get_sub_field('box_type') == 'product') :
-                            $_product = wc_get_product(get_sub_field('product'));
-                        ?>
-                            <div class="boxes-row__description">
-                                <div class="ak-product__price"><?= $_product->get_price_html(); ?></div>
-                                <p class="title"><?= $_product->get_title(); ?></p>
-                            </div>
-                        <? else : ?>
-                            <div class="boxes-row__description">
-                                <p class="title"><? the_sub_field('title'); ?></p>
-                                <p class="boxes-row__item-link"><?= $link['title'] ?></p>
-                            </div>
-                        <? endif; ?>
-                    </a>
-                </div>
-        <? endwhile;
-        endif; ?>
-    </section>
-
-    <section class="home-products-slider products-slider">
-        <?
-        $featured_products = get_field('products_slider');
-        if ($featured_products) : ?>
-            <div class="swiper-wrapper">
-                <?php foreach ($featured_products as $post) :
-
-                    setup_postdata($post); ?>
-                    <div class="swiper-slide products-slider__item">
-                        <? wc_get_template_part('content', 'product'); ?>
-                    </div>
-                <? endforeach; ?>
-            </div>
-        <? endif; ?>
-        <div class="products-slider__button-prev"></div>
-        <div class="products-slider__button-next"></div>
-    </section>
-
-    <div class="sygnet-logo-banner"></div> -->
 <?php
 endwhile;
 get_footer();
