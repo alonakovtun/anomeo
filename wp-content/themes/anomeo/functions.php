@@ -174,4 +174,10 @@ function add_my_currency_symbol( $currency_symbol, $currency ) {
 
 
 //new
+if ( ! function_exists( 'yith_wcwl_custom_remove_from_wishlist_label' ) ) {
+	function yith_wcwl_custom_remove_from_wishlist_label( $label ) {
+		return ' ';
+	}
+	add_filter( 'yith_wcwl_remove_from_wishlist_label', 'yith_wcwl_custom_remove_from_wishlist_label' );
+}
 

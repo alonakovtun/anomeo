@@ -70,6 +70,22 @@ function initHomePageSliders() {
             },
         },
     });
+
+    const homePopularProductsSlider = new Swiper(".popular-product", {
+        slidesPerView: 'auto',
+        spaceBetween: 0,
+        allowTouchMove: true,
+        speed: 600,
+        navigation: {
+            nextEl: ".popular-products-slider__button-next",
+            prevEl: ".popular-products-slider__button-prev",
+        },
+        breakpoints: {
+            576: {
+                slidesPerView: 2,
+            },
+        },
+    });
 }
 
 function initSygnetLogoScroll() {

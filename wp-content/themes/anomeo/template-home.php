@@ -67,12 +67,19 @@ while (have_posts()) : the_post(); ?>
                     <a href="/shop/"><? _e('ALL PRODUCTS', 'anomeo'); ?></a>
                 </div>
             </div>
-
-
+            <div class="bottom">
+                    <div class="popular-products-slider__button-prev"></div>
+                    <div class="popular-products-slider__button-next"> 
+                        <img src="/wp-content/themes/anomeo/assets/img/Arrow_FaQ-06.svg" alt=""> 
+                        <p>Next products</p> 
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
         </div>
 
         <div class="second-block">
             <? include get_template_directory() . '/template-parts/popular-product.php'; ?>
+
         </div>
 
     </section>

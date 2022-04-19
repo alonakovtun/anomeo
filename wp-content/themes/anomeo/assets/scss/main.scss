@@ -197,32 +197,40 @@
 
             &-wishlist {
                 background-image: url(../img/Wishlist-04.svg);
+                width: 19px;
+                height: 17px;
             }
 
             &-search {
                 background-image: url(../img/Search-05.svg);
+                width: 19px;
+                height: 19px;
             }
 
             &-account {
                 background-image: url(../img/Account-03.svg);
+                width: 17px;
+                height: 17px;
             }
 
             &-cart {
                 background-image: url(../img/Card-02.svg);
+                width: 17px;
+                height: 23px;
             }
 
             &-instagram {
                 background-image: url(../img/FB_IG_footer_desktop-11.svg);
+                width: 17px;
+                height: 17px;
             }
 
             &-facebook {
                 background-image: url(../img/FB_IG_footer_desktop-12.svg);
+                width: 17px;
+                height: 17px;
             }
 
-            @include media-breakpoint-up(xl) {
-                width: 20px;
-                height: 20px;
-            }
         }
     }
 
@@ -1520,7 +1528,7 @@
         height: 10px; 
         bottom: 40px;
         right: 0;
-        left: 94%;;
+        left: auto;;
         width: auto;
         transform: translateX(-50%);
 
@@ -6126,7 +6134,12 @@
     padding-right: 0;
 
     .first-block {
-        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        width: 20%;
+        margin-right: 281px;
 
         .top {
             .title {
@@ -6148,9 +6161,60 @@
                 }
             }
         }
+
+        .bottom{
+            .popular-products-slider__button-next{
+                display: flex;
+                cursor: pointer;
+                p{
+                    color: #138796;
+                    font-size: 20px;
+                    font-family: 'Din Pro Light';
+                    margin-bottom: 0;
+                }
+
+                img{
+                    width: 30px;
+                    height: 19px;
+                    margin-right: 13px;
+                }
+                
+            }
+        }
+    }
+}
+
+.popular-products{
+    .swiper-slide{
+        width: 350px!important;
+        margin: 0 38px;
     }
 
-    .second-block {
-        width: 70%;
+    .add_to_wishlist, .delete_item{
+        position: absolute;
+        right: 4%;
+        top: 32px;
+        img{
+            width: 19px;
+            height: 17px;
+        }
     }
+
+    .popular__slider-product-bottom{
+        width: 55%;
+        .slider-product__name{
+            color: #6C6D6E;
+            font-size: 20px;
+            font-family: 'Din Pro Light';
+            margin-bottom: 17px;
+        }
+    
+        .slider-product__price{
+            color: #128796;
+            font-size: 20px;
+            font-family: 'Din Pro';
+        }
+    }
+
+    
 }

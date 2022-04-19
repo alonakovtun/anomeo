@@ -1,11 +1,11 @@
 <?php
 $items = get_field('popular_product_item');
 if ($items) : ?>
-    <section class="related related_two">
+    <section class="popular-products">
 
-        <div class="swiper-container">
+        <div class="swiper-container popular-product">
             <div class="swiper-wrapper">
-            
+
                 <?php foreach ($items as $item) :
                     $permalink = get_permalink($item->ID);
                     $id = wc_get_product($item->ID);
@@ -14,9 +14,9 @@ if ($items) : ?>
                     $title = $item->post_title;
                 ?>
 
-                   
 
-<div class="swiper-slide">
+
+                    <div class="swiper-slide">
                         <div data-prd-id="<?= $item->ID ?>" class="slider-product">
                             <?php echo do_shortcode("[yith_wcwl_add_to_wishlist product_id=" .  $item->ID . "]") ?>
                             <a href="<?= $permalink; ?>" class="slider-product__image">
@@ -29,21 +29,20 @@ if ($items) : ?>
                                     <? } ?>
                                 </div>
                             </a>
-                            <div class="slider-product__bottom bestsellery__slider-product-bottom">
-                                <a href="<?= $permalink; ?>" class="slider-product__name "><?= $title;  ?></a>
+                            <div class="slider-product__bottom popular__slider-product-bottom"><br><br>
+                                <a href="<?= $permalink; ?>" class="slider-product__name "><?= $title;  ?></a> <br><br>
                                 <a href="<?= $permalink; ?>" class="slider-product__price">
                                     <span class="price"><?php echo $price; ?> Eur</span>
                                 </a>
                             </div>
                         </div>
-                        </div>
-                    <?php endforeach; ?>
-                    
-                    <div class="swiper-button-prev left-arrow-black"></div>
-                    <div class="swiper-button-next right-arrow-black"></div>
-                    <div class="swiper-pagination"></div>
+                    </div>
+                <?php endforeach; ?>
+
 
             </div>
+           
+
         </div>
     </section>
 <?php endif; ?>
