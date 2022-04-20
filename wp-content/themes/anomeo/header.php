@@ -76,7 +76,7 @@
 							<a href="<?= get_permalink(get_option('woocommerce_myaccount_page_id')); ?>"><span class="icon icon-account"></span></a>
 							<p class="text"><? _e('ACCOUNT', 'anomeo'); ?></p>
 						</li>
-						<li class="menu-item icon-menu-item">
+						<li class="menu-item icon-menu-item cart-item">
 							<?= get_desktop_cart_icon(); ?>
 							<p class="text"><? _e('Bag', 'anomeo'); ?></p>
 

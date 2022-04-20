@@ -240,6 +240,8 @@
                 text-align: center;
                 font-size: 13px;
                 line-height: 2.3;
+                position: absolute;
+                top: 37%;
             }
 
             &-instagram {
@@ -336,10 +338,6 @@
 
         li:not(:first-of-type) {
             margin-left: 35px;
-
-            @include media-breakpoint-up(xl) {
-                margin-left: 60px;
-            }
         }
     }
 
@@ -1985,8 +1983,16 @@
 .desktop-menu-btn{
     p{
         position: absolute;
-        top: 48%;
+        top: 2px;
         font-size: 11px;
+        left: 5px;
+    }
+}
+
+.icon-menu-item.cart-item{
+    .text{
+        position: absolute;
+        bottom: 0;
     }
 }
 
