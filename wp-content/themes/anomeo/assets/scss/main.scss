@@ -602,10 +602,10 @@
             &__header {
                 display: flex;
                 align-items: center;
-                justify-content: flex-start;
+                justify-content: space-between;
                 height: calc(var(--ak-header-height) + 1px);
 
-                padding: 0 var(--ak-main-spacing);
+                padding: 0 30px;
 
                 font-size: 16px;
                 line-height: 1;
@@ -614,12 +614,19 @@
                     font-size: 20px;
                 }
 
-                p {
+                .count {
                     margin: 0;
+                    color: #128793;
+                    font-size: 16px;
+                    font-family: "Din Pro Bold";
                 }
 
                 .cart-close-btn {
                     cursor: pointer;
+                    color: #6C6D6E;
+                    font-family: 'Din Pro Light';
+                    font-size: 16px;
+                    text-transform: none;
                 }
             }
 
@@ -627,16 +634,8 @@
                 display: flex;
                 flex-direction: column;
                 max-width: 100%;
-                height: calc(100vh - (var(--ak-header-height) * 2 + 100px));
+                height: calc(100vh - (var(--ak-header-height) * 2 + 75px));
                 overflow: auto;
-
-                @include media-breakpoint-up(sm) {
-                    height: calc(100vh - (var(--ak-header-height) * 2 + 100px));
-                }
-
-                @include media-breakpoint-up(xl) {
-                    height: calc(100vh - (var(--ak-header-height) * 2 + 150px));
-                }
 
                 &::-webkit-scrollbar-track {
                     box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
@@ -656,16 +655,16 @@
             &__product-item {
                 position: relative;
                 display: flex;
-                flex-direction: column;
 
                 width: 100%;
                 max-width: 100%;
-                padding: var(--ak-main-spacing);
+                padding: 0 30px;
+                margin-bottom: 15px;
 
                 img {
                     width: 100%;
-                    height: auto;
-                    max-width: 65%;
+                   height: 230px;
+                    max-width: 175px;
                     margin: 0 auto;
                     object-fit: cover;
                 }
@@ -685,28 +684,63 @@
                     display: flex;
                     flex-direction: column;
                     margin-bottom: 30px;
+                    margin-left: 25px;
 
-                    @include media-breakpoint-up(xl) {
-                        margin-bottom: 40px;
+                    .top{
+                        display: flex;
+                        .title{
+                            font-size: 16px;
+                            font-family: 'Din Pro Light';
+                            color: #6C6D6E;
+                            text-transform: none;
+
+                            width: 70%;
+                        }
+
+                        .price{
+                            font-size: 16px;
+                            font-family: 'Din Pro';
+                            color: #128796;
+                            text-transform: none;
+
+                            width: 30%;
+                            text-align: end;
+                        }
                     }
+
+                    .remove_from_cart_button{
+                        text-transform: none;
+                        margin-top: 23px;
+
+                        font-size: 14px;
+                        color: #128793;
+                        font-family: 'Din Pro Light';
+                    }
+
+                    
+
                 }
 
                 .product-item-controls {
                     display: flex;
                     justify-content: space-between;
 
-                    margin-top: 30px;
-
-                    @include media-breakpoint-up(xl) {
-                        margin-top: 40px;
-                    }
+                    margin-top: 23px;
 
                     .qty-buttons {
+                        display: flex;
+                        p{
+                            color: #6C6D6E;
+                            font-size: 16px;
+                            text-transform: none;
+                            font-family: "Din Pro Light";
+                        }
                         .cart-item-qty-btn {
-                            color: #000000;
+                            color: #6C6D6E;
                             cursor: pointer;
+                            font-family: "Din Pro Light";
 
-                            font-size: 20px;
+                            font-size: 16px;
                             font-weight: 100;
                             line-height: 1;
                         }
@@ -721,45 +755,46 @@
                     }
                 }
 
-                .remove_from_cart_button {
-                    position: absolute;
-                    right: var(--ak-main-spacing);
-                    top: var(--ak-main-spacing);
+               .yith-wcwl-add-to-wishlist{
+                   img{
+                       width: 6px;
+                       height: 6px;
+                   }
+               }
 
-                    font-size: 16px;
-                    line-height: 1;
+               .product-img{
+                   position: relative;
+                   
+                   .yith-wcwl-add-to-wishlist{
+                       margin-top: 0;
 
-                    @include media-breakpoint-up(xl) {
-                        font-size: 20px;
-                    }
-                }
+                       .delete_item, .add_to_wishlist{
+                        position: absolute;
+                        width: 6px;
+                        right: 13px;
+                        top: 5px;
+                       }
+                   }
+               }
             }
 
             &__checkout-btn {
                 display: flex;
                 flex-direction: column;
-                position: fixed;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                height: 100px;
+                width: 233px;
+                height: 46px;
                 z-index: 2;
 
                 color: #ffffff;
                 background-color: var(--ak-accent-color);
                 border: 1px solid var(--ak-accent-color);
+                border-radius: 22px;
 
                 text-align: center;
                 align-items: center;
                 justify-content: center;
                 text-transform: uppercase;
                 font-size: 18px;
-
-                @include media-breakpoint-up(xl) {
-                    height: 150px;
-
-                    font-size: 25px;
-                }
 
                 transition: all 250ms ease;
 
@@ -778,6 +813,8 @@
                     color: var(--ak-accent-color);
                 }
             }
+
+            
         }
     }
 
@@ -6214,4 +6251,26 @@
     }
 
     
+}
+
+.site-cart{
+
+    .total-row{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 22px;
+
+        color: #128796;
+        font-size: 18px;
+        text-transform: none;
+    }
+    .total{
+        width: 233px;
+        display: flex;
+        flex-direction: column;
+
+        position: absolute;
+        bottom: 40px;
+        right: 30px;
+    }
 }

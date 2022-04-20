@@ -26,8 +26,8 @@ do_action('woocommerce_before_mini_cart'); ?>
 
 <div class="site-cart">
     <div class="site-cart__header">
-        <a id="cart-popup-toggle" class="cart-close-btn"><? _e('Close', 'anomeo'); ?></a>
-        <p><? WC()->cart->cart_contents_count ?></p>
+        <a id="cart-popup-toggle" class="cart-close-btn"><? _e('Close Bag', 'anomeo'); ?></a>
+        <p class="count"><?php echo WC()->cart->get_cart_contents_count() ?></p>
     </div>
 
     <?php if (!WC()->cart->is_empty()) : ?>
@@ -47,35 +47,48 @@ do_action('woocommerce_before_mini_cart'); ?>
                     $product_permalink = apply_filters('woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink($cart_item) : '', $cart_item, $cart_item_key);
             ?>
                     <li class="site-cart__product-item">
-                        <a href="<?= esc_url($product_permalink); ?>">
+                        <a class="product-item" href="<?= esc_url($product_permalink); ?>">
+                        <div class="product-img">
+                        <?php echo do_shortcode("[yith_wcwl_add_to_wishlist product_id=" .  $product_id . "]") ?>
+
+<?= $thumbnail; ?>
+                        </div>
+                        
                             <div class="product-item-description">
-                                <p class="price"><?= $product_price; ?></p>
-                                <p class="title"><?= $product_name; ?></p>
-                            </div>
-                            <?= $thumbnail; ?>
-                            <div class="product-item-controls">
-                                <p class="product-qty"><? _e('Quantity', 'anomeo'); ?>: <?= $cart_item['quantity']; ?></p>
-                                <div class="qty-buttons">
-                                    <button data-cart_item_qty="<?= $cart_item['quantity']; ?>" data-cart_item_key="<?= $cart_item_key; ?>" class="cart-item-qty-btn minus-btn">-</button>
-                                    <button data-cart_item_qty="<?= $cart_item['quantity']; ?>" data-cart_item_key="<?= $cart_item_key; ?>" class="cart-item-qty-btn plus-btn">+</button>
+                                <div class="top">
+                                    <p class="title"><?= $product_name; ?></p>
+                                    <p class="price"><?= $product_price; ?></p>
                                 </div>
+                               
+                                <div class="product-item-controls">
+                                    
+                                    <div class="qty-buttons">
+                                        <p><? _e('Amount', 'anomeo'); ?>:</p>
+                                        <button data-cart_item_qty="<?= $cart_item['quantity']; ?>" data-cart_item_key="<?= $cart_item_key; ?>" class="cart-item-qty-btn minus-btn">-</button>
+                                        <p class="product-qty"> <?= $cart_item['quantity']; ?></p>
+                                        <button data-cart_item_qty="<?= $cart_item['quantity']; ?>" data-cart_item_key="<?= $cart_item_key; ?>" class="cart-item-qty-btn plus-btn">+</button>
+                                    </div>
+                                </div>
+                                <?php
+                                echo apply_filters( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+                                    'woocommerce_cart_item_remove_link',
+                                    sprintf(
+                                        '<a href="%s" class="remove remove_from_cart_button" aria-label="%s" data-product_id="%s" data-cart_item_key="%s" data-product_sku="%s">%s</a>',
+                                        esc_url(wc_get_cart_remove_url($cart_item_key)),
+                                        esc_attr__('Remove this item', 'woocommerce'),
+                                        esc_attr($product_id),
+                                        esc_attr($cart_item_key),
+                                        esc_attr($_product->get_sku()),
+                                        __('Remove', 'anomeo')
+                                    ),
+                                    $cart_item_key
+                                );
+                                ?>
                             </div>
+
+
                         </a>
-                        <?php
-                        echo apply_filters( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-                            'woocommerce_cart_item_remove_link',
-                            sprintf(
-                                '<a href="%s" class="remove remove_from_cart_button" aria-label="%s" data-product_id="%s" data-cart_item_key="%s" data-product_sku="%s">%s</a>',
-                                esc_url(wc_get_cart_remove_url($cart_item_key)),
-                                esc_attr__('Remove this item', 'woocommerce'),
-                                esc_attr($product_id),
-                                esc_attr($cart_item_key),
-                                esc_attr($_product->get_sku()),
-                                __('Remove', 'anomeo')
-                            ),
-                            $cart_item_key
-                        );
-                        ?>
+
                     </li>
             <?php
                 }
@@ -85,8 +98,8 @@ do_action('woocommerce_before_mini_cart'); ?>
             ?>
         </ul>
 
-        <a class="site-cart__checkout-btn" href="<?= wc_get_checkout_url(); ?>">
-            <p class="total-row">
+        <div class="total">
+        <p class="total-row">
                 <?php
                 /**
                  * Hook: woocommerce_widget_shopping_cart_total.
@@ -96,11 +109,14 @@ do_action('woocommerce_before_mini_cart'); ?>
                 do_action('woocommerce_widget_shopping_cart_total');
                 ?>
             </p>
-
+            <a class="site-cart__checkout-btn" href="<?= wc_get_checkout_url(); ?>">
             <p class="checkout-text-row">
-                <? _e('Go to cart', 'anomeo'); ?>
+                <? _e('Checkout', 'anomeo'); ?>
             </p>
-        </a>
+            </a>
+        </div>
+           
+       
 
     <?php endif; ?>
 
