@@ -58,7 +58,7 @@ function get_mobile_cart_icon()
 function get_desktop_cart_icon()
 {
     if (WC()->cart->is_empty()) {
-        return '<a class="desktop-menu-btn" id="cart-popup-toggle" href="">' . __('Cart', 'anka-krystyniak') . '</a>';
+        return '<a class="desktop-menu-btn" id="cart-popup-toggle" href="">' . __('Cart', 'anka-krystyniak') . '</a>zz';
     } else {
         return '<a class="desktop-menu-btn" id="cart-popup-toggle" href="">' . __('Cart', 'anka-krystyniak') . ' (' . WC()->cart->cart_contents_count . ')</a>';
     }

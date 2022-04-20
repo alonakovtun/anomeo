@@ -181,11 +181,31 @@
     }
 
     .icon-menu-item {
+        &:hover{
+            .text{
+                opacity: 1;
+                visibility: visible;
+            }
+        }
         a {
             display: flex;
             align-items: center;
             align-content: center;
             height: 100%;
+            justify-content: center;
+
+            
+        }
+
+        .text{
+            color: #138997;
+            font-size: 12px;
+            text-transform: uppercase;
+
+            opacity: 0;
+            visibility: hidden;
+
+            transition: all 0.4s;
         }
 
         .icon {
@@ -1960,6 +1980,14 @@
     }
 
     .home-products-slider {}
+}
+
+.desktop-menu-btn{
+    p{
+        position: absolute;
+        top: 48%;
+        font-size: 11px;
+    }
 }
 
 // products grid

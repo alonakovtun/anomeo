@@ -63,10 +63,25 @@
 
 
 					<ul class="site-header__right-menu">
-						<li class="menu-item icon-menu-item"><a href="<?= wc_get_account_endpoint_url('wishlist'); ?>"><span class="icon icon-wishlist"></span></a></li>
-						<li class="menu-item icon-menu-item"><a id="search-toggle" href=""><span class="icon icon-search "></span></a></li>
-						<li class="menu-item icon-menu-item"><a href="<?= get_permalink(get_option('woocommerce_myaccount_page_id')); ?>"><span class="icon icon-account"></span></a></li>
-						<li class="menu-item icon-menu-item"><?= get_desktop_cart_icon(); ?></li>
+						<li class="menu-item icon-menu-item">
+							<a href="<?= wc_get_account_endpoint_url('wishlist'); ?>"><span class="icon icon-wishlist"></span></a>
+							<p class="text"><? _e('Wishlist', 'anomeo'); ?></p>
+						
+						</li>
+						<li class="menu-item icon-menu-item">
+							<a id="search-toggle" href=""><span class="icon icon-search "></span></a>
+							<p class="text"><? _e('SEARCH', 'anomeo'); ?></p>
+						</li>
+						<li class="menu-item icon-menu-item">
+							<a href="<?= get_permalink(get_option('woocommerce_myaccount_page_id')); ?>"><span class="icon icon-account"></span></a>
+							<p class="text"><? _e('ACCOUNT', 'anomeo'); ?></p>
+						</li>
+						<li class="menu-item icon-menu-item">
+							<?= get_desktop_cart_icon(); ?>
+							<p class="text"><? _e('Bag', 'anomeo'); ?></p>
+
+						</li>
+
 					</ul>
 
 					<ul class="site-header__mobile-col">
