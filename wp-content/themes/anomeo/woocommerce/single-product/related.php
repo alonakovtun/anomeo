@@ -20,46 +20,4 @@ if (!defined('ABSPATH')) {
 	exit;
 }
 
-if ($related_products) : ?>
-	<div class="ak-product__related-products">
-		<div class="title-row">
-			<p class="title"><? _e('Related products', 'anomeo'); ?></p>
-		</div>
 
-		<?php ak_product_loop_start(4); ?>
-
-		<?php foreach ($related_products as $related_product) : ?>
-
-			<?php
-			$post_object = get_post($related_product->get_id());
-
-			setup_postdata($GLOBALS['post'] = &$post_object);
-
-			wc_get_template_part('content', 'product');
-			?>
-
-		<?php endforeach; ?>
-
-		<?php ak_product_loop_end(); ?>
-
-		<div class="mobile-products-slider">
-			<div class="swiper-wrapper">
-				<?php foreach ($related_products as $related_product) : ?>
-
-					<?php
-					$post_object = get_post($related_product->get_id());
-
-					setup_postdata($GLOBALS['post'] = &$post_object); ?>
-
-					<div class="swiper-slide mobile-products-slider__item">
-						<? wc_get_template_part('content', 'product'); ?>
-					</div>
-
-				<?php endforeach; ?>
-			</div>
-		</div>
-	</div>
-<?php
-endif;
-
-wp_reset_postdata();
