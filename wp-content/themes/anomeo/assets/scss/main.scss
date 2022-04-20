@@ -289,6 +289,11 @@
         .logo {
             height: 38px;
             margin-bottom: 15px;
+
+            @include media-breakpoint-down(sm) {
+                width: 134px;
+                height: 36px;
+            }
         }
 
         .big-logo {
@@ -1992,7 +1997,7 @@
 .icon-menu-item.cart-item{
     .text{
         position: absolute;
-        bottom: 0;
+        bottom: 5px;
     }
 }
 
@@ -6306,5 +6311,39 @@
         position: absolute;
         bottom: 40px;
         right: 30px;
+    }
+}
+
+.thank-you{
+    margin: 22px 38px 470px;
+    .title{
+        color: #128796;
+        font-size: 36px;
+        font-family: "Din Pro Bold";
+        margin: 40px 0;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 28px;
+            margin: 0 0 20px;
+
+        }
+
+    }
+
+    .item{
+        display: flex;
+        flex-direction: column;
+
+        .item-title{
+            color: #128796;
+            font-size: 20px;
+            font-family: "Din Pro Bold";
+        }
+
+        .item-content{
+            color: #F89D3F;
+            font-size: 20px;
+            font-family: "Din Pro Light";
+        }
     }
 }

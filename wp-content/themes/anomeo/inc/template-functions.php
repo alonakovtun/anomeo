@@ -58,9 +58,9 @@ function get_mobile_cart_icon()
 function get_desktop_cart_icon()
 {
     if (WC()->cart->is_empty()) {
-        return '<a class="desktop-menu-btn icon icon-cart" id="cart-popup-toggle " href=""></a>';
+        return '<a class="desktop-menu-btn icon icon-cart" id="cart-popup-toggle" href="">' . __('', 'anomeo') . '</a>';
     } else {
-        return '<a class="desktop-menu-btn icon icon-cart" id="cart-popup-toggle" href=""><p>' . WC()->cart->cart_contents_count . '</p></a>';
+        return '<a class="desktop-menu-btn icon icon-cart" id="cart-popup-toggle" href="">' . __('', 'anomeo') . WC()->cart->cart_contents_count . '</a>';
     }
 }
 

@@ -19,7 +19,7 @@
 defined('ABSPATH') || exit;
 ?>
 
-<div class="woocommerce-order">
+<div class="woocommerce-order thank-you">
 
 	<?php
 	if ($order) :
@@ -40,45 +40,45 @@ defined('ABSPATH') || exit;
 
 		<?php else : ?>
 
-			<p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received"><?php echo apply_filters('woocommerce_thankyou_order_received_text', esc_html__('Thank you. Your order has been received.', 'woocommerce'), $order); ?></p>
+			<p class="title woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received"><?php echo apply_filters('woocommerce_thankyou_order_received_text', esc_html__('Thank you for Your order.', 'woocommerce'), $order); ?></p>
 
 
 			<div class="woocommerce-order__container">
 				<div class="order-details-section woocommerce-order__section">
-					<p>
-						<span><?php esc_html_e('Order number:', 'woocommerce'); ?></span>
-						#<?php echo $order->get_order_number(); ?>
+					<p class="item">
+						<span class="item-title"><?php esc_html_e('Order number:', 'woocommerce'); ?></span>
+						<span class="item-content">#<?php echo $order->get_order_number(); ?></span>
 					</p>
 				
 					<? foreach ($order->get_items() as $item_id => $item) : ?>
-						<p>
-							<span><?php esc_html_e('Product', 'woocommerce'); ?>:</span>
-							<?php echo $item->get_name(); ?>
+						<p class="item">
+							<span class="item-title"><?php esc_html_e('Product', 'woocommerce'); ?>:</span>
+							<span class="item-content"><?php echo $item->get_name(); ?></span>
 						</p>
 					<? endforeach; ?>
 					
-					<p>
-						<span><?php esc_html_e('Date:', 'woocommerce'); ?></span>
-						<?php echo wc_format_datetime($order->get_date_created()); ?>
+					<p class="item">
+						<span class="item-title"><?php esc_html_e('Date:', 'woocommerce'); ?></span>
+						<span class="item-content"><?php echo wc_format_datetime($order->get_date_created()); ?></span>
 					</p>
-					<p>
-						<span><?php esc_html_e('Total:', 'woocommerce'); ?></span>
-						<?php echo $order->get_formatted_order_total(); ?>
+					<p class="item">
+						<span class="item-title"><?php esc_html_e('Total:', 'woocommerce'); ?></span>
+						<span class="item-content"><?php echo $order->get_formatted_order_total(); ?></span>
 					</p>
-					<p>
-						<span><?php esc_html_e('Payment method:', 'woocommerce'); ?></span>
-						<?php echo wp_kses_post($order->get_payment_method_title()); ?>
+					<p class="item">
+						<span class="item-title"><?php esc_html_e('Payment method:', 'woocommerce'); ?></span>
+					<span class="item-content"><?php echo wp_kses_post($order->get_payment_method_title()); ?></span>
 					</p>
 					<? if ($order->get_shipping_method()) : ?>
-						<p>
-							<span><?php esc_html_e('Shipping', 'woocommerce'); ?>:</span>
-							<?php echo wp_kses_post($order->get_shipping_method()); ?>
+						<p class="item">
+							<span class="item-title"><?php esc_html_e('Shipping', 'woocommerce'); ?>:</span>
+							<span class="item-content"><?php echo wp_kses_post($order->get_shipping_method()); ?></span>
 						</p>
 					<? endif; ?>
 
 				</div>
 
-				<div class="woocommerce-order-overview__billing-address woocommerce-order__section">
+				<!-- <div class="woocommerce-order-overview__billing-address woocommerce-order__section">
 					<div class="title"><?php esc_html_e('Billing address', 'woocommerce'); ?></div>
 					<div class="value">
 						<?php echo wp_kses_post($order->get_formatted_billing_address(esc_html__('N/A', 'woocommerce'))); ?>
@@ -101,7 +101,7 @@ defined('ABSPATH') || exit;
 							<p class="woocommerce-customer-details--phone"><?php echo esc_html($order->get_shipping_phone()); ?></p>
 						<?php endif; ?>
 					</div>
-				</div>
+				</div> -->
 			</div>
 
 		<?php endif; ?>
