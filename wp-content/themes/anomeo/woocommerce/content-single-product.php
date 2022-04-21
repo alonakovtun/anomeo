@@ -38,7 +38,7 @@ if (post_password_required()) {
 	</div>
 	<div class="ak-page__title-row">
 		<h1 class="title"><?= get_the_title(); ?></h1>
-		
+
 	</div>
 
 	<div class="ak-product__main-info">
@@ -72,26 +72,63 @@ if (post_password_required()) {
 
 		<div class="ak-product__main-info-col">
 			<div class="ak-product__description">
-				<p class="title"><? the_title(); ?></p> 
+				<p class="title"><? the_title(); ?></p>
 				<p class="ak-product__price"><?= $product->get_price_html(); ?>&nbsp;</p>
-				<? the_content(); ?> 
+				<? the_content(); ?>
+
+				<div class="product-color">
+					<p class="color-title"><? _e('Colour', 'anomeo'); ?></p>
+					<?php if (have_rows('color_links')) : ?>
+						<?php while (have_rows('color_links')) : the_row(); ?>
+							<?php 
+							$post_object = get_sub_field('color_product_link'); 
+							$color = get_sub_field('color'); 
+							$color_name = get_sub_field('color_name'); 
+							$current_color = get_sub_field('current_color'); 
+							?>
+							<?php if ($post_object) : ?>
+								<?php // override $post
+								$post = $post_object;
+								setup_postdata($post);
+								?>
+								<? if($current_color): ?>
+									<a class="color-block"  href="<?php the_permalink(); ?>" >
+									<div class="color-item" style="background-color:<?php echo $color ?> "></div>
+									</a>
+								<? else: ?>
+									<a class="color-block not_active"  href="<?php the_permalink(); ?>">
+									<div class="not-current-color color-item"  style="background-color:<?php echo $color ?> "></div>
+									</a>
+									<? endif; ?>
+								<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly 
+								?>
+							<?php endif; ?>
+							<? if($current_color): ?>
+								<p class="color-name"><? echo $color_name ?></p>
+								<? endif ?>
+						<?php endwhile; ?>
+					<?php endif; ?>
+				</div>
+
 			</div>
 			<!-- <div class="ak-product__description">
 			</div> -->
 
 			<div class="ak-product__add-to-cart">
 				<? woocommerce_template_single_add_to_cart(); ?>
-				<?= get_wishlist_button(); ?>
+				<!-- <?= get_wishlist_button(); ?> -->
+				<?php echo do_shortcode("[yith_wcwl_add_to_wishlist]") ?>
+
 			</div>
-			
+
 
 
 			<div class="ak-product__additional-info">
-				<? if (have_rows('product_additional_description_items', 'option')) : ?>
-					<? while (have_rows('product_additional_description_items', 'option')) : the_row(); ?>
-						<div class="product-info-item" data-title='<? the_sub_field('title'); ?>' data-description=' <? the_sub_field('description'); ?>'>
-							<span class="item-text"><? the_sub_field('title'); ?></span>
-						</div>
+				<? if (have_rows('color_links', 'option')) : ?>
+					<? while (have_rows('color_links', 'option')) : the_row(); ?>
+						<a href="">
+
+						</a>
 					<? endwhile; ?>
 
 					<div class="description-popover">
@@ -106,6 +143,6 @@ if (post_password_required()) {
 	<? woocommerce_output_related_products(); ?>
 </div>
 
-<?php do_action('woocommerce_after_single_product'); 
+<?php do_action('woocommerce_after_single_product');
 
-include get_template_directory() . '/template-parts/related-product.php';?>
+include get_template_directory() . '/template-parts/related-product.php'; ?>

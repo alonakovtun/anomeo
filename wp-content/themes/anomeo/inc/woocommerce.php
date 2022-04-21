@@ -51,6 +51,17 @@ function ak_remove_my_account_links($menu_links)
 }
 
 /**
+ * Change my account menu items
+ */
+add_filter ( 'woocommerce_account_menu_items', 'wptips_customize_account_menu_items' );
+ function wptips_customize_account_menu_items( $menu_items ){
+     
+    // Chnage the Menu Item name text
+    $menu_items['dashboard'] = 'Hello'; 
+    return $menu_items;
+}
+
+/**
  * Change default sort
  */
 add_filter('woocommerce_default_catalog_orderby', 'ak_default_catalog_orderby');
