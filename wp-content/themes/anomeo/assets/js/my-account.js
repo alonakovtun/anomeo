@@ -28,7 +28,7 @@ function showRegisterScripts() {
 
 function initMyAccountPageScripts() {
     initCheckoutLoginFormScripts();
-    // showRegisterScripts();
+    showRegisterScripts();
 }
 
 export { initMyAccountPageScripts };

@@ -19,7 +19,7 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 <div class="woocommerce-billing-fields">
-	<h3 class="ak-checkout-form__section-title"><?php esc_html_e( 'Billing details', 'woocommerce' ); ?></h3>
+	<h3 class="ak-checkout-form__section-title"><?php esc_html_e( 'Delivery details', 'woocommerce' ); ?></h3>
 
 	<?php do_action( 'woocommerce_before_checkout_billing_form', $checkout ); ?>
 

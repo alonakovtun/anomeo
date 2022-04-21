@@ -150,25 +150,17 @@ input{
     &-container--default {
         .select2-selection--single {
             border: 0;
-            border-bottom: 1px solid #b2b2b2;
             border-radius: 0;
 
             height: auto;
 
             .select2-selection__rendered {
-                padding: 20px var(--ak-main-spacing);
+                padding: 0;
 
-                font-size: 14px;
+                font-size: 16px;
                 font-weight: 300;
                 line-height: 1;
-
-                @include media-breakpoint-up(sm) {
-                    font-size: 16px;
-                }
-
-                @include media-breakpoint-up(xl) {
-                    font-size: 20px;
-                }
+                color: #148D9A;
             }
 
             .select2-selection__arrow {

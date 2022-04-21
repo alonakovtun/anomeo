@@ -3876,6 +3876,10 @@
         font-size: 14px;
         color: #148D9A;
         font-family: 'Din Pro Light';
+
+        .register{
+            font-family: 'Din Pro Bold';
+        }
     }
 }
 
@@ -4649,15 +4653,7 @@
         }
     }
 
-    .woocommerce-checkout {
-        &--hidden {
-            visibility: hidden;
-            opacity: 0;
-            height: 1px;
-            overflow: hidden;
-            position: absolute;
-        }
-    }
+    
 
     .woocommerce-billing-fields {
         &__fields-wrapper {
@@ -5292,22 +5288,26 @@
     }
 }
 
+.woocommerce-checkout {
+    &--hidden {
+        visibility: hidden;
+        opacity: 0;
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+    }
+}
+
 .ak-checkout-form {
     &__section-title {
-        text-transform: uppercase;
-        font-size: 18px;
-        font-weight: 300;
+        font-size: 36px;
+        color: #128796;
         line-height: 1;
+        font-family: "Din Pro Light";
 
 
-        padding: 20px var(--ak-main-spacing) 21px;
+        padding: 38px 0 45px;
         margin: 0;
-
-        @include media-breakpoint-up(xl) {
-            font-size: 25px;
-
-            padding: 20px var(--ak-main-spacing) 19px;
-        }
 
         label {
             display: block;
@@ -5388,7 +5388,7 @@
 
     &__col {
         @include media-breakpoint-up(sm) {
-            width: 50%;
+          
         }
 
         &--left {
@@ -5397,10 +5397,19 @@
             .woocommerce-checkout-review-order-table .products-list {
                 display: none;
             }
+
+            width: 40%;
+
+            border-right: 1px solid #EAEAEA;
+
+            input{
+                width: 70%!important;
+            }
         }
 
         &--right {
-
+            width: 60%;
+            padding-left: var(--ak-main-spacing);
 
             @include media-breakpoint-down(sm) {
                 order: -1;
@@ -6020,6 +6029,7 @@
 
     .col-1 {
         width: 50%;
+        padding-left: var(--ak-main-spacing);
 
         @include media-breakpoint-down(sm) {
             width: 100%;
@@ -6347,3 +6357,100 @@
         }
     }
 }
+.woocommerce-checkout{
+    .r-wrap{
+        padding: 0;
+    }
+
+    .site-header {
+        .r-wrap {
+            padding: 0 var(--ak-main-spacing);
+        }
+
+    }
+} 
+
+.woocommerce-checkout{
+    &.checkout{
+        padding-left: var(--ak-main-spacing);;
+    }
+}
+
+.woocommerce-checkout-review-order{
+    .ak-checkout__product-item{
+        display: flex;
+        margin-bottom: 14px;
+
+        img{
+            width: 175px;
+            height: 231px;
+            object-fit: cover;
+        }
+
+        .description-col{
+            margin-left: 24px;
+
+            .product-title{
+                display: flex;
+
+                .title{
+                    width: 60%;
+
+                    font-size: 16px;
+                    font-family: "Din Pro Light";
+                    color: #6C6D6E;
+
+                    margin-bottom: 0;
+                }
+
+                .price{
+                    width: 40%;
+                    text-align: end;
+
+                    font-size: 16px;
+                    color: #128796;
+                }
+            }
+
+            .qty-buttons{
+                display: flex;
+                align-items: baseline;
+
+                margin-top: 23px;
+                margin-bottom: 30px;
+
+                font-size: 16px;
+                font-family: "Din Pro Light";
+                color: #6C6D6E;
+
+                p{
+                    margin-bottom: 0;
+                }
+
+                button{
+                    color: #6C6D6E;
+                }
+            }
+
+            .remove{
+                font-size: 14px;
+                color: #128796;
+                font-family: "Din Pro Light";
+            }
+        }
+    }
+
+    .yith-wcwl-add-to-wishlist{
+
+        img {
+            width: 6px;
+            height: 6px;
+        }
+
+        .delete_item, .add_to_wishlist{
+            position: absolute;
+            right: 42%;
+        }
+    } 
+}
+

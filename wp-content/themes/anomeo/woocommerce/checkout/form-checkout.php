@@ -69,13 +69,13 @@ if (!is_user_logged_in()) {
 
 		<div class="ak-checkout-form__col ak-checkout-form__col--right">
 			<h3 class="ak-checkout-form__section-title">
-				<? _e('Summary', 'anomeo'); ?>
+				<? _e('Order summary', 'anomeo'); ?>
 			</h3>
 			<div id="order_review" class="woocommerce-checkout-review-order">
 				<?php do_action('woocommerce_checkout_order_review'); ?>
 			</div>
 
-			<div class="woocommerce-additional-fields">
+			<!-- <div class="woocommerce-additional-fields">
 
 				<h3 class="ak-checkout-form__section-title">
 					<? _e('Order notes', 'anomeo'); ?>
@@ -88,7 +88,7 @@ if (!is_user_logged_in()) {
 					<?php endforeach; ?>
 				</div>
 
-			</div>
+			</div> -->
 		</div>
 	</div>
 </form>

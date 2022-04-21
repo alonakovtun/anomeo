@@ -36,6 +36,7 @@ defined('ABSPATH') || exit;
 		?>
 				<div class="ak-checkout__product-item">
 					<a class="product-link" href="<?= esc_url($product_permalink); ?>">
+					<?php echo do_shortcode("[yith_wcwl_add_to_wishlist product_id=" .  $product_id . "]") ?>
 						<?= $thumbnail; ?>
 					</a>
 					<div class="description-col">
@@ -44,14 +45,15 @@ defined('ABSPATH') || exit;
 							<p class="price"><?= $product_price; ?></p>
 						</div>
 						<div class="checkout-product-item-controls">
-							<p class="product-qty"><? _e('Quantity', 'anomeo'); ?>: <?= $cart_item['quantity']; ?></p>
-							<div class="qty-buttons">
-								<button data-cart_item_qty="<?= $cart_item['quantity']; ?>" data-cart_item_key="<?= $cart_item_key; ?>" class="cart-item-qty-btn minus-btn">-</button>
-								<button data-cart_item_qty="<?= $cart_item['quantity']; ?>" data-cart_item_key="<?= $cart_item_key; ?>" class="cart-item-qty-btn plus-btn">+</button>
-							</div>
+						<div class="qty-buttons">
+                                        <p><? _e('Amount', 'anomeo'); ?>:</p>
+                                        <button data-cart_item_qty="<?= $cart_item['quantity']; ?>" data-cart_item_key="<?= $cart_item_key; ?>" class="cart-item-qty-btn minus-btn">-</button>
+                                        <p class="product-qty"> <?= $cart_item['quantity']; ?></p>
+                                        <button data-cart_item_qty="<?= $cart_item['quantity']; ?>" data-cart_item_key="<?= $cart_item_key; ?>" class="cart-item-qty-btn plus-btn">+</button>
+                                    </div>
 						</div>
-					</div>
-					<?
+
+						<?
 						echo apply_filters( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 						'woocommerce_cart_item_remove_link',
 						sprintf(
@@ -66,6 +68,8 @@ defined('ABSPATH') || exit;
 						$cart_item_key
 					);
 					?>
+					</div>
+					
 				</div>
 		<?php
 			}

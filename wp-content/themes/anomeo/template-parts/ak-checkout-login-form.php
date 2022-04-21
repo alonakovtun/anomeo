@@ -8,18 +8,40 @@
 
 ?>
 
-<div class="ak-checkout-login-form">
-    <div class="form-wraper col-1">
-        <h2 class="form-title"><?php esc_html_e('I already have an account', 'anomeo'); ?></h2>
+<div class="ak-page__title-row">
+    <h1 class="title"><?= get_the_title(); ?></h1>
+</div>
 
-        <? get_template_part('template-parts/ak-login-form'); ?>
+<div class="ak-customer-login-form ak-checkout-login-form" id="customer_login">
+    <div class="login-box">
+
+        <div class="form-wraper col-1">
+
+            <div class="page-title__container">
+                <p class="page-title__subtitle "><?php esc_html_e('Login', 'anomeo'); ?></p>
+            </div>
+
+            <? get_template_part('template-parts/checkout-login-form'); ?>
+
+        </div>
+
+        <div class="form-wraper col-2">
+
+            <div class="page-title__container">
+                <p class="page-title__subtitle "><?php esc_html_e('Purchase as a guest', 'anomeo'); ?></p>
+            </div>
+
+            <div class="log-in__input-data">
+                <p class="log-in__right-mess">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                </p>
+            </div>
+
+            <a id="continue-to-checkout-btn" class="woocommerce-button button woocommerce-form-login__submit button__trigger-checkout">
+                <?php esc_html_e('CONTINUE', 'hedo'); ?>
+            </a>
+
+
+        </div>
     </div>
 
-    <div class="form-wraper col-2 ak-form">
-        <h2 class="form-title"><?php esc_html_e('As a guest', 'anomeo'); ?></h2>
-
-        <p class="continue-to-checkout-text"><? _e('You do need to be registered to buy our products', 'anomeo'); ?></p>
-
-        <button id="continue-to-checkout-btn" type="submit" class="button"><?php esc_html_e('Continue', 'anomeo'); ?></button>
-    </div>
 </div>
