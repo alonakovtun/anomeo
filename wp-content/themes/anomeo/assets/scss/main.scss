@@ -3379,6 +3379,14 @@
     }
 }
 
+.single-post {
+    @include media-breakpoint-down(sm) {
+        .site-main {
+            width: fit-content;
+        }
+    }
+}
+
 .post-template-default.single {
     .ak-page__title-row {
         padding-top: 30px;
@@ -3535,7 +3543,7 @@
             }
 
             .text-box {
-                padding: var(--ak-main-spacing);
+                padding: 92px var(--ak-main-spacing);
 
                 font-size: 20px;
 
@@ -3572,20 +3580,39 @@
 
                 &--left {
                     width: 20%;
+                    display: flex;
+                    flex-direction: column;
 
                     @include media-breakpoint-down(sm) {
                         width: 100%;
                         display: flex;
                         justify-content: space-between;
                         flex-direction: row-reverse;
+                        padding: 0 var(--ak-main-spacing) 65px;
+                        align-items: baseline;
                     }
 
-                    a {
+                    .back {
                         color: #138997;
                         font-size: 16px;
                         font-family: "Din Pro Light";
                         text-decoration: none;
+                        cursor: pointer;
                     }
+
+                    .category-name{
+                        margin-top: 38px;
+                        background-color: #F89D3F;
+                        border-radius: 22px;
+                        color: #fff;
+                        padding: 9px 10px 5px;
+                        text-decoration: none;
+                        font-size: 12px;
+                        width: fit-content;
+                    }
+                    
+                    
+                    
                 }
 
                 &--right {
@@ -3593,6 +3620,7 @@
 
                     @include media-breakpoint-down(sm) {
                         width: 100%;
+                        padding-top: 0;
                     }
 
                     a {
@@ -3662,6 +3690,41 @@
     }
 
     .related-posts {
+        &.mobile{
+            display: none;
+            @include media-breakpoint-down(sm) {
+                display: block;
+
+                .section-title{
+                    padding-bottom: 15px;
+                }
+
+                .related-post__button-next{
+                    display: flex;
+                    cursor: pointer;
+
+                    padding-left: var(--ak-main-spacing);
+                    p{
+                        color: #128796;
+                        font-size: 20px;
+                        font-family: 'Din Pro Light';
+                        margin-right: 35px;
+                        margin-bottom: 0;
+                    }
+
+                    img{
+                        width: 30px;
+                        height: 18px;
+                    }
+                }
+            }
+        }
+        &.desktop{
+            @include media-breakpoint-down(sm) {
+                display: none;
+            }
+        }
+
         .section-title {
             display: block;
 
@@ -3670,6 +3733,7 @@
             font-size: 70px;
             font-family: "Din Pro Bold";
             width: 43%;
+            margin-bottom: 0;
 
             @include media-breakpoint-down(sm) {
                 font-size: 50px;

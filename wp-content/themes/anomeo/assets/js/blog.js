@@ -1,4 +1,5 @@
 import { removeEmptyValuesFromObject } from "./utils";
+import Swiper from "swiper/bundle";
 
 const CONFIG = window.js_config;
 
@@ -97,6 +98,16 @@ function toggleLoader(state) {
 
 function initArchivePostsScripts() {
     initBlogPostsPagination();
+
+    const RelatedPostSlider = new Swiper(".related-post", {
+        slidesPerView: 'auto',
+        spaceBetween: 0,
+        allowTouchMove: true,
+        navigation: {
+            nextEl: ".related-post__button-next",
+            prevEl: ".related-post__button-prev",
+        },
+    });
 }
 
 export { initArchivePostsScripts };

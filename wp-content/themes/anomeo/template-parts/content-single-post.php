@@ -19,11 +19,14 @@
     <section class="post-content__section post-content__section--text">
 
         <div class="text-box text-box--left">
-            <a href="/blog/"><? _e('Back to list', 'anomeo'); ?></a>
-            <p>category name</p>
+            <a class="back" onclick="window.history.go(-1); return false;"><? _e('Back to list', 'anomeo'); ?></a>
+            <? $categories = get_the_category();
+            if (!empty($categories)) {
+                echo '<a class="category-name" href="' . esc_url(get_category_link($categories[0]->term_id)) . '">' . esc_html($categories[0]->name) . '</a>';
+            } ?>
         </div>
         <div class="text-box text-box--right">
-            <a class="post-date"><?php the_field('date'); ?></a>
+            <p class="post-date"><?php the_field('date'); ?></p>
             <p class="post-title"><? the_title() ?></p>
             <?php the_field('post_content1'); ?>
 
@@ -62,7 +65,7 @@
 $related_posts = get_posts(array('category__in' => wp_get_post_categories($post->ID), 'numberposts' => 2, 'post__not_in' => array($post->ID)));
 
 if ($related_posts) : ?>
-    <div class="related-posts">
+    <div class="related-posts desktop">
         <p class="section-title"><? _e('Related arcticles', 'anomeo'); ?></p>
 
         <div class="related-posts__grid">
@@ -72,6 +75,31 @@ if ($related_posts) : ?>
                 setup_postdata($GLOBALS['post'] = &$post_object);
                 get_template_part('template-parts/content', 'post');
             } ?>
+        </div>
+    </div>
+    <div class="related-posts mobile">
+        <p class="section-title"><? _e('Related arcticles', 'anomeo'); ?></p>
+        <div class="bottom">
+            <div class="related-post__button-prev"></div>
+            <div class="related-post__button-next">
+                <p><? _e('Next article', 'anomeo'); ?></p>
+                <img src="/wp-content/themes/anomeo/assets/img/Arrow_FaQ-06.svg" alt="">
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="related-posts__grid">
+            <div class="swiper-container related-post">
+                <div class="swiper-wrapper">
+                    <? foreach ($related_posts as $rel_post) {
+                        $post_object = get_post($rel_post->ID);
+
+                        setup_postdata($GLOBALS['post'] = &$post_object);
+
+                        get_template_part('template-parts/content', 'post-mobile');
+                    } ?>
+                </div>
+            </div>
+
         </div>
     </div>
 <? endif; ?>
