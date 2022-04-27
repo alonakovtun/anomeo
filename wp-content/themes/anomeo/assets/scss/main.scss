@@ -4473,17 +4473,17 @@
         color: var(--ak-accent-color);
 
         padding: 30px var(--ak-main-spacing);
-        font-family: "Din Pro";
-        font-size: 20px;
+        font-family: "Din Pro Bold";
+        font-size: 28px;
 
-        max-width: 60%;
+        max-width: 50%;
 
-        margin-bottom: 100px;
+        margin-bottom: 35px;
 
         @include media-breakpoint-up(xl) {
-            padding: 60px var(--ak-main-spacing);
+            padding: 40px var(--ak-main-spacing);
 
-            font-size: 35px;
+            font-size: 36px;
         }
 
         .error-title {

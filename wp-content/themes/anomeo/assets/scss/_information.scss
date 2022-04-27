@@ -1,5 +1,5 @@
 .information__container{
-    padding: 60px;
+    padding: 40px 70px;
     font-family: 'Din Pro Light';
     width: 60%;
 
@@ -16,7 +16,7 @@
     }
     .information__title{
         color:#15818b;
-        margin-bottom: 35px;
+        margin-bottom: 32px;
         font-size: 36px;
         @include media-breakpoint-down(sm) {
             font-size: 28px;

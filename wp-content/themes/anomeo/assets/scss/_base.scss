@@ -3,17 +3,15 @@
 
 // css vars
 :root {
-    --ak-main-spacing: 30px;
+    --ak-main-spacing: 70px;
     --ak-accent-color: #15818b;
-    --ak-header-height: 70px;
+    --ak-header-height: 100px;
 
-    @include media-breakpoint-up(lg) {
-        --ak-main-spacing: 40px;
-    }
+    @include media-breakpoint-down(sm) {
 
-    @include media-breakpoint-up(xl) {
-        --ak-header-height: 100px;
-        --ak-main-spacing: 70px;
+        --ak-main-spacing: 37px;
+        --ak-header-height: 70px;
+    
     }
 }
 

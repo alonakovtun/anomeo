@@ -17,6 +17,10 @@ get_header(); ?>
         <div class="information__content">
           <?php the_field('privacy_policy_text'); ?>
         </div>
+        <p class="information__subtitle "><?php the_field('privacy_policy_subtitle2') ?></p>
+        <div class="information__content">
+          <?php the_field('privacy_policy_text2'); ?>
+        </div>
     </section>
 
 <?php
