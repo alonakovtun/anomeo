@@ -11,7 +11,7 @@
 
 get_header(); ?>
 
-  <section class="information__container">
+  <section class="information__container cookies">
         <h1 class="information__title"><?php the_field('cookies_title') ?></h1>
         <p class="information__subtitle "><?php the_field('cookies_subtitle') ?></p>
         <div class="information__content">

@@ -92,7 +92,7 @@ if (post_password_required()) {
 								setup_postdata($post);
 								?>
 								<? if($current_color): ?>
-									<a class="color-block"  href="<?php the_permalink(); ?>" >
+									<a class="color-block"  href="<?php $post->the_permalink(); ?>" >
 									<div class="color-item" style="background-color:<?php echo $color ?> "></div>
 									</a>
 								<? else: ?>
