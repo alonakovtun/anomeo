@@ -29,33 +29,18 @@ get_header();
 			</div>
 
 			<div class="blog-filter">
-				<div class="blog-catogories">
-					<div>
-						<div class="ak-page__sub-menu-row">
-							<?
-							wp_nav_menu(array(
-								'theme_location' => 'blog-categories-menu',
-								'container' => '',
-							));
-							?>
-						</div>
-					</div>
-				</div>
+				<?
+				wp_nav_menu(array(
+					'theme_location' => 'blog-categories-menu',
+					'container' => '',
+				));
 
-				<div class="blog-sort">
-					<?php
-					$args = array(
-						'order'    => (isset($_GET['dir']) ? $_GET['dir'] : 'ASC')
-					);
-					query_posts($args);
-					?>
-					<a href="<? get_permalink(); ?>?dir=DESC">The latest</a>
-					<a href="<? get_permalink(); ?>?dir=ASC">Oldest</a>
-				</div>
+				//include get_template_directory() . '/template-parts/sort.php'; 
+				?>
+
 			</div>
 
-
-	<?php
+		<?php
 
 
 		endif;
@@ -66,19 +51,19 @@ get_header();
 			'post_status' => 'publish',
 		));
 
-		/* Start the Loop */?>
+		/* Start the Loop */ ?>
 		<section class="blog-page__blog-items" data-total_pages="<?= $posts_query->max_num_pages; ?>" data-config='<?= json_encode($posts_query->query_vars); ?>'>
 
-		<?
-        while ($posts_query->have_posts()) :
-            $posts_query->the_post();
+			<?
+			while ($posts_query->have_posts()) :
+				$posts_query->the_post();
 
-            get_template_part('template-parts/content', 'post');
+				get_template_part('template-parts/content', 'post');
 
-        endwhile; ?>
+			endwhile; ?>
 		</section>
 
-		<?
+	<?
 
 		the_posts_navigation();
 
