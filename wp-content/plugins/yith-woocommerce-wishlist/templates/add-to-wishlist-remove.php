@@ -55,7 +55,6 @@ global $product;
 	</a>
 
 	<?php if ( $show_view ) : ?>
-		<span class="separator"><?php esc_html_e( 'or', 'yith-woocommerce-wishlist' ); ?></span>
-		<a href="<?php echo esc_url( $found_in_list->get_url() ); ?>" class="view-wishlist"><?php echo esc_html( apply_filters( 'yith_wcwl_view_wishlist_label', __( 'View &rsaquo;', 'yith-woocommerce-wishlist' ) ) ); ?></a>
+		
 	<?php endif; ?>
 </div>

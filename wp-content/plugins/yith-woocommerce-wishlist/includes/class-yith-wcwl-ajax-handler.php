@@ -73,8 +73,7 @@ if ( ! class_exists( 'YITH_WCWL_Ajax_Handler' ) ) {
 				if ( apply_filters( 'yith_wcwl_show_popup_links', YITH_WCWL()->is_multi_wishlist_enabled() ) ) {
 					$message .= '<p class="after-links">
 					<a href="' . YITH_WCWL()->get_last_operation_url() . '">' . __( 'View &rsaquo;', 'yith-woocommerce-wishlist' ) . '</a>
-					<span class="separator">' . __( 'or', 'yith-woocommerce-wishlist' ) . '</span>
-					<a href="#" class="close-popup">' . __( 'Close', 'yith-woocommerce-wishlist' ) . '</a>
+					
 					</p>';
 				}
 			} catch ( YITH_WCWL_Exception $e ) {

@@ -42,7 +42,7 @@
 		<header id="masthead" class="site-header">
 			<div class="r-wrap">
 				<div id="header-inner" class="site-header__inner">
-				<div class="site-header__logo-col">
+					<div class="site-header__logo-col">
 						<a href="<?= get_home_url(); ?>" class="logo-link">
 							<img class="logo" src="<?= get_template_directory_uri(); ?>/assets/img/logo.svg" alt="Anomeo logo">
 							<img class="big-logo" src="<?= get_template_directory_uri(); ?>/assets/img/logo.svg" alt="Anomeo logo">
@@ -66,7 +66,7 @@
 						<li class="menu-item icon-menu-item">
 							<a href="<?= wc_get_account_endpoint_url('wishlist'); ?>"><span class="icon icon-wishlist"></span></a>
 							<p class="text"><? _e('Wishlist', 'anomeo'); ?></p>
-						
+
 						</li>
 						<li class="menu-item icon-menu-item">
 							<a id="search-toggle" href=""><span class="icon icon-search "></span></a>
@@ -174,4 +174,5 @@
 			</div>
 		</div>
 
-		<main id="primary" class="site-main" style="opacity: 0;">
+		<!-- <main id="primary" class="site-main" style="opacity: 0;"> -->
+		<main id="primary" class="site-main">

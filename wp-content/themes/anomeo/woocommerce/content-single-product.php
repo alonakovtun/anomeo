@@ -77,36 +77,53 @@ if (post_password_required()) {
 				<? the_content(); ?>
 
 				<div class="product-color">
-					<p class="color-title"><? _e('Colour', 'anomeo'); ?></p>
+
 					<?php if (have_rows('color_links')) : ?>
+						<p class="color-title"><? _e('Colour', 'anomeo'); ?></p>
 						<?php while (have_rows('color_links')) : the_row(); ?>
-							<?php 
-							$post_object = get_sub_field('color_product_link'); 
-							$color = get_sub_field('color'); 
-							$color_name = get_sub_field('color_name'); 
-							$current_color = get_sub_field('current_color'); 
+							<?php
+							$post_object = get_sub_field('color_product_link');
+							$color = get_sub_field('color');
+							$current_color = get_sub_field('current_color');
+
 							?>
 							<?php if ($post_object) : ?>
 								<?php // override $post
 								$post = $post_object;
+								$permalink = get_permalink($post_object->ID);
 								setup_postdata($post);
 								?>
-								<? if($current_color): ?>
-									<a class="color-block"  href="<?php $post->the_permalink(); ?>" >
-									<div class="color-item" style="background-color:<?php echo $color ?> "></div>
+								<? if ($current_color) : ?>
+									<a class="color-block" href="<?php echo esc_url($permalink); ?>">
+										<div class="color-item" style="background-color:<?php echo $color ?> "></div>
 									</a>
-								<? else: ?>
-									<a class="color-block not_active"  href="<?php the_permalink(); ?>">
-									<div class="not-current-color color-item"  style="background-color:<?php echo $color ?> "></div>
+								<? else : ?>
+									<a class="color-block not_active" href="<?php echo esc_url($permalink); ?>">
+										<div class="not-current-color color-item" style="background-color:<?php echo $color ?> "></div>
 									</a>
-									<? endif; ?>
+								<? endif ?>
 								<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly 
 								?>
+
 							<?php endif; ?>
-							<? if($current_color): ?>
-								<p class="color-name"><? echo $color_name ?></p>
-								<? endif ?>
+
+
 						<?php endwhile; ?>
+
+					<?php endif; ?>
+
+					<?php if (have_rows('color_links')) : ?>
+						<?php while (have_rows('color_links')) : the_row();
+
+							$color_name = get_sub_field('color_name');
+							$current_color = get_sub_field('current_color'); ?>
+
+							<? if ($current_color) : ?>
+								<p class="color-name"><? echo $color_name ?></p>
+							<? endif ?>
+
+						<?php endwhile; ?>
+
 					<?php endif; ?>
 				</div>
 
