@@ -2599,13 +2599,14 @@
     .single-product-slider {
         position: relative;
         width: 100%;
+        height: 690px;
         max-width: 100%;
 
         overflow: hidden;
 
         &__item {
             position: relative;
-            height: 0;
+            height: 0!important;
             padding-top: 100%;
             width: 100%;
 
@@ -2662,7 +2663,7 @@
                 position: relative;
 
                 @include media-breakpoint-up(sm) {
-                    width: 50%;
+                    width: 45%;
                 }
 
                 &:last-of-type {
@@ -2731,7 +2732,7 @@
             }
 
             @include media-breakpoint-up(lg) {
-                max-width: 80%;
+                max-width: 85%;
             }
 
             @include media-breakpoint-up(xl) {
@@ -6644,14 +6645,58 @@
     }
 }
 
-.yith-wcwl-add-to-wishlist{
-    position: absolute;
-    right: 13%;
-    top: 20px;
-    z-index: 2;
 
-    img{
-        width: 19px;
-        height: 17px;
+.ak-product-item{
+    .yith-wcwl-add-to-wishlist{
+        position: absolute;
+        right: 13%;
+        top: 20px;
+        z-index: 2;
+    
+        img{
+            width: 19px;
+            height: 17px;
+        }
     }
+}
+
+.more-info{
+    border-top: 1px solid rgba(18, 135, 149, .5);
+    border-bottom: 1px solid rgba(18, 135, 149, .5);
+
+    &__title{
+        font-family: 'Din Pro Light';
+        font-size: 16px;
+        color: #6C6D6E;
+        padding: 25px 0;
+
+        margin-bottom: 0;
+        cursor: pointer;
+        &:after { 
+            content: '';
+            background-size: 17px 17px;
+            background-image: url('/wp-content/themes/anomeo/assets/img/Details_product_dektop-02.svg');
+            width: 17px;
+            height: 17px;
+            display: inline-block;
+            position: absolute;
+            right: 25%;
+            transition: all .3s;
+        }
+
+        &.change{
+            &:after { 
+                transform: rotate(45deg)
+            }
+        }
+    }
+
+    .details-block{
+        border-bottom: 1px solid rgba(18, 135, 149, .5);
+    }
+
+    .more-info__text{
+        display:none;
+    }
+
 }

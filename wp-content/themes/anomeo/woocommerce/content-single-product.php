@@ -138,9 +138,26 @@ if (post_password_required()) {
 
 			</div>
 
+			<div class="ak-product__description">
+				<div class="more-info">
+					<div class="details-block block">
+						<p class="more-info__title"><? _e('Details', 'anomeo'); ?></p>
+						<div class="more-info__text">
+						<? the_field('details') ?>
+						</div>
+					</div>
+					<div class="features-block block">
+						<p class="more-info__title"><? _e('Features', 'anomeo'); ?></p>
+						<div class="more-info__text">
+						<? the_field('features') ?>
+						</div>
+						
+					</div>
+				</div>
 
 
-			<div class="ak-product__additional-info">
+
+				<!-- <div class="ak-product__additional-info">
 				<? if (have_rows('color_links', 'option')) : ?>
 					<? while (have_rows('color_links', 'option')) : the_row(); ?>
 						<a href="">
@@ -153,13 +170,13 @@ if (post_password_required()) {
 						<div class="description"></div>
 					</div>
 				<? endif; ?>
+			</div> -->
 			</div>
 		</div>
+
+		<? woocommerce_output_related_products(); ?>
 	</div>
 
-	<? woocommerce_output_related_products(); ?>
-</div>
+	<?php do_action('woocommerce_after_single_product');
 
-<?php do_action('woocommerce_after_single_product');
-
-include get_template_directory() . '/template-parts/related-product.php'; ?>
+	include get_template_directory() . '/template-parts/related-product.php'; ?>

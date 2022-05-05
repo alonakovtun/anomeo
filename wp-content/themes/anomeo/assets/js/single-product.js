@@ -203,17 +203,22 @@ function addItemToCart(formData) {
 
 function gallerySliderScripts() {
     singleProductSliderEl = new Swiper(".single-product-slider", {
+        // direction: "vertical",
+        // allowTouchMove: true,
+        // navigation: {
+        //     nextEl: ".single-product-slider__button-next",
+        // },
+        // on: {
+        //     init: () => {
+        //         setTimeout(() => initPhotoSwipeImageGallery(), 300);
+        //     },
+        // },
+        direction: "vertical",
+        slidesPerView: 1,
         spaceBetween: 0,
-        loop: true,
-        allowTouchMove: true,
-        navigation: {
-            nextEl: ".single-product-slider__button-next",
-        },
-        on: {
-            init: () => {
-                setTimeout(() => initPhotoSwipeImageGallery(), 300);
-            },
-        },
+        calculateHeight:true,
+        height : window.innerHeight,
+
     });
 }
 
@@ -350,12 +355,21 @@ function initPhotoSwipeImageGallery() {
     }
 }
 
+function showDetailsScript() {
+    jQuery(".block").click(function () {
+        jQuery(this).find(' .more-info__text').slideToggle("slow","linear");
+        jQuery(this).find('.more-info__title').toggleClass("change");
+
+    });
+}
+
 function initSingleProductPageScripts() {
     addToCartScripts();
     gallerySliderScripts();
     additionalInfoItemsScripts();
     relatedProductsSlider();
     // initPhotoSwipeImageGallery();
+    showDetailsScript();
 }
 
 export { initSingleProductPageScripts };
