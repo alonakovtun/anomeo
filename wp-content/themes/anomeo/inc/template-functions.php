@@ -39,7 +39,7 @@ function get_mobile_change_lang_link()
 
 function get_currency_menu_list()
 {
-    echo '<p class="col-label">' . __('Currency', 'anomeo') . '</p>';
+    echo '<p class="col-label">' . __('Currency', 'anomeo') . '</p>'; 
 
     echo do_action('wcml_currency_switcher', array('format' => '%code%', 'switcher_style' => 'anomeo-menu-list'));
 }

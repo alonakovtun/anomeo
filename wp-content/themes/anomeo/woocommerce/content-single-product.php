@@ -128,9 +128,6 @@ if (post_password_required()) {
 				</div>
 
 			</div>
-			<!-- <div class="ak-product__description">
-			</div> -->
-
 			<div class="ak-product__add-to-cart">
 				<? woocommerce_template_single_add_to_cart(); ?>
 				<!-- <?= get_wishlist_button(); ?> -->
@@ -143,15 +140,15 @@ if (post_password_required()) {
 					<div class="details-block block">
 						<p class="more-info__title"><? _e('Details', 'anomeo'); ?></p>
 						<div class="more-info__text">
-						<? the_field('details') ?>
+							<? the_field('details') ?>
 						</div>
 					</div>
 					<div class="features-block block">
 						<p class="more-info__title"><? _e('Features', 'anomeo'); ?></p>
 						<div class="more-info__text">
-						<? the_field('features') ?>
+							<? the_field('features') ?>
 						</div>
-						
+
 					</div>
 				</div>
 

@@ -4239,56 +4239,69 @@
     .ak-my-account__orders-table {
         width: 100%;
 
-        font-size: 18px;
+        font-size: 20px;
         font-weight: 300;
+        color: #128796;
+        font-family: 'Din Pro Bold';
 
+        tr{
+            border-bottom: 1px solid #EAEAEA;
+        }
 
 
         @include media-breakpoint-down(sm) {
             display: none;
+            font-size: 16px;
         }
 
-        @include media-breakpoint-up(xl) {
-            font-size: 25px;
-        }
 
-        .woocommerce-orders-table__header,
-        .woocommerce-orders-table__cell {
-            padding: 20px var(--ak-main-spacing);
-
+        .woocommerce-orders-table__header{
             font-weight: 300;
+            padding-bottom: 15px;
 
-            &:not(:last-of-type) {}
+            &:not(:last-of-type) {
+                
+            }
+            &:first-of-type{
+                padding-left: var(--ak-main-spacing);
+            }
         }
 
         .woocommerce-orders-table__cell {
-            padding: 30px var(--ak-main-spacing);
-        }
+            font-weight: 300;
+            padding: 21px 0;
 
-        .woocommerce-orders-table__row {
+            font-size: 16px;
+            color: #148D9A;
+            font-family: 'Din Pro';
+            vertical-align: top;
+
             &:first-of-type {
-                .woocommerce-orders-table__cell {
-                    padding-top: 60px;
+                padding-left: var(--ak-main-spacing);
+            }
+
+            &-order-actions{
+                display: flex;
+                flex-direction: column;
+
+                .pay{
+                    padding-bottom: 11px;
+                }
+
+                .cancel{
+                    padding-top: 11px;
+                }
+
+                a{
+                    font-size: 16px;
+                    color: #F89D3F;
+                    font-family: 'Din Pro';
+                    text-decoration: underline;
                 }
             }
 
-            &:last-of-type {
-                .woocommerce-orders-table__cell {
-                    padding-bottom: 60px;
-                }
-            }
         }
 
-        .woocommerce-orders-table__header {
-            text-transform: uppercase;
-
-
-        }
-
-        .button {
-            text-transform: uppercase;
-            text-decoration: underline;
-        }
     }
 
     .ak-my-account__order-details {
@@ -6699,4 +6712,29 @@
         display:none;
     }
 
+}
+
+.order-title{
+    margin-top: 45px;
+    margin-bottom: 75px;
+    padding-left: var(--ak-main-spacing);
+}
+
+.woocommerce-orders{
+    .page__content-section{
+        .r-wrap{
+            padding-left: 0!important;
+            .page-template-template-account{
+                thead{
+                    padding-left: var(--ak-main-spacing);
+                }
+
+                tbody{
+                    padding-left: var(--ak-main-spacing);
+                }
+            }
+        
+        }
+    }
+    
 }
