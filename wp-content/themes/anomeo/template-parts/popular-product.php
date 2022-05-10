@@ -29,8 +29,8 @@ if ($items) : ?>
                                     <? } ?>
                                 </div>
                             </a>
-                            <div class="slider-product__bottom popular__slider-product-bottom"><br><br>
-                                <a href="<?= $permalink; ?>" class="slider-product__name "><?= $title;  ?></a> <br><br>
+                            <div class="slider-product__bottom popular__slider-product-bottom">
+                                <a href="<?= $permalink; ?>" class="slider-product__name "><?= $title;  ?></a> 
                                 <a href="<?= $permalink; ?>" class="slider-product__price">
                                     <span class="price"><?php echo $price; ?> Eur</span>
                                 </a>
