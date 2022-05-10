@@ -88,16 +88,16 @@ do_action('woocommerce_before_account_orders', $has_orders); ?>
 		?>
 	</tbody>
 </table>
-
-<div class="ak-my-account__orders-mobile-list">
+<div class="swiper-order">
+<div class="ak-my-account__orders-mobile-list swiper-wrapper">
 	<?php
 	foreach ($customer_orders->orders as $customer_order) {
 		$order      = wc_get_order($customer_order);
 		$item_count = $order->get_item_count() - $order->get_item_count_refunded();
 	?>
-		<div class="order-item">
+		<div class="order-item swiper-slide">
 			<?php foreach (wc_get_account_orders_columns() as $column_id => $column_name) : ?>
-				<div class="item-row">
+				<div class="item-row ">
 					<span>
 						<?= esc_html($column_name); ?>
 					</span>
@@ -147,6 +147,8 @@ do_action('woocommerce_before_account_orders', $has_orders); ?>
 	}
 	?>
 </div>
+</div>
+
 
 <?php do_action('woocommerce_before_account_orders_pagination'); ?>
 

@@ -74,9 +74,11 @@ do_action('woocommerce_before_edit_account_form'); ?>
 		<p class="form-row form-row-wide">
 			<input type="password" class="woocommerce-Input woocommerce-Input--password input-text" name="password_1" id="password_1" autocomplete="off" placeholder="<? _e('New password', 'woocommerce'); ?>" />
 		</p>
-		<p class="form-row form-row-wide">
+		<p class="form-row form-row-wide pass2">
 			<input type="password" class="woocommerce-Input woocommerce-Input--password input-text" name="password_2" id="password_2" autocomplete="off" placeholder="<? _e('Confirm new password', 'woocommerce'); ?>" />
 		</p>
+
+		<a class="forgot" href="<?php echo esc_url(wp_lostpassword_url()); ?>"><?php esc_html_e('Forgot your current password?', 'anomeo'); ?></a>
 
 		<?php do_action('woocommerce_edit_account_form'); ?>
 		

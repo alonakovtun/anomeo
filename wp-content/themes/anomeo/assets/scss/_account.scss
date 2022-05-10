@@ -54,8 +54,13 @@
 
 .woocommerce-MyAccount-navigation{
     padding: 43px 0px;
+    @include media-breakpoint-down(sm) {
+        padding-bottom: 25px;;
+    }
     .woocommerce-MyAccount-navigation-link{
-        margin-bottom: 43px;
+        &:not(:last-child){
+            margin-bottom: 43px;
+        }
     }
 }
 
@@ -93,6 +98,7 @@
             padding: var(--ak-main-spacing);
             width: 100%;
             border-right: none;
+            padding-top: 25px;
 
         }
 
@@ -111,6 +117,7 @@
             font-family: "Din Pro Bold";
             @include media-breakpoint-down(sm) {
                 font-size: 28px;
+                margin-bottom: 56px;
             }
         }
 
@@ -122,15 +129,14 @@
         color: #128796;
         @include media-breakpoint-down(sm) {
             width: 100%;
+            padding-top: 0;
+            margin-bottom: 233px;
         }
 
         
         .dashboard-text{
             font-size: 16px;
             font-family: "Din Pro Light";
-        }
-        @include media-breakpoint-down(sm) {
-            margin-bottom: 50%;
         }
     }
 }
@@ -146,13 +152,13 @@
     display: flex;
     @include media-breakpoint-down(sm) {
         display: block;
+        
     }
 
     .ak-my-account__address-item:last-child, .col:last-child{
         padding-left: var(--ak-main-spacing);
-        @include media-breakpoint-down(sm) {
-            padding-left: 0;
-        }
+        padding-top: 35px;
+       
     }
     .ak-my-account__address-item, .col{
         padding-top: 43px;
@@ -163,6 +169,7 @@
             width: 100%;
             border-right: none;
             border-bottom: 1px solid #EAEAEA;
+            padding: 0 var(--ak-main-spacing);
         }
 
         .ak-my-account__address-item-title, .col-title{
@@ -178,7 +185,27 @@
 
             @include media-breakpoint-down(sm) {
                 width: 100%;
+                margin-bottom: 27px;
             }
+        }
+
+        .form-row{
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 46px;
+                &:last-child{
+                    margin-bottom: 25px;
+                }
+
+                &.pass2{
+                    margin-bottom: 27px;
+                }
+            }
+        }
+
+        .forgot{
+            font-size: 14px;
+            color: #148D9A;
+            font-family: 'Din Pro Light';
         }
     }
 
@@ -218,6 +245,7 @@ input, .select2{
     font-family: 'Din Pro Light';
     @include media-breakpoint-down(sm) {
         width: 100%!important;
+        padding: 12px 34px;
     }
     
     &::placeholder{
@@ -234,7 +262,7 @@ input, .select2{
     color: #fff;
     font-size: 12px;
     text-transform: uppercase;
-    padding: 6px 10px;
+    padding: 8px 10px 4px;
     cursor: pointer;
 
 }
@@ -256,6 +284,16 @@ input, .select2{
     &.hidden{
         opacity: 0;
         visibility: hidden;
+        @include media-breakpoint-down(sm) {
+           display: none;
+        }
     }
 }
 
+.woocommerce-edit-account, .woocommerce-edit-address{
+    .my-account-page__content-section{
+        @include media-breakpoint-down(sm) {
+            padding: 25px 0 35px;
+        }
+    }
+}

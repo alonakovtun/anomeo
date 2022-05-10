@@ -1,3 +1,5 @@
+import Swiper from "swiper/bundle";
+
 function initCheckoutLoginFormScripts() {
     const registerBtnEl = document.querySelector(
         ".woocommerce-form-register__submit"
@@ -26,8 +28,30 @@ function showRegisterScripts() {
     });
 }
 
+function swiperOrder(){
+    const orderSlider = new Swiper(".swiper-order", {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        allowTouchMove: true,
+        speed: 600,
+        autoplay: {
+            delay: 5000,
+        },
+        navigation: {
+            nextEl: ".products-slider__button-next",
+            prevEl: ".products-slider__button-prev",
+        },
+        breakpoints: {
+            576: {
+                slidesPerView: 2,
+            },
+        },
+    });
+}
+
 function initMyAccountPageScripts() {
     initCheckoutLoginFormScripts();
+    swiperOrder();
     // showRegisterScripts();
 }
 
