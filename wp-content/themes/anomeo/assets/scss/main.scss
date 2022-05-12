@@ -6994,12 +6994,18 @@
 .find_us-title{
     margin-top: 38px;
     margin-bottom: 39px;
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 15px;
+    }
 
     .title{
         color: #128796;
         opacity: .56;
         font-size: 20px;
         font-family: 'Din Pro Bold';
+        @include media-breakpoint-down(sm) {
+            font-size: 18px;
+        }
     }
 
     .subtitle{
@@ -7007,12 +7013,19 @@
         font-size: 36px;
         font-family: 'Din Pro';
         margin-bottom: 0;
+        @include media-breakpoint-down(sm) {
+            font-size: 28px; 
+        }
     }
 }
 
 .find_us-block{
     display: flex;
     margin-bottom: 81px;
+
+    @include media-breakpoint-down(sm) {
+        flex-direction: column;    
+    }
 
     .first-block{
         width: 256px;
@@ -7028,6 +7041,9 @@
 
         margin-bottom: 15px;
         margin-top: 25px;
+        @include media-breakpoint-down(sm) {
+            font-size: 28px;
+        }
     }
 
     .country-block{
@@ -7036,6 +7052,10 @@
             font-size: 16px;
             color: #148D9A;
             margin-top: 25px;
+            @include media-breakpoint-down(sm) {
+                font-size: 20px;
+                margin-top: 37px;
+            }
         }
 
         p{
