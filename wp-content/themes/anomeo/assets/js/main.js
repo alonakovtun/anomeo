@@ -33,7 +33,9 @@ import { initPressPageScripts } from "./press";
 
         initWishlistScripts();
 
-        
+        if(jQuery('.filter-row-popup').hasClass('open')){
+            alert('open')
+        }
 
 
     });

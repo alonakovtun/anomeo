@@ -2176,6 +2176,7 @@
             visibility: hidden;
             opacity: 0;
             transform: translateY(-10%);
+            transform: translateX(-100%);
 
             transition: all 350ms ease;
 
@@ -2191,6 +2192,7 @@
                 visibility: visible;
                 opacity: 1;
                 transform: translateY(0);
+                transform: translateX(0);
             }
         }
 
@@ -6072,6 +6074,12 @@
     display: none;
 }
 
+.ak-products__filters-row{
+    .wp-block-group__inner-container {
+        display: block;
+    }
+}
+
 .tag {
     position: absolute;
     top: 32px;
@@ -7062,6 +7070,66 @@
             color: #148D9A;
             margin-bottom: 0;
            
+        }
+    }
+}
+
+.reset-main-title{
+    margin-top: 38px;
+    margin-bottom: 48px;
+    @include media-breakpoint-down(sm) {
+        padding-left: var(--ak-main-spacing);
+        margin-bottom: 22px;
+    }
+    
+    .title{
+        color: #128796;
+        font-size: 36px;
+        @include media-breakpoint-down(sm) {
+            font-size: 28px;
+        }
+    }
+}
+
+.ak-customer-lost-password-form-container{
+    width: 460px;
+    @include media-breakpoint-down(sm) {
+        padding: 0 var(--ak-main-spacing);
+        width: 100%;
+    }
+
+    p{
+        color: #148D9A;
+        font-size: 16px;
+        margin-bottom: 46px;
+        
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 27px;
+        }
+    }
+
+    input{
+        width: 78%!important;
+        margin-bottom: 29px;
+        @include media-breakpoint-down(sm) {
+            width: 100%!important;
+            margin-bottom: 46px;
+        }
+    }
+
+    .form-submit-btn{
+        width: 152px;
+        height: 46px;
+
+        font-size: 18px;
+        font-family: "Din Pro Bold";
+
+        margin-bottom: 323px;
+
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+            margin-bottom: 513px;
+
         }
     }
 }

@@ -42,6 +42,7 @@
 			</p>
 			<ul class="footer-list">
 				<li class="footer-list-item"><a href="#">FAQ</a></li>
+				<li class="footer-list-item"><a href="/find-us/">Find Us</a></li>
 				<li class="footer-list-item"><a href="#">Order Tracking</a></li>
 				<li class="footer-list-item"><a href="/delivery/">Delivery</a></li>
 				<li class="footer-list-item"><a href="/refund_returns/">Returns</a></li>

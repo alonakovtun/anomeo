@@ -26,20 +26,25 @@ do_action('woocommerce_before_lost_password_form');
 		<? _e('Forgot password?', 'anomeo'); ?>
 	</h1>
 </div>
+
+<div class="reset-main-title">
+		<p class="title"><? _e('Reset password', 'anomeo') ?></p>
+	</div>
+
 <div class="ak-customer-lost-password-form-container">
 	<form method="post" class="ak-customer-lost-password-form woocommerce-ResetPassword lost_reset_password">
 
-		<p><?php echo apply_filters('woocommerce_lost_password_message', esc_html__('Lost your password? Please enter your username or email address. You will receive a link to create a new password via email.', 'woocommerce')); ?></p>
+		<p><?php echo apply_filters('woocommerce_lost_password_message', esc_html__('If You’ve forgotten your password, enter your e-mail address and we’ll send you an e-mail telling you how to recover it.', 'woocommerce')); ?></p>
 
 		<div class="form-row form-row-first">
-			<input class="woocommerce-Input woocommerce-Input--text input-text" type="text" name="user_login" id="user_login" autocomplete="username" placeholder="<?php esc_html_e('Username or email', 'woocommerce'); ?>" />
+			<input class="woocommerce-Input woocommerce-Input--text input-text" type="text" name="user_login" id="user_login" autocomplete="username" placeholder="<?php esc_html_e('Email', 'woocommerce'); ?>" />
 		</div>
 
 		<?php do_action('woocommerce_lostpassword_form'); ?>
 
 		<div class="form-row submit-row">
 			<input type="hidden" name="wc_reset_password" value="true" />
-			<button type="submit" class="form-submit-btn button" value="<?php esc_attr_e('Reset password', 'woocommerce'); ?>"><?php esc_html_e('Reset password', 'woocommerce'); ?></button>
+			<button type="submit" class="form-submit-btn button" value="<?php esc_attr_e('CONTINUE', 'woocommerce'); ?>"><?php esc_html_e('CONTINUE', 'woocommerce'); ?></button>
 		</div>
 
 		<?php wp_nonce_field('lost_password', 'woocommerce-lost-password-nonce'); ?>
