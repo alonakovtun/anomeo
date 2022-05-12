@@ -290,6 +290,7 @@
         .logo {
             height: 38px;
             margin-bottom: 15px;
+            width: 145px;
 
             @include media-breakpoint-down(sm) {
                 width: 134px;
@@ -343,8 +344,12 @@
         }
 
         li:not(:first-of-type) {
-            margin-left: 35px;
+            margin-left: 70px;
         }
+    }
+
+    &__left-menu{
+        
     }
 
     &__right-menu {
@@ -390,9 +395,11 @@
                 position: absolute;
                 left: 0;
                 top: 0;
-                background-color: #000000;
-                height: 1px;
+                background-color: #148D99;
+                height: 2px;
                 width: 100%;
+
+                border-radius: 2px;
 
                 transform-origin: left;
                 transition: all 250ms;
@@ -849,7 +856,7 @@
     li:not(.right-col)>.sub-menu {
         cursor: auto;
         display: flex;
-        flex-direction: column;
+        flex-direction: inherit;
         flex-wrap: wrap;
         align-content: flex-start;
         justify-content: flex-start;
@@ -863,6 +870,7 @@
         width: 100%;
         height: auto;
         padding: 15px var(--ak-main-spacing) 5px;
+        padding-right: 0;
 
         @include media-breakpoint-up(xl) {
             height: auto;
@@ -874,9 +882,48 @@
         transform: translateY(-10%);
         transition: all 300ms ease;
 
+        &__about{
+            flex-direction: column;
+            padding-left: 393px;
+            li{
+                padding-bottom: 25px;
+                margin-right: 0;
+            }
+
+        }
+
+        &.first{
+            .menu-item-type-custom{
+                a{
+                    color: #F89D3F;
+                    font-family: 'Din Pro Bold';
+                }
+                
+            }
+            .menu-item-has-children >a{
+                font-family: 'Din Pro Bold';
+            }
+        }
+            
+        .sub-menu{
+            top: 70px;
+            padding-top: 37px;
+            position: relative;
+            transform: translateY(-70px);
+            padding-left: 0;
+            padding-right: 0;
+
+            flex-direction: column;
+
+            li{
+                padding-bottom: 25px;
+                margin-right: 0;
+                
+            }
+        }
         li {
             margin-left: 0;
-            margin-right: 100px;
+            margin-right: 115px;
             margin-bottom: 10px;
         }
     }
@@ -909,6 +956,7 @@
             visibility: visible;
             opacity: 1;
             transform: translateY(0);
+            padding-top: 45px;
         }
     }
 
@@ -6543,7 +6591,6 @@
             @include media-breakpoint-down(sm) {
                 z-index: 9;
                 position: absolute;
-                // right: 60px;
                 top: 55%;       
                 width: 275px;       
             }
@@ -6912,3 +6959,4 @@
 .popular-product{
     overflow: hidden;
 }
+

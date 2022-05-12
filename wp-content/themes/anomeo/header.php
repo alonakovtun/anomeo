@@ -50,14 +50,38 @@
 					</div>
 
 					<ul class="site-header__left-menu">
+						<li class="menu-item menu-item-open">
+							<a class="menu-item-open__link">
+								<? _e('Shop', 'anomeo'); ?>
+							</a>
+							<ul class="site-header__left-menu sub-menu first">
+								<?
+								wp_nav_menu(array(
+									'theme_location' => 'header-menu',
+									'container' => '',
+									'items_wrap' => '%3$s'
+								));
+								?>
+							</ul>
+						</li>
 
-						<?
-						wp_nav_menu(array(
-							'theme_location' => 'header-menu',
-							'container' => '',
-							'items_wrap' => '%3$s'
-						));
-						?>
+						<li class="menu-item menu-item-open">
+							<a class="menu-item-open__link">
+								<? _e('About', 'anomeo'); ?>
+							</a>
+							<ul class="site-header__left-menu sub-menu sub-menu__about">
+								<?
+								wp_nav_menu(array(
+									'theme_location' => 'header-menu2',
+									'container' => '',
+									'items_wrap' => '%3$s'
+								));
+								?>
+							</ul>
+						</li>
+
+
+
 
 					</ul>
 

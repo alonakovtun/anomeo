@@ -158,10 +158,10 @@ function headerBigLogoAnimation() {
 function initHeaderSubmenuHandlers() {
     const headerInnerEl = document.getElementById("header-inner");
     const menuItemsWithSubmenu = headerInnerEl.querySelectorAll(
-        ".menu-item.menu-item-has-children > a"
+        ".menu-item.menu-item-open > a"
     );
     const submenus = headerInnerEl.querySelectorAll(
-        ".menu-item.menu-item-has-children .sub-menu"
+        ".menu-item.menu-item-open .sub-menu"
     );
     menuItemsWithSubmenu.forEach((el) => {
         el.addEventListener("mouseover", (e) => {
