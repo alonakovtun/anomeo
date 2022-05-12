@@ -354,6 +354,9 @@
 
     &__right-menu {
         justify-content: flex-end;
+        li:not(:first-of-type) {
+            margin-left: 55px;
+        }
     }
 
     &__mobile-col {
