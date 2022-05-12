@@ -2808,6 +2808,12 @@
                 color: #6C6D6E;
             }
 
+            .more-info__text{
+                p{
+                    margin-bottom: 41px;
+                }
+            }
+
             @include media-breakpoint-up(lg) {
                 max-width: 85%;
             }
@@ -6896,7 +6902,7 @@
         font-family: 'Din Pro Light';
         font-size: 16px;
         color: #6C6D6E;
-        padding: 25px 0;
+        padding: 22px 0;
 
         margin-bottom: 0;
         cursor: pointer;
@@ -6915,7 +6921,7 @@
 
         &.change {
             &:after {
-                transform: rotate(45deg)
+                background-image: url('/wp-content/themes/anomeo/assets/img/Details_product_dektop-03.svg');
             }
         }
     }
@@ -6962,4 +6968,82 @@
 .popular-product{
     overflow: hidden;
 }
+
+.ak-product__add-to-cart{
+    .yith-wcwl-add-button{
+        img{
+            max-width: 50px!important;
+            width: 50px;
+            height: 46px;
+        }
+    }
+}
+
+.ak-product__add-to-cart{
+    .yith-wcwl-add-to-wishlist{
+        margin-top: 0!important;
+        margin-left: 21px;
+    }
+}
+
+.find-us{
+    padding-left: var(--ak-main-spacing);
+
+}
+
+.find_us-title{
+    margin-top: 38px;
+    margin-bottom: 39px;
+
+    .title{
+        color: #128796;
+        opacity: .56;
+        font-size: 20px;
+        font-family: 'Din Pro Bold';
+    }
+
+    .subtitle{
+        color: #128796;
+        font-size: 36px;
+        font-family: 'Din Pro';
+        margin-bottom: 0;
+    }
+}
+
+.find_us-block{
+    display: flex;
+    margin-bottom: 81px;
+
+    .first-block{
+        width: 256px;
+        margin-right: 271px;
+    }
+    .first-block{
+        width: 273px;
+    }
+
+    .сontinent{
+        color: #F89D3F;
+        font-size: 36px;
+
+        margin-bottom: 15px;
+        margin-top: 25px;
+    }
+
+    .country-block{
+        .country{
+            font-family: 'Din Pro Bold';
+            font-size: 16px;
+            color: #148D9A;
+            margin-top: 25px;
+        }
+
+        p{
+            color: #148D9A;
+            margin-bottom: 0;
+           
+        }
+    }
+}
+
 
