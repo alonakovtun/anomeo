@@ -5609,6 +5609,59 @@
             input {
                 width: 70% !important;
             }
+
+            .ak-checkout__coupon-form{
+                input {
+                    width: 344px !important;
+                    background-color: #F89D3F;
+                    color: #fff;
+                    padding-top: 17px;
+                    margin-top: 14px;
+    
+                    &::placeholder{
+                        color: #fff;
+                        text-transform: uppercase;
+                    }
+
+                    &.error{
+                        border: 1px solid #E01D77;
+                        background-color: #F89D3F!important;
+                    }
+                }
+            }
+
+            .modified{
+
+                color: #E01D77;
+                font-size:  14px;
+                font-family: 'Din Pro Bold'
+            }
+
+           
+
+            .ak-checkout__coupon-form{
+                display: flex;
+                justify-content: space-between;
+
+                align-items: baseline;
+                #ajax-coupon-form-submit-btn{
+                    display: none;
+                    margin-right: 22px;
+
+                    background-color: #128793;
+                    border-radius: 27px;
+                    color: #fff;
+                    text-transform: uppercase;
+
+                    width: 111px;
+                    height: 53px;
+
+                }
+
+                #ajax-coupon-form-input{
+                    margin-bottom: 23px;
+                }
+            }
         }
 
         &--right {
@@ -7142,6 +7195,70 @@
         }
     }
     
+}
+
+.change_delivery{
+    display: flex;
+    margin-bottom: 50px;
+
+    .item{
+        font-size: 12px;
+        text-transform: uppercase;
+        width: 79px;
+        height: 26px;
+        border-radius: 22px;
+        text-align: center;
+        padding-top: 7.5px;
+        cursor: pointer;
+    }
+
+    .personal{
+        margin-right: 23px;
+        background-color: #128796;
+        color: #fff;
+
+    }
+
+    .business,
+    .personal {
+        &._active{
+            background-color: #128796;
+            color: #fff;
+        }
+
+        &._notactive{
+            background-color: rgba(18, 135, 150, .45);
+            color: #138796;
+        }
+    }
+}
+
+.subtotals-list{
+    
+    .subtotals-row{
+        display: flex;
+        justify-content: space-between;
+
+        border-bottom: 1px solid #EAEAEA;
+        margin-top: 20px;
+    
+        .price{
+            margin-right: 47px;
+            color: #148D9A;
+            font-size: 20px;
+        }
+    
+        .title{
+            color: #148D9A;
+            font-size: 20px;
+        }
+
+        .total{
+            font-family: 'Din Pro Bold';
+        }
+            
+        
+    }
 }
 
 

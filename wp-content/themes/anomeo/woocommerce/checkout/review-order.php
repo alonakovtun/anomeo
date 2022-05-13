@@ -81,14 +81,14 @@ defined('ABSPATH') || exit;
 
 	<div class="subtotals-list">
 		<div class="subtotals-row cart-subtotal">
-			<div><?php esc_html_e('Subtotal', 'woocommerce'); ?></div>
-			<div><?php wc_cart_totals_subtotal_html(); ?></div>
+			<div class="title"><?php esc_html_e('Item total', 'woocommerce'); ?></div>
+			<div class="price"><?php wc_cart_totals_subtotal_html(); ?></div>
 		</div>
 
 		<?php foreach (WC()->cart->get_coupons() as $code => $coupon) : ?>
 			<div class="subtotals-row cart-discount coupon-<?php echo esc_attr(sanitize_title($code)); ?>">
-				<div><?php wc_cart_totals_coupon_label($coupon); ?></div>
-				<div><?php wc_cart_totals_coupon_html($coupon); ?></div>
+				<div class="title"><?php wc_cart_totals_coupon_label($coupon); ?></div>
+				<div class="price"><?php wc_cart_totals_coupon_html($coupon); ?></div>
 			</div>
 		<?php endforeach; ?>
 
@@ -107,8 +107,8 @@ defined('ABSPATH') || exit;
 
 		<?php foreach (WC()->cart->get_fees() as $fee) : ?>
 			<div class="subtotals-row fee">
-				<div><?php echo esc_html($fee->name); ?></div>
-				<div><?php wc_cart_totals_fee_html($fee); ?></div>
+				<div class="title"> <?php echo esc_html($fee->name); ?></div>
+				<div class="price"><?php wc_cart_totals_fee_html($fee); ?></div>
 			</div>
 		<?php endforeach; ?>
 
@@ -124,15 +124,15 @@ defined('ABSPATH') || exit;
 			<?php else : ?>
 				<div class="subtotals-row tax-total">
 					<div><?php echo esc_html(WC()->countries->tax_or_vat()); ?></div>
-					<div><?php wc_cart_totals_taxes_total_html(); ?></div>
+					<div class="price"><?php wc_cart_totals_taxes_total_html(); ?></div>
 				</div>
 			<?php endif; ?>
 		<?php endif; ?>
 
 		<?php do_action('woocommerce_review_order_before_order_total'); ?>
 		<div class="subtotals-row order-total">
-			<div><?php esc_html_e('Total', 'woocommerce'); ?></div>
-			<div><?php wc_cart_totals_order_total_html(); ?></div>
+			<div class="title total"><?php esc_html_e('Total:', 'woocommerce'); ?></div>
+			<div class="price total"><?php wc_cart_totals_order_total_html(); ?></div>
 		</div>
 		<?php do_action('woocommerce_review_order_after_order_total'); ?>
 	</div>

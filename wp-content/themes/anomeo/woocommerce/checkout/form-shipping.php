@@ -48,12 +48,3 @@ defined('ABSPATH') || exit;
 
 	<?php endif; ?>
 </div>
-<div class="woocommerce-invoice-fields">
-	<h3 id="invoice-fields-title" class="ak-checkout-form__section-title ak-checkout-form__section-title--dropdown">
-		<? _e('Invoice data (optional)', 'anomeo'); ?>
-	</h3>
-
-	<div class="woocommerce-invoice-fields__fields-wrapper" style="display: none;">
-		<?php do_action('woocommerce_invoice_vat_fields', $checkout); ?>
-	</div>
-</div>

@@ -68,8 +68,9 @@ function initCouponFormScripts() {
                             ""
                         );
 
-                        couponFormEl.classList.add("error");
-                        couponSubmitBtnEl.textContent = errorMessage;
+                        couponFormInputEl.classList.add("error");
+                        couponFormEl.textContent = errorMessage;
+                        
 
                         return;
                     }
@@ -204,6 +205,45 @@ function initCheckoutConsentScripts() {
     });
 }
 
+function changeAddress() {
+    jQuery(".business.item").click(function () {
+        jQuery(".woocommerce-invoice-fields").css("display", "block");
+        jQuery(".woocommerce-billing-fields__fields-wrapper").css(
+            "display",
+            "none"
+        );
+        jQuery(this).addClass("_active");
+        jQuery(this).removeClass("_notactive");
+        jQuery(".personal.item").addClass("_notactive");
+    });
+
+    jQuery(".personal.item").click(function () {
+        jQuery(".woocommerce-invoice-fields").css("display", "none");
+        jQuery(".woocommerce-billing-fields__fields-wrapper").css(
+            "display",
+            "block"
+        );
+        jQuery(this).addClass("_active");
+        jQuery(this).removeClass("_notactive");
+        jQuery(".business.item").addClass("_notactive");
+    });
+}
+
+function couponCode(){
+    jQuery("#ajax-coupon-form-input").on("input", function() {
+        if (jQuery(this).val()) {
+          jQuery("#ajax-coupon-form-submit-btn").show();
+          jQuery(this).css("background-color", "#128793");
+        } else {
+          jQuery("#ajax-coupon-form-submit-btn").hide();
+        }
+      });
+      jQuery("#ajax-coupon-form-submit-btn").click(function() {
+        jQuery("#ajax-coupon-form-input").val('');
+        jQuery(this).hide();
+      });
+}
+
 function initCheckoutPageScripts() {
     initCheckoutLoginFormScripts();
     initCouponFormScripts();
@@ -211,6 +251,9 @@ function initCheckoutPageScripts() {
     removeSubtotalRowsFromRightColumn();
     updateCheckoutOnCartUpdate();
     initCheckoutConsentScripts();
+    changeAddress();
+    couponCode()
 }
 
 export { initCheckoutPageScripts };
+

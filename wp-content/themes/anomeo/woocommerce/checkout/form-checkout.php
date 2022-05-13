@@ -52,14 +52,19 @@ if (!is_user_logged_in()) {
 			<h3 class="ak-checkout-form__section-title ak-checkout-form__section-title--border-top">
 				<? _e('Billing summary', 'anomeo'); ?>
 			</h3>
-			<div id="ajax-coupon-form" class="ak-checkout__coupon-form">
+			<div id="ajax-coupon-form"></div>
+			<div class="ak-checkout__coupon-form">
+				
 				<div class="form-row">
 					<input type="text" name="coupon_code" id="ajax-coupon-form-input" placeholder="<? _e('Coupon code', 'woocommerce'); ?>">
 				</div>
-				<button id="ajax-coupon-form-submit-btn" class="button submit-btn"><? _e('Apply coupon', 'woocommerce'); ?></button>
-				<button id="ajax-coupon-form-close-btn" class="button close-btn"></button>
+				<div class="load_btn">
+					<button id="ajax-coupon-form-submit-btn" class="button submit-btn"><? _e('Load', 'woocommerce'); ?></button>
+					<button id="ajax-coupon-form-close-btn" class="button close-btn"></button>
 
-				<div class="coupon-form-title"><? _e('Want to use gift card or coupon code', 'anomeo'); ?></div>
+					<div class="coupon-form-title"><? _e('', 'anomeo'); ?></div>
+				</div>
+				
 			</div>
 			<div id="order_review" class="woocommerce-checkout-review-order">
 				<?php do_action('woocommerce_checkout_order_review'); ?>

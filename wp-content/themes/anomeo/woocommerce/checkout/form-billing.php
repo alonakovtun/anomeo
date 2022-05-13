@@ -23,6 +23,15 @@ defined( 'ABSPATH' ) || exit;
 
 	<?php do_action( 'woocommerce_before_checkout_billing_form', $checkout ); ?>
 
+	<div class="change_delivery">
+		<div class="personal item _active">
+			<? _e('PERSONAL', 'anomeo') ?>
+		</div>
+		<div class="business item _notactive">
+			<? _e('BUSINESS', 'anomeo') ?>
+		</div>
+	</div>
+
 	<div class="woocommerce-billing-fields__fields-wrapper">
 		<?php
 		$fields = $checkout->get_checkout_fields( 'billing' );
@@ -33,5 +42,17 @@ defined( 'ABSPATH' ) || exit;
 		?>
 	</div>
 
+	<div class="woocommerce-invoice-fields" style="display: none;">
+	<!-- <h3 id="invoice-fields-title" class="ak-checkout-form__section-title ak-checkout-form__section-title--dropdown">
+		<? _e('Invoice data (optional)', 'anomeo'); ?>
+	</h3> -->
+
+	<div class="woocommerce-invoice-fields__fields-wrapper">
+		<?php do_action('woocommerce_invoice_vat_fields', $checkout); ?>
+	</div>
+</div>
+
 	<?php do_action( 'woocommerce_after_checkout_billing_form', $checkout ); ?>
 </div>
+
+
