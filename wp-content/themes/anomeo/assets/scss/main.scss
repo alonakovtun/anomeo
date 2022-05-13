@@ -3768,7 +3768,7 @@
 
             @include media-breakpoint-down(sm) {
                 margin: 0;
-                width: 320px;
+                width: 100%;
             }
 
             &:last-child {
