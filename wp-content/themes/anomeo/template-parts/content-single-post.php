@@ -52,11 +52,14 @@
             <?php the_field('post_content2'); ?>
         </div>
     </section>
-    <?php
-    $image = get_field('footer_post_image');
-    if (!empty($image)) : ?>
-        <img src="<?php echo esc_url($image); ?>" />
-    <?php endif; ?>
+    <div class="footer_post_image">
+        <?php
+        $image = get_field('footer_post_image');
+        if (!empty($image)) : ?>
+            <img src="<?php echo esc_url($image); ?>" />
+        <?php endif; ?>
+
+    </div>
 
 <? endif; ?>
 

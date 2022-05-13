@@ -338,6 +338,8 @@ function override_woocommerce_default_address_fields($address_fields)
     $address_fields['country']['placeholder'] = __('Country', 'anomeo');
     $address_fields['country']['label'] = '';
 
+   
+
     return $address_fields;
 }
 add_filter('woocommerce_default_address_fields', 'override_woocommerce_default_address_fields');
@@ -348,6 +350,25 @@ add_filter('woocommerce_default_address_fields', 'override_woocommerce_default_a
  */
 function invoice_vat_fields_init($checkout)
 {
+    woocommerce_form_field(
+        'vat_name',
+        array(
+            'type'          => 'text',
+            'label'         => __('Name', 'anomeo'),
+            'placeholder'   => __('Name', 'anomeo'),
+        ),
+        $checkout->get_value('vat_name')
+    );
+
+    woocommerce_form_field(
+        'vat_surname',
+        array(
+            'type'          => 'text',
+            'label'         => __('Surname', 'anomeo'),
+            'placeholder'   => __('Surname', 'anomeo'),
+        ),
+        $checkout->get_value('vat_name')
+    );
 
     woocommerce_form_field(
         'vat_company_name',
@@ -357,6 +378,16 @@ function invoice_vat_fields_init($checkout)
             'placeholder'   => __('Company Name', 'anomeo'),
         ),
         $checkout->get_value('vat_company_name')
+    );
+
+    woocommerce_form_field(
+        'vat_nip_number',
+        array(
+            'type'          => 'text',
+            'label'         => __('NIP', 'anomeo'),
+            'placeholder'   => __('NIP', 'anomeo'),
+        ),
+        $checkout->get_value('vat_nip_number')
     );
 
     woocommerce_form_field(
@@ -373,8 +404,8 @@ function invoice_vat_fields_init($checkout)
         'vat_company_zip_code',
         array(
             'type'          => 'text',
-            'label'         => __('ZIP code', 'anomeo'),
-            'placeholder'   => __('ZIP code', 'anomeo'),
+            'label'         => __('Post code', 'anomeo'),
+            'placeholder'   => __('Post code', 'anomeo'),
         ),
         $checkout->get_value('vat_company_zip_code')
     );
@@ -399,21 +430,41 @@ function invoice_vat_fields_init($checkout)
         $checkout->get_value('vat_company_country')
     );
 
+   
+
     woocommerce_form_field(
-        'vat_nip_number',
+        'vat_phone',
         array(
-            'type'          => 'text',
-            'label'         => __('NIP/VAT', 'anomeo'),
-            'placeholder'   => __('NIP/VAT', 'anomeo'),
+            'type'          => 'tel',
+            'label'         => __('Phone', 'anomeo'),
+            'placeholder'   => __('Phone', 'anomeo'),
         ),
-        $checkout->get_value('vat_nip_number')
+        $checkout->get_value('vat_phone')
     );
+
+    woocommerce_form_field(
+        'vat_email',
+        array(
+            'type'          => 'email',
+            'label'         => __('Email', 'anomeo'),
+            'placeholder'   => __('Email', 'anomeo'),
+        ),
+        $checkout->get_value('vat_email')
+    );
+
+    
 }
 add_action('woocommerce_invoice_vat_fields', 'invoice_vat_fields_init');
 
 
 function invoice_vat_fields_update($order_id)
 {
+    if (!empty($_POST['vat_name'])) {
+        update_post_meta($order_id, '_vat_name', sanitize_text_field($_POST['vat_name']));
+    }
+    if (!empty($_POST['vat_surname'])) {
+        update_post_meta($order_id, '_vat_surname', sanitize_text_field($_POST['vat_surname']));
+    }
     if (!empty($_POST['vat_company_name'])) {
         update_post_meta($order_id, '_vat_company_name', sanitize_text_field($_POST['vat_company_name']));
     }
@@ -432,6 +483,13 @@ function invoice_vat_fields_update($order_id)
     if (!empty($_POST['vat_nip_number'])) {
         update_post_meta($order_id, '_vat_nip_number', sanitize_text_field($_POST['vat_nip_number']));
     }
+    if (!empty($_POST['vat_phone'])) {
+        update_post_meta($order_id, '_vat_phone', sanitize_text_field($_POST['vat_phone']));
+    }
+    if (!empty($_POST['vat_email'])) {
+        update_post_meta($order_id, '_vat_email', sanitize_text_field($_POST['vat_email']));
+    }
+   
 }
 add_action('woocommerce_checkout_update_order_meta', 'invoice_vat_fields_update');
 
@@ -439,12 +497,16 @@ add_action('woocommerce_checkout_update_order_meta', 'invoice_vat_fields_update'
 function invoice_vat_fields_admin_show($order)
 {
     echo '<h3>Invoice VAT data:</h3>';
+    echo '<p><strong>' . __('Name') . ':</strong><br>' . wp_kses_post(get_post_meta($order->get_id(), '_vat_name', true)) . '</p>';
+    echo '<p><strong>' . __('Surame') . ':</strong><br>' . wp_kses_post(get_post_meta($order->get_id(), '_vat_surname', true)) . '</p>';
     echo '<p><strong>' . __('Company name') . ':</strong><br>' . wp_kses_post(get_post_meta($order->get_id(), '_vat_company_name', true)) . '</p>';
     echo '<p><strong>' . __('Company Address') . ':</strong><br>' . wp_kses_post(get_post_meta($order->get_id(), '_vat_company_addres', true)) . '</p>';
     echo '<p><strong>' . __('Company Zip code') . ':</strong><br>' . wp_kses_post(get_post_meta($order->get_id(), '_vat_company_zip_code', true)) . '</p>';
     echo '<p><strong>' . __('Company Сity') . ':</strong><br>' . wp_kses_post(get_post_meta($order->get_id(), '_vat_company_city', true)) . '</p>';
     echo '<p><strong>' . __('Company Сountry') . ':</strong><br>' . wp_kses_post(get_post_meta($order->get_id(), '_vat_company_country', true)) . '</p>';
     echo '<p><strong>' . __('VAT/NIP') . ':</strong><br>' . wp_kses_post(get_post_meta($order->get_id(), '_vat_nip_number', true)) . '</p>';
+    echo '<p><strong>' . __('Phone') . ':</strong><br>' . wp_kses_post(get_post_meta($order->get_id(), '_vat_phone', true)) . '</p>';
+    echo '<p><strong>' . __('Email') . ':</strong><br>' . wp_kses_post(get_post_meta($order->get_id(), '_vat_email', true)) . '</p>';
 }
 add_action('woocommerce_admin_order_data_after_shipping_address', 'invoice_vat_fields_admin_show', 10, 1);
 
