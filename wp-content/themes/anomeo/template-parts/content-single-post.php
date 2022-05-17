@@ -19,7 +19,7 @@
     <section class="post-content__section post-content__section--text">
 
         <div class="text-box text-box--left">
-            <a class="back" onclick="window.history.go(-1); return false;"><? _e('Back to list', 'anomeo'); ?></a>
+            <a class="back" onclick="window.history.go(-1); return false;"><? _e('Back to the list', 'anomeo'); ?></a>
             <? $categories = get_the_category();
             if (!empty($categories)) {
                 echo '<a class="category-name" href="' . esc_url(get_category_link($categories[0]->term_id)) . '">' . esc_html($categories[0]->name) . '</a>';

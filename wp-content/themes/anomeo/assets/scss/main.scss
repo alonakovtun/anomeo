@@ -1599,7 +1599,9 @@
         p {
             margin-bottom: 10px;
             color: #fff;
-
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 25px;
+            }
 
         }
 
@@ -4070,6 +4072,11 @@
         .register {
             font-family: 'Din Pro Bold';
         }
+
+        @include media-breakpoint-down(sm) {
+           margin-left: 37px;
+           margin-bottom: 40px;
+        }
     }
 }
 
@@ -5795,6 +5802,10 @@
     padding: 10px 10px 4px;
     border-radius: 25px;
 
+    @include media-breakpoint-down(sm) {
+        padding: 2px 10px 0px;
+    }
+
     &.orange {
         background-color: #f79c3f;
     }
@@ -6022,6 +6033,7 @@
         @include media-breakpoint-down(sm) {
             width: 100%;
             padding: 40px;
+            padding-top: 152px;
         }
 
         .about-title {
@@ -6033,6 +6045,7 @@
             @include media-breakpoint-down(sm) {
                 width: 100%;
                 font-size: 25px;
+                margin-bottom: 25px;
 
             }
         }
@@ -6358,6 +6371,21 @@
             display: block;
 
         }
+
+        .page-title__container{
+            @include media-breakpoint-down(sm) {
+                padding-top: 25px;
+            }
+        }
+
+        .col-2 {
+            .page-title__container{
+                @include media-breakpoint-down(sm) {
+                    padding-top: 35px;
+                }
+            }
+           
+        }
     }
 
 
@@ -6385,11 +6413,20 @@
         .log-in__input-data {
             margin: 24px 0 34px;
 
+            @include media-breakpoint-down(sm) {
+               margin-top: 33px;
+               margin-bottom: 43px;
+    
+            }
+
             .log-in__right-mess {
                 width: 60%;
                 color: #148D9A;
                 font-size: 16px;
                 font-family: 'Din Pro Light';
+                @include media-breakpoint-down(sm) {
+                    width: 100%;
+                }
             }
         }
 
@@ -6418,6 +6455,7 @@
 
         @include media-breakpoint-down(sm) {
             width: 100%;
+            height: 46px;
         }
 
         &.disabled {
@@ -6449,6 +6487,10 @@
     .ak-form.ak-form--login {
         margin-top: 45px;
 
+        @include media-breakpoint-down(sm) {
+            margin-top: 32px;
+        }
+
         input {
             border: 1px solid #BCBCBC;
             border-radius: 27px;
@@ -6457,6 +6499,16 @@
             font-size: 16px;
             text-transform: none;
             padding: 16px var(--ak-main-spacing);
+
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 44px;
+            }
+
+            &#password{
+                @include media-breakpoint-down(sm) {
+                    margin-bottom: 17px;
+                }
+            }
         }
     }
 
@@ -7067,6 +7119,7 @@
         font-family: 'Din Pro Bold';
         @include media-breakpoint-down(sm) {
             font-size: 18px;
+            margin-bottom: 0;
         }
     }
 
@@ -7255,10 +7308,21 @@
 
         .total{
             font-family: 'Din Pro Bold';
-        }
-            
+        } 
         
     }
+}
+
+.woocommerce-info{
+    color: #148D9A;
+    font-size: 20px;
+
+    padding: var(--ak-main-spacing);
+}
+
+#yith-wcwl-popup-message{
+    opacity: 0;
+    visibility: hidden;
 }
 
 
