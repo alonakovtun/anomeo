@@ -15,7 +15,7 @@
 <div class="ak-popups-overlay"></div>
 <footer id="colophon" class="site-footer">
 
-	<!-- <? get_template_part('template-parts/newsletter-section'); ?> -->
+	<? get_template_part('template-parts/newsletter-section'); ?>
 	<div class="footer-top">
 		<div class="newsletter">
 			<p class="newsletter_text">

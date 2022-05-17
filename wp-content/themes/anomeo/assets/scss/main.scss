@@ -1311,18 +1311,50 @@
 }
 
 .newsletter-section {
-    position: relative;
-    padding: 140px 0 60px;
+    position: fixed;
+    z-index: 9999;
+    right: 0;
+    bottom: 71px;
+    right: 69px;
+   
+    border-radius: 24px;
+    background-color: #fff;
+    width: 415px;
+    height: 312px;
 
-    text-transform: uppercase;
+    padding: 19px 30px;
 
-    @include media-breakpoint-up(sm) {
-        padding: 140px 0 30px;
-        text-align: center;
+    
+    @include media-breakpoint-down(sm) {
+        width: 89%;
+        margin: 0 12px;
+
+        right: auto;
+        left: auto;
+
+        bottom: 0;
+        top: 140px;
+
+        height: 353px;
     }
 
-    @include media-breakpoint-up(xl) {
-        padding: 165px 0 60px;
+    .btn-close{
+        background-size: 31px 31px;
+        background-image: url('/wp-content/themes/anomeo/assets/img/Details_product_dektop-02.svg');
+        width: 31px;
+        height: 31px;
+        display: inline-block;
+        position: absolute;
+        right: 28px;
+        top: 28px;
+        transition: all .3s;
+        transform: rotate(45deg);
+
+        cursor: pointer;
+
+        @include media-breakpoint-down(sm) {
+            top: 20px;
+        }
     }
 
     .button {
@@ -1336,7 +1368,6 @@
 
         font-size: 20px;
         font-weight: 300;
-        text-transform: uppercase;
         text-decoration: underline;
 
         @include media-breakpoint-up(sm) {
@@ -1351,33 +1382,22 @@
     &__text-wrap {
         font-size: 26px;
         line-height: 1.1;
-        font-family: "Din Pro";
-
-        position: absolute;
-        top: 50px;
-
-        padding: 0 var(--ak-main-spacing);
+        font-family: "Din Pro Bold";
+        color: #128796;
 
         transition: all 450ms;
-
-        @include media-breakpoint-up(sm) {
-            top: 150px;
-            left: 50%;
-            margin: 0 auto;
-            max-width: 40%;
-            padding: 0;
-
-            transform: translateX(-50%);
-        }
-
-        @include media-breakpoint-up(xl) {
-            font-size: 40px;
-
-            max-width: 50%;
+        @include media-breakpoint-down(sm) {
+            font-size: 24px;
         }
 
         p {
             margin: 0;
+            width: 70%;
+
+            @include media-breakpoint-down(sm) {
+                width: 75%;
+            }
+    
         }
 
         .button {
@@ -1404,81 +1424,61 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-
-        padding: 0 var(--ak-main-spacing);
         margin-top: 20px;
 
-        visibility: hidden;
-        opacity: 0;
+        @include media-breakpoint-down(sm) {
+            margin-top: 38px;
+         }
+      
+
 
         transition: all 450ms;
-
-        @include media-breakpoint-up(sm) {
-            align-items: center;
-
-            margin-top: 0;
-        }
-
         .input-text {
-            border: 0;
             outline: none !important;
 
-            width: 100%;
-            padding: 10px 0 20px;
-            padding-right: 56px;
-            margin-bottom: 10px;
+            width: 100%!important;
+            padding: 16px 34px;
+            margin-bottom: 29px;
 
-            text-transform: uppercase;
             text-align: left;
-            font-size: 14px;
+            font-size: 16px;
             font-weight: 300;
 
-            @include media-breakpoint-up(sm) {
-                width: 20%;
-                margin-bottom: 30px;
-                padding: 10px 0;
-                padding-right: 0;
-
-                font-size: 16px;
-                text-align: center;
-            }
-
-            @include media-breakpoint-up(xl) {
-                font-size: 20px;
-            }
-
+            font-family: "Din Pro Light";
             &.invalid {
                 border-color: #ea431f;
                 color: #ea431f;
+            }
+
+            
+            @include media-breakpoint-down(sm) {
+            margin-bottom: 51px;
             }
         }
 
         .consent-checkbox {
             font-size: 14px;
-            margin-top: 20px;
-
-            @include media-breakpoint-up(sm) {
-                font-size: 16px;
-                margin-top: 30px;
-            }
-
-            opacity: 0;
-            visibility: hidden;
+            margin-top: 22px;
+            font-family: "Din Pro Light";
 
             transition: all 250ms;
         }
 
         .button {
             pointer-events: initial;
-            color: var(--ak-accent-color);
+            color: #fff!important;
+            text-decoration: none;
 
-            @include media-breakpoint-down(sm) {
-                position: absolute;
-                top: 10px;
-                right: var(--ak-main-spacing);
+            height: 53px;
+            width: 100%;
 
-                font-size: 14px;
-            }
+            border-radius: 27px;
+            background-color: #f89d3f;
+            font-family: 'Din Pro Bold';
+            font-size: 18px;
+
+           
+        
 
             &.disabled {
                 pointer-events: none;
@@ -4131,7 +4131,11 @@
         position: relative;
         line-height: 1;
 
-        padding-left: 30px;
+        padding-left: 37px;
+
+        color: #148D9A;
+        font-size: 14px;
+        font-family: 'Din Pro Light';
 
         &:before {
             content: "";
@@ -4156,7 +4160,7 @@
             height: 8px;
             width: 8px;
 
-            background-color: #010101;
+            background-color: #F89D3F;
             border-radius: 50%;
 
             opacity: 0;
@@ -5650,7 +5654,7 @@
             border-right: 1px solid #EAEAEA;
 
             input {
-                width: 70% !important;
+                width: 357px !important;
             }
 
             .ak-checkout__coupon-form{
@@ -6906,7 +6910,7 @@
 .woocommerce-checkout {
     &.checkout {
         padding-left: var(--ak-main-spacing);
-        ;
+        padding-bottom: 41px;
     }
 }
 
@@ -7433,7 +7437,7 @@
 
 .woocommerce-input-wrapper{
     .select2{
-        width: 70%!important;
+        width: 357px!important;
         padding: 20px 34px;
     }
 
@@ -7442,6 +7446,26 @@
 
 .select2-search__field{
     width: 100%!important;
+}
+
+.place-order{
+    .button{
+        margin-top: 50px;
+        margin-bottom: 54px;
+
+        font-size: 18px;
+        font-family: "Din Pro Bold";
+        color: #fff;
+        background-color: #128793;
+        border-radius: 27px;
+        width: 357px;
+        height: 53px;
+    }
+}
+
+.woocommerce-error{
+    padding: var(--ak-main-spacing);
+    color: #138997;
 }
 
 

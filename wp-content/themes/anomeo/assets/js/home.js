@@ -191,7 +191,7 @@ function addNewsletterSubscriber(email) {
 
 function initHomePageScripts() {
     initHomePageSliders();
-    initNewsletterScripts();
+    // initNewsletterScripts();
     initSygnetLogoScroll();
 }
 
