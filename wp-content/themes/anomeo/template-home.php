@@ -86,7 +86,7 @@ while (have_posts()) : the_post(); ?>
 
     </section>
 
-    <section class="home-second-slider fullwidth-slider">
+    <section class="home-second-slider fullwidth-slider bottom-slider">
         <div class="swiper-wrapper">
             <? if (have_rows('bottom_slider')) :
                 while (have_rows('bottom_slider')) : the_row(); ?>

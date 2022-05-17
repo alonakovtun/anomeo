@@ -109,7 +109,7 @@
 					</ul>
 
 					<ul class="site-header__mobile-col">
-						<li class="menu-item"><?= get_mobile_cart_icon(); ?></li>
+						<li class="menu-item icon-menu-item"><?= get_mobile_cart_icon(); ?></li>
 						<li class="menu-item">
 							<a href="">
 								<span id="mobile-menu-toggle" class="mobile-menu-icon">

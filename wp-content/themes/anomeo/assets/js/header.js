@@ -68,10 +68,24 @@ function initSiteCookiesBannerScripts() {
 }
 
 function headerHideOnScrollAnimation() {
-    const headerEl = document.querySelector("#masthead");
-    const topBannerEl = document.querySelector(".site-top-banner");
+    var header = jQuery(".site-header"),
+        scrollPrev = 0;
 
-    let prevScrollpos = window.pageYOffset;
+    jQuery(window).scroll(function () {
+        var scrolled = jQuery(window).scrollTop();
+
+        if (scrolled > 100 && scrolled > scrollPrev) {
+            header.addClass("out");
+        } else {
+            header.removeClass("out");
+        }
+        scrollPrev = scrolled;
+    });
+
+    // const headerEl = document.querySelector("#masthead");
+    // const topBannerEl = document.querySelector(".site-top-banner");
+
+    // let prevScrollpos = window.pageYOffset;
 
     // window.addEventListener(
     //     "scroll",

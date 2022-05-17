@@ -48,9 +48,9 @@ function get_currency_menu_list()
 function get_mobile_cart_icon()
 {
     if (WC()->cart->is_empty()) {
-        return '<a class="mobile-cart-toggle" href=""><span id="cart-popup-toggle" class="mobile-cart-icon"></span></a>';
+        return '<a class="mobile-cart-toggle icon icon-cart" href=""><span id="cart-popup-toggle" class="mobile-cart-icon"></span></a>';
     } else {
-        return '<a class="mobile-cart-toggle" href=""><span id="cart-popup-toggle" class="mobile-cart-qty">' . WC()->cart->cart_contents_count . '</span></a>';
+        return '<a class="mobile-cart-toggle icon icon-cart" href=""><span id="cart-popup-toggle" class="mobile-cart-qty">' . WC()->cart->cart_contents_count . '</span></a>';
     }
 }
 

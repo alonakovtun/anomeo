@@ -51,11 +51,11 @@ if (!is_ajax()) {
 
 		<?php do_action('woocommerce_review_order_before_submit'); ?>
 
-		<?php echo apply_filters('woocommerce_order_button_html', '<button type="submit" class="button disabled alt" name="woocommerce_checkout_place_order"  id="place_order" value="' . esc_attr($order_button_text) . '" data-value="' . esc_attr($order_button_text) . '">' . esc_html($order_button_text) . '</button>'); ?>
+		<?php echo apply_filters('woocommerce_order_button_html', '<button type="submit" class="button disabled alt" name="woocommerce_checkout_place_order"  id="place_order" value="' . esc_attr($order_button_text) . '" data-value="Pay">Pay</button>'); ?>
 
 		<label for="checkout-form-consent" class="ak-checkbox consent-checkbox checkout-consent-checkbox">
 			<input type="checkbox" name="checkout-form-consent" id="checkout-form-consent">
-			<span><?= sprintf(__('I have read and agree website <a href="%s">Terms and conditions</a>', 'anomeo'), esc_url(get_permalink(84))); ?></span>
+			<span><?= sprintf(__('I accept Privacy Policy and Cookies Policy', 'anomeo'), esc_url(get_permalink(84))); ?></span>
 		</label>
 
 		<?php do_action('woocommerce_review_order_after_submit'); ?>
