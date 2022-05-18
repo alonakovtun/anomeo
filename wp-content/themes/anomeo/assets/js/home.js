@@ -189,10 +189,20 @@ function addNewsletterSubscriber(email) {
     }).then((response) => response.json());
 }
 
+function FAQScript(){
+    jQuery( ".faq_btn.open" ).click(function() {
+        jQuery('#openModal').addClass('_active');
+    });
+    jQuery( ".faq_btn.close" ).click(function() {
+        jQuery('#openModal').removeClass('_active');
+    });
+}
+
 function initHomePageScripts() {
     initHomePageSliders();
     // initNewsletterScripts();
     initSygnetLogoScroll();
+    FAQScript();
 }
 
 export { initHomePageScripts };

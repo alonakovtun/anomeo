@@ -1,3 +1,30 @@
 <div class="faq_block">
-			<button class="faq_btn">FAQ</button> 
+	<button class="faq_btn open"><? _e('FAQ', 'anomeo'); ?></button>
+
+	<div id="openModal" class="modalDialog">
+		<button class="faq_btn close"><? _e('Close FAQ', 'anomeo'); ?></button>
+
+		<p class="faq_title">
+			<? _e('POPULAR QUESTIONS', 'anomeo'); ?>
+		</p>
+		<div class="faq_question">
+			<? if (have_rows('faq', 'option')) : ?>
+
+				<?php while (have_rows('faq', 'option')) : the_row();
+					$question = get_sub_field('question');
+					$answer = get_sub_field('answer');
+				?>
+					<div class="question_block">
+						<p class="question"><? echo $question ?></p>
+
+					</div>
+
+
+				<?php endwhile; ?>
+
+			<? endif; ?>
 		</div>
+
+
+	</div>
+</div>

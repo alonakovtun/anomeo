@@ -589,9 +589,14 @@ add_filter('woocommerce_my_account_my_orders_query', 'ak_account_order_custom_qu
 
 function ak_get_formatted_order_address($raw_address)
 {
-    $raw_address['name'] = $raw_address['first_name'] . ' ' . $raw_address['last_name'];
-    $raw_address['country'] = WC()->countries->countries[$raw_address['country']];
+   ?> Test:  <? var_dump(WC()->countries->countries[$raw_address['country']]);
 
+
+    $raw_address['name'] = $raw_address['first_name'] . ' ' . $raw_address['last_name'];
+    $country = WC()->countries->countries[$raw_address['country']];
+    
+    $raw_address['country'] = $country;
+   
     $sorted_address_keys = [
         'name',
         'company',

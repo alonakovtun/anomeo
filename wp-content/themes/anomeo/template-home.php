@@ -11,7 +11,7 @@
 
 get_header();
 while (have_posts()) : the_post(); ?>
-
+<?php get_template_part('template-parts/faq');?>
     <section class="home-top-slider fullwidth-slider">
         <div class="swiper-wrapper">
             <? if (have_rows('top_slider')) :
