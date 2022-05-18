@@ -200,3 +200,5 @@
 
 		<!-- <main id="primary" class="site-main" style="opacity: 0;"> -->
 		<main id="primary" class="site-main">
+
+		<?php get_template_part('template-parts/faq');?>

@@ -29,7 +29,7 @@ get_header();
         'container' => '',
     ));
 
-//include get_template_directory() . '/template-parts/sort.php'; ?>
+// include get_template_directory() . '/template-parts/sort.php'; ?>
 </div>
 
 

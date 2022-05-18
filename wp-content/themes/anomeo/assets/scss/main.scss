@@ -7468,5 +7468,29 @@
     color: #138997;
 }
 
+.faq{
+    &_block{
+        position: fixed;
+        z-index: 9;
+        right: 60px;
+        top: 130px;
+    }
+
+    &_btn{
+        color: #138997;
+        background-color: #fff;
+
+        border-radius: 27px;
+
+        width: 70px;
+        height: 38px;
+
+        cursor: pointer;
+    }
+    
+}
+
+   
+
 
 

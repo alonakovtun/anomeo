@@ -1,12 +1,9 @@
-<?php $sort= $_GET['sort'];
-if($sort == "title")
-{
-$order= "orderby=title";
-}
-if($sort == "date")
-{
-$order= "orderby=date";
-}
-?>
+<?php
+        $args = array(
+            'order'    => (isset($_GET['dir']) ? $_GET['dir'] : 'ASC')
+        );
+        query_posts( $args );
+    ?>
 
-<a  href="?sort=title" <?php if ($sort == "title"){ echo 'style="color:gray"'; } ?>>title</a><a href="?sort=date" <?php if ($sort == "date"){ echo 'style="color:gray"'; } ?>>Date</a>
+<a href="<?get_page_uri()?>?dir=DESC">Newest to Oldest</a>
+<a href="<?get_page_uri()?>?dir=ASC">Oldest to Newest</a>
