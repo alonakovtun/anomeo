@@ -2721,7 +2721,7 @@
     .single-product-slider {
         position: relative;
         width: 100%;
-        height: 690px;
+        height: 790px;
         max-width: 100%;
 
         overflow: hidden;
@@ -7324,6 +7324,7 @@
 
 .footer_post_image {
     img {
+        width: 100%;
         @include media-breakpoint-down(sm) {
             width: 100%;
         }
@@ -7591,4 +7592,29 @@
         }
 
     }
+}
+
+
+.iconic-woothumbs-all-images-wrap{
+    width: 100%!important;
+}
+
+.iconic-woothumbs-wishlist-buttons{
+    display: none;
+}
+
+.iconic-woothumbs-images-wrap{
+    .onsale{
+        display: none;
+    }
+}
+
+.iconic-woothumbs-images__image{
+    height: 685px;
+    object-fit: cover;
+}
+
+.slick-vertical .slick-slide {
+    
+    height: 685px;
 }

@@ -44,29 +44,23 @@ if (post_password_required()) {
 	<div class="ak-product__main-info">
 		<div class="ak-product__main-info-col">
 			<div class="single-product-slider">
-				<div class="swiper-wrapper">
-
-					<div class="swiper-slide single-product-slider__item">
-						<?= woocommerce_get_product_thumbnail('full'); ?>
-					</div>
-
-					<?
-					$attachment_ids = $product->get_gallery_image_ids();
-
-					foreach ($attachment_ids as $attachment_id) { ?>
-						<div class="swiper-slide single-product-slider__item">
-
-							<?= wp_get_attachment_image($attachment_id, 'full'); ?>
-
-						</div>
-					<? } ?>
+				<div class="single-product single-product-slider">
+					<?php
+					/**
+					 * Hook: woocommerce_before_single_product_summary.
+					 *
+					 * @hooked woocommerce_show_product_sale_flash - 10
+					 * @hooked woocommerce_show_product_images - 20
+					 */
+					do_action('woocommerce_before_single_product_summary');
+					?>
 				</div>
-				<div class="single-product-slider__button-next"></div>
+
 			</div>
 
-			<div class="ak-product__featured-cats-wrapper">
+			<!-- <div class="ak-product__featured-cats-wrapper">
 				<?= get_product_featured_categories_list($product->get_id()); ?>
-			</div>
+			</div> -->
 
 		</div>
 
