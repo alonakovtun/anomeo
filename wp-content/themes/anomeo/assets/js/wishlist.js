@@ -56,7 +56,7 @@ function addProductToWishlist(productId) {
         method: "POST",
         credentials: "same-origin",
         body: convertedParams,
-    }).then((response) => response.json());
+    }).then((response) => response.json()).then(console.log);
 }
 
 function removeProductFromWishlist(productId) {

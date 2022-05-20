@@ -388,7 +388,7 @@ input{
         text-decoration: none;
         color: #d3e5e8;
         margin-right: 15px;
-        font-size: 20px;
+        font-size: 28px;
 
         @include media-breakpoint-down(sm) {
             font-size: 22px;
@@ -408,10 +408,10 @@ input{
 
     ins {
         color: #FDA757;
-        font-family: 'Din Pro Bold';
+        font-family: 'Din Pro';
 
         text-decoration: none;
-        font-size: 20px;
+        font-size: 28px;
 
         @include media-breakpoint-down(sm) {
             
@@ -441,6 +441,16 @@ input{
     }
 }
 
+.popular-products, .my-account-page__content-section, .ak-products__grid{
+    .ak-product-favorite-btn {
+        background-image: url('/wp-content/themes/anomeo/assets/img/Wishlist-04.svg');
+        &.active {
+            background-image: url('/wp-content/themes/anomeo/assets/img/Wishlist_fill-04.svg')!important;
+        }
+    }
+   
+}
+
 .ak-product-favorite-btn {
     display: block;
     width: 18px;
@@ -449,6 +459,7 @@ input{
     border: none;
     background-color: transparent;
     background-image: url("../img/Wishlist-04.svg");
+    
     background-repeat: no-repeat;
     background-size: contain;
 
@@ -473,7 +484,7 @@ input{
     }
 
     &.active {
-        background-image: url("../img/Wishlist_fill-04.svg");
+        background-image: url('/wp-content/themes/anomeo/assets/img/Wishlist_product_desktop-05.svg')!important;
     }
 }
 

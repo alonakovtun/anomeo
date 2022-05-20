@@ -12,7 +12,7 @@ function is_product_in_wishlist($product_id)
 
     if ($curr_user) {
         $current_wishlist = get_the_author_meta('ak_wishlist', $curr_user);
-
+       
         if ($current_wishlist) {
             return in_array($product_id, $current_wishlist);
         }

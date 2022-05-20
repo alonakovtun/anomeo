@@ -124,8 +124,8 @@ if (post_password_required()) {
 			</div>
 			<div class="ak-product__add-to-cart">
 				<? woocommerce_template_single_add_to_cart(); ?>
-				<!-- <?= get_wishlist_button(); ?> -->
-				<?php echo do_shortcode("[yith_wcwl_add_to_wishlist]") ?>
+				<?= get_wishlist_button(); ?> 
+				<?php //echo do_shortcode("[yith_wcwl_add_to_wishlist]") ?>
 
 			</div>
 

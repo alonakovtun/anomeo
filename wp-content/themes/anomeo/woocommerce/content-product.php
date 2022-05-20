@@ -27,8 +27,7 @@ if (empty($product) || !$product->is_visible()) {
 ?>
 <div <?php wc_product_class('ak-product-item', $product); ?>>
 
-	<!-- <?= get_wishlist_button(); ?> -->
-	<?php echo do_shortcode("[yith_wcwl_add_to_wishlist]") ?>
+	<?= get_wishlist_button(); ?> 
 	<div class="tag"> 
 	<?php
 		if( get_field('sale') ) { ?>

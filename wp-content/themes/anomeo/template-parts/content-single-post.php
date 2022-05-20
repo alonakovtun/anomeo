@@ -25,7 +25,7 @@
                 echo '<a class="category-name" href="' . esc_url(get_category_link($categories[0]->term_id)) . '">' . esc_html($categories[0]->name) . '</a>';
             } ?>
         </div>
-        <div class="text-box text-box--right">
+        <div class="text-box text-box--right pb-0">
             <p class="post-date"><?php the_field('date'); ?></p>
             <p class="post-title"><? the_title() ?></p>
             <?php the_field('post_content1'); ?>
@@ -38,17 +38,19 @@
         <?php
         $post_image1 = get_field('post_image1');
         $post_image2 = get_field('post_image2');
-        if ((!empty($post_image1)) || (!empty($post_image2))) : ?>
+        if ((!empty($post_image1))) : ?>
             <img src="<?php echo esc_url($post_image1); ?>" />
-            <img src="<?php echo esc_url($post_image2); ?>" />
+        <? elseif ((!empty($post_image2))) : ?>
+            
+        <img src="<?php echo esc_url($post_image2); ?>" />
 
         <?php endif; ?>
     </div>
     <section class="post-content__section post-content__section--text">
 
-        <div class="text-box text-box--left">
+        <div class="text-box text-box--left pt-0">
         </div>
-        <div class="text-box text-box--right">
+        <div class="text-box text-box--right pt-0">
             <?php the_field('post_content2'); ?>
         </div>
     </section>

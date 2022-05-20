@@ -8,11 +8,13 @@ if ($items) : ?>
                
             </div>
             <div class="bottom">
-                    <div class="popular-products-slider__button-prev"></div>
-                    <div class="popular-products-slider__button-next"> 
-                        <img src="/wp-content/themes/anomeo/assets/img/Arrow_FaQ-06.svg" alt=""> 
-                        <p>Next products</p> 
-                    </div>
+            <div class="popular-products-slider__button-prev">
+                    <img src="/wp-content/themes/anomeo/assets/img/Arrow_FaQ-06.svg" alt="">
+                    <p class="">Previous products</p></div>
+                <div class="popular-products-slider__button-next">
+                    <img src="/wp-content/themes/anomeo/assets/img/Arrow_FaQ-06.svg" alt="">
+                    <p class="">Next products</p>
+                </div>
                     <div class="swiper-pagination"></div>
                 </div>
         </div>
@@ -36,8 +38,7 @@ if ($items) : ?>
 
                     <div class="swiper-slide">
                         <div data-prd-id="<?= $item->ID ?>" class="slider-product">
-                            <?php echo do_shortcode("[yith_wcwl_add_to_wishlist product_id=" .  $item->ID . "]") ?>
-                            <a href="<?= $permalink; ?>" class="slider-product__image">
+                        <?= get_wishlist_button(); ?>                            <a href="<?= $permalink; ?>" class="slider-product__image">
                                 <img src="<?= get_the_post_thumbnail_url($id->get_id()); ?>" alt="<?= the_title(); ?>" />
 
                                 <div class="tag">
@@ -47,8 +48,8 @@ if ($items) : ?>
                                     <? } ?>
                                 </div>
                             </a>
-                            <div class="slider-product__bottom popular__slider-product-bottom"><br><br>
-                                <a href="<?= $permalink; ?>" class="slider-product__name "><?= $title;  ?></a> <br><br>
+                            <div class="slider-product__bottom popular__slider-product-bottom">
+                                <a href="<?= $permalink; ?>" class="slider-product__name "><?= $title;  ?></a> 
                                 <a href="<?= $permalink; ?>" class="slider-product__price">
                                     <span class="price"><?php echo $price; ?> Eur</span>
                                 </a>

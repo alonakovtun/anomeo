@@ -49,7 +49,7 @@ do_action('woocommerce_before_mini_cart'); ?>
                     <li class="site-cart__product-item">
                         <a class="product-item" href="<?= esc_url($product_permalink); ?>">
                             <div class="product-img">
-                                <?php echo do_shortcode("[yith_wcwl_add_to_wishlist product_id=" .  $product_id . "]") ?>
+                                <?php //echo do_shortcode("[yith_wcwl_add_to_wishlist product_id=" .  $product_id . "]") ?>
 
                                 <?= $thumbnail; ?>
                             </div>
