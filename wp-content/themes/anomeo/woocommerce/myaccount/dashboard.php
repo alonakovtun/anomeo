@@ -41,7 +41,7 @@ $allowed_html = array(
 </div>
 
 <section class="myaccount__content-wrap myaccount__content-wrap--dashboard">
-	<p class="account-title">Account</p>
+	<p class="account-title"><? _e('Account', 'anomeo'); ?></p>
 	<p class="dashboard-title">
 		<?php
 		/* translators: 1: Orders URL 2: Address URL 3: Account URL. */

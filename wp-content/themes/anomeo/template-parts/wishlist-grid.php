@@ -14,6 +14,11 @@ $wishlist_products = get_the_author_meta('ak_wishlist', $curr_user) ? get_the_au
 <header class="ak-page__title-row">
     <h1 class="title"><? _e('Wishlist', 'anomeo'); ?>: <?= count($wishlist_products); ?></h1>
 </header>
+<div class="wislist-block">
+<div class="account-main-title">
+    <p class="account-title"><? _e('Account', 'anomeo'); ?></p>
+    <p class="address-title"><? _e('Wishlist', 'anomeo'); ?></p>
+</div>
 
 <?
 
@@ -25,7 +30,7 @@ if (count($wishlist_products) > 0) :
 
         setup_postdata($GLOBALS['post'] = &$post_object);
 
-        wc_get_template_part('content', 'product');
+        wc_get_template_part('content', 'wishlist');
 
 
     endforeach;
@@ -34,3 +39,4 @@ if (count($wishlist_products) > 0) :
 
 endif;
 ?>
+</div>

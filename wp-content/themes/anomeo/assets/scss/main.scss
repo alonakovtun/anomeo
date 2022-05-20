@@ -2727,7 +2727,7 @@
         overflow: hidden;
 
         @include media-breakpoint-down(sm) {
-           height: 566px;
+            height: 566px;
         }
 
         &__item {
@@ -3802,7 +3802,7 @@
     .post-content-img {
         display: flex;
         margin: auto;
-        
+
 
         @include media-breakpoint-down(sm) {
             display: block;
@@ -6228,7 +6228,7 @@
 
     .ak-product-favorite-btn {
         position: inherit !important;
-        background-image: url(../img/Wishlist_product_desktop-04.svg);
+        background-image: url(../img/Wishlist_product_desktop-05.svg);
         width: 50px;
         height: 50px;
         margin-left: 20px;
@@ -6677,9 +6677,9 @@
         flex-direction: column;
     }
 
-    .desctop{
+    .desctop {
         @include media-breakpoint-down(sm) {
-            display: block;    
+            display: block;
         }
     }
 
@@ -6769,7 +6769,8 @@
                 @include media-breakpoint-down(sm) {
                     position: absolute;
                     left: 0px;
-                    top: 30px;                }
+                    top: 30px;
+                }
             }
 
             .popular-products-slider__button-next {
@@ -6811,15 +6812,16 @@
         }
     }
 
-    .slider-product{
+    .slider-product {
         position: relative;
+
         .ak-product-favorite-btn {
             position: absolute;
             right: 8%;
             top: 32px;
         }
     }
-   
+
 
     .popular__slider-product-bottom {
         display: flex;
@@ -7336,6 +7338,7 @@
 .footer_post_image {
     img {
         width: 100%;
+
         @include media-breakpoint-down(sm) {
             width: 100%;
         }
@@ -7606,55 +7609,204 @@
 }
 
 
-.iconic-woothumbs-all-images-wrap{
-    width: 100%!important;
+.iconic-woothumbs-all-images-wrap {
+    width: 100% !important;
 }
 
-.iconic-woothumbs-wishlist-buttons{
+.iconic-woothumbs-wishlist-buttons {
     display: none;
 }
 
-.iconic-woothumbs-images-wrap{
-    .onsale{
+.iconic-woothumbs-images-wrap {
+    .onsale {
         display: none;
     }
 }
 
-.iconic-woothumbs-images__image{
+.iconic-woothumbs-images__image {
     height: 790px;
+
     @include media-breakpoint-down(sm) {
-       height: 566px;
+        height: 566px;
     }
+
     object-fit: cover;
 }
 
 .slick-vertical .slick-slide {
     height: 790px;
+
     @include media-breakpoint-down(sm) {
-       height: 566px;
+        height: 566px;
     }
 }
 
-.slick-list.draggable{
+.slick-list.draggable {
     height: 790px;
+
     @include media-breakpoint-down(sm) {
-       height: 566px;
+        height: 566px;
     }
 }
 
-.iconic-woothumbs-responsive-media{
-    video{
+.iconic-woothumbs-responsive-media {
+    video {
         height: 790px;
+
         @include media-breakpoint-down(sm) {
-           height: 566px;
+            height: 566px;
         }
     }
 }
 
-.pt-0{
-    padding-top: 0!important;
+.pt-0 {
+    padding-top: 0 !important;
 }
 
-.pb-0{
-    padding-bottom: 0!important;
+.pb-0 {
+    padding-bottom: 0 !important;
+}
+
+.wislist-block {
+    padding-top: 43px;
+
+    @include media-breakpoint-down(sm) {
+        padding-top: 0;
+    }
+
+    .account-main-title {
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+    }
+
+    .ak-products__grid--4-cols {
+        .ak-product-item {
+            width: 40%;
+            margin-right: 71px;
+
+            @include media-breakpoint-down(sm) {
+                width: 100%;
+                margin-right: 0;
+            }
+
+            .ak-product-favorite-btn {
+                top: 15px;
+                left: 155px;
+
+                width: 6px;
+                height: 6px;
+            }
+
+            .tag {
+                left: 4%;
+                top: 7px;
+
+                .tag-item {
+                    font-size: 10px;
+                }
+            }
+        }
+
+        .ak-product-item__image-wrap {
+            max-width: 100%;
+            width: 45%;
+
+            height: 235px;
+
+            @include media-breakpoint-down(sm) {
+                width: 50%;
+            }
+
+            img {
+                width: 175px;
+                height: 235px;
+            }
+        }
+
+        .ak-product-item__link {
+            flex-direction: row;
+        }
+
+        .ak-product-item__description {
+            padding-top: 0;
+            margin-top: 20px;
+            width: 50%;
+
+            @include media-breakpoint-down(sm) {
+                width: 50%;
+            }
+
+            .top-info {
+                display: flex;
+                align-items: baseline;
+                justify-content: space-between;
+
+                @include media-breakpoint-down(sm) {
+                    flex-direction: column;                
+                }
+            }
+
+            .color_block{
+                display: flex;
+                align-items: baseline;
+
+                .color-item{
+                    width: 8px;
+                    height: 8px;
+
+                    border-radius: 50%;
+                    margin-right: 8px;
+                }
+
+                .title {
+                    width: 23%;
+                }
+
+                p{
+                    margin-bottom: 0;
+                }
+            }
+
+            .title {
+                font-size: 14px;
+                @include media-breakpoint-down(sm) {
+                    width: 100%;
+                }
+
+                &:first-child {
+                    @include media-breakpoint-down(sm) {
+                        margin-bottom: 15px;
+                    }
+                }
+
+                &.qty{
+                    @include media-breakpoint-down(sm) {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+
+            .ak-product__price{
+                @include media-breakpoint-down(sm) {
+                    margin-bottom: 28px;
+                }
+            }
+            
+
+            .woocommerce-Price-amount {
+                font-size: 14px;
+                
+            }
+
+            del {
+                margin-right: 0;
+
+                &:after {
+                    top: 54%;
+                }
+            }
+        }
+    }
+
 }
