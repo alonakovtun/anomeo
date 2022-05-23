@@ -7619,6 +7619,46 @@
             position: relative;
             border-bottom: 1px solid #88DCDF;
 
+            .next_question{
+                display: none;
+            }
+
+            &.next{
+                display: block!important;
+                border-bottom: none;
+                .question{
+                    white-space: nowrap; 
+                    overflow: hidden; 
+                    text-overflow: ellipsis;
+                    position: absolute;
+                    right: 270px;
+                    font-size: 20px;
+                    width: 440px;
+
+                    padding-top: 0;
+                }
+
+                .next_question{
+                    display: flex;
+                    position: absolute;
+                    right: 70px;
+
+                    font-size: 20px;
+                    color: #138796;
+                    font-family: 'Din Pro Light';
+                    img{
+                        width: 29px;
+                        height: 19px;
+
+                        margin-right: 27px;
+                    }
+                }
+                
+                &:after {
+                    content: '';
+                }
+            }
+
             &.hide {
                 display: none;
             }
