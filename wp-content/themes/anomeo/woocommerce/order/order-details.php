@@ -23,75 +23,99 @@ $order = wc_get_order($order_id); // phpcs:ignore WordPress.WP.GlobalVariablesOv
 if (!$order) {
 	return;
 }
-
-$order_items           = $order->get_items(apply_filters('woocommerce_purchase_order_item_types', 'line_item'));
-$show_purchase_note    = $order->has_status(apply_filters('woocommerce_purchase_note_order_statuses', array('completed', 'processing')));
-$show_customer_details = is_user_logged_in() && $order->get_user_id() === get_current_user_id();
-$downloads             = $order->get_downloadable_items();
-$show_downloads        = $order->has_downloadable_item() && $order->is_download_permitted();
-
-if ($show_downloads) {
-	wc_get_template(
-		'order/order-downloads.php',
-		array(
-			'downloads'  => $downloads,
-			'show_title' => true,
-		)
-	);
-}
 ?>
-<section class="ak-my-account__order-details woocommerce-order-details">
-	<div class="col col-left">
-		<p class="ak-order-details__title"><? _e('Billing address', 'woocommerce'); ?></p>
-		<div class="ak-order-details__address">
-			<? foreach (ak_get_formatted_order_address($order->get_address('billing')) as $key => $value) : ?>
-				<p class="address-row <?= $key; ?>"><?= $value; ?></p>
-			<? endforeach; ?>
-		</div>
 
-		<p class="ak-order-details__title ak-order-details__title--border-top"><? _e('Shipping address', 'woocommerce'); ?></p>
-		<div class="ak-order-details__address">
-			<? foreach (ak_get_formatted_order_address($order->get_address('shipping')) as $key => $value) : ?>
-				<p class="address-row <?= $key; ?>"><?= $value; ?></p>
-			<? endforeach; ?>
-		</div>
+<form id="order_review" method="post" class="order_view">
+
+	<div class="back" onclick="history.go(-1)"><?php _e( 'Go back', 'anomeo')?></div>
+	<?php foreach (wc_get_account_orders_columns() as $column_id => $column_name) : ?>
+		<?php if ('order-number' === $column_id) : ?>
+			<a href="<?php echo esc_url($order->get_view_order_url()); ?>" class="number">
+				<?php echo esc_html(_x('Order #', 'hash before order number', 'woocommerce') . $order->get_order_number()); ?>
+			</a>
+	<?php endif;
+	endforeach; ?>
 
 
-		<p class="ak-order-details__title ak-order-details__title--border-top"><? _e('Billing summary', 'anomeo'); ?></p>
-		<div class="ak-order-details-totals">
-			<?
-			foreach ($order->get_order_item_totals() as $key => $total) : ?>
-				<div class="totals-row">
-					<span class="title"><? echo esc_html($total['label']); ?></span>
-					<span><? echo ('payment_method' === $key) ? esc_html($total['value']) : wp_kses_post($total['value']); ?></span>
-				</div>
-			<?
-			endforeach;
-			?>
+	<div class="shop_table">
+
+		<div class="content-table">
+			<?php if (count($order->get_items()) > 0) : ?>
+				<?php foreach ($order->get_items() as $item_id => $item) : ?>
+					<?php
+					if (!apply_filters('woocommerce_order_item_visible', true, $item)) {
+						continue;
+					}
+					?>
+					<div class="<?php echo esc_attr(apply_filters('woocommerce_order_item_class', 'order_item', $item, $order)); ?>">
+						<div class="product-name">
+							<?php
+							echo wp_kses_post(apply_filters('woocommerce_order_item_name', $item->get_name(), $item, false));
+
+							do_action('woocommerce_order_item_meta_start', $item_id, $item, $order, false);
+
+							wc_display_item_meta($item);
+
+							do_action('woocommerce_order_item_meta_end', $item_id, $item, $order, false);
+							?>
+						</div>
+						<div class="product-quantity"><?php echo apply_filters('woocommerce_order_item_quantity_html', ' <strong class="product-quantity">' . sprintf('&times;&nbsp;%s', esc_html($item->get_quantity())) . '</strong>', $item); ?></div><?php // @codingStandardsIgnoreLine 
+																																																															?>
+						<div class="product-subtotal"><?php echo $order->get_formatted_line_subtotal($item); ?></div><?php // @codingStandardsIgnoreLine 
+																														?>
+					</div>
+				<?php endforeach; ?>
+			<?php endif; ?>
 		</div>
+
 	</div>
 
-	<div class="col col-right">
-		<div class="ak-order-details__products-list">
-			<?
-			foreach ($order_items as $item_id => $item) {
-				$product = $item->get_product();
+	<section class="order-details woocommerce-order-details">
+		<div class="billing-col col">
+			<p class="order-details__title"><? _e('Billing address', 'woocommerce'); ?></p>
+			<div class="order-details__address">
+				<? foreach (ak_get_formatted_order_address($order->get_address('billing')) as $key => $value) : ?>
+					<p class="address-row <?= $key; ?>"><?= $value; ?></p>
+				<? endforeach; ?>
+			</div>
+		</div>
 
-				if ($product) {
-					wc_get_template(
-						'order/order-details-item.php',
-						array(
-							'order'              => $order,
-							'item_id'            => $item_id,
-							'item'               => $item,
-							'show_purchase_note' => $show_purchase_note,
-							'purchase_note'      => $product ? $product->get_purchase_note() : '',
-							'product'            => $product,
-						)
-					);
+		<div class="shipping-col col">
+			<p class="order-details__title"><? _e('Shipping address', 'woocommerce'); ?></p>
+			<div class="order-details__address">
+				<? foreach (ak_get_formatted_order_address($order->get_address('shipping')) as $key => $value) : ?>
+					<p class="address-row <?= $key; ?>"><?= $value; ?></p>
+				<? endforeach; ?>
+			</div>
+		</div>
+
+
+
+
+	</section>
+	<?php if ($order->needs_payment()) : ?>
+	<div class="action">
+		<?php foreach (wc_get_account_orders_columns() as $column_id => $column_name) : ?>
+			<?php if ('order-actions' === $column_id) : ?>
+				<?php
+				$actions = wc_get_account_orders_actions($order);
+
+				if (!empty($actions)) {
+					foreach ($actions as $key => $action) {
+						echo '<button><a href="' . esc_url($action['url']) . '" class="woocommerce-button button ' . sanitize_html_class($key) . '">' . esc_html($action['name']) . '</a></button>';
+					}
 				}
-			}
-			?>
-		</div>
+				?>
+		<?php endif;
+		endforeach; ?>
 	</div>
-</section>
+
+	<div class="accept">
+	<label for="checkout-form-consent" class="ak-checkbox consent-checkbox checkout-consent-checkbox">
+			<input type="checkbox" name="checkout-form-consent" id="checkout-form-consent">
+			<span><?= sprintf(__('I accept Privacy Policy and Cookies Policy', 'anomeo'), esc_url(get_permalink(84))); ?></span>
+		</label>
+	</div>
+	<?php endif; ?>
+
+</form>

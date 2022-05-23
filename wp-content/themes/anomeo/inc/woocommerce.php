@@ -589,7 +589,6 @@ add_filter('woocommerce_my_account_my_orders_query', 'ak_account_order_custom_qu
 
 function ak_get_formatted_order_address($raw_address)
 {
-   ?> Test:  <? var_dump(WC()->countries->countries[$raw_address['country']]);
 
 
     $raw_address['name'] = $raw_address['first_name'] . ' ' . $raw_address['last_name'];
