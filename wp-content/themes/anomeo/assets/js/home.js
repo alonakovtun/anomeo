@@ -196,6 +196,28 @@ function FAQScript(){
     jQuery( ".faq_btn.close" ).click(function() {
         jQuery('#openModal').removeClass('_active');
     });
+
+    jQuery( ".question_block .question" ).click(function() {
+        jQuery(this).parent().addClass('show');
+        jQuery('.question_block').addClass('hide');
+
+        jQuery('.faq_title').hide();
+
+        jQuery('.faq-footer').addClass('show');
+
+        jQuery('.faq_question').addClass('open');
+        
+        
+    });
+
+    jQuery(".faq-footer .back").click(function() {
+        jQuery('.faq_title').show();
+        jQuery('.question_block').removeClass('hide');
+        jQuery('.question_block').removeClass('show');
+        jQuery('.faq-footer').removeClass('show');
+        jQuery('.faq_question').removeClass('open');
+    });
+
 }
 
 function initHomePageScripts() {

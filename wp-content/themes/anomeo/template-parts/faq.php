@@ -16,13 +16,20 @@
 				?>
 					<div class="question_block">
 						<p class="question"><? echo $question ?></p>
+						<div class="answer">
+							<? echo $answer ?>
+						</div>
+
+
 
 					</div>
-
-
 				<?php endwhile; ?>
 
 			<? endif; ?>
+
+			<div class="faq-footer">
+				<button class="back"><?php _e('BACK TO THE LIST OF QUESTIONS', 'anomeo') ?></button>
+			</div>
 		</div>
 
 
