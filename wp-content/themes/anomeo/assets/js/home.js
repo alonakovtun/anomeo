@@ -216,6 +216,25 @@ function FAQScript(){
         }
     });
 
+    jQuery( ".question_block.next .next_question" ).click(function() {
+        jQuery(this).parent().addClass('show');
+        jQuery('.question_block').addClass('hide');
+        jQuery('.faq_title').hide();
+        jQuery('.faq-footer').addClass('show');
+        jQuery('.faq_question').addClass('open');
+
+        jQuery(this).parent().next().addClass('next');
+
+        if(jQuery('.question_block').hasClass('next')){
+            jQuery('.question_block.next .question').after('<div class="next_question"><img src="/wp-content/themes/anomeo/assets/img/Arrow_FaQ-06.svg">Next question</div>');
+            
+            jQuery( ".question_block.next .question" ).click(function() {
+                jQuery(this).parent().removeClass('next');
+                jQuery(this).parent().prev('.question_block').removeClass('show');
+            });
+        }
+    });
+
     
 
     jQuery(".faq-footer .back").click(function() {

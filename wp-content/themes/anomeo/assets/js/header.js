@@ -355,35 +355,41 @@ function initMobileMenuScripts() {
                 .querySelector(".sub-menu")
                 .cloneNode(true);
 
-            const contentEl = submenuContentPopup.querySelector(".content");
-            if (contentEl) {
-                contentEl.innerHTML = "";
+            // const contentEl = submenuContentPopup.querySelector(".content");
+            // if (contentEl) {
+            //     contentEl.innerHTML = "";
 
-                contentEl.appendChild(itemContent);
-            }
+            //     contentEl.appendChild(itemContent);
+            // }
 
-            submenuContentPopup.classList.add("open");
+            // submenuContentPopup.classList.add("open");
         });
     });
 
-    const submenuBackBtnEl = submenuContentPopup.querySelector(".back-btn");
-    submenuBackBtnEl.addEventListener("click", (e) => {
-        e.preventDefault();
+    // const submenuBackBtnEl = submenuContentPopup.querySelector(".back-btn");
+    // submenuBackBtnEl.addEventListener("click", (e) => {
+    //     e.preventDefault();
 
-        submenuContentPopup.classList.remove("open");
-    });
+    //     submenuContentPopup.classList.remove("open");
+    // });
 
     const mobileSearchInput = document.getElementById(
         "woocommerce-mobile-product-search-field"
     );
-    const mobileSearchForm = document.querySelector(".mobile-product-search");
-    mobileSearchInput.addEventListener("input", (e) => {
-        if (e.target.value !== "") {
-            mobileSearchForm.classList.add("modified");
-        } else {
-            mobileSearchForm.classList.remove("modified");
-        }
-    });
+    // const mobileSearchForm = document.querySelector(".mobile-product-search");
+    // mobileSearchInput.addEventListener("input", (e) => {
+    //     if (e.target.value !== "") {
+    //         mobileSearchForm.classList.add("modified");
+    //     } else {
+    //         mobileSearchForm.classList.remove("modified");
+    //     }
+    // });
+
+    jQuery('.menu-item-has-children a').click(function(){
+        jQuery(this).parent().find('.sub-menu').toggleClass('open');
+        jQuery(this).parent().toggleClass('open');
+        
+    })
 }
 
 function togglePopupOverlay(enable, whiteBg) {

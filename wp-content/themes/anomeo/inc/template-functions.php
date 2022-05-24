@@ -39,7 +39,7 @@ function get_mobile_change_lang_link()
 
 function get_currency_menu_list()
 {
-    echo '<p class="col-label">' . __('Currency', 'anomeo') . '</p>'; 
+    echo '<p class="col-label">' . __('Currency', 'anomeo') . '</p>';
 
     echo do_action('wcml_currency_switcher', array('format' => '%code%', 'switcher_style' => 'anomeo-menu-list'));
 }
@@ -154,8 +154,9 @@ function get_mobile_product_search_form()
 {
 ?>
     <form role="search" method="get" class="woocommerce-product-search mobile-product-search <?= get_search_query() ? 'modified' : ''; ?>" action="<?php echo esc_url(home_url('/')); ?>">
-        <input type="search" id="woocommerce-mobile-product-search-field" class="search-field" placeholder="<?php echo esc_attr__('Search', 'anomeo'); ?>" value="<?php echo get_search_query(); ?>" name="s" />
-        <button type="submit" class="search-submit"></button>
+        <span class="icon icon-search "></span>
+        <input type="search" id="woocommerce-mobile-product-search-field" class="search-field" value="<?php echo get_search_query(); ?>" name="s" />
+        <button type="submit" class="search-submit"><? _e('Search', 'anomeo'); ?></button>
         <input type="hidden" name="post_type" value="product" />
     </form>
 <?

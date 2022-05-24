@@ -149,7 +149,7 @@
 				</li>
 				<?
 				wp_nav_menu(array(
-					'theme_location' => 'header-menu',
+					'theme_location' => 'mobile-menu',
 					'container' => '',
 					'items_wrap' => '%3$s'
 				));
@@ -171,7 +171,7 @@
 					<li class="menu-item <?= is_account_page() ? 'current-menu-item' : '' ?>"><a href="<?= get_permalink(get_option('woocommerce_myaccount_page_id')); ?>"><? _e('Account', 'anomeo'); ?></a></li>
 				<? endif; ?>
 
-				<? get_mobile_change_lang_link(); ?>
+				<!-- <? //get_mobile_change_lang_link(); ?>
 
 				<li class="menu-item menu-item-has-children">
 					<a href=""><? _e('Currency', 'anomeo'); ?></a>
@@ -181,21 +181,15 @@
 							<? get_currency_menu_list(); ?>
 						</li>
 					</ul>
-				</li>
+				</li> -->
 
-				<?
-				wp_nav_menu(array(
-					'theme_location' => 'mobile-bottom-menu',
-					'container' => '',
-					'items_wrap' => '%3$s'
-				));
-				?>
+				
 			</ul>
-			<div class="submenu-content-popup">
+			<!-- <div class="submenu-content-popup">
 				<button class="back-btn"><span class="back-icon"></span></button>
 
 				<div class="content"></div>
-			</div>
+			</div> -->
 		</div>
 
 		<!-- <main id="primary" class="site-main" style="opacity: 0;"> -->

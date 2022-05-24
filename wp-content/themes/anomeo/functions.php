@@ -51,6 +51,7 @@ if (!function_exists('anomeo_setup')) :
 				'mobile-bottom-menu' => esc_html__('Mobile bottom menu', 'anomeo'),
 				'header-menu' => esc_html__('Header menu', 'anomeo'),
 				'header-menu2' => esc_html__('Header menu2', 'anomeo'),
+				'mobile-menu' => esc_html__('Mobile menu', 'anomeo'),
 				'footer-menu' => esc_html__('Footer menu', 'anomeo'),
 				'terms-menu'  => esc_html__('Terms menu', 'anomeo'),
 				'blog-categories-menu' => esc_html__('Blog categories menu', 'anomeo'),
