@@ -1082,12 +1082,7 @@
             margin-top: 76px;
         }
 
-        &.menu-open,
-        &.current-menu-parent,
-        &.current-menu-item,
-        &.is-active {
-            text-decoration: underline;
-        }
+       
 
         &.right-col {
             display: none;
@@ -1111,14 +1106,13 @@
                 }
             }
 
-            
-                .sub-menu{
-                    &:first-child{
-                        .menu-item{
-                            a{
-                                color: #F89D3F;
-                            }
+            &:first-child{
+                .sub-menu.open{
+                    .menu-item{
+                        a{
+                            color: #F89D3F;
                         }
+                    }
                 }
             }
         }
@@ -5938,6 +5932,7 @@
     @include media-breakpoint-down(sm) {
         align-items: center;
         padding-left: var(--ak-main-spacing);
+        height: 18px;
     }
 
     .home-orange-block__text {

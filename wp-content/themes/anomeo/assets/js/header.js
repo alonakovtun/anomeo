@@ -342,29 +342,29 @@ function initMobileMenuScripts() {
         }
     });
 
-    const menuItemsWithSubmenu = mobileMenuPopupEl.querySelectorAll(
-        ".menu-item.menu-item-has-children"
-    );
-    menuItemsWithSubmenu.forEach((el) => {
-        el.addEventListener("click", (e) => {
-            e.preventDefault();
+    // const menuItemsWithSubmenu = mobileMenuPopupEl.querySelectorAll(
+    //     ".menu-item.menu-item-has-children"
+    // );
+    // menuItemsWithSubmenu.forEach((el) => {
+    //     el.addEventListener("click", (e) => {
+    //         e.preventDefault();
 
-            const parentNode =
-                e.target.tagName === "A" ? e.target.parentNode : e.target;
-            const itemContent = parentNode
-                .querySelector(".sub-menu")
-                .cloneNode(true);
+    //         const parentNode =
+    //             e.target.tagName === "A" ? e.target.parentNode : e.target;
+    //         const itemContent = parentNode
+    //             .querySelector(".sub-menu")
+    //             .cloneNode(true);
 
-            // const contentEl = submenuContentPopup.querySelector(".content");
-            // if (contentEl) {
-            //     contentEl.innerHTML = "";
+    //         const contentEl = submenuContentPopup.querySelector(".content");
+    //         if (contentEl) {
+    //             contentEl.innerHTML = "";
 
-            //     contentEl.appendChild(itemContent);
-            // }
+    //             contentEl.appendChild(itemContent);
+    //         }
 
-            // submenuContentPopup.classList.add("open");
-        });
-    });
+    //         submenuContentPopup.classList.add("open");
+    //     });
+    // });
 
     // const submenuBackBtnEl = submenuContentPopup.querySelector(".back-btn");
     // submenuBackBtnEl.addEventListener("click", (e) => {
@@ -373,9 +373,9 @@ function initMobileMenuScripts() {
     //     submenuContentPopup.classList.remove("open");
     // });
 
-    const mobileSearchInput = document.getElementById(
-        "woocommerce-mobile-product-search-field"
-    );
+    // const mobileSearchInput = document.getElementById(
+    //     "woocommerce-mobile-product-search-field"
+    // );
     // const mobileSearchForm = document.querySelector(".mobile-product-search");
     // mobileSearchInput.addEventListener("input", (e) => {
     //     if (e.target.value !== "") {

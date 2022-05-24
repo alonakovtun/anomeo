@@ -155,44 +155,19 @@
 				));
 				?>
 
-				<? if (is_user_logged_in()) : ?>
-					<li class="menu-item menu-item-has-children <?= is_account_page() ? 'current-menu-item' : '' ?>">
-						<a href=""><? _e('Account', 'anomeo'); ?></a>
-
-						<ul class="sub-menu">
-							<?php foreach (wc_get_account_menu_items() as $endpoint => $label) : ?>
-								<li class="menu-item <?php echo wc_get_account_menu_item_classes($endpoint); ?>">
-									<a href="<?php echo esc_url(wc_get_account_endpoint_url($endpoint)); ?>"><?php echo esc_html($label); ?></a>
-								</li>
-							<?php endforeach; ?>
-						</ul>
-					</li>
-				<? else : ?>
-					<li class="menu-item <?= is_account_page() ? 'current-menu-item' : '' ?>"><a href="<?= get_permalink(get_option('woocommerce_myaccount_page_id')); ?>"><? _e('Account', 'anomeo'); ?></a></li>
-				<? endif; ?>
-
-				<!-- <? //get_mobile_change_lang_link(); ?>
-
-				<li class="menu-item menu-item-has-children">
-					<a href=""><? _e('Currency', 'anomeo'); ?></a>
-
-					<ul class="sub-menu">
-						<li class="menu-item currency-menu-item">
-							<? get_currency_menu_list(); ?>
-						</li>
-					</ul>
-				</li> -->
-
 				
+					<li class="menu-item <?= is_account_page() ? 'current-menu-item' : '' ?>"><a href="<?= get_permalink(get_option('woocommerce_myaccount_page_id')); ?>"><? _e('Account', 'anomeo'); ?></a></li>
+				
+					<?
+				wp_nav_menu(array(
+					'theme_location' => 'footer-menu',
+					'container' => '',
+					'items_wrap' => '%3$s'
+				));
+				?>
 			</ul>
-			<!-- <div class="submenu-content-popup">
-				<button class="back-btn"><span class="back-icon"></span></button>
-
-				<div class="content"></div>
-			</div> -->
 		</div>
-
-		<!-- <main id="primary" class="site-main" style="opacity: 0;"> -->
+		
 		<main id="primary" class="site-main">
 
 		
