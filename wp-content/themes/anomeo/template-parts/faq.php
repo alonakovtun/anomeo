@@ -19,9 +19,6 @@
 						<div class="answer">
 							<? echo $answer ?>
 						</div>
-
-
-
 					</div>
 				<?php endwhile; ?>
 

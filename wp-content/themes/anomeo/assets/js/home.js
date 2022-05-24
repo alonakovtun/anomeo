@@ -208,13 +208,15 @@ function FAQScript(){
 
         if(jQuery('.question_block').hasClass('next')){
             jQuery('.question_block.next .question').after('<div class="next_question"><img src="/wp-content/themes/anomeo/assets/img/Arrow_FaQ-06.svg">Next question</div>');
+            
+            jQuery( ".question_block.next .question" ).click(function() {
+                jQuery(this).parent().removeClass('next');
+                jQuery(this).parent().prev('.question_block').removeClass('show');
+            });
         }
     });
 
-    jQuery( ".question_block.next .question" ).click(function() {
-        jQuery(this).parent().removeClass('next');
-        jQuery('.question_block.next').prev().removeClass('show');
-    });
+    
 
     jQuery(".faq-footer .back").click(function() {
         jQuery('.faq_title').show();
