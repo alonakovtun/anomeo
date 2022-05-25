@@ -8257,3 +8257,15 @@
     }
    
 }
+
+.pswp__ui--fit .pswp__caption, .pswp__ui--fit .pswp__top-bar{
+    background-color: rgba(0,0,0,.0);
+}
+
+.iconic-woothumbs-fullscreen i{
+    display: none;
+}
+
+.iconic-woothumbs-all-images-wrap .slick-vertical .slick-slide{
+    cursor: pointer;
+}

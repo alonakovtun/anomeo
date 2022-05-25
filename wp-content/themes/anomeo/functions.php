@@ -183,3 +183,5 @@ if ( ! function_exists( 'yith_wcwl_custom_remove_from_wishlist_label' ) ) {
 	add_filter( 'yith_wcwl_remove_from_wishlist_label', 'yith_wcwl_custom_remove_from_wishlist_label' );
 }
 
+add_filter('jpeg_quality', function($arg){return 100;});
+

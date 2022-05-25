@@ -363,6 +363,11 @@ function showDetailsScript() {
     });
 }
 
+function zoomProduct(){
+    jQuery(".pswp__button.pswp__button--close").addClass("test");
+
+}
+
 function initSingleProductPageScripts() {
     addToCartScripts();
     gallerySliderScripts();
@@ -370,6 +375,7 @@ function initSingleProductPageScripts() {
     relatedProductsSlider();
     // initPhotoSwipeImageGallery();
     showDetailsScript();
+    zoomProduct();
 }
 
 export { initSingleProductPageScripts };
