@@ -1,4 +1,5 @@
 <?php
+
 $items = get_field('related_products');
 if ($items) : ?>
 <section class="popular-items-block">
@@ -38,7 +39,8 @@ if ($items) : ?>
 
                     <div class="swiper-slide">
                         <div data-prd-id="<?= $item->ID ?>" class="slider-product">
-                        <?= get_wishlist_button(); ?>                            <a href="<?= $permalink; ?>" class="slider-product__image">
+                        <?= get_wishlist_button(); ?>                            
+                        <a href="<?= $permalink; ?>" class="slider-product__image">
                                 <img src="<?= get_the_post_thumbnail_url($id->get_id()); ?>" alt="<?= the_title(); ?>" />
 
                                 <div class="tag">

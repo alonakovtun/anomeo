@@ -19,5 +19,9 @@ defined( 'ABSPATH' ) || exit;
 
 ?>
 <div class="nothing-found-text-wrap">
-    <p class="woocommerce-info"><?php esc_html_e( 'No products were found matching your selection.', 'woocommerce' ); ?></p>
+<div class="page-title__container search-notfound">
+		<h1 class="page-title__title"><? _e('Search', 'anomeo'); ?></h1>
+		<p class="page-title__subtitle "><? _e('No results for: ', 'anomeo'); ?> <span class="search-title"><?php echo get_search_query(); ?></span></p>
+		
+	</div>
 </div>

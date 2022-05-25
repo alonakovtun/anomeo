@@ -31,24 +31,21 @@ do_action('woocommerce_before_main_content');
 
 ?>
 <? if (!is_search()) : ?>
-	<header class="ak-page__title-row">
-		<h1 class="title"><?php woocommerce_page_title(); ?></h1>
-	</header>
-<? else : ?>
-	<header class="ak-page__title-row ak-page__title-row--search">
-		<form role="search" method="get" class="woocommerce-product-search" action="<?php echo esc_url(home_url('/')); ?>">
-			<input type="search" id="woocommerce-product-search-field-<?php echo isset($index) ? absint($index) : 0; ?>" class="search-field" placeholder="<?php echo esc_attr__('Type the phrase', 'anomeo'); ?>" value="<?php echo get_search_query(); ?>" name="s" />
-			<a href="<?= get_permalink( wc_get_page_id( 'shop' ) ); ?>" class="search-close"><? _e('Close', 'anomeo'); ?></a>
-			<input type="hidden" name="post_type" value="product" />
-		</form>
-	</header>
-<? endif; ?>
-<?php
-if (woocommerce_product_loop()) { ?>
 	<div class="page-title__container">
 		<h1 class="page-title__title"><? _e('Shop', 'anomeo'); ?></h1>
 		<p class="page-title__subtitle "><? _e('All products', 'anomeo'); ?></p>
 	</div>
+<? else : ?>
+	<div class="page-title__container search">
+		<h1 class="page-title__title"><? _e('Search', 'anomeo'); ?></h1>
+		<p class="page-title__subtitle "><? _e('Results for: ', 'anomeo'); ?> <span class="search-title"><?php echo get_search_query(); ?></span></p>
+		
+	</div>
+
+<? endif; ?>
+<?php
+if (woocommerce_product_loop()) { ?>
+	
 	<section class="ak-products__filters-row">
 		
 		<div class="filter-col">

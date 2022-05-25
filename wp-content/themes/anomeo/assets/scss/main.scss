@@ -2655,12 +2655,8 @@
 .post-type-archive-product.search {
     .nothing-found-text-wrap {
         color: var(--ak-accent-color);
-
-        padding: 30px var(--ak-main-spacing);
         font-family: "Din Pro";
         font-size: 20px;
-
-        max-width: 35%;
 
         @include media-breakpoint-up(xl) {
             padding: 60px var(--ak-main-spacing);
@@ -8297,5 +8293,46 @@
 
 .iconic-woothumbs-all-images-wrap .slick-vertical .slick-slide{
     cursor: pointer;
+}
+
+.search-results{
+    .page-title__container, .ak-products__filters-row{
+        display: none;
+    }
+
+    .page-title__container{
+        margin-bottom: 92px;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 49px;
+        }
+        &.search{
+            display: block;
+        }
+
+        .search-title{
+            color: #F89D3F;
+        }
+    }
+}
+
+.search-no-results{
+    .page-title__container{
+       
+        &.search{
+            display: none;
+        }
+
+        &.search-notfound{
+            margin-bottom: 551px;
+            .page-title__subtitle{
+                color: #E85699;
+
+                @include media-breakpoint-down(sm) {
+                    font-size: 28px;
+                }
+            }
+        }
+    }
 }
 

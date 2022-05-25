@@ -18,7 +18,10 @@ if ($items) : ?>
 
                     <div class="swiper-slide">
                         <div data-prd-id="<?= $item->ID ?>" class="slider-product">
-                            <?php echo do_shortcode("[yith_wcwl_add_to_wishlist product_id=" .  $item->ID . "]") ?>
+                            <?php //echo do_shortcode("[yith_wcwl_add_to_wishlist product_id=" .  $item->ID . "]") ?>
+                            <?php //get_wishlist_button(); ?>                            
+                            <a href="<?= $permalink; ?>" class="slider-product__image">
+
                             <a href="<?= $permalink; ?>" class="slider-product__image">
                                 <img src="<?= get_the_post_thumbnail_url($id->get_id()); ?>" alt="<?= the_title(); ?>" />
 
