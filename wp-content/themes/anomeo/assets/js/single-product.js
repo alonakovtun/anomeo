@@ -364,7 +364,7 @@ function showDetailsScript() {
 }
 
 function zoomProduct(){
-    jQuery(".pswp__button.pswp__button--close").addClass("test");
+    jQuery(".pswp__button.pswp__button--close").html('Close');
 
 }
 

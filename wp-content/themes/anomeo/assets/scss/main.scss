@@ -1074,6 +1074,16 @@
 
         border-bottom: 1px solid #EAEAEA;
 
+        &:nth-child(2){
+            .sub-menu{
+                .menu-item{
+                    a{
+                        color: #FDA757;
+                    }
+                }
+            }
+        }
+
         a{
             display: block;
             padding: 28px var(--ak-main-spacing);
@@ -7673,17 +7683,23 @@
 
     .faq_question {
         overflow-y: auto;
-        height: 68vh;
+        height: 71vh;
 
         &.open{
             height: 75vh;
         }
 
         .faq-footer{
-            display: none;
+            // display: none;
+            opacity: 0;
+            visibility: hidden;
+            height: 0;
 
             &.show{
-                display: block;
+                // display: block;
+                opacity: 1;
+                visibility: visible;
+                height: auto;
 
                 padding-left: 70px;
 
@@ -7711,13 +7727,20 @@
             position: relative;
             border-bottom: 1px solid #88DCDF;
 
+            transition: visibility, opacity, height all .5s;
+
             .next_question{
                 display: none;
             }
 
             &.next{
-                display: block!important;
+                // display: block!important;
                 border-bottom: none;
+                opacity: 1!important;
+                height: 100%;
+                visibility: visible!important;
+
+                transition: opacity, visibility, height .5s;
                 .question{
                     white-space: nowrap; 
                     overflow: hidden; 
@@ -7764,11 +7787,17 @@
             }
 
             &.hide {
-                display: none;
+                // display: none;
+                opacity: 0;
+                visibility: hidden;
+                height: 0;
             }
 
             &.show {
-                display: block;
+                // display: block;
+                height: auto;
+                visibility: visible;
+                opacity: 1;
                 border-bottom: none;
 
                 @include media-breakpoint-down(sm) {
@@ -7796,7 +7825,11 @@
                 }
 
                 .answer {
-                    display: block;
+                    // display: block;
+                    transition: all .5s ease-in-out;
+                    opacity: 1;
+                    visibility: visible;
+                    height: 100%;
                     padding: 70px;
                     padding-bottom: 115px;
 
@@ -7822,21 +7855,23 @@
             .question {
                 color: #138997;
                 font-size: 30px;
-                width: 75%;
                 margin-bottom: 0;
-                padding: 20px 0px 20px 70px;
+                padding: 20px 200px 20px 70px;
                 text-transform: none;
 
                 cursor: pointer;
 
                 @include media-breakpoint-down(sm) {
-                   padding: 25px 0 25px 35px;
+                   padding: 25px 60px 25px 35px;
                    font-size: 20px;
                 }
             }
 
             .answer {
-                display: none;
+                // display: none;
+                opacity: 0;
+                visibility: hidden;
+                height: 0;
             }
 
             &:after {
@@ -7848,6 +7883,7 @@
                 transition: all .3s;
                 top: 10%;
                 right: 70px;
+                z-index: -1;
 
                 color: #F89D3F;
 
@@ -8284,7 +8320,7 @@
 }
 
 .pswp__ui--fit .pswp__caption, .pswp__ui--fit .pswp__top-bar{
-    background-color: rgba(0,0,0,.0);
+    display: none;
 }
 
 .iconic-woothumbs-fullscreen i{
@@ -8316,6 +8352,10 @@
     }
 }
 
+.search-notfound{
+    display: none;
+}
+
 .search-no-results{
     .page-title__container{
        
@@ -8324,6 +8364,7 @@
         }
 
         &.search-notfound{
+            display: block;
             margin-bottom: 551px;
             .page-title__subtitle{
                 color: #E85699;
@@ -8336,3 +8377,23 @@
     }
 }
 
+.iconic-woothumbs-icon-right-open-mini:before, .iconic-woothumbs-icon-left-open-mini:before{
+    content: "";
+    width: 10px;
+    display: inline-block;
+    height: 10px;
+    background-color: #138997;
+    border-radius: 50%;
+}
+
+.pswp__button--arrow--left:before, .pswp__button--arrow--right:before{
+    background: url(/wp-content/themes/anomeo/assets/img/strzalka_zoom-01.svg)!important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20px;
+    width: 31px;
+}
+
+.notfound{
+    margin-bottom: 500px;
+}

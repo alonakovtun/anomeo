@@ -68,19 +68,25 @@ function initSiteCookiesBannerScripts() {
 }
 
 function headerHideOnScrollAnimation() {
-    var header = jQuery(".site-header"),
-        scrollPrev = 0;
+    var header = jQuery(".site-header");
 
-    jQuery(window).scroll(function () {
-        var scrolled = jQuery(window).scrollTop();
+    if (jQuery(window).width() < 768) {
+        header.removeClass("out");
+    } else {
+        var header = jQuery(".site-header"),
+            scrollPrev = 0;
 
-        if (scrolled > 100 && scrolled > scrollPrev) {
-            header.addClass("out");
-        } else {
-            header.removeClass("out");
-        }
-        scrollPrev = scrolled;
-    });
+        jQuery(window).scroll(function () {
+            var scrolled = jQuery(window).scrollTop();
+
+            if (scrolled > 100 && scrolled > scrollPrev) {
+                header.addClass("out");
+            } else {
+                header.removeClass("out");
+            }
+            scrollPrev = scrolled;
+        });
+    }
 
     // const headerEl = document.querySelector("#masthead");
     // const topBannerEl = document.querySelector(".site-top-banner");
@@ -385,11 +391,10 @@ function initMobileMenuScripts() {
     //     }
     // });
 
-    jQuery('.menu-item-has-children a').click(function(){
-        jQuery(this).parent().find('.sub-menu').toggleClass('open');
-        jQuery(this).parent().toggleClass('open');
-        
-    })
+    jQuery(".menu-item-has-children a").click(function () {
+        jQuery(this).parent().find(".sub-menu").toggleClass("open");
+        jQuery(this).parent().toggleClass("open");
+    });
 }
 
 function togglePopupOverlay(enable, whiteBg) {
@@ -446,18 +451,16 @@ function initPopupOverlayScripts() {
 }
 
 function hideSearchScript() {
+    const hideSearch = document.querySelector(".hide_search"),
+        searchPopup = document.querySelector(".site-header__search-popup");
 
-    const hideSearch = document.querySelector('.hide_search'),
-    searchPopup = document.querySelector('.site-header__search-popup');
-   
-    hideSearch.addEventListener('click', (e) => {
+    hideSearch.addEventListener("click", (e) => {
         e.preventDefault();
-        if(searchPopup.classList.contains('open')){
-            searchPopup.classList.remove('open');
+        if (searchPopup.classList.contains("open")) {
+            searchPopup.classList.remove("open");
         }
     });
-   
-   }
+}
 
 function initHeaderScripts() {
     initStartupAnimation();

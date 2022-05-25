@@ -109,7 +109,13 @@ if (woocommerce_product_loop()) { ?>
 	 *
 	 * @hooked wc_no_products_found - 10
 	 */
-	do_action('woocommerce_no_products_found');
+	do_action('woocommerce_no_products_found');?>
+	<div class="page-title__container notfound">
+		<p class="page-title__subtitle "><? _e('Products not found', 'anomeo'); ?></p>
+	</div>
+
+
+	<?php
 }
 
 /**
