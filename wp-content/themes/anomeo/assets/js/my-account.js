@@ -33,19 +33,11 @@ function swiperOrder(){
         slidesPerView: 1,
         spaceBetween: 0,
         allowTouchMove: true,
-        speed: 600,
-        autoplay: {
-            delay: 5000,
-        },
         navigation: {
-            nextEl: ".products-slider__button-next",
-            prevEl: ".products-slider__button-prev",
+            nextEl: ".order-slider__button-next",
+            prevEl: ".order-slider__button-prev",
         },
-        breakpoints: {
-            576: {
-                slidesPerView: 2,
-            },
-        },
+        
     });
 }
 

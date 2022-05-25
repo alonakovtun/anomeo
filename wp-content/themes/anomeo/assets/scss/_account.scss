@@ -121,6 +121,20 @@
             }
         }
 
+        .address-title,
+        .order-title{
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 19px;
+            }
+        }
+
+        .order-title{
+            @include media-breakpoint-down(sm) {
+                padding-right: var(--ak-main-spacing);
+                padding-left: var(--ak-main-spacing);
+            }
+        }
+
     }
 
     .myaccount__content-wrap--dashboard{
@@ -295,5 +309,40 @@ input, .select2{
         @include media-breakpoint-down(sm) {
             padding: 25px 0 35px;
         }
+    }
+}
+
+
+.order-slider__button-prev{
+    img{
+        transform: rotate(180deg);
+        margin-right: 28px;
+    }
+}
+
+.order-slider__button-next{
+    img{
+        margin-left: 28px;
+        margin-bottom: 15px;
+    }
+}
+
+.order-slider__button-prev, .order-slider__button-next{
+    display: flex;
+
+    color: #128796;
+    font-size: 20px;
+    font-family: 'Din Pro Light';
+
+    padding-left: var(--ak-main-spacing);
+    padding-right: var(--ak-main-spacing);
+
+    @include media-breakpoint-up(sm) {
+        display: none;
+    }
+
+    img{
+        width: 30px;
+        height: 18px;
     }
 }
