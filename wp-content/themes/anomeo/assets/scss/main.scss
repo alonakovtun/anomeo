@@ -161,6 +161,7 @@
 
     @include media-breakpoint-down(sm) {
        height: 80px;
+       z-index: 99999999;
     }
 
     &.hidden {
@@ -7589,6 +7590,11 @@
         width: 85px;
         height: 44px;
 
+        @include media-breakpoint-down(sm) {
+            top: 111px;
+            right: 37px;
+        }
+
         cursor: pointer;
 
         &.close {
@@ -7612,6 +7618,10 @@
 
         padding-top: 142px;
 
+        @include media-breakpoint-down(sm) {
+            padding-top: 172px;
+        }
+
         &._active {
             opacity: 1;
             pointer-events: auto;
@@ -7627,6 +7637,13 @@
         margin-bottom: 0;
 
         border-bottom: 1px solid #88DCDF;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 28px;
+            padding-left: 35px;
+            padding-right: 130px;
+            padding-bottom: 21px;
+        }
     }
 
     .faq_question {
@@ -7644,6 +7661,11 @@
                 display: block;
 
                 padding-left: 70px;
+
+                @include media-breakpoint-down(sm) {
+                    padding-left: 35px;
+                    margin-top: -150px;
+                }
                 .back{
                     color: #FFFFFF;
                     font-size: 12px;
@@ -7683,6 +7705,10 @@
                     padding-right: 200px;
 
                     padding-top: 0;
+
+                    @include media-breakpoint-down(sm) {
+                        opacity: 0;
+                    }
                 }
 
                 .next_question{
@@ -7693,6 +7719,12 @@
                     font-size: 20px;
                     color: #138796;
                     font-family: 'Din Pro Light';
+
+                    @include media-breakpoint-down(sm) {
+                        padding-bottom: 75px;
+                        right: 35px;
+                    }
+
                     img{
                         width: 29px;
                         height: 19px;
@@ -7714,6 +7746,10 @@
                 display: block;
                 border-bottom: none;
 
+                @include media-breakpoint-down(sm) {
+                    padding-top: 101px;
+                }
+
                 &:after {
                     content: '';
                 }
@@ -7724,6 +7760,14 @@
                     text-transform: uppercase;
 
                     cursor: default;
+
+                    @include media-breakpoint-down(sm) {
+                        font-size: 28px;
+                        width: 100%;
+                        padding-right: 60px;
+                        padding-bottom: 0;
+                    }
+    
                 }
 
                 .answer {
@@ -7734,6 +7778,19 @@
                     font-size: 36px;
                     color: #138997;
                     width: 85%;
+
+                    @include media-breakpoint-down(sm) {
+                       padding: 25px 78px 30px 35px;
+                       width: 100%;
+                       font-size: 20px;
+                       margin-bottom: 150px;
+                    }
+
+                    p{
+                        @include media-breakpoint-down(sm) {
+                            margin-bottom: 0;
+                        }
+                    }
                 }
             }
 
@@ -7746,6 +7803,11 @@
                 text-transform: none;
 
                 cursor: pointer;
+
+                @include media-breakpoint-down(sm) {
+                   padding: 25px 0 25px 35px;
+                   font-size: 20px;
+                }
             }
 
             .answer {
@@ -7763,6 +7825,10 @@
                 right: 70px;
 
                 color: #F89D3F;
+
+                @include media-breakpoint-down(sm) {
+                   right: 35px;
+                 }
             }
         }
 
