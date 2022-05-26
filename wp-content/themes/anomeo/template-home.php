@@ -10,21 +10,29 @@
 
 
 get_header();
+
 while (have_posts()) : the_post(); ?>
-<?php get_template_part('template-parts/faq');?>
+    <?php get_template_part('template-parts/faq'); ?>
     <section class="home-top-slider fullwidth-slider">
-        <div class="swiper-wrapper">
-            <? if (have_rows('top_slider')) :
-                while (have_rows('top_slider')) : the_row(); ?>
-                    <div class="swiper-slide fullwidth-slider__item">
-                        <img src="<? the_sub_field('image'); ?>" class="fullwidth-slider__image">
-                        <div class="fullwidth-slider__item-description">
-                            <? the_sub_field('name'); ?>
+        <?php $file = get_field('video');
+        if ($file) : ?>
+            <video autoplay class="home-video">
+                <source src="<?php echo $file; ?>" type="video/mp4">
+            </video>
+        <?php else : ?>
+            <div class="swiper-wrapper">
+                <? if (have_rows('top_slider')) :
+                    while (have_rows('top_slider')) : the_row(); ?>
+                        <div class="swiper-slide fullwidth-slider__item">
+                            <img src="<? the_sub_field('image'); ?>" class="fullwidth-slider__image">
+                            <div class="fullwidth-slider__item-description">
+                                <? the_sub_field('name'); ?>
+                            </div>
                         </div>
-                    </div>
-            <? endwhile;
-            endif; ?>
-        </div>
+                <? endwhile;
+                endif; ?>
+            </div>
+        <?php endif; ?>
         <div class="fullwidth-slider__button-prev"></div>
         <div class="fullwidth-slider__button-next"></div>
         <div class="swiper-pagination fullwidth-slider__pagination"></div>
@@ -70,7 +78,8 @@ while (have_posts()) : the_post(); ?>
             <div class="bottom">
                 <div class="popular-products-slider__button-prev">
                     <img src="/wp-content/themes/anomeo/assets/img/Arrow_FaQ-06.svg" alt="">
-                    <p class="desktop">Previous products</p></div>
+                    <p class="desktop">Previous products</p>
+                </div>
                 <div class="popular-products-slider__button-next">
                     <img src="/wp-content/themes/anomeo/assets/img/Arrow_FaQ-06.svg" alt="">
                     <p class="desktop">Next products</p>
