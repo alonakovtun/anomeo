@@ -1601,8 +1601,9 @@
         background-color: #EFF4F3;
         color: #128796;
 
-        @include media-breakpoint-up(sm) {
+        @include media-breakpoint-down(sm) {
             height: 25px;
+            padding-left: var(--ak-main-spacing);
         }
 
         a,
@@ -3799,6 +3800,7 @@
                         flex-direction: row-reverse;
                         padding: 0 var(--ak-main-spacing) 65px;
                         align-items: baseline;
+                        padding-left: var(--ak-main-spacing);
                     }
 
                     .back {
@@ -3830,6 +3832,7 @@
                     @include media-breakpoint-down(sm) {
                         width: 100%;
                         padding-top: 0;
+                        padding-left: var(--ak-main-spacing);
                     }
 
                     a {
@@ -3910,6 +3913,10 @@
 
                 .section-title {
                     padding-bottom: 15px;
+
+                    @include media-breakpoint-down(sm) {
+                        display: block;
+                    }
                 }
 
                 .related-post__button-next {
@@ -5017,6 +5024,7 @@
 
             @include media-breakpoint-up(xl) {
                 margin-bottom: 130px;
+                
             }
         }
     }
@@ -5518,7 +5526,7 @@
 
     .ak-checkout__coupon-form {
         position: relative;
-
+       
 
 
         .coupon-form-title {
@@ -5665,6 +5673,15 @@
         padding: 38px 0 45px;
         margin: 0;
 
+        @include media-breakpoint-down(sm) {
+            font-size: 28px;
+            padding-top: 23px;
+            padding-bottom: 23px;
+            padding-left: var(--ak-main-spacing);
+            border-top: 1px solid #EAEAEA;
+
+        }
+
         label {
             display: block;
             margin: 0;
@@ -5746,7 +5763,10 @@
         @include media-breakpoint-up(sm) {}
 
         &--left {
-            @include media-breakpoint-up(sm) {}
+            @include media-breakpoint-down(sm) {
+                width: 100%;
+                padding-left: 0;
+            }
 
             .woocommerce-checkout-review-order-table .products-list {
                 display: none;
@@ -5755,6 +5775,7 @@
             width: 40%;
 
             border-right: 1px solid #EAEAEA;
+            
 
             input {
                 width: 357px !important;
@@ -5795,6 +5816,11 @@
 
                 align-items: baseline;
 
+                @include media-breakpoint-down(sm) {
+                    padding-left: var(--ak-main-spacing);
+                    border-top: 1px solid #EAEAEA;
+                }
+
                 #ajax-coupon-form-submit-btn {
                     display: none;
                     margin-right: 22px;
@@ -5811,6 +5837,9 @@
 
                 #ajax-coupon-form-input {
                     margin-bottom: 23px;
+                    @include media-breakpoint-down(sm) {
+                        margin-top: 32px;
+                    }
                 }
             }
         }
@@ -5821,10 +5850,9 @@
 
             @include media-breakpoint-down(sm) {
                 order: -1;
-
-                .ak-checkout-form__section-title {
-                    display: none;
-                }
+                width: 100%;
+                padding-right: var(--ak-main-spacing);
+                border-bottom: 1px solid #EAEAEA;
             }
 
             .woocommerce-checkout-review-order-table .subtotals-list {
@@ -7001,7 +7029,6 @@
 
         @include media-breakpoint-down(sm) {
             margin-bottom: 44px;
-
         }
     }
 
@@ -7034,7 +7061,6 @@
         @include media-breakpoint-down(sm) {
             font-size: 28px;
             margin: 0 0 20px;
-
         }
 
     }
@@ -7074,6 +7100,10 @@
     &.checkout {
         padding-left: var(--ak-main-spacing);
         padding-bottom: 41px;
+
+        @include media-breakpoint-down(sm) {
+           padding-left: 0;
+        }
     }
 }
 
@@ -7081,6 +7111,10 @@
     .ak-checkout__product-item {
         display: flex;
         margin-bottom: 14px;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 32px;
+        }
 
         img {
             width: 175px;
@@ -7094,6 +7128,11 @@
             .product-title {
                 display: flex;
 
+                @include media-breakpoint-down(sm) {
+                    flex-direction: column;
+                }
+
+
                 .title {
                     width: 60%;
 
@@ -7102,6 +7141,10 @@
                     color: #6C6D6E;
 
                     margin-bottom: 0;
+
+                    @include media-breakpoint-down(sm) {
+                        width: 100%;
+                    }
                 }
 
                 .price {
@@ -7110,6 +7153,12 @@
 
                     font-size: 16px;
                     color: #128796;
+
+                    @include media-breakpoint-down(sm) {
+                        width: 100%;
+                        text-align: start;
+                        margin-top: 20px;
+                    }
                 }
             }
 
@@ -7489,6 +7538,10 @@
     display: flex;
     margin-bottom: 50px;
 
+    @include media-breakpoint-down(sm) {
+        padding-left: var(--ak-main-spacing);
+    }
+
     .item {
         font-size: 12px;
         text-transform: uppercase;
@@ -7529,6 +7582,11 @@
 
         border-bottom: 1px solid #EAEAEA;
         margin-top: 20px;
+
+        @include media-breakpoint-down(sm) {
+            padding-left: var(--ak-main-spacing);
+            padding-bottom: 16px;
+        }
 
         .price {
             margin-right: 47px;
@@ -7644,6 +7702,9 @@
 }
 
 .place-order {
+    @include media-breakpoint-down(sm) {
+        padding-left: var(--ak-main-spacing);
+    }
     .button {
         margin-top: 50px;
         margin-bottom: 54px;
@@ -8324,6 +8385,9 @@
 .woocommerce-checkout-review-order {
     #payment {
         padding-left: 0;
+        @include media-breakpoint-down(sm) {
+            padding-right: 0;
+        }
     }
 }
 
@@ -8461,5 +8525,31 @@
 .woocommerce-shipping-methods{
     label{
         display: block;
+    }
+}
+
+.woocommerce-billing-fields__fields-wrapper{
+    @include media-breakpoint-down(sm) {
+        padding-left: var(--ak-main-spacing);
+    }
+
+    .form-row{
+        &:last-child{
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 32px;
+            }
+        }
+        
+    }
+}
+
+.wc_payment_methods{
+
+    .wc_payment_method{
+        @include media-breakpoint-down(sm) {
+            border-bottom: 1px solid #eaeaea;
+            padding-left: var(--ak-main-spacing);
+            padding-right: var(--ak-main-spacing);
+        }
     }
 }
