@@ -5035,6 +5035,11 @@
         @include media-breakpoint-up(xl) {
             margin-bottom: 130px;
         }
+
+        @include media-breakpoint-down(sm) {
+           padding-left: var(--ak-main-spacing);
+           padding-right: var(--ak-main-spacing);
+        }
     }
 
     .woocommerce-additional-fields {
@@ -5779,6 +5784,9 @@
 
             input {
                 width: 357px !important;
+                @include media-breakpoint-down(sm) {
+                    width: 100%!important;
+                }
             }
 
             .ak-checkout__coupon-form {
@@ -5788,6 +5796,10 @@
                     color: #fff;
                     padding-top: 17px;
                     margin-top: 14px;
+
+                    @include media-breakpoint-down(sm) {
+                        width: 100%!important;
+                    }
 
                     &::placeholder {
                         color: #fff;
@@ -5818,6 +5830,7 @@
 
                 @include media-breakpoint-down(sm) {
                     padding-left: var(--ak-main-spacing);
+                    padding-right: var(--ak-main-spacing);
                     border-top: 1px solid #EAEAEA;
                 }
 
@@ -5962,6 +5975,7 @@
         font-family: "Din Pro";
         font-size: 36px;
         width: 60%;
+        display: inline-block;
 
         @include media-breakpoint-down(sm) {
             width: 100%;
@@ -7692,6 +7706,9 @@
     .select2 {
         width: 357px !important;
         padding: 20px 34px;
+        @include media-breakpoint-down(sm) {
+            width: 100%!important;
+        }
     }
 
 
@@ -7704,6 +7721,7 @@
 .place-order {
     @include media-breakpoint-down(sm) {
         padding-left: var(--ak-main-spacing);
+        padding-right: var(--ak-main-spacing);
     }
     .button {
         margin-top: 50px;
@@ -7716,6 +7734,10 @@
         border-radius: 27px;
         width: 357px;
         height: 53px;
+
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+        }
     }
 }
 
@@ -8531,6 +8553,7 @@
 .woocommerce-billing-fields__fields-wrapper{
     @include media-breakpoint-down(sm) {
         padding-left: var(--ak-main-spacing);
+        padding-right: var(--ak-main-spacing);
     }
 
     .form-row{

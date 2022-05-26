@@ -23,7 +23,7 @@
 	<link rel="preload" href="<?= get_template_directory_uri(); ?>/assets/fonts/DIN_Pro_Bold.otf" as="font" type="font/opentype" crossorigin>
 	<link rel="preload" href="<?= get_template_directory_uri(); ?>/assets/fonts/DIN_Pro_Light.otf" as="font" type="font/opentype" crossorigin>
 	<link rel="preload" href="<?= get_template_directory_uri(); ?>/assets/fonts/DIN_Pro.otf" as="font" type="font/opentype" crossorigin>
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 	<?php wp_head(); ?>
 
 	<style>

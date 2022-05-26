@@ -38,7 +38,7 @@ while (have_posts()) : the_post(); ?>
         <div class="swiper-pagination fullwidth-slider__pagination"></div>
     </section>
 
-    <section class="home-boxes-first-row boxes-row">
+    <section class="home-boxes-first-row boxes-row ">
         <? the_field('text_home'); ?>
     </section>
 

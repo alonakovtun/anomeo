@@ -31,7 +31,7 @@ function initHomePageSliders() {
         spaceBetween: 0,
         loop: true,
         cssWidthAndHeight: true,
-        allowTouchMove: false,
+        allowTouchMove: true,
         speed: 800,
         effect: "fade",
         fadeEffect: {
@@ -248,11 +248,28 @@ function FAQScript(){
 
 }
 
+function animateStory() {
+    var scrollPrev = 0;
+
+    jQuery(window).scroll(function () {
+        var scrolled = jQuery(window).scrollTop();
+
+        if (scrolled > 300 && scrolled > scrollPrev) {
+            jQuery(".home_text--content .first").addClass("animate__animated animate__fadeInUpBig animate__delay-1s");
+            jQuery(".home_text--content .second").addClass("animate__animated animate__fadeInUpBig animate__delay-2s");
+            jQuery(".home_text--content .third").addClass("animate__animated animate__fadeInUpBig animate__delay-3s");
+        }
+        scrollPrev = scrolled;
+    });
+}
+
 function initHomePageScripts() {
     initHomePageSliders();
     // initNewsletterScripts();
     initSygnetLogoScroll();
     FAQScript();
+    animateStory();
 }
 
 export { initHomePageScripts };
+
