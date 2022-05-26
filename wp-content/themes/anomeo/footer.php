@@ -19,9 +19,19 @@
 	<div class="footer-top">
 		<div class="newsletter">
 			<p class="newsletter_text">
-				Sign up to our newsletter and stay update
+				<?php _e('Sign up to our newsletter and stay update', 'anomeo')?>
 			</p>
-			<a class="open__newsletter" href="#"><span class="icon icon-open"></a>
+			<a class="open__newsletter"><span class="icon icon-open"></a>
+			<div class="form-newsletter">
+				<input type="email" class="newsletter-input" placeholder="<?php _e('Email', 'anomeo') ?>">
+
+				<div class="accept">
+					<label for="checkout-form-consent" class="ak-checkbox consent-checkbox checkout-consent-checkbox">
+						<input type="checkbox" name="checkout-form-consent" id="checkout-form-consent">
+						<span class="checkbox"><?= sprintf(__('I accept <a href="/privacy-policy/">Privacy Policy</a>', 'anomeo')); ?></span>
+					</label>
+				</div>
+			</div>
 		</div>
 		<div class="contact">
 			<p class="contact_text footer-title">
@@ -41,13 +51,13 @@
 				Customer Service
 			</p>
 			<ul class="footer-list">
-				<li class="footer-list-item"><a href="#">FAQ</a></li>
-				<li class="footer-list-item"><a href="/find-us/">Find Us</a></li>
-				<li class="footer-list-item"><a href="#">Order Tracking</a></li>
-				<li class="footer-list-item"><a href="/delivery/">Delivery</a></li>
-				<li class="footer-list-item"><a href="/refund_returns/">Returns</a></li>
-				<li class="footer-list-item"><a href="/privacy-policy/">Privacy Policy</a></li>
-				<li class="footer-list-item"><a href="/terms-conditions/">Terms & Conditions</a></li>
+				<li class="footer-list-item"><a href="#"><?php _e('FAQ', 'anomeo')?></a></li>
+				<li class="footer-list-item"><a href="/find-us/"><?php _e('Find Us', 'anomeo')?></a></li>
+				<li class="footer-list-item"><a href="#"><?php _e('Order Tracking', 'anomeo')?></a></li>
+				<li class="footer-list-item"><a href="/delivery/"><?php _e('Delivery', 'anomeo')?></a></li>
+				<li class="footer-list-item"><a href="/refund_returns/"><?php _e('Returns', 'anomeo')?></a></li>
+				<li class="footer-list-item"><a href="/privacy-policy/"><?php _e('Privacy Policy', 'anomeo')?></a></li>
+				<li class="footer-list-item"><a href="/terms-conditions/"><?php _e('Terms & Conditions', 'anomeo')?></a></li>
 			</ul>
 		</div>
 		<div class="follow">
@@ -60,7 +70,7 @@
 			</ul>
 			<a class="language" href="">Change language</a>
 		</div>
-	
+
 	</div>
 
 	<div class="site-footer__menu">

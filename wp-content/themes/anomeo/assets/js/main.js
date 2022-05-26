@@ -66,5 +66,10 @@ import { initPressPageScripts } from "./press";
             }
             return "";
         }
+
+        jQuery('.open__newsletter').click(function() {
+            jQuery(this).hide();
+            jQuery('.form-newsletter').show();
+        })
     });
 })();

@@ -16,7 +16,7 @@ while (have_posts()) : the_post(); ?>
     <section class="home-top-slider fullwidth-slider">
         <?php $file = get_field('video');
         if ($file) : ?>
-            <video autoplay class="home-video">
+            <video autoplay loop class="home-video">
                 <source src="<?php echo $file; ?>" type="video/mp4">
             </video>
         <?php else : ?>

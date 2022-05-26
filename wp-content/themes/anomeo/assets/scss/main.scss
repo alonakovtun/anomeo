@@ -5,6 +5,21 @@
 @import "information";
 @import "account";
 
+#loading {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    opacity: 1;
+    visibility: visible;
+    background-color: #fff;
+    z-index: 9999999999999;
+    transition: all 0.5s;
+}
+
 .site-top-banner {
     position: fixed;
     top: 0;
@@ -6062,6 +6077,8 @@
                 background-size: contain;
                 background-repeat: no-repeat;
 
+                cursor: pointer;
+
                 &-open {
                     background-image: url(../img/Newsletter_start-14.svg);
                 }
@@ -6069,6 +6086,33 @@
                 @include media-breakpoint-up(xl) {
                     width: 30px;
                     height: 30px;
+                }
+            }
+        }
+
+        .form-newsletter{
+            display: none;
+
+            .newsletter-input{
+                background-color: #F89D3F;
+                height: 31px;
+                color: #fff;
+                border-color: #F89D3F;
+
+                &::placeholder{
+                    color: #fff;
+                }
+            }
+
+            .accept{
+                margin-top: 20px;
+
+                .checkbox{
+                    font-size: 14px;
+                    text-transform: none;
+                    a{
+                        text-decoration: underline;
+                    }
                 }
             }
         }
@@ -7501,6 +7545,14 @@
             font-family: 'Din Pro Bold';
         }
 
+        .shiping-block{
+            display: contents;
+
+            .shipping-item{
+                margin-right: 47px;
+            }
+        }
+
     }
 }
 
@@ -8400,4 +8452,14 @@
 
 .notfound{
     margin-bottom: 500px;
+}
+
+.fa-spinner:before{
+    color: #138997;
+}
+
+.woocommerce-shipping-methods{
+    label{
+        display: block;
+    }
 }

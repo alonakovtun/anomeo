@@ -32,9 +32,18 @@
 			<? endif; ?>
 		}
 	</style>
+
+	<script>
+		jQuery(window).on('load', function() {
+        jQuery('#loading').css('opacity', '0');
+        jQuery('#loading').css('visibility', 'hidden');
+  
+      })
+	</script>
 </head>
 
 <body <?php body_class(); ?>>
+<div id="loading"></div>
 	<?php wp_body_open(); ?>
 
 	<div id="page" class="site">

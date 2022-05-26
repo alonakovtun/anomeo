@@ -34,9 +34,7 @@ defined('ABSPATH') || exit;
 				$product_price     = apply_filters('woocommerce_cart_item_price', WC()->cart->get_product_price($_product), $cart_item, $cart_item_key);
 				$product_permalink = apply_filters('woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink($cart_item) : '', $cart_item, $cart_item_key);
 		?>
-				<div class="ak-checkout__product-item">
-					<a class="product-link" href="<?= esc_url($product_permalink); ?>">
-					<?php echo do_shortcode("[yith_wcwl_add_to_wishlist product_id=" .  $product_id . "]") ?>
+				<div class="ak-checkout__product-item">                          
 						<?= $thumbnail; ?>
 					</a>
 					<div class="description-col">
@@ -97,7 +95,9 @@ defined('ABSPATH') || exit;
 
 				<?php do_action('woocommerce_review_order_before_shipping'); ?>
 
-				<?php wc_cart_totals_shipping_html(); ?>
+				<div class="shiping-block title">
+					<?php wc_cart_totals_shipping_html(); ?>
+				</div> 
 
 				<?php do_action('woocommerce_review_order_after_shipping'); ?>
 
