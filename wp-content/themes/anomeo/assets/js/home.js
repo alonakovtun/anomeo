@@ -6,16 +6,27 @@ const CONFIG = window.js_config;
 
 function initHomePageSliders() {
     const homeTopSlider = new Swiper(".home-top-slider", {
+        direction: 'vertical',
         spaceBetween: 0,
         loop: true,
-        allowTouchMove: false,
+        freeMode: true,
         speed: 800,
-        effect: "fade",
-        fadeEffect: {
-            crossFade: true,
-        },
+        // effect: 'creative',
+        // creativeEffect: {
+        //   prev: {
+        //     // will set `translateZ(-400px)` on previous slides
+        //     translate: [0, 0, -400],
+        //     shadow: true
+
+        //   },
+        //   next: {
+        //     // will set `translateX(100%)` on next slides
+        //     translate: ['100%', 0, 0],
+        //     shadow: true
+        //   },
+        // },
         autoplay: {
-            delay: 5000,
+            delay: 3000,
         },
         pagination: {
             el: ".swiper-pagination",
@@ -214,7 +225,7 @@ function FAQScript(){
                 jQuery(this).parent().prev('.question_block').removeClass('show');
             });
         }
-    });
+   });
 
     jQuery( ".question_block.next .next_question" ).click(function() {
         jQuery(this).parent().addClass('show');
@@ -246,6 +257,18 @@ function FAQScript(){
         jQuery('.question_block').removeClass('next');
     });
 
+    // jQuery( ".question_block .question" ).hover(
+    //     function() {
+    //         jQuery(this).parent().addClass('show_answer');
+    //         jQuery(".question_block.show_answer").find('.answer').addClass('show');
+    //         jQuery(".question_block.show_answer").find('.answer').stop().slideDown("slow");
+    //     }, function() {
+            
+    //         jQuery(".question_block.show_answer").find('.answer').removeClass('show');
+    //         jQuery(".question_block.show_answer").find('.answer').stop().slideUp("slow");
+    //         jQuery(this).parent().removeClass('show_answer');
+    //     }
+    //   );
 }
 
 function animateStory() {
@@ -255,9 +278,9 @@ function animateStory() {
         var scrolled = jQuery(window).scrollTop();
 
         if (scrolled > 300 && scrolled > scrollPrev) {
-            jQuery(".home_text--content .first").addClass("animate__animated animate__fadeInUpBig animate__delay-1s");
-            jQuery(".home_text--content .second").addClass("animate__animated animate__fadeInUpBig animate__delay-2s");
-            jQuery(".home_text--content .third").addClass("animate__animated animate__fadeInUpBig animate__delay-3s");
+            jQuery(".home_text--content .first").addClass("animate__animated animate__fadeInUp animate__delay-1s");
+            jQuery(".home_text--content .second").addClass("animate__animated animate__fadeInUp animate__delay-2s");
+            jQuery(".home_text--content .third").addClass("animate__animated animate__fadeInUp animate__delay-3s");
         }
         scrollPrev = scrolled;
     });

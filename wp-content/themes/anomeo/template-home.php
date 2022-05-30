@@ -17,10 +17,10 @@ while (have_posts()) : the_post(); ?>
         <?php $file = get_field('video');
         if ($file) : ?>
             <video autoplay loop class="home-video">
-                <source src="<?php echo $file; ?>" type="video/mp4">
+                <source src="<?php echo $file; ?>" type='video/mp4; codecs="avc1"'>
             </video>
         <?php else : ?>
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper swiper-home-top">
                 <? if (have_rows('top_slider')) :
                     while (have_rows('top_slider')) : the_row(); ?>
                         <div class="swiper-slide fullwidth-slider__item">

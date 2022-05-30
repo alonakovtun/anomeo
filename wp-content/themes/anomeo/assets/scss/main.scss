@@ -1704,7 +1704,7 @@
 
 
         p {
-            margin-bottom: 10px;
+            margin-bottom: 60px;
             color: #fff;
 
             @include media-breakpoint-down(sm) {
@@ -1859,6 +1859,10 @@
 
     .home-video{
         width: 100%;
+    }
+
+    .swiper-home-top{
+        height: 90vh;
     }
 }
 
@@ -5974,7 +5978,7 @@
     &--content {
         font-family: "Din Pro";
         font-size: 36px;
-        width: 60%;
+        // width: 60%;
         display: inline-block;
 
         @include media-breakpoint-down(sm) {
@@ -5982,16 +5986,49 @@
             font-size: 28px;
             padding: 0 var(--ak-main-spacing);
         }
+
+        p{
+            margin-bottom: 0;
+        }
     }
 }
 
+.helper {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    width: 0;
+}
+
+
+/* Safari 10.1+ (alternate method) */
+
+@media not all and (min-resolution:.001dpcm)
+{ @supports (-webkit-appearance:none) {
+
+    .color_bg {
+        padding: 0 10px!important;
+    }
+
+    .home-orange-block .home-orange-block__text{
+        padding-top: 5px!important;
+    }
+
+    .popular-items-block .first-block .bottom .popular-products-slider__button-next, 
+    .popular-items-block .first-block .bottom .popular-products-slider__button-prev{
+        align-items: center;
+    }
+}}
 
 .color_bg {
-    // padding: 10px 10px 4px;
+    padding: 3px 10px;
     border-radius: 25px;
     color: #138997;
 
     height: 44px;
+
+    display: inline-block;
+    // padding: 0 10px;
 
     &:before {
         content: "";
@@ -6030,7 +6067,6 @@
         font-family: 'Din Pro Light';
         font-size: 20px;
         padding: 9px 69px;
-        -webkit-padding-before: 6px;
 
         @include media-breakpoint-down(sm) {
             padding: 0;
@@ -6909,6 +6945,11 @@
                 visibility: visible;
 
                 transition: all 0.3s;
+
+                &:focus{
+                    outline: none;
+                    border: none;
+                }
 
                 p {
                     color: #138796;
@@ -8011,6 +8052,12 @@
                 opacity: 0;
                 visibility: hidden;
                 height: 0;
+
+                &.show{
+                    opacity: 1;
+                    visibility: visible;
+                    height: 100%;
+                }
             }
 
             &:after {
