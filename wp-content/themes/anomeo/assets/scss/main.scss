@@ -2012,7 +2012,7 @@
         overflow: hidden;
         padding: var(--ak-main-spacing);
         ;
-        height: 70vh;
+        height: 60vh;
         align-items: end;
 
         @include media-breakpoint-up(sm) {
@@ -6129,7 +6129,6 @@
     }
 
     .newsletter {
-        width: 40%;
 
         @include media-breakpoint-down(md) {
             width: 100%;
@@ -6170,6 +6169,7 @@
 
         .form-newsletter{
             display: none;
+            position: relative;
 
             .newsletter-input{
                 background-color: #F89D3F;
@@ -6192,6 +6192,19 @@
                         text-decoration: underline;
                     }
                 }
+            }
+
+            .send{
+                background: url('/wp-content/themes/anomeo/assets/img/Arrow_newsletter.svg');
+                background-repeat: no-repeat;
+                background-size: 30px 29px;
+                border: none;
+                position: absolute;
+                right: -40px;
+                padding: 0;
+                height: 50px;
+                top: 1px;
+                cursor: pointer;
             }
         }
     }
@@ -8623,3 +8636,37 @@
         }
     }
 }
+
+.home-top-slider{
+    .swiper-slide {
+        filter: brightness(40%);
+      transition: all 0.4s;
+    }
+    .swiper-slide-active {
+        filter: brightness(100%)
+    }
+}
+
+.mc4wp-form-error{
+    .open__newsletter{
+        display: none;
+    }
+
+    .mc4wp-error{
+        font-size: 12px;
+        color: #E01D77;
+        font-family: 'Din Pro Bold';
+        text-transform: none;
+    }
+}
+
+.mc4wp-form-success{
+    .mc4wp-success{
+        display: none;
+    }
+
+    .icon-open{
+        background-image: url(../img/Newsletter_final_desktop-14.svg)!important;
+    }
+}
+
