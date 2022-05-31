@@ -530,10 +530,10 @@ function ak_change_sorting_options($options)
 
     $options = array(
         'menu_order' => __('Default', 'anomeo'),
-        'price'      => __('Price ascending', 'anomeo'),
-        'price-desc' => __('Price descending', 'anomeo'),
-        'date'       => __('Newest', 'anomeo'),
-        'date-desc'  => __('Oldest', 'anomeo'),
+        'price'      => __('Ascending Prices', 'anomeo'),
+        'price-desc' => __('Descending prices', 'anomeo'),
+        'date'       => __('Latest products', 'anomeo'),
+        'date-desc'  => __('Oldest products', 'anomeo'),
     );
 
     return $options;

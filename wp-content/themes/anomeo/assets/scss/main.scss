@@ -2260,10 +2260,6 @@
                 position: relative;
                 display: none;
 
-                @include media-breakpoint-up(sm) {
-                    display: block;
-                }
-
                 cursor: pointer;
                 color: var(--ak-accent-color);
 
@@ -2326,11 +2322,7 @@
                 display: flex;
                 flex-direction: column;
 
-                @include media-breakpoint-up(sm) {
-                    flex-direction: row;
-                    justify-content: center;
-                    align-items: center;
-                }
+                
             }
 
             .sort-item {
@@ -2353,23 +2345,13 @@
                 label {
                     position: relative;
                     cursor: pointer;
+                    display: block;
 
-                    &:after {
-                        content: "";
-                        position: absolute;
-                        right: 0;
-                        top: calc(50% - 3px);
-                        display: block;
-                        height: 6px;
-                        width: 6px;
-                        border-radius: 50%;
-                        background-color: var(--ak-accent-color);
-                        visibility: hidden;
-
-                        @include media-breakpoint-up(sm) {
-                            display: none;
-                        }
-                    }
+                    color: #128796;
+                    font-size: 20;
+                    font-family: "Din Pro Light";
+                    text-transform: none;
+                    margin-bottom: 20px;
                 }
 
                 input[type="radio"] {
@@ -2393,6 +2375,7 @@
 
         .filter-col {
             display: flex;
+            margin-right: 23px;
 
             .filters-toggle-btn {
                 background-color: #128796;
@@ -6009,6 +5992,22 @@
         p{
             margin-bottom: 0;
         }
+
+        .third{
+            display: flex;
+
+            a{
+                margin-top: 10px;
+                margin-left: 25px;
+            }
+
+            img{
+                width: 40px;
+                height: 14px;
+            }
+        }
+
+        
     }
 }
 
@@ -6036,6 +6035,10 @@
     .popular-items-block .first-block .bottom .popular-products-slider__button-next, 
     .popular-items-block .first-block .bottom .popular-products-slider__button-prev{
         align-items: center;
+    }
+    
+    .filters-toggle-btn{
+        padding-top: 4px!important;
     }
 }}
 
@@ -6451,6 +6454,12 @@
 .ak-products__filters-row {
     .wp-block-group__inner-container {
         display: block;
+    }
+
+    &.hide-filter{
+        .filter-col{
+            display: none;
+        }
     }
 }
 

@@ -66,6 +66,8 @@ function initSortScripts() {
                 document.querySelector(".page-title__container").classList.toggle("index");
                 document.querySelector(".sort-col").classList.toggle("index-btn");
                 document.querySelector(".ak-products__grid").classList.toggle("ml-450");
+                document.querySelector(".ak-products__filters-row").classList.toggle("hide-filter");
+                
             }
         });
 
