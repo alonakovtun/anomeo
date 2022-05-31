@@ -199,7 +199,7 @@ function addNewsletterSubscriber(email) {
 }
 
 function FAQScript(){
-    jQuery( ".faq_btn.open" ).click(function() {
+    jQuery( ".faq_btn.open, .footer-list-item.faq" ).click(function() {
         jQuery('#openModal').addClass('_active');
     });
     jQuery( ".faq_btn.close" ).click(function() {

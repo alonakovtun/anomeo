@@ -13,6 +13,7 @@
 ?>
 
 <div class="ak-popups-overlay"></div>
+</main><!-- #main -->
 <footer id="colophon" class="site-footer">
 
 	<? get_template_part('template-parts/newsletter-section'); ?>
@@ -43,7 +44,7 @@
 				Customer Service
 			</p>
 			<ul class="footer-list">
-				<li class="footer-list-item"><a href="#"><?php _e('FAQ', 'anomeo') ?></a></li>
+				<li class="footer-list-item faq"><a href="#"><?php _e('FAQ', 'anomeo') ?></a></li>
 				<li class="footer-list-item"><a href="/find-us/"><?php _e('Find Us', 'anomeo') ?></a></li>
 				<li class="footer-list-item"><a href="#"><?php _e('Order Tracking', 'anomeo') ?></a></li>
 				<li class="footer-list-item"><a href="/delivery/"><?php _e('Delivery', 'anomeo') ?></a></li>
@@ -79,7 +80,7 @@
 		</div>
 	</div>
 </footer><!-- #colophon -->
-</main><!-- #main -->
+
 </div><!-- #page -->
 <? ak_site_cookies_banner(); ?>
 <? get_template_part('template-parts/photoswipe-root'); ?>

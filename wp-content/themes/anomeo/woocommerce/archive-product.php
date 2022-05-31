@@ -30,6 +30,7 @@ get_header('shop');
 do_action('woocommerce_before_main_content');
 
 ?>
+<input type="checkbox" id="nav-toggle" hidden>
 <? if (!is_search()) : ?>
 	<div class="page-title__container">
 		<h1 class="page-title__title"><? _e('Shop', 'anomeo'); ?></h1>
@@ -79,6 +80,24 @@ if (woocommerce_product_loop()) { ?>
 			<?php dynamic_sidebar('active-filters-sidebar'); ?>
 		</div>
 	<? endif; ?>
+	<!-- <input type="checkbox" id="nav-toggle" hidden>
+
+    <nav class="nav ak-products__filters-row">
+	
+		<div class="filter-col">
+			<label for="nav-toggle" class="nav-toggle filters-toggle-btn" onclick><? _e('Filters', 'anomeo'); ?></label>
+		</div>
+
+        <ul>
+            <li><a href="#1">Один</a>
+            <li><a href="#2">Два</a>
+            <li><a href="#3">Три</a>
+            <li><a href="#4">Четыре</a>
+            <li><a href="#5">Пять</a>
+            <li><a href="#6">Шесть</a>
+            <li><a href="#7">Семь</a> 
+        </ul>
+    </nav> -->
 <?php
 	ak_product_loop_start(2);
 

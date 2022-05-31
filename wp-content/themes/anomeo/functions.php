@@ -76,6 +76,22 @@ if (!function_exists('anomeo_setup')) :
 			'after_title'   => '</p>',
 		));
 
+		function rmc_sidebar_init() {
+
+		register_sidebar( array(
+			'name' => __( 'Your Sidebar Name', 'wpb' ),
+			'id' => 'your-sidebar-1',
+			'description' => __( 'This is your sidebar description.', 'rmc' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' => '</aside>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>',
+		) );
+
+}
+
+add_action( 'widgets_init', 'rmc_sidebar_init' );
+
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.

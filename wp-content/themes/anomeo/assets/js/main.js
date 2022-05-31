@@ -32,10 +32,6 @@ import { initPressPageScripts } from "./press";
 
         initWishlistScripts();
 
-        if (jQuery(".filter-row-popup").hasClass("open")) {
-            alert("open");
-        }
-
         var PopUpCookie = getCookie("MyPopUpCookie");
         if (PopUpCookie == "") {
             jQuery(".newsletter-section").show();
