@@ -30,7 +30,6 @@ get_header('shop');
 do_action('woocommerce_before_main_content');
 
 ?>
-<input type="checkbox" id="nav-toggle" hidden>
 <? if (!is_search()) : ?>
 	<div class="page-title__container">
 		<h1 class="page-title__title"><? _e('Shop', 'anomeo'); ?></h1>
@@ -40,21 +39,19 @@ do_action('woocommerce_before_main_content');
 	<div class="page-title__container search">
 		<h1 class="page-title__title"><? _e('Search', 'anomeo'); ?></h1>
 		<p class="page-title__subtitle "><? _e('Results for: ', 'anomeo'); ?> <span class="search-title"><?php echo get_search_query(); ?></span></p>
-		
+
 	</div>
 
 <? endif; ?>
 <?php
 if (woocommerce_product_loop()) { ?>
-	
+
 	<section class="ak-products__filters-row">
-		
+
 		<div class="filter-col">
 			<button id="filter-toggle-btn" class="filters-toggle-btn"><? _e('Filters', 'anomeo'); ?></button>
 
-			<div class="active-filters">
-				<?php dynamic_sidebar('active-filters-sidebar'); ?>
-			</div>
+
 		</div>
 
 		<div class="sort-col">
@@ -66,12 +63,18 @@ if (woocommerce_product_loop()) { ?>
 			<button class="filters-toggle-btn" id="sort-toggle-btn"><? _e('Sort', 'anomeo'); ?></button>
 		</div>
 
-		<div class="ak-filters-popup filter-row-popup">
-			<?php dynamic_sidebar('filters-sidebar'); ?>
+		<div class="filters-sort">
+			<div class="ak-filters-popup filter-row-popup">
+				<div class="active-filters">
+					<?php dynamic_sidebar('active-filters-sidebar'); ?>
+				</div>
+			</div>
 		</div>
 		<div class="ak-sort-popup filter-row-popup">
 			<? woocommerce_catalog_ordering(); ?>
 		</div>
+
+
 
 
 	</section>
@@ -80,25 +83,7 @@ if (woocommerce_product_loop()) { ?>
 			<?php dynamic_sidebar('active-filters-sidebar'); ?>
 		</div>
 	<? endif; ?>
-	<!-- <input type="checkbox" id="nav-toggle" hidden>
-
-    <nav class="nav ak-products__filters-row">
-	
-		<div class="filter-col">
-			<label for="nav-toggle" class="nav-toggle filters-toggle-btn" onclick><? _e('Filters', 'anomeo'); ?></label>
-		</div>
-
-        <ul>
-            <li><a href="#1">Один</a>
-            <li><a href="#2">Два</a>
-            <li><a href="#3">Три</a>
-            <li><a href="#4">Четыре</a>
-            <li><a href="#5">Пять</a>
-            <li><a href="#6">Шесть</a>
-            <li><a href="#7">Семь</a> 
-        </ul>
-    </nav> -->
-<?php
+	<?php
 	ak_product_loop_start(2);
 
 	if (wc_get_loop_prop('total')) {
@@ -128,13 +113,13 @@ if (woocommerce_product_loop()) { ?>
 	 *
 	 * @hooked wc_no_products_found - 10
 	 */
-	do_action('woocommerce_no_products_found');?>
+	do_action('woocommerce_no_products_found'); ?>
 	<div class="page-title__container notfound">
 		<p class="page-title__subtitle "><? _e('Products not found', 'anomeo'); ?></p>
 	</div>
 
 
-	<?php
+<?php
 }
 
 /**
