@@ -33,7 +33,11 @@ do_action('woocommerce_before_main_content');
 <? if (!is_search()) : ?>
 	<div class="page-title__container">
 		<h1 class="page-title__title"><? _e('Shop', 'anomeo'); ?></h1>
-		<p class="page-title__subtitle "><? _e('All products', 'anomeo'); ?></p>
+		<?php if(is_product_category() ): ?>
+		<p class="page-title__subtitle "><? single_term_title() ?></p>
+		<?php else: ?>
+			<p class="page-title__subtitle "><? _e('All products', 'anomeo'); ?></p>
+		<?php endif; ?>
 	</div>
 <? else : ?>
 	<div class="page-title__container search">
@@ -45,6 +49,11 @@ do_action('woocommerce_before_main_content');
 <? endif; ?>
 <?php
 if (woocommerce_product_loop()) { ?>
+<div class="description-category">
+	<?php echo category_description(); ?>
+</div>
+
+
 
 	<section class="ak-products__filters-row">
 

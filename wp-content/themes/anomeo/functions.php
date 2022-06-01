@@ -201,3 +201,36 @@ if ( ! function_exists( 'yith_wcwl_custom_remove_from_wishlist_label' ) ) {
 
 add_filter('jpeg_quality', function($arg){return 100;});
 
+function my_category_description($container = ''){
+	$content = is_object($container) && isset($container->description) ? html_entity_decode($container->description) : '';
+	$editor_id = 'tag_description';
+	$settings = 'description';
+	?>
+	<tr class="form-field">
+	<th scope="row" valign="top"><label for="description">Description</label></th>
+	<td><?php wp_editor($content, $editor_id, array(
+	'textarea_name' => $settings,
+	'editor_css' => '<style>.html-active .wp-editor-area{border:0;}</style>',
+	)); ?><br />
+	<span class="description">The description is not prominent by default; however, some themes may show it.</span></td>
+	</tr>
+	<?php
+	}
+	remove_filter( 'pre_term_description', 'wp_filter_kses' );
+	remove_filter( 'term_description', 'wp_kses_data' );
+	function my_remove_category_description(){
+	global $mk_description;
+	if ( $mk_description == 'edit-category' or 'edit-tag' ){
+	?>
+	<script type="text/javascript">
+	jQuery(function($) {
+	$('textarea#description').closest('tr.form-field').remove();
+	});
+	</script>
+	<?php
+	}
+	}
+	add_action('admin_head', 'my_remove_category_description');    
+	add_filter('edit_category_form_fields', 'my_category_description');   
+	add_filter('edit_tag_form_fields', 'my_category_description');      
+
