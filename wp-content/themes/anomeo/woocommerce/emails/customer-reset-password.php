@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div class="mail-title-wrap">
 <?php /* translators: %s: Customer username */ ?>
-<p><?php printf( esc_html__( 'Hi %s,', 'woocommerce' ), esc_html( $user_login ) ); ?></p>
+<p><?php printf( esc_html__( 'Hello %s.', 'woocommerce' ), esc_html( $user_login ) ); ?></p>
 <?php /* translators: %s: Store name */ ?>
 <p><?php printf( esc_html__( 'Someone has requested a new password for the following account on %s:', 'woocommerce' ), esc_html( wp_specialchars_decode( get_option( 'blogname' ), ENT_QUOTES ) ) ); ?></p>
 <?php /* translators: %s: Customer username */ ?>

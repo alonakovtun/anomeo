@@ -51,6 +51,7 @@ body {
 	padding: 0;
 }
 
+
 #wrapper {
 	background-color: <?php echo esc_attr( $bg ); ?>;
 	margin: 0;
@@ -238,7 +239,7 @@ img {
 	padding: 0 40px 50px !important;
 	text-align: center;
 	text-transform: uppercase;
-	font-size: 14px;
+	font-size: 18px;
 }
 
 .mail-title-wrap p {
@@ -247,7 +248,10 @@ img {
 	font-size: 18px;
 	text-transform: none;
 	font-family: 'Readex Pro', sans-serif;
-	font-weight: 600;
+}
+
+.mail-title-wrap a {
+	color: #138997;
 }
 
 .address-title {
@@ -291,6 +295,7 @@ img {
 
 .additional-content-wrap {
 	padding: 30px 40px 0px;
+	border-top: 1px solid #eaeaea;
 }
 
 .additional-content-wrap p {
@@ -419,4 +424,7 @@ img {
 	padding: 15px 40px !important;
 }
 
+.hello-title{
+	font-weight: 600;
+}
 <?php

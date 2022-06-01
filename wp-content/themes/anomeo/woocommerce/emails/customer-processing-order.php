@@ -26,9 +26,9 @@ do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
 
 <div class="mail-title-wrap">
 <?php /* translators: %s: Customer first name */ ?>
-<p><?php printf( esc_html__( 'Hi %s,', 'woocommerce' ), esc_html( $order->get_billing_first_name() ) ); ?></p>
+<p><?php printf( esc_html__( 'Hello %s.', 'woocommerce' ), esc_html( $order->get_billing_first_name() ) ); ?></p>
 <?php /* translators: %s: Order number */ ?>
-<p><?php printf( esc_html__( 'Your order #%s, has been accepted and processed. Below are the order details.', 'anomeo' ), esc_html( $order->get_order_number() ) ); ?></p>
+<p><?php printf( esc_html__( 'Your order #%s. has been accepted and processed. Below are the order details.', 'anomeo' ), esc_html( $order->get_order_number() ) ); ?></p>
 <p><?php esc_html_e( 'We remind you that the order processing time in our online store is up to 14 business days. When your order is ready for pickup / shipped, you will receive a confirmation email.', 'anomeo' ); ?></p>
 <p><?php esc_html_e( 'In the meantime, if you have any questions regarding your order, please contact us by e-mail at: zamowienia@ankakrystyniak.com.', 'anomeo' ); ?></p>
 

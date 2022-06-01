@@ -16,9 +16,14 @@ while (have_posts()) : the_post(); ?>
     <section class="home-top-slider fullwidth-slider">
         <?php $file = get_field('video');
         if ($file) : ?>
-            <video autoplay loop class="home-video">
-                <source src="<?php echo $file; ?>" type='video/mp4; codecs="avc1"'>
-            </video>
+            <div class="fullwidth-slider__item">
+                <video autoplay loop class="home-video">
+                    <source src="<?php echo $file; ?>" type='video/mp4; codecs="avc1"'>
+                </video>
+                <div class="fullwidth-slider__item-description video">
+                    <? the_field('video_title'); ?>
+                </div>
+            </div>
         <?php else : ?>
             <div class="swiper-wrapper swiper-home-top">
                 <? if (have_rows('top_slider')) :
