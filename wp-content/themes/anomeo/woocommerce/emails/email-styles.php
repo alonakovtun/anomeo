@@ -42,7 +42,11 @@ $text_lighter_40 = wc_hex_lighter( $text, 40 );
 
 // !important; is a gmail hack to prevent styles being stripped if it doesn't like something.
 // body{padding: 0;} ensures proper scale/positioning of the email in the iOS native email app.
+
+
+
 ?>
+
 body {
 	padding: 0;
 }
@@ -86,13 +90,14 @@ body {
 	margin-left: 0;
 	margin-right: 0;
 	max-width: 260px;
-	width: 90px;
+	width: auto;
 	height: 25px;
 }
 
 #template_footer td {
 	padding: 0;
-	background-color: <?php echo esc_attr( $base ); ?>;
+	background-color: #fff;
+	
 }
 
 #template_footer #credit {
@@ -102,7 +107,8 @@ body {
 	font-size: 14px;
 	line-height: 150%;
 	text-align: center;
-	padding: 10px 0;
+	padding: 30px 0;
+	border-top: 1px solid #eaeaea
 }
 
 #template_footer .footer-links {
@@ -115,13 +121,15 @@ body {
 #template_footer .footer-links li {
 	display: inline-block;
 	padding: 0 50px;
-	font-size: 14px;
+	
 }
 
 #template_footer .footer-links li a {
-	color: #ffffff;
-	text-transform: uppercase;
+	font-size: 18px;
+	color: #148D9A;
+	text-transform: none;
 	text-decoration: none;
+	font-weight: 600;
 }
 
 #body_content {
@@ -215,14 +223,15 @@ img {
 	display: inline-block;
 	font-size: 14px;
 	font-weight: bold;
-	height: auto;
 	outline: none;
 	text-decoration: none;
 	text-transform: capitalize;
 	vertical-align: middle;
 	margin-<?php echo is_rtl() ? 'left' : 'right'; ?>: 10px;
 	max-width: 100%;
-	height: auto;
+	width: 175px;
+	height: 231px;
+	object-fit: cover;
 }
 
 .mail-title-wrap {
@@ -236,31 +245,37 @@ img {
 	margin: 0 !important;
 	color: #138997;
 	font-size: 18px;
-	font-family: "Din Pro Bold";
 	text-transform: none;
+	font-family: 'Readex Pro', sans-serif;
+	font-weight: 600;
 }
 
 .address-title {
-	color: <?php echo esc_attr( $text ); ?>;
-	border-top: 1px solid #b2b2b2;
-	border-bottom: 1px solid #b2b2b2;
+	color: #138796;
+	border-top: 1px solid #EAEAEA;
 	font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
 	font-size: 16px;
-	font-weight: 300;
+	font-weight: 600;
 	line-height: 1;
 	margin: 0;
-	padding: 40px;
+	padding: 30px 40px 15px;
 	text-transform: uppercase;
 }
 
 .address-column {
-	border-bottom: 1px solid #b2b2b2;
+	border-bottom: 1px solid #EAEAEA;
 }
 
 .address {
-	padding: 30px 40px;
-	color: <?php echo esc_attr( $text ); ?>;
+	padding: 0px 40px 30px;
+	color: #138796;
 	font-style: normal;
+
+}
+
+.address a{
+	color: #138796;
+	text-decoration: none;
 }
 
 .text {
@@ -269,28 +284,31 @@ img {
 }
 
 .link {
-	color: <?php echo esc_attr( $link_color ); ?>;
+	color: #138997;
+	text-decoration: none;
+	font-weight: 600;
 }
 
 .additional-content-wrap {
-	padding: 50px 40px 20px;
+	padding: 30px 40px 0px;
 }
 
 .additional-content-wrap p {
-	font-size: 14px;
+	font-size: 16px;
 	margin: 0 !important;
+	color: #138796;
+	text-align: center;
 }
 
 .order-title {
-	padding: 20px 40px;
+	padding: 4px 40px 33px;
 	margin: 0 !important;
-	color: <?php echo esc_attr( $text ); ?>;
-	font-size: 16px;
-	font-weight: 300;
+	color: #138997;
+	font-size: 18px;
 	line-height: 1;
-	text-transform: uppercase;
-	border-top: 1px solid #b2b2b2;
-	border-bottom: 1px solid #b2b2b2;
+	font-weight: 600;
+	display: flex;
+    justify-content: space-between;
 }
 
 .wc-bacs-bank-details-heading {
@@ -308,57 +326,78 @@ img {
 .order_item .image-col {
 	padding: 0 !important;
 
-	border: 1px solid #b2b2b2;
 	border-top: 0;
 	border-left: 0;
 	border-right: 0;
 
 	width: 250px;
+	padding-left: 40px!important;
+	padding-bottom: 13px!important;
 }
 
 .order_item .description-col {
-	padding: 20px 40px !important;
 
-	border: 1px solid #b2b2b2;
 	border-top: 0;
 	border-right: 0;
+	padding-right: 40px!important;
+}
+
+.order_item{
+	padding: 0 40px;
 }
 
 .order_item p {
 	font-size: 16px;
-	text-transform: uppercase;
+	text-transform: none;
 	margin: 0 !important;
+	color: #6C6D6E;
 }
+
+.order_item .title {
+	display: flex;
+    justify-content: space-between;
+}
+
+.order_item .title p:first-child {
+	width: 60%;
+}
+
+
 
 .order_item .qty-row {
 	margin: 130px 0 0 !important;
 }
 
 .order-details-totals .empty-col {
-	height: 60px;
+	height: 30px;
 
-	border-bottom: 1px solid #b2b2b2;
+	border-bottom: 1px solid #EAEAEA;
 }
 
 .order-details-totals th {
 	text-align: left;
 	padding: 15px 40px !important;
 	font-weight: normal;
-	text-transform: uppercase;
+	text-transform: none;
+	color: #138997;
+	font-size: 18px;
 }
 
 .order-details-totals td {
 	text-align: right;
 	padding: 15px 40px !important;
 	font-weight: normal;
-	text-transform: uppercase;
+	text-transform: none;
+	color: #138997;
+	font-size: 18px;
 }
 
 .order-details-totals .order_total th,
 .order-details-totals .order_total td {
-	color: <?php echo esc_attr( $base_text ); ?>;
-	background-color: <?php echo esc_attr( $base ); ?>;
-	padding: 30px 40px !important;
+	color: #138997;
+	padding: 15px 40px !important;
+	font-weight: 600;
+	font-size: 18px;
 }
 
 .mail-order-meta-wrap {

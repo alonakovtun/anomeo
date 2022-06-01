@@ -31,11 +31,11 @@ do_action( 'woocommerce_email_before_order_table', $order, $sent_to_admin, $plai
 		$after  = '';
 	}
 	/* translators: %s: Order ID. */
-	echo wp_kses_post( $before . sprintf( __( 'Order #%s', 'anomeo' ) . $after . ', <time datetime="%s">%s</time>', $order->get_order_number(), $order->get_date_created()->format( 'c' ), wc_format_datetime( $order->get_date_created(), 'd.m.Y' ) ) );
+	echo wp_kses_post( $before . sprintf( __( 'Order #%s', 'anomeo' ) . $after . ' <time datetime="%s">%s</time>', $order->get_order_number(), $order->get_date_created()->format( 'c' ), wc_format_datetime( $order->get_date_created(), 'd.m.Y' ) ) );
 	?>
 </h2>
 
-<div style="margin-bottom: 70px;">
+<div style="margin-bottom: 15px;">
 	<table cellspacing="0" cellpadding="0" style="width: 100%; font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;" border="0">
 		<tbody>
 			<?php

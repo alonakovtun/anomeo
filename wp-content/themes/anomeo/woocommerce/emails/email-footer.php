@@ -41,8 +41,8 @@ defined( 'ABSPATH' ) || exit;
 										<tr>
 											<td colspan="2" valign="middle" id="credit">
 												<ul class="footer-links">
-													<li><a href="https://facebook.com/krystyniakanka" target="_blank">Facebook</a></li>
-													<li><a href="https://instagram.com/ankakrystyniak" target="_blank">Instagram</a></li>
+													<li><a href="#" target="_blank">Facebook</a></li>
+													<li><a href="#" target="_blank">Instagram</a></li>
 												</ul>
 											</td>
 										</tr>

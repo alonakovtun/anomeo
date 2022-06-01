@@ -47,47 +47,49 @@ foreach ($items as $item_id => $item) :
 			?>
 		</td>
 		<td class="description-col" style="text-align:<?php echo esc_attr($text_align); ?>; vertical-align:middle; font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;">
-			<?php
-			$qty          = $item->get_quantity();
-			$refunded_qty = $order->get_qty_refunded_for_item($item_id);
+			<div class="title">
+				<?php
+				$qty          = $item->get_quantity();
+				$refunded_qty = $order->get_qty_refunded_for_item($item_id);
 
-			if ($refunded_qty) {
-				$qty_display = '<del>' . esc_html($qty) . '</del> <ins>' . esc_html($qty - ($refunded_qty * -1)) . '</ins>';
-			} else {
-				$qty_display = esc_html($qty);
-			}
-			
-			echo '<p>';
-			// Product name.
-			echo wp_kses_post(apply_filters('woocommerce_order_item_name', $item->get_name(), $item, false));
-			// SKU.
-			if ($show_sku && $sku) {
-				echo wp_kses_post(' (#' . $sku . ')');
-			}
-			echo '</p>';
+				if ($refunded_qty) {
+					$qty_display = '<del>' . esc_html($qty) . '</del> <ins>' . esc_html($qty - ($refunded_qty * -1)) . '</ins>';
+				} else {
+					$qty_display = esc_html($qty);
+				}
 
-			
-			
+				echo '<p>';
+				// Product name.
+				echo wp_kses_post(apply_filters('woocommerce_order_item_name', $item->get_name(), $item, false));
+				// SKU.
+				if ($show_sku && $sku) {
+					echo wp_kses_post(' (#' . $sku . ')');
+				}
+				echo '</p>';
 
-			// allow other plugins to add additional product information here.
-			do_action('woocommerce_order_item_meta_start', $item_id, $item, $order, $plain_text);
 
-			wc_display_item_meta(
-				$item,
-				array(
-					'label_before' => '<strong class="wc-item-meta-label" style="float: ' . esc_attr($text_align) . '; margin-' . esc_attr($margin_side) . ': .25em; clear: both">',
-				)
-			);
 
-			// allow other plugins to add additional product information here.
-			do_action('woocommerce_order_item_meta_end', $item_id, $item, $order, $plain_text); ?>
 
-			<p>
-				<?php echo wp_kses_post($order->get_formatted_line_subtotal($item)); ?>
-			</p>
+				// allow other plugins to add additional product information here.
+				do_action('woocommerce_order_item_meta_start', $item_id, $item, $order, $plain_text);
+
+				wc_display_item_meta(
+					$item,
+					array(
+						'label_before' => '<strong class="wc-item-meta-label" style="float: ' . esc_attr($text_align) . '; margin-' . esc_attr($margin_side) . ': .25em; clear: both">',
+					)
+				);
+
+				// allow other plugins to add additional product information here.
+				do_action('woocommerce_order_item_meta_end', $item_id, $item, $order, $plain_text); ?>
+
+				<p>
+					<?php echo wp_kses_post($order->get_formatted_line_subtotal($item)); ?>
+				</p>
+			</div>
 
 			<p class="qty-row">
-				<?= __('Quantity', 'anomeo') . ': ' . wp_kses_post(apply_filters('woocommerce_email_order_item_quantity', $qty_display, $item)); ?>
+				<?= __('Amount', 'anomeo') . ': ' . wp_kses_post(apply_filters('woocommerce_email_order_item_quantity', $qty_display, $item)); ?>
 			</p>
 		</td>
 	</tr>
