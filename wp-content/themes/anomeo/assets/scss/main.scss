@@ -8781,15 +8781,26 @@
     padding: 20px var(--ak-main-spacing) 0;
     width: 70%;
 
+    @include media-breakpoint-down(sm) {
+        width: 100%;
+        padding-bottom: 24px;
+    }
+
     p{
         color: #138796;
         font-size: 18px;
         font-family: "Din Pro Light";
+        @include media-breakpoint-down(sm) {
+            font-size: 16px;
+        }
     }
 
     .title{
         font-size: 28px;
-        font-family: "Din Pro"
+        font-family: "Din Pro";
+        @include media-breakpoint-down(sm) {
+            font-size: 26px;
+        }
     }
 }
 
