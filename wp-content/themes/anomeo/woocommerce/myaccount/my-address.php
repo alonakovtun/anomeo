@@ -45,7 +45,7 @@ $get_addresses = apply_filters(
 			<div class="account-main-title">
 				<p class="account-title"><? _e('Account', 'anomeo'); ?></p>
 				<p class="address-title"><? _e('Addresses', 'anomeo'); ?></p>
-			</div>zzz
+			</div>
 			<form method="post" action="<?= wc_get_endpoint_url('edit-address', $name); ?>">
 			<div class="my-account__flex">
 				<p class="ak-my-account__address-item-title"><?php echo esc_html($address_title); ?></p>

@@ -6056,7 +6056,7 @@
 }}
 
 .color_bg {
-    padding: 3px 10px;
+    padding: 5px 10px;
     border-radius: 25px;
     color: #138997;
 
@@ -6859,6 +6859,13 @@
 
         .ak-form--register {
             margin-top: 45px;
+            .button{
+                margin-bottom: 40px;
+            }
+        }
+
+        .ak-checkbox{
+            margin-bottom: 200px;
         }
 
     }
@@ -8788,20 +8795,35 @@
 
     p{
         color: #138796;
-        font-size: 18px;
+        font-size: 20px;
         font-family: "Din Pro Light";
         @include media-breakpoint-down(sm) {
             font-size: 16px;
         }
     }
 
+    ul{
+        li{
+            color: #138796;
+            font-size: 20px;
+            font-family: "Din Pro Light";
+            @include media-breakpoint-down(sm) {
+                font-size: 16px;
+            }
+        }
+    }
+
     .title{
-        font-size: 28px;
+        font-size: 30px;
         font-family: "Din Pro";
         @include media-breakpoint-down(sm) {
             font-size: 26px;
         }
     }
+}
+
+.woocommerce-privacy-policy-text{
+    display: none;
 }
 
 

@@ -513,6 +513,10 @@ input{
             height: 500px;
             
         }
+        @include media-breakpoint-up(xl) {
+            height: 650px;
+            
+        }
 
         img {
             position: inherit;

@@ -15,17 +15,11 @@ function initCheckoutLoginFormScripts() {
 }
 
 function showRegisterScripts() {
-    const buttonTrigger = document.querySelector('.button__trigger-register'),
-    visibileBox = document.querySelector('.login-box'),
-    hiddenBox = document.querySelector('.register-box');
 
-    buttonTrigger.addEventListener('click', (e) => {
-    e.preventDefault();
-    setTimeout(() => {
-    visibileBox.style.display = 'none';
-    hiddenBox.style.display = 'block';
-    }, 1000)
-    });
+    jQuery('.button__trigger-register').click(function(){
+        jQuery('.login-box').css('display', 'none');
+        jQuery('.register-box').css('display', 'block');
+    })
 }
 
 function swiperOrder(){
@@ -44,7 +38,7 @@ function swiperOrder(){
 function initMyAccountPageScripts() {
     initCheckoutLoginFormScripts();
     swiperOrder();
-    // showRegisterScripts();
+    showRegisterScripts();
 }
 
 export { initMyAccountPageScripts };
