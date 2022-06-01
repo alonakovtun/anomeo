@@ -2019,7 +2019,7 @@
         padding: var(--ak-main-spacing);
         ;
         height: 60vh;
-        align-items: end;
+        align-items: flex-end;
 
         @include media-breakpoint-up(sm) {
             flex-direction: row;
@@ -6039,6 +6039,13 @@
     
     .filters-toggle-btn{
         padding-top: 4px!important;
+    }
+
+    .third{
+        a{
+            margin-top: 16px!important;
+        }
+        
     }
 }}
 

@@ -85,7 +85,9 @@ body {
 #template_header_image img {
 	margin-left: 0;
 	margin-right: 0;
-	max-width: 260px
+	max-width: 260px;
+	width: 90px;
+	height: 25px;
 }
 
 #template_footer td {
@@ -232,6 +234,10 @@ img {
 
 .mail-title-wrap p {
 	margin: 0 !important;
+	color: #138997;
+	font-size: 18px;
+	font-family: "Din Pro Bold";
+	text-transform: none;
 }
 
 .address-title {
