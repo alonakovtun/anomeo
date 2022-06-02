@@ -7008,12 +7008,17 @@
 
                 opacity: 1;
                 visibility: visible;
+                transform: translateX(0);
 
                 transition: all 0.3s;
 
                 &:focus{
                     outline: none;
                     border: none;
+                }
+
+                &:hover{
+                    transform: translateX(15px);
                 }
 
                 p {
@@ -8747,6 +8752,12 @@
 
         .icon-thank {
             background-image: url(../img/Newsletter_final_desktop-14.svg) !important;
+            width: 30px;
+            height: 30px;
+            display: block;
+            background-size: contain;
+            background-repeat: no-repeat;
+            cursor: pointer;
         }
     }
 
@@ -8824,6 +8835,14 @@
 
 .woocommerce-privacy-policy-text{
     display: none;
+}
+
+.category-btn{
+    transition: all .4s;
+
+    &:hover{
+        background-color: #138997;
+    }
 }
 
 

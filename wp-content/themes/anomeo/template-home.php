@@ -56,12 +56,19 @@ while (have_posts()) : the_post(); ?>
         <? if (have_rows('home_block_item')) :
             while (have_rows('home_block_item')) : the_row(); ?>
                 <div class="fullwidth-slider__item">
-                    <? $link = get_field('link'); ?>
-                    <img src="<? the_sub_field('image'); ?>" class="fullwidth-slider__image">
-                    <div class="fullwidth-slider__item-description block-item">
-                        <? the_sub_field('name'); ?>
-                        <a href="<? $link ?>">All Products</a>
-                    </div>
+                    <? $links = get_sub_field('link'); 
+                    if( $links ): ?>
+                        <?php foreach( $links as $link ): ?>
+                            <img src="<? the_sub_field('image'); ?>" class="fullwidth-slider__image">
+                            <div class="fullwidth-slider__item-description block-item">
+                                <? the_sub_field('name'); ?>
+                                <a class="category-btn" href="<?php echo esc_url( get_term_link( $link ) ); ?>">All Products</a>
+                            </div>
+                        <?php endforeach; ?>
+                        </ul>
+                    <?php endif; ?>
+                    
+                    
                 </div>
         <? endwhile;
         endif; ?>

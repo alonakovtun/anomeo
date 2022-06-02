@@ -120,7 +120,7 @@ function ak_site_top_banner()
 function ak_site_cookies_banner()
 { ?>
     <div class="site-cookies-banner">
-        <p><? _e('We use cookies in order to provide you with best online experience. By continuing to use our site you are agreeing to our', 'anomeo'); ?> <a href="<?= get_permalink(58); ?>"><? _e('Privacy Policy', 'anomeo'); ?></a></p>
+        <p><? _e('We use cookies in order to provide you with best online experience. By continuing to use our site you are agreeing to our', 'anomeo'); ?> <a href="/privacy-policy/"><? _e('Privacy Policy', 'anomeo'); ?></a></p>
 
         <button class="close-btn"><? _e('Close', 'anomeo'); ?></button>
     </div>
