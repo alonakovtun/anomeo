@@ -50,7 +50,7 @@ if (empty($product) || !$product->is_visible()) {
                 <? wc_get_template('loop/price.php'); ?>
             </div>
 
-            <p class="title qty"><? _e('Quantity: 1: ', 'anomeo'); ?></p>
+            <p class="title qty"><? _e('Quantity: 1 ', 'anomeo'); ?></p>
 
 
             <?php if (have_rows('color_links')) : ?>

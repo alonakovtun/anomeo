@@ -234,6 +234,7 @@ function custom_override_checkout_fields($fields)
 
     $fields['shipping']['shipping_last_name']['required'] = false;
 
+    $fields['shipping']['shipping_company']['placeholder'] = __('Company name', 'woocommerce');
     $fields['shipping']['shipping_company']['required'] = false;
 
     $fields['shipping']['shipping_address_1']['required'] = false;

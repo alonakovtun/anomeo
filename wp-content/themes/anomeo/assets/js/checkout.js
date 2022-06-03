@@ -244,6 +244,12 @@ function couponCode(){
       });
 }
 
+function shippingImg(){
+    jQuery(".shipping-open span").click(function() {
+        jQuery('.shipping-img').toggleClass('_active');
+    })
+}
+
 function initCheckoutPageScripts() {
     initCheckoutLoginFormScripts();
     initCouponFormScripts();
@@ -252,7 +258,8 @@ function initCheckoutPageScripts() {
     updateCheckoutOnCartUpdate();
     initCheckoutConsentScripts();
     changeAddress();
-    couponCode()
+    couponCode();
+    shippingImg();
 }
 
 export { initCheckoutPageScripts };

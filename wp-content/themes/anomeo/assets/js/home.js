@@ -223,6 +223,8 @@ function FAQScript(){
                 jQuery(this).parent().prev('.question_block').removeClass('show');
             });
         }
+
+        jQuery(this).parent().find('.answer p').addClass("animate__animated animate__fadeInUp");
    });
 
     jQuery( ".question_block.next .next_question" ).click(function() {
@@ -233,6 +235,8 @@ function FAQScript(){
         jQuery('.faq_question').addClass('open');
 
         jQuery(this).parent().next().addClass('next');
+
+        jQuery('.answer p').addClass("animate__animated animate__fadeInUp");
 
         if(jQuery('.question_block').hasClass('next')){
             jQuery('.question_block.next .question').after('<div class="next_question"><img src="/wp-content/themes/anomeo/assets/img/Arrow_FaQ-06.svg">Next question</div>');
@@ -253,7 +257,13 @@ function FAQScript(){
         jQuery('.faq-footer').removeClass('show');
         jQuery('.faq_question').removeClass('open');
         jQuery('.question_block').removeClass('next');
+        jQuery('.answer p').removeClass("animate__animated animate__fadeInUp");
     });
+
+    // if(jQuery('.question_block').contains('show')){
+        
+    // }
+    
 
     // jQuery( ".question_block .question" ).hover(
     //     function() {
