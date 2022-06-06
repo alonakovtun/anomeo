@@ -63,9 +63,29 @@ import { initPressPageScripts } from "./press";
             return "";
         }
 
-        jQuery('.open__newsletter').click(function() {
+        jQuery(".open__newsletter").click(function () {
             jQuery(this).hide();
-            jQuery('.form-newsletter').show();
-        })
+            jQuery(".form-newsletter").show();
+        });
+
+        jQuery(document).on(
+            "change",
+            ".ak-checkbox.consent-checkbox",
+            function () {
+                jQuery("#newsletter-subscribe-btn").toggleClass("disabled");
+            }
+        );
+        jQuery(document).on(
+            "change",
+            ".ak-checkbox.newsletter-checkbox",
+            function () {
+                jQuery(".send").toggleClass("disabled");
+            }
+        );
+
+        if(jQuery('#mce-success-response').css('display') == 'block')
+        {
+            jQuery('.newsletter_text').css('display', 'none');
+        }
     });
 })();

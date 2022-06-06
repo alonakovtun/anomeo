@@ -8,11 +8,11 @@
 
 ?>
 
-<div class="newsletter-section">
-    <div class="newsletter-section__text-wrap">
+<!-- <div class="newsletter-section"> -->
+    <!-- <div class="newsletter-section__text-wrap">
         <p><? _e('Get -15% for Your first shopping.', 'anomeo') ?></p>
         <div class="btn-close"></div>
-    </div>
+    </div> -->
 
     <!-- <form class="newsletter-section__form" name="subscribe_newsletter" action="" method="POST">
         <input type="email" class="input-text" name="email" id="newsletter_email" autocomplete="email" placeholder="<?php esc_html_e('E-mail', 'anomeo'); ?>" />

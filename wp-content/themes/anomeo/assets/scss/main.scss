@@ -1391,20 +1391,19 @@
     border-radius: 24px;
     background-color: #fff;
     width: 415px;
-    height: 312px;
+    height: auto;
 
     padding: 19px 30px;
 
 
     @include media-breakpoint-down(sm) {
         width: 89%;
-        margin: 0 12px;
+        margin: 0 auto;
 
-        right: auto;
-        left: auto;
-
+        right: 0;
+        left: 0;
         bottom: 0;
-        top: 140px;
+        top: 28%;
 
         height: 353px;
     }
@@ -6265,8 +6264,8 @@
 
             .icon {
                 display: block;
-                width: 20px;
-                height: 20px;
+                width: 30px;
+                height: 30px;
                 background-size: contain;
                 background-repeat: no-repeat;
 
@@ -6299,7 +6298,6 @@
             }
 
             .accept{
-                margin-top: 20px;
 
                 .checkbox{
                     font-size: 14px;
@@ -6321,6 +6319,12 @@
                 height: 50px;
                 top: 1px;
                 cursor: pointer;
+
+                &.disabled{
+                    cursor: not-allowed;
+                    pointer-events: none;
+                    opacity: 0.45;
+                }
             }
         }
     }
@@ -9063,6 +9067,93 @@
     }
 }
 
+#newsletter-subscribe-btn{
+    &.disabled{
+        cursor: not-allowed;
+        pointer-events: none;
+        opacity: 0.45;
+    }
+}
+
+.newsletter-popup.thank{
+    display: none;
+}
+
+.mc4wp-form-success{
+    .newsletter-popup.form{
+        display: none;
+    }
+
+    .newsletter-popup.thank{
+        display: block;
+    }
+}
+
+#mc-embedded-subscribe{
+    margin: 0!important;
+    border: none!important;
+    right: 237px !important;
+    width: 10%!important;
+    height: 30px;
+    @include media-breakpoint-down(sm) {
+        right: 25px !important;
+        width: 13% !important;
+    }
+}
+
+#mce-EMAIL{
+    border-radius: 27px!important;
+    padding-left: 15px!important;
+    border-color: #F89D3F!important;
+}
+
+#mc_embed_signup #mc-embedded-subscribe-form input.mce_inline_error{
+    border: 1px solid #E25898!important;
+}
+
+.mce_inline_error:last-child{
+    position: absolute;
+    top: -21px;
+    color: #E01D77!important;
+    font-size: 12px;
+    text-transform: none;
+    font-family: 'Din Pro Bold';
+    background-color: rgba(255,255,255,0)!important;
+}
+
+.mc4wp-form-error{
+   .newsletter-section__text-wrap p, #newsletter_email, #newsletter-subscribe-btn, .ak-checkbox.popup-checkbox{
+       display: none;
+   } 
+
+    .mc4wp-alert.mc4wp-notice{
+        font-size: 26px;
+        line-height: 1.1;
+        font-family: "Din Pro Bold";
+        color: #128796;
+        -webkit-transition: all 450ms;
+        -o-transition: all 450ms;
+        transition: all 450ms;
+        margin-bottom: 25px;
+    }
+}
+
+#mc_embed_signup div#mce-responses{
+    margin: 0!important;
+
+   div.response{
+        font-weight: 400!important;
+        text-transform: none!important;
+        padding-top: 0;
+        margin-top: 0;
+    }
+}
+
+#mc_embed_signup{
+    @include media-breakpoint-down(sm) {
+        width: 100%!important;
+    }
+}
 
 
 
