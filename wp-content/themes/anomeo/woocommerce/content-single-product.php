@@ -129,7 +129,7 @@ if (post_password_required()) {
 
 			</div>
 
-			<div class="ak-product__description">
+			<div class="ak-product__description more-description">
 				<div class="more-info">
 					<div class="details-block block">
 						<p class="more-info__title"><? _e('Details', 'anomeo'); ?></p>

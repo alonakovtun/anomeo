@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 /**
  * Photoswipe markup
  *
@@ -53,4 +53,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 		</div>
 	</div>
-</div>
+</div> -->
