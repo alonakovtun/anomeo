@@ -179,6 +179,10 @@
        z-index: 99999999;
     }
 
+    @include media-breakpoint-up(xxl) {
+        height: 139px;
+     }
+
     &.hidden {
         transform: translateY(-100%);
         opacity: 0;
@@ -199,6 +203,10 @@
 
         @include media-breakpoint-up(xl) {
             font-size: 18px;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            font-size: 25px;
         }
 
 
@@ -231,6 +239,10 @@
             visibility: hidden;
 
             transition: all 0.4s;
+
+            @include media-breakpoint-up(xxl) {
+                font-size: 16px;
+            }
         }
 
         .icon {
@@ -244,18 +256,33 @@
                 background-image: url(../img/Wishlist-04.svg);
                 width: 19px;
                 height: 17px;
+
+                @include media-breakpoint-up(xxl) {
+                    width: 24px;
+                    height: 22px;
+                }
             }
 
             &-search {
                 background-image: url(../img/Search-05.svg);
                 width: 19px;
                 height: 19px;
+
+                @include media-breakpoint-up(xxl) {
+                    width: 25px;
+                    height: 25px;
+                }
             }
 
             &-account {
                 background-image: url(../img/Account-03.svg);
                 width: 17px;
                 height: 17px;
+
+                @include media-breakpoint-up(xxl) {
+                    width: 22px;
+                    height: 22px;
+                }
             }
 
             &-cart {
@@ -267,6 +294,13 @@
                 line-height: 2.3;
                 position: absolute;
                 top: 37%;
+
+                @include media-breakpoint-up(xxl) {
+                    width: 22px;
+                    height: 30px;
+
+                    top: 40%;
+                }
             }
 
             &-instagram {
@@ -320,6 +354,11 @@
                 width: 134px;
                 height: 36px;
                 margin-bottom: 0;
+            }
+
+            @include media-breakpoint-up(xxl) {
+                width: 220px;
+                height: 58px;
             }
         }
 
@@ -1708,6 +1747,11 @@
             max-width: 85%;
         }
 
+        @include media-breakpoint-up(xxl) {
+            width: 1121px;
+            font-size: 100px;
+        }
+
         p {
             margin-bottom: 0px;
             color: #fff;
@@ -1732,6 +1776,12 @@
 
             &:hover{
                 background-color: #138997;
+            }
+
+            @include media-breakpoint-up(xxl) {
+                padding: 24px 52px;
+                border-radius: 45px;
+                font-size: 25px;
             }
 
             @include media-breakpoint-down(sm) {
@@ -1776,6 +1826,9 @@
         ;
         width: auto;
         transform: translateX(-50%);
+        transform: rotate(90deg);
+        top: 90%;
+        right: 3%;
 
         @include media-breakpoint-up(sm) {
             display: block;
@@ -1784,7 +1837,8 @@
         @include media-breakpoint-up(xl) {
             height: 10px;
 
-            bottom: 70px;
+            
+           
         }
 
         .swiper-pagination-bullet {
@@ -1793,10 +1847,16 @@
             height: 10px;
             width: 10px;
             margin: 0 7px;
+            margin-top: 15px;
 
             @include media-breakpoint-up(xl) {
                 height: 12px;
                 width: 12px;
+            }
+
+            @include media-breakpoint-up(xxl) {
+                height: 15px;
+                width: 15px;
             }
 
             &.swiper-pagination-bullet-active {
@@ -5974,6 +6034,10 @@
         @include media-breakpoint-down(sm) {
             padding-left: var(--ak-main-spacing);
         }
+
+        @include media-breakpoint-up(xxl) {
+            font-size: 30px;
+        }
     }
 
     &--content {
@@ -5986,6 +6050,10 @@
             width: 100%;
             font-size: 28px;
             padding: 0 var(--ak-main-spacing);
+        }
+
+        @include media-breakpoint-up(xxl) {
+            font-size: 50px;
         }
 
         p{
@@ -6004,6 +6072,10 @@
                 margin-left: 25px;
                 @include media-breakpoint-down(sm) {
                     margin-left: 0;
+                }
+
+                @include media-breakpoint-up(xxl) {
+                    margin-top: 18px;
                 }
             }
 
@@ -6143,6 +6215,10 @@
     display: inline-block;
     // padding: 0 10px;
 
+    @include media-breakpoint-up(xxl) {
+        height: 60px;
+    }
+
     &:before {
         content: "";
         display: inline-block;
@@ -6174,6 +6250,10 @@
         padding-left: var(--ak-main-spacing);
     }
 
+    @include media-breakpoint-up(xxl) {
+       height: 59px;
+    }
+
     .home-orange-block__text {
         color: #fff;
         font-family: 'Din Pro Light';
@@ -6190,6 +6270,10 @@
             }
         }
 
+        @include media-breakpoint-up(xxl) {
+            font-size: 40px;
+        }
+
 
     }
 }
@@ -6203,6 +6287,10 @@
     @include media-breakpoint-down(sm) {
         font-size: 70px;
     }
+
+    @include media-breakpoint-up(xxl) {
+        font-size: 100px;
+    }
 }
 
 .home-category-block-content {
@@ -6211,6 +6299,10 @@
 
     @include media-breakpoint-down(sm) {
         font-size: 30px;
+    }
+
+    @include media-breakpoint-down(sm) {
+        font-size: 50px;
     }
 
 }
@@ -6241,6 +6333,10 @@
         @include media-breakpoint-down(md) {
             margin-top: 20px;
         }
+
+        @include media-breakpoint-up(xxl) {
+            font-size: 20px;
+        }
     }
 
     .newsletter {
@@ -6255,6 +6351,12 @@
 
             @include media-breakpoint-down(md) {
                 width: 170px;
+            }
+
+            @include media-breakpoint-up(xxl) {
+                font-size: 30px;
+                width: 47%;
+                
             }
         }
 
@@ -6278,6 +6380,11 @@
                 @include media-breakpoint-up(xl) {
                     width: 30px;
                     height: 30px;
+                }
+
+                @include media-breakpoint-up(xxl) {
+                    width: 42px;
+                    height: 42px;
                 }
             }
         }
@@ -6365,8 +6472,16 @@
         background-size: contain;
         background-repeat: no-repeat;
 
+        @include media-breakpoint-up(xxl) {
+            width: 35px!important;
+            height: 35px!important;
+        }
+
         &-instagram {
             background-image: url(../img/FB_IG_footer_desktop-11.svg);
+            @include media-breakpoint-up(xxl) {
+                margin-right: 35px;
+            }
         }
 
         &-facebook {
@@ -6384,12 +6499,16 @@
     .footer-list-item {
         font-size: 13px;
         margin-bottom: 5px;
+
+        @include media-breakpoint-up(xxl) {
+            font-size: 20px;
+        }
     }
 }
 
 .home-blue-block {
     background-color: #09616d;
-    padding: 30px 60px;
+    padding: 30px var(--ak-main-spacing);
     color: #fff;
 
     @include media-breakpoint-down(sm) {
@@ -6405,12 +6524,20 @@
             width: 23%;
             font-family: "Din Pro";
             font-size: 20px;
+
+            @include media-breakpoint-up(xxl) {
+                font-size: 30px;
+                width: 30%;
+            }
         }
 
         .blue-block__item--second {
             font-family: "Din Pro Light";
             font-size: 16px;
             width: 50%;
+            @include media-breakpoint-up(xxl) {
+                font-size: 20px;
+            }
         }
     }
 }
@@ -7007,6 +7134,10 @@
             text-transform: uppercase;
 
             margin-bottom: 35px;
+
+            @include media-breakpoint-up(xxl) {
+                font-size: 30px;
+            }
         }
 
         .text-content {
@@ -7019,6 +7150,10 @@
 
             @include media-breakpoint-down(sm) {
                 width: 100%;
+            }
+
+            @include media-breakpoint-up(xxl) {
+                font-size: 30px;
             }
         }
     }
@@ -7060,6 +7195,9 @@
                 font-size: 70px;
                 font-family: "Din Pro Bold";
 
+                @include media-breakpoint-up(xxl) {
+                    font-size: 100px;
+                }
 
                 @include media-breakpoint-down(sm) {
                     margin-bottom: 57px;
@@ -7083,6 +7221,14 @@
                     &:hover{
                         background-color: #138997;
                     }
+
+                    @include media-breakpoint-up(xxl) {
+                        padding: 24px 52px;
+                        border-radius: 45px;
+                        font-size: 25px;
+                    }
+
+                    
                 }
             }
         }
@@ -7114,12 +7260,21 @@
                     font-size: 20px;
                     font-family: 'Din Pro Light';
                     margin-bottom: 0;
+
+                    @include media-breakpoint-up(xxl) {
+                        font-size: 30px;
+                    }
                 }
 
                 img {
                     width: 30px;
                     height: 19px;
                     margin-right: 13px;
+
+                    @include media-breakpoint-up(xxl) {
+                        width: 45px;
+                        height: 28px;
+                    }
 
                     @include media-breakpoint-down(sm) {
                         width: 40px;
@@ -7208,17 +7363,29 @@
             margin-top: 48px;
         }
 
+        @include media-breakpoint-up(xxl) {
+            width: 90%;
+        }
+
         .slider-product__name {
             color: #6C6D6E;
             font-size: 20px;
             font-family: 'Din Pro Light';
             margin-bottom: 17px;
+
+            @include media-breakpoint-up(xxl) {
+                font-size: 30px;
+            }
         }
 
         .slider-product__price {
             color: #128796;
             font-size: 20px;
             font-family: 'Din Pro';
+
+            @include media-breakpoint-up(xxl) {
+                font-size: 30px;
+            }
         }
     }
 
@@ -7976,6 +8143,16 @@
         @include media-breakpoint-down(sm) {
             top: 111px;
             right: 37px;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            width: 111px;
+            height: 65px;
+            font-size: 25px;
+            border-radius: 46px;
+
+            top: 192px;
+
         }
 
         cursor: pointer;
@@ -9152,6 +9329,12 @@
 #mc_embed_signup{
     @include media-breakpoint-down(sm) {
         width: 100%!important;
+    }
+}
+
+.home-second-slider{
+    .fullwidth-slider__pagination.swiper-pagination-bullets{
+        transform: rotate(0);
     }
 }
 

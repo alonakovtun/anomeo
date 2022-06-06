@@ -15,6 +15,10 @@
         --ak-header-height: 64px;
         --ak-main-spacing: 60px;
     }
+
+    @include media-breakpoint-up(xxl) {
+        --ak-main-spacing: 140px;
+    }
 }
 
 ::selection {
