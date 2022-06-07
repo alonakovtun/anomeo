@@ -46,10 +46,12 @@ $get_addresses = apply_filters(
 				<p class="account-title"><? _e('Account', 'anomeo'); ?></p>
 				<p class="address-title"><? _e('Addresses', 'anomeo'); ?></p>
 			</div>
-			<form method="post" action="<?= wc_get_endpoint_url('edit-address', $name); ?>">
+			<form method="post">
 			<div class="my-account__flex">
 				<p class="ak-my-account__address-item-title"><?php echo esc_html($address_title); ?></p>
 				<button type="submit" class="form-submit-btn button" name="save_address" value="<?php esc_attr_e('Save address', 'woocommerce'); ?>"><?php esc_html_e('Save', 'woocommerce'); ?></button>
+				<?php wp_nonce_field('woocommerce-edit_address', 'woocommerce-edit-address-nonce'); ?>
+				<input type="hidden" name="action" value="edit_address" />
 			</div>
 				<div class="woocommerce-address-fields">
 					<?php do_action("woocommerce_before_edit_address_form_{$name}"); ?>
@@ -63,9 +65,6 @@ $get_addresses = apply_filters(
 					</div>
 
 					<?php do_action("woocommerce_after_edit_address_form_{$name}"); ?>
-
-					<?php wp_nonce_field('woocommerce-edit_address', 'woocommerce-edit-address-nonce'); ?>
-					<input type="hidden" name="action" value="edit_address" />
 				</div>
 
 			</form>

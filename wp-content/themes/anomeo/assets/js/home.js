@@ -225,6 +225,7 @@ function FAQScript(){
         }
 
         jQuery(this).parent().find('.answer p').addClass("animate__animated animate__fadeInUp");
+        jQuery(this).parent().find('.question').addClass("animate__animated animate__fadeInUp");
    });
 
     jQuery( ".question_block.next .next_question" ).click(function() {
@@ -237,6 +238,7 @@ function FAQScript(){
         jQuery(this).parent().next().addClass('next');
 
         jQuery('.answer p').addClass("animate__animated animate__fadeInUp");
+        jQuery('.question').addClass("animate__animated animate__fadeInUp");
 
         if(jQuery('.question_block').hasClass('next')){
             jQuery('.question_block.next .question').after('<div class="next_question"><img src="/wp-content/themes/anomeo/assets/img/Arrow_FaQ-06.svg">Next question</div>');
@@ -258,6 +260,7 @@ function FAQScript(){
         jQuery('.faq_question').removeClass('open');
         jQuery('.question_block').removeClass('next');
         jQuery('.answer p').removeClass("animate__animated animate__fadeInUp");
+        jQuery('.question').removeClass("animate__animated animate__fadeInUp");
     });
 
     // if(jQuery('.question_block').contains('show')){
@@ -286,9 +289,9 @@ function animateStory() {
         var scrolled = jQuery(window).scrollTop();
 
         if (scrolled > 300 && scrolled > scrollPrev) {
-            jQuery(".home_text--content .first").addClass("animate__animated animate__fadeInUp animate__delay-1s");
-            jQuery(".home_text--content .second").addClass("animate__animated animate__fadeInUp animate__delay-2s");
-            jQuery(".home_text--content .third").addClass("animate__animated animate__fadeInUp animate__delay-3s");
+            jQuery(".home_text--content .first").addClass("animate__animated animate__fadeInUp animate__delay-5ms");
+            jQuery(".home_text--content .second").addClass("animate__animated animate__fadeInUp animate__delay-1s");
+            jQuery(".home_text--content .third").addClass("animate__animated animate__fadeInUp animate__delay-2s");
         }
         scrollPrev = scrolled;
     });
