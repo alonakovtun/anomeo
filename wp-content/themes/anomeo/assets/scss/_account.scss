@@ -20,6 +20,10 @@
         }
     }
 
+    @include media-breakpoint-up(xxl) {
+        padding-top: 80px;
+    }
+
     .menu,
     .woocommerce-MyAccount-navigation > ul {
         display: inline-block;
@@ -126,12 +130,15 @@
             @include media-breakpoint-down(sm) {
                 margin-bottom: 19px;
             }
+
+           
         }
 
         .order-title{
             @include media-breakpoint-down(sm) {
                 padding-right: var(--ak-main-spacing);
                 padding-left: var(--ak-main-spacing);
+                
             }
         }
 
@@ -145,6 +152,11 @@
             width: 100%;
             padding-top: 0;
             margin-bottom: 233px;
+        }
+
+        
+        @include media-breakpoint-up(xxl) {
+            padding: 120px var(--ak-main-spacing);
         }
 
         
@@ -184,6 +196,10 @@
             border-right: none;
             border-bottom: 1px solid #EAEAEA;
             padding: 0 var(--ak-main-spacing);
+        }
+        @include media-breakpoint-up(xxl) {
+           // padding-top: 120px;
+            padding-left: var(--ak-main-spacing);
         }
 
         .ak-my-account__address-item-title, .col-title{
@@ -237,6 +253,10 @@
             .select2-selection__rendered{
                 padding: 0;
                 font-size: 16px;
+
+                @include media-breakpoint-up(xxl) {
+                    font-size: 20px!important;
+                }
                 .select2-selection__placeholder{
                     color: #148D9A;
                 }
@@ -246,6 +266,14 @@
         
     }
 }
+
+.select2-container--default{
+    .select2-selection__rendered{
+        @include media-breakpoint-up(xxl) {
+            font-size: 20px!important;
+        }
+    }
+} 
 
 label{
     display: none;
@@ -265,6 +293,7 @@ input, .select2{
     @include media-breakpoint-up(xxl) {
         padding: 21px 34px;
         font-size: 20px;
+        border-radius: 45px;
     }
     
     &::placeholder{
@@ -300,6 +329,9 @@ input, .select2{
 }
 
 .account-main-title{
+    @include media-breakpoint-up(xxl) {
+        padding-top: 80px;
+     }
     &.hidden{
         opacity: 0;
         visibility: hidden;

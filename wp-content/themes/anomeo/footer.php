@@ -97,19 +97,14 @@
 				Contact Us
 			</p>
 			<ul class="footer-list">
-				<!-- <li class="footer-list-item"><a href="mailto:customercare@anomeo.com">customercare@anomeo.com</a></li>
-				<li class="footer-list-item"><a href="tel:123456789">/SG/ +65 6407 5414</a></li>
-				<li class="footer-list-item"><a href="tel:123456789">/MY/ +60 3 9212 5495</a></li>
-				<li class="footer-list-item"><a href="tel:123456789">/ID/ +62 855 7467 4602</a></li>
-				<li class="footer-list-item"><a href="tel:123456789">/NZ/ +64 0 801 1145</a></li>
-				<li class="footer-list-item"><a href="tel:123456789">/AU/ +61 2 7908 2644</a></li> -->
+
 				<?
-								wp_nav_menu(array(
-									'theme_location' => 'footer-menu-contact',
-									'container' => '',
-									'items_wrap' => '%3$s'
-								));
-								?>
+				wp_nav_menu(array(
+					'theme_location' => 'footer-menu-contact',
+					'container' => '',
+					'items_wrap' => '%3$s'
+				));
+				?>
 			</ul>
 		</div>
 		<div class="customer_service">
@@ -117,23 +112,16 @@
 				Customer Service
 			</p>
 			<ul class="footer-list">
-				<!-- <li class="footer-list-item faq"><a href="#"><?php _e('FAQ', 'anomeo') ?></a></li>
-				<li class="footer-list-item"><a href="/find-us/"><?php _e('Find Us', 'anomeo') ?></a></li>
-				<li class="footer-list-item"><a href="#"><?php _e('Order Tracking', 'anomeo') ?></a></li>
-				<li class="footer-list-item"><a href="/delivery/"><?php _e('Delivery', 'anomeo') ?></a></li>
-				<li class="footer-list-item"><a href="/refund_returns/"><?php _e('Returns', 'anomeo') ?></a></li>
-				<li class="footer-list-item"><a href="/privacy-policy/"><?php _e('Privacy Policy', 'anomeo') ?></a></li>
-				<li class="footer-list-item"><a href="/terms-conditions/"><?php _e('Terms & Conditions', 'anomeo') ?></a></li> -->
 				<?
-								wp_nav_menu(array(
-									'theme_location' => 'footer-menu',
-									'container' => '',
-									'items_wrap' => '%3$s'
-								));
-								?>
+				wp_nav_menu(array(
+					'theme_location' => 'footer-menu',
+					'container' => '',
+					'items_wrap' => '%3$s'
+				));
+				?>
 			</ul>
 		</div>
-		<div class="follow">
+		<!-- <div class="follow">
 			<p class="contact_text footer-title">
 				Follow Us
 			</p>
@@ -141,8 +129,8 @@
 				<li class="footer-list-item"><a href="#"><span class="icon icon-instagram"></a></li>
 				<li class="footer-list-item"><a href="#"><span class="icon icon-facebook"></a></li>
 			</ul>
-			<!-- <a class="language" href="">Change language</a> -->
-		</div>
+			<a class="language" href="">Change language</a>
+		</div> -->
 
 	</div>
 

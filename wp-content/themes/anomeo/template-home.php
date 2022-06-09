@@ -13,7 +13,7 @@ get_header();
 
 while (have_posts()) : the_post(); ?>
     <?php get_template_part('template-parts/faq'); ?>
-    <section class=" fullwidth-slider">
+    <section class="home-top fullwidth-slider">
         <?php $file = get_field('video');
         if ($file) : ?>
             <div class="fullwidth-slider__item">

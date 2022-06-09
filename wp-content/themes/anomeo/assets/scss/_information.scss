@@ -7,6 +7,10 @@
         padding: 25px 37px;
     }
 
+    @include media-breakpoint-up(xxl) {
+        padding: 120px var(--ak-main-spacing);
+    }
+
     &.cookies{
         .information__subtitle{
             font-family: 'Din Pro Light';

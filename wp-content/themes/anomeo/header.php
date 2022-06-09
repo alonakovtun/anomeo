@@ -143,14 +143,15 @@
 						</div>
 					</div>
 
-					<div class="site-header__popup site-header__cart-popup">
-						<? woocommerce_mini_cart(); ?>
-					</div>
+					
 
 
 				</div>
 			</div>
 		</header><!-- #masthead -->
+		<div class="site-header__popup site-header__cart-popup">
+						<? woocommerce_mini_cart(); ?>
+					</div>
 		<div class="ak-mobile-menu-popup">
 			<ul class="ak-mobile-menu-popup__menu">
 				<li class="menu-item mobile-search-item">
