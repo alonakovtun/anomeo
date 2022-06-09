@@ -400,6 +400,10 @@ input{
             font-size: 22px;
         }
 
+        @include media-breakpoint-up(xxl) {
+            font-size: 30px;
+        }
+
         &:after {
             content: "";
             position: absolute;
@@ -420,8 +424,11 @@ input{
         font-size: 28px;
 
         @include media-breakpoint-down(sm) {
-            
             font-size: 22px;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            font-size: 30px;
         }
     }
 
@@ -524,6 +531,11 @@ input{
             
         }
 
+        @include media-breakpoint-up(xxl) {
+            width: 87%;
+            
+        }
+
         img {
             position: inherit;
             top: 0;
@@ -586,6 +598,11 @@ input{
 
             @include media-breakpoint-up(xl) {
                 font-size: 22px;
+            }
+
+            @include media-breakpoint-up(xxl) {
+                font-size: 30px;
+                width: 70%;
             }
         }
     }

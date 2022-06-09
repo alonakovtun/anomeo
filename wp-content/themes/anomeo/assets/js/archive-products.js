@@ -66,6 +66,7 @@ function initSortScripts() {
                 document.querySelector(".page-title__container").classList.toggle("index");
                 document.querySelector(".sort-col").classList.toggle("index-btn");
                 document.querySelector(".ak-products__grid").classList.toggle("ml-450");
+                document.querySelector(".description-category").classList.toggle("hide");
                 document.querySelector(".ak-products__filters-row").classList.toggle("hide-filter");
                 
             }
@@ -124,6 +125,7 @@ function initFilterScripts() {
                 document.querySelector(".page-title__container").classList.toggle("index");
                 document.querySelector(".filter-col").classList.toggle("index-btn");
                 document.querySelector(".ak-products__grid").classList.toggle("ml-450");
+                document.querySelector(".description-category").classList.toggle("hide");
 
                 
 

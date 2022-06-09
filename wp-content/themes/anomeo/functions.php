@@ -53,6 +53,7 @@ if (!function_exists('anomeo_setup')) :
 				'header-menu2' => esc_html__('Header menu2', 'anomeo'),
 				'mobile-menu' => esc_html__('Mobile menu', 'anomeo'),
 				'footer-menu' => esc_html__('Footer menu', 'anomeo'),
+				'footer-menu-contact' => esc_html__('Footer menu contact us', 'anomeo'),
 				'terms-menu'  => esc_html__('Terms menu', 'anomeo'),
 				'blog-categories-menu' => esc_html__('Blog categories menu', 'anomeo'),
 			)

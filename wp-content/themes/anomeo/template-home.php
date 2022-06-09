@@ -13,11 +13,11 @@ get_header();
 
 while (have_posts()) : the_post(); ?>
     <?php get_template_part('template-parts/faq'); ?>
-    <section class="home-top-slider fullwidth-slider">
+    <section class=" fullwidth-slider">
         <?php $file = get_field('video');
         if ($file) : ?>
             <div class="fullwidth-slider__item">
-                <video autoplay loop class="home-video">
+                <video autoplay loop muted playsinline class="home-video">
                     <source src="<?php echo $file; ?>" type='video/mp4; codecs="avc1"'>
                 </video>
                 <div class="fullwidth-slider__item-description video">
@@ -25,6 +25,7 @@ while (have_posts()) : the_post(); ?>
                 </div>
             </div>
         <?php else : ?>
+            <div class="home-top-slider">
             <div class="swiper-wrapper swiper-home-top">
                 <? if (have_rows('top_slider')) :
                     while (have_rows('top_slider')) : the_row(); ?>
@@ -37,6 +38,8 @@ while (have_posts()) : the_post(); ?>
                 <? endwhile;
                 endif; ?>
             </div>
+            </div>
+           
         <?php endif; ?>
         <div class="fullwidth-slider__button-prev"></div>
         <div class="fullwidth-slider__button-next"></div>
@@ -129,8 +132,8 @@ while (have_posts()) : the_post(); ?>
 
     <section class="home-blue-block">
         <div class="blue-block__content">
-            <div class="blue-block__item blue-block__item--first">WE CARE ABOUT OUR COSTUMER 24 MONTHS GUARANTEE</div>
-            <div class="blue-block__item blue-block__item--second">Travel blue offers products of the highest quality. Should any defect appear within 24 months from date purchase (batteries - 12 months from date of purchase) please return the product with proof of purchase to Travel Blues and we will repair or replace it free of charge. This worldwide guarantee does not affect your statutory rights.</div>
+            <div class="blue-block__item blue-block__item--first"><?php the_field('left_text') ?></div>
+            <div class="blue-block__item blue-block__item--second"><?php the_field('right_text') ?></div>
         </div>
     </section>
 <?php

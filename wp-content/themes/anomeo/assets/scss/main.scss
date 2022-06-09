@@ -1980,6 +1980,11 @@
 
     .home-video{
         width: 100%;
+        @include media-breakpoint-down(sm) {
+            height: inherit;
+            object-fit: cover;
+        }
+
     }
 
     .swiper-home-top{
@@ -2367,6 +2372,12 @@
             @include media-breakpoint-down(sm) {
                 margin-right: 15px;
             }
+
+            @include media-breakpoint-up(xxl) {
+                padding: 16px 19px 12px;
+                font-size: 16px;
+                border-radius: 45px;
+            }
         }
 
         .sort-col {
@@ -2751,6 +2762,10 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: flex-start;
+
+        @include media-breakpoint-up(xxl) {
+            padding: 0 100px;
+        }
 
         .ak-product-item {
             transition: all 300ms ease;
@@ -6587,6 +6602,10 @@
         display: none;
     }
 
+    p{
+        margin-bottom: 0;
+    }
+
     .blue-block__content {
         display: flex;
         justify-content: space-between;
@@ -6716,6 +6735,10 @@
     border-right: none;
     // transition: all 350ms ease;
 
+    @include media-breakpoint-up(xxl) {
+            padding-top: 103px;
+        }
+
     .page-title__title {
         color: #128796;
         opacity: 0.56;
@@ -6724,6 +6747,10 @@
 
         @include media-breakpoint-down(sm) {
             font-size: 18px;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            font-size: 30px;
         }
     }
 
@@ -6735,6 +6762,10 @@
 
         @include media-breakpoint-down(sm) {
             font-size: 32px;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            font-size: 50px;
         }
     }
 }
@@ -7377,8 +7408,8 @@
             .popular-products-slider__button-next {
                 @include media-breakpoint-down(sm) {
                     position: absolute;
-                    left: 0;
-                    top: 0;
+                    right: 0;
+                    bottom: -245px;
                 }
             }
 
@@ -9162,12 +9193,24 @@
         padding-bottom: 24px;
     }
 
+    @include media-breakpoint-up(xxl) {
+        width: 75%;
+    }
+
+    &.hide{
+        display: none;
+    }
+
     p{
         color: #138796;
         font-size: 20px;
         font-family: "Din Pro Light";
         @include media-breakpoint-down(sm) {
             font-size: 16px;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            font-size: 30px;
         }
     }
 
@@ -9187,6 +9230,10 @@
         font-family: "Din Pro";
         @include media-breakpoint-down(sm) {
             font-size: 26px;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            font-size: 40px;
         }
     }
 }
