@@ -3063,16 +3063,28 @@
 
             font-size: 16px;
 
+            @include media-breakpoint-up(xxl) {
+                padding-right: 0!important;
+            }
+
             .title {
                 font-size: 36px;
                 font-family: "Din Pro Light";
                 color: #6C6D6E;
+
+                @include media-breakpoint-up(xxl) {
+                    font-size: 50px;
+                }
             }
 
             p {
                 font-size: 16px;
                 font-family: "Din Pro Light";
                 color: #6C6D6E;
+
+                @include media-breakpoint-up(xxl) {
+                    font-size: 30px;
+                }
             }
 
             .more-info__text {
@@ -3083,6 +3095,10 @@
 
             @include media-breakpoint-up(lg) {
                 max-width: 85%;
+            }
+
+            @include media-breakpoint-up(xxl) {
+                max-width: 90%;
             }
 
             @include media-breakpoint-up(xl) {
@@ -3119,6 +3135,12 @@
                 text-transform: uppercase;
 
                 transition: all .4s;
+
+                @include media-breakpoint-up(xxl) {
+                    width: 310px;
+                    height: 65px;
+                    font-size: 25px;
+                }
 
                 &:hover {
                     background-color: #138997;
@@ -3338,6 +3360,18 @@
                         width: 100%;
                         height: 100%;
                     }
+                }
+            }
+        }
+
+        &__price{
+            @include media-breakpoint-up(xxl) {
+                font-size: 40px!important;
+            }
+
+            del, ins {
+                @include media-breakpoint-up(xxl) {
+                    font-size: 40px!important;
                 }
             }
         }
@@ -6583,7 +6617,7 @@
 
 
 
-    .footer-list-item {
+    .footer-list-item, .menu-item {
         font-size: 13px;
         margin-bottom: 5px;
 
@@ -6812,6 +6846,11 @@
         width: 50px;
         height: 50px;
         margin-left: 20px;
+
+        @include media-breakpoint-up(xxl) {
+            width: 65px;
+            height: 65px;
+        }
     }
 }
 
@@ -7698,6 +7737,10 @@
     .color-title {
         margin-right: 30px;
         text-transform: uppercase;
+
+        @include media-breakpoint-up(xxl) {
+           font-size: 28px!important;
+        }
     }
 
     .color-block {
@@ -7705,12 +7748,21 @@
         height: 16px;
         border-radius: 50%;
         margin-right: 10px;
+        @include media-breakpoint-up(xxl) {
+            width: 22px;
+            height: 22px;
+         }
 
         .color-item {
             width: 16px;
             height: 16px;
             border-radius: 50%;
             margin-right: 10px;
+
+            @include media-breakpoint-up(xxl) {
+                width: 22px;
+                height: 22px;
+             }
 
             &.not-current-color {
 
@@ -7719,6 +7771,13 @@
                 left: 12%;
                 width: 10px;
                 height: 10px;
+
+                @include media-breakpoint-up(xxl) {
+                    bottom: 11%;
+                    left: 8.5%;
+                    width: 16px;
+                    height: 16px;
+                 }
             }
         }
     }
@@ -7779,6 +7838,13 @@
             position: absolute;
             right: 25%;
             transition: all .3s;
+
+            
+            @include media-breakpoint-up(xxl) {
+                background-size: 20px 20px;
+                width: 20px;
+                height: 20px;
+            }
         }
 
         &.change {
