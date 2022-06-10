@@ -97,15 +97,20 @@
     .my-account-page__content-section{
         border-right: 1px solid #EAEAEA;
         width: 84%;
+        min-height: 100vh;
 
         @include media-breakpoint-down(sm) {
             padding: var(--ak-main-spacing);
             width: 100%;
             border-right: none;
             padding-top: 25px;
+            min-height: auto;
 
         }
 
+
+            
+        
         .account-title{
             color: #128796;
             opacity: 0.56;

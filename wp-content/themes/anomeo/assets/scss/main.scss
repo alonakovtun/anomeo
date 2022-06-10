@@ -338,6 +338,10 @@
         transform: translateY(-10%);
         transition: all 350ms ease;
 
+        @include media-breakpoint-up(xxl) {
+            top: calc(var(--ak-header-height) + 40px);
+        }
+
         &.open {
             visibility: visible;
             opacity: 1;
@@ -1495,7 +1499,8 @@
         bottom: 0;
         top: 28%;
 
-        height: 353px;
+        height: fit-content;
+        padding: 30px 37px;
     }
 
     .footer-newsletter{
@@ -6004,6 +6009,10 @@
                 @include media-breakpoint-down(sm) {
                     width: 100%!important;
                 }
+
+                @include media-breakpoint-up(xxl) {
+                    width: 465px !important
+                }
             }
 
             .ak-checkout__coupon-form {
@@ -8333,14 +8342,15 @@
 .woocommerce-input-wrapper {
     .select2 {
         width: 357px !important;
-        padding: 16px 34px;
+        padding: 19px 34px;
         @include media-breakpoint-down(sm) {
             width: 100%!important;
             padding: 12px 34px;
         }
 
         @include media-breakpoint-up(xxl) {
-            padding: 27px 34px;
+            padding: 25px 34px;
+            width: 465px !important;
         }
     }
 
@@ -9425,6 +9435,40 @@
             font-size: 40px;
         }
     }
+
+    strong{
+            padding: 5px 10px;
+            border-radius: 25px;
+            color: #138997;
+        
+            height: 44px;
+        
+            display: inline-block;
+            background-color: #88dbdf;
+            // padding: 0 10px;
+        
+            @include media-breakpoint-up(xxl) {
+                height: 60px;
+                border-radius: 35px;
+            }
+        
+        
+            &:before {
+                content: "";
+                display: inline-block;
+                vertical-align: middle;
+                height: 100%;
+            }
+        
+            @include media-breakpoint-down(sm) {
+                padding: 2px 10px 0px;
+            }
+        
+            
+ 
+               
+      
+    }
 }
 
 .woocommerce-privacy-policy-text{
@@ -9515,9 +9559,9 @@
         top: auto;
         bottom: 37px;
     }
-    @include media-breakpoint-up(xxl) {
-        right: -60px;
-    }
+    // @include media-breakpoint-up(xxl) {
+    //     right: -60px;
+    // }
 }
 
 .slick-active .iconic-woothumbs-all-images-wrap .slick-dots button, .iconic-woothumbs-zoom-bullets .slick-dots button{
@@ -9706,6 +9750,23 @@
     }
 }
 
+.payment_method_paypal{
+    img, .about_paypal{
+        display: none;
+    }
+}
+
+.register-box{
+    @include media-breakpoint-up(xxl) {
+        padding-left: var(--ak-main-spacing);
+    }
+}
+
+.myaccount__content-wrap--orders{
+    .woocommerce-info {
+        padding: 0;
+    }
+}
 
 
 
