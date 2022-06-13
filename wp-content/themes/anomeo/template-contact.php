@@ -21,11 +21,11 @@ while (have_posts()) : the_post(); ?>
 
                 <div class="contact_social">
                 <?php the_field('contact_social'); ?>
-                <div class="contact_social--img">
+                <!-- <div class="contact_social--img">
                     <img src="/wp-content/themes/anomeo/assets/img/FB_IG_footer_desktop-11.svg" alt="">
                     <img src="/wp-content/themes/anomeo/assets/img/FB_IG_footer_desktop-12.svg" alt="">
 
-                </div>
+                </div> -->
                 </div>
 
 

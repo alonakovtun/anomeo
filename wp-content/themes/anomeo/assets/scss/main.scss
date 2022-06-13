@@ -6698,6 +6698,9 @@
 
     p{
         margin-bottom: 0;
+        a{
+            color: #fff;
+        }
     }
 
     .blue-block__content {
@@ -7336,6 +7339,9 @@
 
 .slider2-block {
     padding: 140px var(--ak-main-spacing) 65px;
+    @include media-breakpoint-up(xxl) {
+        padding-top: 164px;
+    }
 
     img {
         width: 110px;
@@ -7557,6 +7563,10 @@
         @include media-breakpoint-down(sm) {
             margin-left: 0;
             width: 275px !important;
+        }
+
+        @include media-breakpoint-up(xxl) {
+           width: 475px!important;
         }
     }
 
@@ -8415,6 +8425,12 @@
         width: 85px;
         height: 44px;
 
+        transition: all .3s;
+
+        &:hover{
+            right: 60px;
+        }
+
         @include media-breakpoint-down(sm) {
             top: 111px;
             right: 37px;
@@ -8722,6 +8738,10 @@
                 @include media-breakpoint-down(sm) {
                    right: 35px;
                  }
+
+                 @include media-breakpoint-up(xxl) {
+                    right: 140px;
+                  }
             }
         }
 
@@ -9703,6 +9723,11 @@
 .home-second-slider{
     .fullwidth-slider__pagination.swiper-pagination-bullets{
         transform: rotate(0);
+
+        @include media-breakpoint-up(xxl) {
+            top: 470px;
+            right: 140px;
+        }
     }
 }
 
@@ -9765,6 +9790,15 @@
 .myaccount__content-wrap--orders{
     .woocommerce-info {
         padding: 0;
+    }
+}
+
+
+.home-blocks{
+    .block-item{
+        @include media-breakpoint-up(xxl) {
+            bottom: 140px;
+        }
     }
 }
 

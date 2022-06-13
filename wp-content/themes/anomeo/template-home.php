@@ -51,8 +51,8 @@ while (have_posts()) : the_post(); ?>
     </section>
 
     <section class="home-orange-block">
-        <p class="home-orange-block__text">FREE SHIPPING OVER 50$</p>
-        <p class="home-orange-block__text">FREE SHIPPING OVER 50$</p>
+        <p class="home-orange-block__text"><?php _e('FREE SHIPPING', 'anomeo') ?></p>
+        <p class="home-orange-block__text"><?php _e('FREE SHIPPING', 'anomeo') ?>/p>
     </section>
 
     <section class="home-blocks">
@@ -78,8 +78,8 @@ while (have_posts()) : the_post(); ?>
     </section>
 
     <section class="home-orange-block">
-        <p class="home-orange-block__text">FREE SHIPPING OVER 50$</p>
-        <p class="home-orange-block__text">FREE SHIPPING OVER 50$</p>
+        <p class="home-orange-block__text"><?php _e('FREE SHIPPING', 'anomeo') ?>/p>
+        <p class="home-orange-block__text"><?php _e('FREE SHIPPING', 'anomeo') ?>/p>
     </section>
 
     <section class="popular-items-block">
