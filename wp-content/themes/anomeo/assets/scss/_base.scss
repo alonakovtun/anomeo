@@ -631,4 +631,34 @@ input{
             color: var(--ak-accent-color);
         }
     }
+
+    .product-color{
+        position: absolute;
+        left: var(--ak-main-spacing);
+        bottom: 175px;
+        width: 76%;
+
+        .color-name {
+            text-transform: none;
+            position: absolute;
+            right: 32px;
+            font-size: 14px;
+            font-family: "Din Pro Light";
+            color: #138796;
+        }
+
+        .color-item.not-current-color{
+            bottom: 11% !important;
+            left: 13% !important;
+        }
+
+        .color-block {
+            width: 15px;
+            height: 15px;
+
+            &.not_active{
+                background-color: #fff;
+            }
+        }
+    }
 }

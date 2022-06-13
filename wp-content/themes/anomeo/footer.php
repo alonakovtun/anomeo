@@ -37,7 +37,7 @@
 		<div id="mc_embed_signup" class="footer-newsletter">
 			<form action="https://travel-blue.us10.list-manage.com/subscribe/post?u=29461db69912d5bc0a242974f&amp;id=bf20a93a0e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 				<div id="mc_embed_signup_scroll" class=" newsletter subscribe">
-					<p class="newsletter_text">Sign up to our newsletter and stay update</p>
+					<p class="newsletter_text">Sign up to our newsletter and stay updated</p>
 					<a class="open__newsletter"><span class="icon icon-open"></a>
 					<div class="form-newsletter">
 						<div class="mc-field-group">

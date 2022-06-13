@@ -1922,9 +1922,6 @@
 
         @include media-breakpoint-up(xl) {
             height: 10px;
-
-            
-           
         }
 
         .swiper-pagination-bullet {
@@ -6299,6 +6296,11 @@
 
     .fullwidth-slider__item-description a, .popular-items-block .button a{
         padding: 3px 20px 7px!important;
+
+        @include media-breakpoint-up(xxl) {
+           padding-top: 10px!important;
+        }
+        
     }
 
     .faq_block .faq_question .faq-footer.show .back{
@@ -6522,6 +6524,7 @@
         .newsletter_text {
             width: 42%;
             font-size: 20px;
+            font-family: 'Din Pro';
 
             @include media-breakpoint-down(md) {
                 width: 170px;
@@ -9725,7 +9728,7 @@
         transform: rotate(0);
 
         @include media-breakpoint-up(xxl) {
-            top: 470px;
+            top: 605px;
             right: 140px;
         }
     }

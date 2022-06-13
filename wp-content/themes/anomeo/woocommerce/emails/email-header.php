@@ -43,9 +43,9 @@ if (!defined('ABSPATH')) {
 										<td>
 											<div id="template_header_image">
 												<?php
-												
-													echo '<p style="margin-top:0;"><img src="/wp-content/themes/anomeo/assets/img/logo.svg" /></p>';
-												
+												if ($img = get_option('woocommerce_email_header_image')) {
+													echo '<p style="margin-top:0;"><img src="' . esc_url($img) . '" alt="' . get_bloginfo('name', 'display') . '" /></p>';
+												}
 												?>
 											</div>
 										</td>
