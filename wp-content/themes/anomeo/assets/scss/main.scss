@@ -1033,6 +1033,7 @@
             li {
                 padding-bottom: 25px;
                 margin-right: 0;
+               
             }
 
         }
@@ -1071,7 +1072,9 @@
             li {
                 padding-bottom: 25px;
                 margin-right: 0;
-
+                @include media-breakpoint-up(xxl) {
+                    width: 100%;
+                }
             }
         }
 
@@ -1081,7 +1084,14 @@
             margin-bottom: 10px;
 
             @include media-breakpoint-up(xxl) {
-                margin-right: 185px;
+                width: 15%;
+                margin-right: 0;
+            }
+
+            &:first-child {
+                @include media-breakpoint-up(xxl) {
+                    margin-right: 64px;
+                }
             }
         }
     }
@@ -8459,7 +8469,7 @@
 
             @include media-breakpoint-up(xxl) {
                 width: 175px;
-                top: 130px;
+                top: 192px;
             }
         }
     }
@@ -8484,9 +8494,15 @@
             padding-top: 172px;
         }
 
+        @include media-breakpoint-up(xxl) {
+                padding-top: 205px;
+        }
+
         &._active {
             transform: translateX(0);
             pointer-events: auto;
+
+           
         }
     }
 
@@ -8506,6 +8522,12 @@
             padding-right: 130px;
             padding-bottom: 21px;
         }
+
+        @include media-breakpoint-up(xxl) {
+            font-size: 50px;
+            padding-left: 140px;
+        }
+
     }
 
     .faq_question {
@@ -8535,6 +8557,10 @@
                     padding-left: 35px;
                     margin-top: -150px;
                 }
+
+                @include media-breakpoint-up(xxl) {
+                    padding-left: 140px;
+                }
                 .back{
                     color: #FFFFFF;
                     font-size: 12px;
@@ -8547,6 +8573,12 @@
                     padding-top: 4px;
 
                     cursor: pointer;
+
+                    @include media-breakpoint-up(xxl) {
+                        font-size: 16px;
+                        width: 273px;
+                        height: 42px;
+                    }
                 }
                
             }
@@ -8586,6 +8618,11 @@
                     @include media-breakpoint-down(sm) {
                         opacity: 0;
                     }
+
+                    @include media-breakpoint-up(xxl) {
+                        font-size: 28px;
+                        right: 200px;
+                    }
                 }
 
                 .next_question{
@@ -8602,11 +8639,22 @@
                         right: 35px;
                     }
 
+                    @include media-breakpoint-up(xxl) {
+                        font-size: 28px;
+                        right: 140px;
+                    }
+
                     img{
                         width: 29px;
                         height: 19px;
 
                         margin-right: 27px;
+
+                        @include media-breakpoint-up(xxl) {
+                            width: 45px;
+                            height: 28px;
+                            
+                        }
                     }
                 }
                 
@@ -8656,6 +8704,10 @@
                         padding-right: 60px;
                         padding-bottom: 0;
                     }
+
+                    @include media-breakpoint-up(xxl) {
+                        font-size: 50px;
+                    }
     
                 }
 
@@ -8679,6 +8731,11 @@
                        width: 100%;
                        font-size: 20px;
                        margin-bottom: 150px;
+                    }
+
+                    @include media-breakpoint-up(xxl) {
+                        font-size: 50px;
+                        padding-left: 140px;
                     }
 
                     p{
@@ -8708,6 +8765,11 @@
                    padding: 25px 60px 25px 35px;
                    font-size: 20px;
                 }
+
+                @include media-breakpoint-up(xxl) {
+                    font-size: 45px;
+                    padding: 30px 300px 30px 140px;
+                 }
             }
 
             .answer {
@@ -8744,6 +8806,8 @@
 
                  @include media-breakpoint-up(xxl) {
                     right: 140px;
+                    top: 15%;
+                    font-size: 70px;
                   }
             }
         }
