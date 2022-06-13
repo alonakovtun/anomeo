@@ -3603,6 +3603,12 @@
             padding: 75px var(--ak-main-spacing) 135px;
         }
 
+        @include media-breakpoint-up(xxl) {
+            padding-left: 86px;
+            padding-top: 60px;
+            padding-bottom: 54px;
+        }
+
         .title {
             font-family: "Din Pro";
             font-weight: 400;
@@ -3611,6 +3617,9 @@
             justify-content: space-between;
             color: #128796;
             text-transform: none;
+            @include media-breakpoint-up(xxl) {
+                font-size: 40px;
+            }
 
             @include media-breakpoint-down(sm) {
                 display: flex;
@@ -3644,6 +3653,10 @@
                     margin-bottom: 31px;
                 }
 
+                @include media-breakpoint-up(xxl) {
+                    font-size: 28px;
+                }
+
             }
         }
 
@@ -3661,6 +3674,11 @@
                 width: 100%;
                 margin: 27px 0 75px;
             }
+
+            @include media-breakpoint-up(xxl) {
+                font-size: 28px;
+                margin: 49px 0 75px;
+            }
         }
 
         .read-more-link {
@@ -3673,6 +3691,11 @@
 
             width: fit-content;
             padding: 15px 29px 11px;
+
+            @include media-breakpoint-up(xxl) {
+                font-size: 25px;
+                padding: 20px 51px 16px;
+            }
         }
     }
 }
@@ -6323,10 +6346,16 @@
 
     .blog-filter .menu .menu-item{
         padding-top: 3px!important;
+        @include media-breakpoint-up(xxl) {
+            padding: 7px 12px 10px!important;
+         }
     }
 
     .ak-post-item__description .read-more-link{
         padding-top: 8px!important;
+        @include media-breakpoint-up(xxl) {
+            padding-top: 12px!important;
+        }
     }
 
     .post-template-default.single .post-content__section--text .text-box--left .category-name{
@@ -6938,6 +6967,10 @@
     padding: 43px var(--ak-main-spacing) 0;
     display: flex;
 
+    @include media-breakpoint-up(xxl) {
+        margin-bottom: 43px;
+        padding-top: 60px;
+    }
 
     .menu {
         display: flex;
@@ -6958,6 +6991,10 @@
 
             @include media-breakpoint-down(sm) {
                 margin-bottom: 32px
+            }
+
+            @include media-breakpoint-up(xxl) {
+                padding: 13px 12px 10px;
             }
 
             &:first-child {
