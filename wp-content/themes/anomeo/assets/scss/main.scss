@@ -6824,6 +6824,10 @@
             padding-top: 152px;
         }
 
+        @include media-breakpoint-up(xxl) {
+            padding-bottom: 100px;
+        }
+
         .about-title {
             color: #128796;
             font-size: 36px;
@@ -6834,7 +6838,11 @@
                 width: 100%;
                 font-size: 25px;
                 margin-bottom: 25px;
+            }
 
+            @include media-breakpoint-up(xxl) {
+                font-size: 40px;
+                margin-bottom: 49px;
             }
         }
 
@@ -6845,6 +6853,10 @@
 
             @include media-breakpoint-down(sm) {
                 width: 100%;
+            }
+
+            @include media-breakpoint-up(xxl) {
+                font-size: 28px;
             }
         }
     }
