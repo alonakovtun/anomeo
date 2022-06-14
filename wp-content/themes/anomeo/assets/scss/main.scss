@@ -4041,12 +4041,20 @@
                         padding-left: var(--ak-main-spacing);
                     }
 
+                    @include media-breakpoint-up(xxl) {
+                        padding-right: 0;
+                    }
+
                     .back {
                         color: #138997;
                         font-size: 16px;
                         font-family: "Din Pro Light";
                         text-decoration: none;
                         cursor: pointer;
+
+                        @include media-breakpoint-up(xxl) {
+                            font-size: 28px;
+                        }
                     }
 
                     .category-name {
@@ -4058,6 +4066,12 @@
                         text-decoration: none;
                         font-size: 12px;
                         width: fit-content;
+
+                        @include media-breakpoint-up(xxl) {
+                            font-size: 16px;
+                            padding: 13px 11px 9px;
+                            margin-top: 50px;
+                        }
                     }
 
 
@@ -4080,24 +4094,39 @@
                     p {
                         font-size: 16px;
                         color: #6C6D6E;
+                        @include media-breakpoint-up(xxl) {
+                            font-size: 28px;
+                        }
                     }
 
                     .post-date {
                         color: #6C6D6E;
                         font-size: 16px;
                         font-family: "Din Pro Light";
+
+                        @include media-breakpoint-up(xxl) {
+                            font-size: 28px;
+                        }
                     }
 
                     .post-title {
                         font-size: 36px;
                         color: #128796;
                         margin: 30px 0;
+
+                        @include media-breakpoint-up(xxl) {
+                            font-size: 40px;
+                            margin: 58px 0;
+                        }
                     }
 
                     .post-content {
                         color: #6C6D6E;
                         font-size: 16px;
                         font-family: "Din Pro Light";
+                        @include media-breakpoint-up(xxl) {
+                            font-size: 28px;
+                        }
                     }
 
 
@@ -9289,6 +9318,9 @@
     strong{
         font-weight: bold;
         font-size: 20px;
+        @include media-breakpoint-up(xxl) {
+            font-size: 28px;
+        }
     }
 }
 
