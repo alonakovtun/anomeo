@@ -386,7 +386,7 @@ input{
 
 
     @include media-breakpoint-down(sm) {
-        // font-size: 20px;
+        font-size: 20px!important;
     }
 
     del {
@@ -598,6 +598,10 @@ input{
 
             @include media-breakpoint-up(xl) {
                 font-size: 22px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                width: 100%;
             }
 
             @include media-breakpoint-up(xxl) {
