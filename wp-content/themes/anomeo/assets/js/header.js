@@ -392,7 +392,7 @@ function initMobileMenuScripts() {
     // });
 
     jQuery(".menu-item-has-children a").click(function () {
-        jQuery(this).parent().find(".sub-menu").toggleClass("open");
+        jQuery(this).parent().find(".sub-menu").first().toggleClass("open");
         jQuery(this).parent().toggleClass("open");
     });
 }
