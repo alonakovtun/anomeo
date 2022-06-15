@@ -78,6 +78,11 @@
     font-family: "Din Pro Light";
     color: #6C6D6E;
     margin-right: 30px;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 14px;
+        padding-top: 28px;
+    }
 }
 
 
@@ -88,6 +93,9 @@
 .ak-product__variations_form{
     .single_variation_wrap{
         margin-top: 50px;
+        @include media-breakpoint-down(sm) {
+            margin-top: 35px;
+        }
     }
 }
 

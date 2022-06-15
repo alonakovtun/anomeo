@@ -2,7 +2,7 @@
 
 $items = get_field('related_products');
 if ($items) : ?>
-<section class="popular-items-block">
+<section class="popular-items-block related_products">
         <div class="first-block">
             <div class="top">
                 <div class="title"><? _e('Related Products', 'anomeo'); ?></div>

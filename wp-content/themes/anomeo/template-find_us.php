@@ -19,41 +19,45 @@ get_header(); ?>
 
   <div class="find_us-block">
     <div class="first-block">
-      <p class="сontinent">
-        <?php echo get_field('сontinent1'); ?>
-      </p>
-      <div class="country-block">
-        <?php echo get_field('country1'); ?>
-      </div>
 
-      <p class="сontinent">
-        <?php echo get_field('сontinent2'); ?>
-      </p>
-      <div class="country-block">
-        <?php echo get_field('country2'); ?>
-      </div>
+      <?php if (have_rows('find_us_left')) :
+        while (have_rows('find_us_left')) : the_row();
+          $сontinent = get_sub_field('сontinent');
+          $country = get_sub_field('country'); ?>
+          <div class="section-find_us">
+            <div class="сontinent">
+              <?php echo $сontinent; ?>
+            </div>
+            <div class="country-block">
+              <?php echo $country ?>
+            </div>
+          </div>
 
-      <p class="сontinent">
-        <?php echo get_field('сontinent3'); ?>
-
-      </p>
-      <div class="country-block">
-        <?php echo get_field('country3'); ?>
-      </div>
-
+      <?php
+        endwhile;
+      endif; ?>
     </div>
     <div class="second-block">
-      <p class="сontinent">
-        <?php echo get_field('сontinent4'); ?>
+    <?php if (have_rows('find_us_right')) :
+        while (have_rows('find_us_right')) : the_row();
+          $сontinent = get_sub_field('сontinent');
+          $country = get_sub_field('country'); ?>
+          <div class="section-find_us">
+            <div class="сontinent">
+              <?php echo $сontinent; ?>
+            </div>
+            <div class="country-block">
+              <?php echo $country ?>
+            </div>
+          </div>
 
-      </p>
-      <div class="country-block">
-        <?php echo get_field('country4'); ?>
-      </div>
-
+      <?php
+        endwhile;
+      endif; ?>
     </div>
   </div>
 </div>
+
 
 
 
