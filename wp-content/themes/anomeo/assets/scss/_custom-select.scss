@@ -83,6 +83,10 @@
         font-size: 14px;
         padding-top: 28px;
     }
+
+    @include media-breakpoint-up(xxl) {
+        font-size: 26px!important;
+     }
 }
 
 
