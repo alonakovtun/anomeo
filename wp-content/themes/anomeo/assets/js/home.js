@@ -226,7 +226,10 @@ function FAQScript(){
 
         jQuery(this).parent().find('.answer p').addClass("animate__animated animate__fadeInUp");
         jQuery(this).parent().find('.question').addClass("animate__animated animate__fadeInUp");
+        jQuery('.back').addClass("animate__animated animate__fadeInUp");
    });
+
+   
 
     jQuery( ".question_block.next .next_question" ).click(function() {
         jQuery(this).parent().addClass('show');
@@ -234,6 +237,8 @@ function FAQScript(){
         jQuery('.faq_title').hide();
         jQuery('.faq-footer').addClass('show');
         jQuery('.faq_question').addClass('open');
+        jQuery('.back').addClass("animate__animated animate__fadeInUp");
+        
 
         jQuery(this).parent().next().addClass('next');
 
@@ -261,6 +266,7 @@ function FAQScript(){
         jQuery('.question_block').removeClass('next');
         jQuery('.answer p').removeClass("animate__animated animate__fadeInUp");
         jQuery('.question').removeClass("animate__animated animate__fadeInUp");
+        jQuery('.back').removeClass("animate__animated animate__fadeInUp");
     });
 
     // if(jQuery('.question_block').contains('show')){

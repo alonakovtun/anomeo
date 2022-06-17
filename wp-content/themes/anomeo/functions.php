@@ -235,3 +235,4 @@ function my_category_description($container = ''){
 	add_filter('edit_category_form_fields', 'my_category_description');   
 	add_filter('edit_tag_form_fields', 'my_category_description');      
 
+	add_action( 'current_screen', function() { remove_all_filters( 'woocommerce_admin_disabled' ); }, 20, 1 );

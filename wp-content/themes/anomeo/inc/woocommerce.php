@@ -533,8 +533,8 @@ function ak_change_sorting_options($options)
         'menu_order' => __('Default', 'anomeo'),
         'price'      => __('Ascending Prices', 'anomeo'),
         'price-desc' => __('Descending prices', 'anomeo'),
-        'date'       => __('Latest products', 'anomeo'),
-        'date-desc'  => __('Oldest products', 'anomeo'),
+        // 'date'       => __('Latest products', 'anomeo'),
+        // 'date-desc'  => __('Oldest products', 'anomeo'),
     );
 
     return $options;
