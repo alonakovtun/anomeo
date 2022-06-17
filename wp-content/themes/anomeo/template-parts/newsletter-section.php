@@ -8,7 +8,7 @@
 
 ?>
 
-<!-- <div class="newsletter-section"> -->
+<div class="newsletter-section">
     <!-- <div class="newsletter-section__text-wrap">
         <p><? _e('Get -15% for Your first shopping.', 'anomeo') ?></p>
         <div class="btn-close"></div>
@@ -33,7 +33,7 @@
         <label for="newsletter-consent" class="ak-checkbox consent-checkbox">
             <input type="checkbox" name="consent" id="newsletter-consent">
             <span>I accept Privacy Policy and Cookies Policy</a></span>
-        </label>
+        </label>-->
     
-</div> -->
+</div> 
 </div>
