@@ -250,6 +250,14 @@ function shippingImg(){
     })
 }
 
+function paymentMethod(){
+    jQuery(".payment-method__title").addClass('test');
+    jQuery(".wc_payment_method").click(function() {
+        jQuery(".payment-method__title").addClass('test');
+    })
+    
+}
+
 function initCheckoutPageScripts() {
     initCheckoutLoginFormScripts();
     initCouponFormScripts();
@@ -260,6 +268,7 @@ function initCheckoutPageScripts() {
     changeAddress();
     couponCode();
     shippingImg();
+    paymentMethod();
 }
 
 export { initCheckoutPageScripts };

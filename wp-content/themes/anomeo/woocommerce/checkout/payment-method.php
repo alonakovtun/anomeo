@@ -32,3 +32,19 @@ if (!defined('ABSPATH')) {
 		</div>
 	</label>
 </li>
+
+
+<script>
+	var panels = document.getElementsByClassName("payment-method__title");
+	var actives = document.getElementsByClassName('bottom');
+	for (i = 0; panels.length > i; i++) {
+		panels[i].onclick = function() {
+			var currentActive = actives[0];
+			if (currentActive)
+				currentActive.classList.remove("bottom");
+
+			if (currentActive !== this)
+				this.classList.add("bottom");
+		};
+	}
+</script>
