@@ -35,7 +35,7 @@ if ($items) : ?>
                             <div class="slider-product__bottom popular__slider-product-bottom">
                                 <a href="<?= $permalink; ?>" class="slider-product__name "><?= $title;  ?></a> 
                                 <a href="<?= $permalink; ?>" class="slider-product__price">
-                                    <span class="price"><?php echo $price; ?> Eur</span>
+                                    <span class="price"><?php echo $price; ?> £</span>
                                 </a>
                             </div>
                         </div>
