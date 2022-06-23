@@ -268,24 +268,6 @@ function FAQScript(){
         jQuery('.question').removeClass("animate__animated animate__fadeInUp");
         jQuery('.back').removeClass("animate__animated animate__fadeInUp");
     });
-
-    // if(jQuery('.question_block').contains('show')){
-        
-    // }
-    
-
-    // jQuery( ".question_block .question" ).hover(
-    //     function() {
-    //         jQuery(this).parent().addClass('show_answer');
-    //         jQuery(".question_block.show_answer").find('.answer').addClass('show');
-    //         jQuery(".question_block.show_answer").find('.answer').stop().slideDown("slow");
-    //     }, function() {
-            
-    //         jQuery(".question_block.show_answer").find('.answer').removeClass('show');
-    //         jQuery(".question_block.show_answer").find('.answer').stop().slideUp("slow");
-    //         jQuery(this).parent().removeClass('show_answer');
-    //     }
-    //   );
 }
 
 function animateStory() {
@@ -303,13 +285,41 @@ function animateStory() {
     });
 }
 
+function mobileText(){
+    jQuery(document).ready(function () {
+        jQuery(window).on("resize", function (e) {
+            checkScreenSize();
+        });
+    
+        checkScreenSize();
+        
+        function checkScreenSize(){
+            var newWindowWidth = jQuery(window).width();
+            if (newWindowWidth < 768) {
+                jQuery(".home_text--content .first").each(function() {
+                    var getContent=jQuery(this).text();
+                    var newString=getContent.replace('HUMBLE BEGINNINGS','<span class="color_bg orange">HUMBLE</span><br /> BEGINNINGS');
+                    jQuery(this).html(newString);
+
+                    
+                });
+            }
+            else
+            {
+                jQuery('.left').insertBefore('.right');
+            }
+        }
+    });
+}
+
 function initHomePageScripts() {
     initHomePageSliders();
     // initNewsletterScripts();
     initSygnetLogoScroll();
     FAQScript();
     animateStory();
-}
+    mobileText();
+}   
 
 export { initHomePageScripts };
 
