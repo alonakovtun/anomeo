@@ -25,7 +25,7 @@ get_header(); ?>
                 $link_url = $link['url'];
                 $link_title = $link['title'];
             ?>
-                <a class="travel-link" href="<?php echo esc_url($link_url); ?>" ><img src="/wp-content/themes/anomeo/assets/img/Arrow_Our story-07.svg" /><?php echo esc_html($link_title); ?></a>
+                <a class="travel-link" target="_blank" href="<?php echo esc_url($link_url); ?>" ><img src="/wp-content/themes/anomeo/assets/img/Arrow_newsletter.svg" /><?php echo esc_html($link_title); ?></a>
             <?php endif; ?>
 
         </div>
@@ -56,7 +56,7 @@ get_header(); ?>
                 $link_url = $link['url'];
                 $link_title = $link['title'];
             ?>
-                <a class="travel-link" href="<?php echo esc_url($link_url); ?>" ><img src="/wp-content/themes/anomeo/assets/img/Arrow_Our story-07.svg" /><?php echo esc_html($link_title); ?></a>
+                <a class="travel-link" target="_blank" href="<?php echo esc_url($link_url); ?>" ><img src="/wp-content/themes/anomeo/assets/img/Arrow_newsletter.svg" /><?php echo esc_html($link_title); ?></a>
             <?php endif; ?>
         </div>
     </div>
@@ -74,7 +74,7 @@ get_header(); ?>
                 $link_url = $link['url'];
                 $link_title = $link['title'];
             ?>
-                <a class="travel-link" href="<?php echo esc_url($link_url); ?>" ><img src="/wp-content/themes/anomeo/assets/img/Arrow_Our story-07.svg" /><?php echo esc_html($link_title); ?></a>
+                <a class="travel-link" target="_blank" href="<?php echo esc_url($link_url); ?>" ><img src="/wp-content/themes/anomeo/assets/img/Arrow_newsletter.svg" /><?php echo esc_html($link_title); ?></a>
             <?php endif; ?>
         </div>
         <div class="about_img"> <?php
@@ -97,7 +97,7 @@ get_header(); ?>
                 $link_url = $link['url'];
                 $link_title = $link['title'];
             ?>
-                <a class="travel-link" href="<?php echo esc_url($link_url); ?>" ><img src="/wp-content/themes/anomeo/assets/img/Arrow_Our story-07.svg" /><?php echo esc_html($link_title); ?></a>
+                <a class="travel-link" target="_blank" href="<?php echo esc_url($link_url); ?>" ><img src="/wp-content/themes/anomeo/assets/img/Arrow_newsletter.svg" /><?php echo esc_html($link_title); ?></a>
             <?php endif; ?>
         </div>
         <div class="about_img"><?php
@@ -126,7 +126,7 @@ get_header(); ?>
                 $link_url = $link['url'];
                 $link_title = $link['title'];
             ?>
-                <a class="travel-link" href="<?php echo esc_url($link_url); ?>" ><img src="/wp-content/themes/anomeo/assets/img/Arrow_Our story-07.svg" /><?php echo esc_html($link_title); ?></a>
+                <a class="travel-link" target="_blank" href="<?php echo esc_url($link_url); ?>" ><img src="/wp-content/themes/anomeo/assets/img/Arrow_newsletter.svg" /><?php echo esc_html($link_title); ?></a>
             <?php endif; ?>
         </div>
     </div>
@@ -144,7 +144,7 @@ get_header(); ?>
                 $link_url = $link['url'];
                 $link_title = $link['title'];
             ?>
-                <a class="travel-link" href="<?php echo esc_url($link_url); ?>" ><img src="/wp-content/themes/anomeo/assets/img/Arrow_Our story-07.svg" /><?php echo esc_html($link_title); ?></a>
+                <a class="travel-link" target="_blank" href="<?php echo esc_url($link_url); ?>" ><img src="/wp-content/themes/anomeo/assets/img/Arrow_newsletter.svg" /><?php echo esc_html($link_title); ?></a>
             <?php endif; ?>
         </div>
         <div class="about_img"> <?php
