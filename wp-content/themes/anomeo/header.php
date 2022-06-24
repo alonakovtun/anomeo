@@ -74,7 +74,7 @@
 							</ul>
 						</li>
 
-						<li class="menu-item menu-item-open">
+						<li class="menu-item menu-item-open about-menu-item">
 							<a class="menu-item-open__link">
 								<? _e('About', 'anomeo'); ?>
 							</a>

@@ -10565,3 +10565,71 @@
 }
 
 
+.travel__container{
+    .travel-link{
+        display: flex;
+
+        font-size: 20px;
+        color: #fff;
+        font-family: 'Din Pro Light';
+
+        img{
+            width: 30px;
+            height: 18px;
+    
+            margin-right: 13px;
+        }
+       
+    }
+    
+    .travel-first{
+        background-color: #5778B7;
+
+        p{
+            color: #fff;
+        }
+    }
+
+    .travel-second{
+        background-color: #DDB052;
+
+        p{
+            color: #fff;
+        }
+    }
+
+    .travel-third{
+        background-color: #e16e73;
+
+        p{
+            color: #fff;
+        }
+    }
+
+    .travel-fourth{
+        background-color: #138796;
+
+        p{
+            color: #fff;
+        }
+    }
+
+
+    .about-title{
+        color: #fff!important;
+    }
+}
+
+.about-menu-item{
+    .sub-menu__about{
+        height: 267px!important;
+        li{
+            &:last-child{
+                width: 17%;
+            }
+           
+        }
+    }
+}
+
+
