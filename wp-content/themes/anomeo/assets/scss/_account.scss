@@ -181,22 +181,25 @@
 .ak-my-account__addresses, .ak-my-account__edit-account{
 
     display: flex;
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
         display: block;
-        
     }
 
     .ak-my-account__address-item:last-child, .col:last-child{
         padding-left: var(--ak-main-spacing);
         padding-top: 35px;
+
        
     }
+
+    
+
     .ak-my-account__address-item, .col{
         padding-top: 43px;
         padding-bottom: 200px;
         width: 50%;
         border-right: 1px solid #EAEAEA;
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(md) {
             width: 100%;
             border-right: none;
             border-bottom: 1px solid #EAEAEA;

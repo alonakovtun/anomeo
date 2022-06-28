@@ -152,8 +152,12 @@
         border-radius: 44px;
         padding: 9px 9px 6px;
 
-        @include media-breakpoint-up(sm) {
-            top: 22px;
+        @include media-breakpoint-down(sm) {
+            right: var(--ak-main-spacing);
+        }
+
+        @include media-breakpoint-down(md) {
+            right: calc(var(--ak-main-spacing) - 40px);
         }
     }
 }
@@ -439,16 +443,27 @@
             @include media-breakpoint-up(xxl) {
                 margin-left: 90px;
             }
+
+            @include media-breakpoint-down(md) {
+                margin-left: 40px;
+             }
         }
     }
 
-    &__left-menu {}
+    &__left-menu {
+        @include media-breakpoint-down(md) {
+           padding-left: 20px;
+        }
+    }
 
     &__right-menu {
         justify-content: flex-end;
 
         li:not(:first-of-type) {
             margin-left: 55px;
+            @include media-breakpoint-down(md) {
+                margin-left: 30px;
+             }
         }
     }
 
@@ -799,7 +814,7 @@
                 overflow-x: hidden;
 
                 @include media-breakpoint-down(sm) {
-                    height: calc(100vh - (var(--ak-header-height) * 2 + 145px));
+                    height: calc(100vh - (var(--ak-header-height) * 2 + 170px));
                 }
 
                 &::-webkit-scrollbar-track {
@@ -1963,8 +1978,7 @@
         height: 10px;
         bottom: 40px;
         right: 0;
-        left: auto;
-        ;
+        left: 88%;
         width: auto;
         transform: translateX(-50%);
         transform: rotate(90deg);
@@ -1973,6 +1987,10 @@
 
         @include media-breakpoint-up(sm) {
             display: block;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            left:84%
         }
 
         @include media-breakpoint-down(sm) {
@@ -3243,7 +3261,7 @@
                 }
             }
 
-            @include media-breakpoint-up(lg) {
+            @include media-breakpoint-up(md) {
                 max-width: 85%;
             }
 
@@ -3440,7 +3458,7 @@
                 }
 
                 .description {
-                    @include media-breakpoint-up(lg) {
+                    @include media-breakpoint-up(md) {
                         max-width: 80%;
                     }
 
@@ -4150,6 +4168,10 @@
                         padding: 0 var(--ak-main-spacing) 65px;
                         align-items: baseline;
                         padding-left: var(--ak-main-spacing);
+                    }
+
+                    @include media-breakpoint-down(md) {
+                        width: 30%;
                     }
 
                     @include media-breakpoint-up(xxl) {
@@ -6084,7 +6106,6 @@
             padding-top: 23px;
             padding-bottom: 23px;
             padding-left: var(--ak-main-spacing);
-            border-top: 1px solid #EAEAEA;
         }
 
         @include media-breakpoint-up(xxl) {
@@ -6163,10 +6184,10 @@
 
     &__container {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
 
-        @include media-breakpoint-up(sm) {
-            flex-direction: row;
+        @include media-breakpoint-down(md) {
+            flex-direction: column;
         }
     }
 
@@ -6174,10 +6195,12 @@
         @include media-breakpoint-up(sm) {}
 
         &--left {
-            @include media-breakpoint-down(sm) {
+            @include media-breakpoint-down(md) {
                 width: 100%;
                 padding-left: 0;
+                border-right: none;
             }
+
 
             .woocommerce-checkout-review-order-table .products-list {
                 display: none;
@@ -6215,6 +6238,10 @@
                     @include media-breakpoint-down(sm) {
                         width: 80% !important;
                         padding-top: 14px;
+                    }
+
+                    @include media-breakpoint-down(md) {
+                        width: 100% !important;
                     }
 
                     &::placeholder {
@@ -6283,7 +6310,7 @@
             width: 60%;
             padding-left: var(--ak-main-spacing);
 
-            @include media-breakpoint-down(sm) {
+            @include media-breakpoint-down(md) {
                 order: -1;
                 width: 100%;
                 padding-right: var(--ak-main-spacing);
@@ -6478,6 +6505,14 @@
 @media not all and (min-resolution:.001dpcm) {
     @supports (-webkit-appearance:none) {
 
+        #wcpay-payment-request-wrapper{
+            .ak-checkout-form__section-title{
+                &::after{
+                    content: ' Apple Pay'!important;
+                }
+            }
+        }
+
         .site-header__mobile-col .mobile-menu-icon{
             margin-bottom: 5px;
         }
@@ -6546,13 +6581,22 @@
         }
 
         .fullwidth-slider__item-description a {
-            padding: 9px 20px 12px!important;
+            padding: 11px 23px 15px!important;
             margin-top: 10px;
             margin-left: 10px;
 
             @include media-breakpoint-up(xxl) {
                 padding-top: 10px !important;
             }
+        }
+
+        .home-top{
+            .color_bg{
+            padding: 12px 20px 12px!important;
+            margin-top: 10px;
+            margin-left: 10px;
+            }
+
         }
 
         .faq_block .faq_question .faq-footer.show .back {
@@ -7044,6 +7088,10 @@
         @include media-breakpoint-down(sm) {
             width: 100%;
             padding: 80px var(--ak-main-spacing);
+        }
+
+        @include media-breakpoint-down(md) {
+           padding-right: 65px;
         }
 
         @include media-breakpoint-up(xxl) {
@@ -7663,6 +7711,9 @@
         height: auto;
     }
 
+    .payment_box{
+        padding-left: 0;
+    }
     
 
 }
@@ -7769,8 +7820,12 @@
         margin-right: 281px;
 
         @include media-breakpoint-down(sm) {
-            width: 100%;
-            margin-right: 0;
+            width: 100%!important;
+            margin-right: 0!important;
+        }
+        @include media-breakpoint-down(md) {
+           margin-right: 60px;
+           width: 30%;
         }
 
         .top {
@@ -8601,6 +8656,7 @@
 .change_delivery {
     display: flex;
     margin-bottom: 50px;
+    margin-top: 25px;
 
     @include media-breakpoint-down(sm) {
         padding-left: var(--ak-main-spacing);
@@ -8787,7 +8843,6 @@
 
 .place-order {
     border-top: 1px solid #EAEAEA;
-    margin-top: 20px;
 
     @include media-breakpoint-down(sm) {
         padding-left: var(--ak-main-spacing);
@@ -8810,6 +8865,10 @@
 
         @include media-breakpoint-down(sm) {
             width: 100%;
+        }
+
+        @include media-breakpoint-down(md) {
+            width: 88%;
         }
 
         &.disabled {
@@ -8968,6 +9027,10 @@
                 @include media-breakpoint-down(sm) {
                     padding-left: 35px;
                     margin-top: -150px;
+                }
+
+                @include media-breakpoint-down(md) {
+                    margin-top: 50px;
                 }
 
                 @include media-breakpoint-up(xxl) {
@@ -9349,6 +9412,10 @@
             @include media-breakpoint-down(sm) {
                 width: 100%;
                 margin-right: 0;
+            }
+
+            @include media-breakpoint-down(md) {
+                width: 100%;
             }
 
             .ak-product-favorite-btn {
@@ -10076,6 +10143,8 @@
     @include media-breakpoint-down(sm) {
         width: 100% !important;
     }
+
+   
 }
 
 .ship-to-different-address {
@@ -10367,6 +10436,12 @@
         }
     }
 
+    .fullwidth-slider__item{
+        @include media-breakpoint-down(md) {
+           height: auto;
+        }
+    }
+
 
 }
 
@@ -10490,59 +10565,19 @@
 
 .wc_payment_method {
 
-    &:last-child {
-        .payment-method__title {
-            border-bottom: 1px solid #EAEAEA;
-        }
-    }
-
-    input {
-        opacity: 0;
-    }
-
     .payment-method__title {
         color: #148D9A;
         font-size: 20px;
         transition: all .3s;
-
-        text-align: end;
         position: relative;
 
-        padding-right: var(--ak-main-spacing);
-
-        border-top: 1px solid #EAEAEA;
-        padding-top: 21px;
-        padding-bottom: 0;
+        padding-left: var(--ak-main-spacing);
 
 
 
 
         &.bottom {
             font-family: 'Din Pro Bold'
-        }
-
-        &:before {
-            content: '';
-            display: inline-block;
-            width: 48px;
-            height: 48px;
-            -moz-border-radius: 50%;
-            border-radius: 50%;
-            background-color: #060606;
-            margin-left: -53px;
-            margin-top: -11px;
-            z-index: -2;
-            position: absolute;
-            left: 120px;
-            top: 18px;
-
-            @include media-breakpoint-down(sm) {
-                left: 85px;
-            }
-
-            @include media-breakpoint-up(xxl) {
-                left: 190px;
-            }
         }
     }
 
@@ -10577,9 +10612,9 @@
 
 .select2-container--default .select2-selection--single .select2-selection__arrow
 {
-    @include media-breakpoint-up(xxl) {
+
         right: 30px;
-    }
+  
     b {
         border-color: #138997 transparent transparent transparent!important;
     }
@@ -10595,11 +10630,17 @@
     }
 }
 
-.woocommerce-checkout-payment{
+// .woocommerce-checkout-payment{
+//     .ak-checkout-form__section-title{
+//         @include media-breakpoint-down(sm) {
+//             padding-bottom: 0;
+//         }
+//     }
+// }
+
+.ak-checkout-form__col--right{
     .ak-checkout-form__section-title{
-        @include media-breakpoint-down(sm) {
-            padding-bottom: 0;
-        }
+        padding-left: 0;
     }
 }
 
@@ -10787,4 +10828,146 @@
         }
     }
 }
+
+.StripeElement{
+    width: 357px;
+    margin-left: var(--ak-main-spacing);
+    @include media-breakpoint-down(sm) {
+        width: 300px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+        width: 465px;
+    }
+}
+
+#wcpay-payment-request-wrapper{
+    .ak-checkout-form__section-title{
+        margin-bottom: 45px;
+        &::after{
+            content: ' Google Pay';
+        }
+
+        
+    }
+}
+
+#wcpay-payment-request-button-separator{
+    padding: 0 var(--ak-main-spacing);
+    margin-top: 45px;
+    margin-bottom: 7px;
+    text-align: left!important;
+
+    color: #128796;
+    font-size: 36px;
+}
+
+.payment_block{
+    display: flex;
+    border-top: 1px solid #EAEAEA;
+    align-items: center;
+    position: relative;
+    padding: 20px 0;
+
+    input{
+        padding-top: 21px;
+        width: auto !important;
+        position: absolute;
+        right: 46px;
+    }
+
+    input[name="payment_method"] {
+        accent-color: #138793;
+    }
+    
+
+}
+
+.payment_box{
+    padding: 0 var(--ak-main-spacing);
+    color: #148D9A;
+    font-size: 20px;
+    border-top: 1px solid #EAEAEA;
+    padding-top: 20px;
+
+    @include media-breakpoint-down(sm) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    p{
+        @include media-breakpoint-down(sm) {
+            padding-left: var(--ak-main-spacing);
+            padding-right: var(--ak-main-spacing);
+        }
+    }
+}
+
+.wc-credit-card-form.wc-payment-form{
+    border: none!important;
+}
+
+#wcpay-card-element, #wcpay-sepa-element{
+    padding: 16px 25px!important;
+    border-radius: 27px;
+    width: 357px!important;
+    @include media-breakpoint-up(xxl) {
+        border-radius: 44px;
+        width: 465px!important;
+    }
+
+    @include media-breakpoint-down(sm) {
+        margin: 0 auto;
+    }
+
+    @include media-breakpoint-down(md) {
+        width: 270px!important;
+    }
+}
+
+.woocommerce-SavedPaymentMethods-saveNew{
+    display: flex;
+    margin-top: 21px;
+    font-size: 14px;
+    font-family: 'Din Pro Light';
+
+    input{
+        width: auto!important;
+        margin-right: 30px;
+        accent-color: #138793;
+    }
+
+    @include media-breakpoint-down(sm) {
+        padding-left: var(--ak-main-spacing);
+        padding-right: var(--ak-main-spacing);
+    }
+}
+
+#wc-woocommerce_payments-cc-form{
+    @include media-breakpoint-down(sm) {
+        padding-left: 0;
+        width: 100%;
+    }
+}
+
+#billing_country_field{
+    color: #148D9A;
+    border: 1px solid #BCBCBC;
+    border-radius: 26px;
+    padding: 16px 34px;
+    width: 357px;
+    font-family: 'Din Pro Light';
+    @include media-breakpoint-down(sm) {
+        padding: 12px 34px;
+        width: 100%;
+    }
+
+    @include media-breakpoint-up(xxl) {
+        padding: 21px 34px;
+        width: 465px;
+    }
+}
+
+
+
 

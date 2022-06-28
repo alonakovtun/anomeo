@@ -277,9 +277,12 @@ function animateStory() {
         var scrolled = jQuery(window).scrollTop();
 
         if (scrolled > 300 && scrolled > scrollPrev) {
-            jQuery(".home_text--content .first").addClass("animate__animated animate__fadeInUp animate__delay-5ms");
-            jQuery(".home_text--content .second").addClass("animate__animated animate__fadeInUp animate__delay-1s");
-            jQuery(".home_text--content .third").addClass("animate__animated animate__fadeInUp animate__delay-2s");
+            jQuery(".boxes-row .home_text--title").addClass("animate__animated animate__fadeInUp animate__delay-5ms");
+            jQuery(".home_text--content .first").addClass("animate__animated animate__fadeInUp animate__delay-1s");
+            jQuery(".home_text--content .second").addClass("animate__animated animate__fadeInUp animate__delay-2s");
+            jQuery(".home_text--content .third").addClass("animate__animated animate__fadeInUp animate__delay-3s");
+
+            
         }
         scrollPrev = scrolled;
     });

@@ -255,6 +255,10 @@ function paymentMethod(){
     jQuery(".wc_payment_method").click(function() {
         jQuery(".payment-method__title").addClass('test');
     })
+
+    var getContent=jQuery('#wcpay-payment-request-button-separator').text();
+    var newString=getContent.replace('— OR —','or');
+    jQuery('#wcpay-payment-request-button-separator').html(newString);
     
 }
 

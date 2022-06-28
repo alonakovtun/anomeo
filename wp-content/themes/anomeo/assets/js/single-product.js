@@ -368,6 +368,17 @@ function zoomProduct(){
 
 }
 
+function productSliderDots(){
+    jQuery(window).on('load', function(){
+        if(jQuery(".iconic-woothumbs-images__slide").has('div').length > 0){
+            jQuery(this).parent().parent().parent().find("ul.slick-dots").addClass("triangle")
+            jQuery("ul.slick-dots").addClass("triangle")
+        }
+    });
+   
+    
+}
+
 function initSingleProductPageScripts() {
     addToCartScripts();
     gallerySliderScripts();
@@ -376,6 +387,7 @@ function initSingleProductPageScripts() {
     // initPhotoSwipeImageGallery();
     showDetailsScript();
     zoomProduct();
+    productSliderDots();
 }
 
 export { initSingleProductPageScripts };

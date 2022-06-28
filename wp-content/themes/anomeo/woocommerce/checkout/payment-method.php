@@ -21,30 +21,25 @@ if (!defined('ABSPATH')) {
 }
 ?>
 <li class="wc_payment_method payment_method_<?php echo esc_attr($gateway->id); ?>">
-	<input id="payment_method_<?php echo esc_attr($gateway->id); ?>" type="radio" class="input-radio" name="payment_method" value="<?php echo esc_attr($gateway->id); ?>" <?php checked($gateway->chosen, true); ?> data-order_button_text="<?php echo esc_attr($gateway->order_button_text); ?>" />
+	<div class="payment_block">
 
-	<label for="payment_method_<?php echo esc_attr($gateway->id); ?>">
-		<div class="payment-method__icon">
-			<?php echo $gateway->get_icon(); ?>
+		<label for="payment_method_<?php echo esc_attr($gateway->id); ?>">
+			<div class="payment-method__icon">
+				<?php echo $gateway->get_icon(); ?>
+			</div>
+			<div class="payment-method__title">
+				<?php echo $gateway->get_title(); ?>
+			</div>
+		</label>
+
+		<input id="payment_method_<?php echo esc_attr($gateway->id); ?>" type="radio" class="input-radio" name="payment_method" value="<?php echo esc_attr($gateway->id); ?>" <?php checked($gateway->chosen, true); ?> data-order_button_text="<?php echo esc_attr($gateway->order_button_text); ?>" />
+
+	</div>
+	
+
+	<?php if ( $gateway->has_fields() || $gateway->get_description() ) : ?>
+		<div class="payment_box payment_method_<?php echo esc_attr( $gateway->id ); ?>" <?php if ( ! $gateway->chosen ) : /* phpcs:ignore Squiz.ControlStructures.ControlSignature.NewlineAfterOpenBrace */ ?>style="display:none;"<?php endif; /* phpcs:ignore Squiz.ControlStructures.ControlSignature.NewlineAfterOpenBrace */ ?>>
+			<?php $gateway->payment_fields(); ?>
 		</div>
-		<div class="payment-method__title">
-			<?php echo $gateway->get_title(); ?>
-		</div>
-	</label>
+	<?php endif; ?>
 </li>
-
-
-<script>
-	var panels = document.getElementsByClassName("payment-method__title");
-	var actives = document.getElementsByClassName('bottom');
-	for (i = 0; panels.length > i; i++) {
-		panels[i].onclick = function() {
-			var currentActive = actives[0];
-			if (currentActive)
-				currentActive.classList.remove("bottom");
-
-			if (currentActive !== this)
-				this.classList.add("bottom");
-		};
-	}
-</script>

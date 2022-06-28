@@ -65,7 +65,7 @@ import { initPressPageScripts } from "./press";
 
         jQuery(".open__newsletter").click(function () {
             jQuery(this).hide();
-            jQuery(".form-newsletter").show();
+            jQuery(".form-newsletter").fadeIn( "slow");
         });
 
         jQuery(document).on(
