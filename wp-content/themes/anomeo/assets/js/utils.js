@@ -16,7 +16,7 @@ export function removeEmptyValuesFromObject(paramsObj) {
 }
 
 export function isCheckoutPage() {
-    return document.body.classList.contains("page-template-template-checkout");
+    return document.body.classList.contains("woocommerce-checkout");
 }
 
 export function isMyAccountPage() {

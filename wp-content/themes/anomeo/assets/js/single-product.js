@@ -369,14 +369,29 @@ function zoomProduct(){
 }
 
 function productSliderDots(){
-    jQuery(window).on('load', function(){
-        if(jQuery(".iconic-woothumbs-images__slide").has('div').length > 0){
-            jQuery(this).parent().parent().parent().find("ul.slick-dots").addClass("triangle")
-            jQuery("ul.slick-dots").addClass("triangle")
+    jQuery(window).on('load', function() {   
+        jQuery(window).on("resize", function (e) {
+            checkScreenSize();
+        });
+    
+        checkScreenSize();
+        
+        function checkScreenSize(){
+            var newWindowWidth = jQuery(window).width();
+            if (newWindowWidth > 1600) {
+                jQuery('.iconic-woothumbs-play').css('top', jQuery(".slick-dots").height() + 535 + 'px' )
+            }
+            else if(newWindowWidth < 768)
+            {
+                jQuery('.iconic-woothumbs-play').css('top', jQuery(".slick-dots").height() + 454 + 'px' )
+            }
+            else{
+                jQuery('.iconic-woothumbs-play').css('top', jQuery(".slick-dots").height() + 454 + 'px' )
+
+            }
         }
     });
-   
-    
+
 }
 
 function initSingleProductPageScripts() {
