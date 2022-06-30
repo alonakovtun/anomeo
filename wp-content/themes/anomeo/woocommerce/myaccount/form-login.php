@@ -72,7 +72,7 @@ do_action('woocommerce_before_customer_login_form'); ?>
 			</div>
 
 			<div class="log-in__input-data">
-				<p class="log-in__right-mess">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+				<p class="log-in__right-mess"><?esc_html_e('Sign in to check the status of your most recent order and your order history.', 'anomeo'); ?></p>
 				</p>
 			</div>
 

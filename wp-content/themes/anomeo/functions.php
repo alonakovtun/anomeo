@@ -236,3 +236,22 @@ function my_category_description($container = ''){
 	add_filter('edit_tag_form_fields', 'my_category_description');      
 
 	add_action( 'current_screen', function() { remove_all_filters( 'woocommerce_admin_disabled' ); }, 20, 1 );
+
+
+	add_filter( 'woocommerce_package_rates', 'bbloomer_unset_shipping_when_free_is_available_all_zones', 9999, 2 );
+   
+function bbloomer_unset_shipping_when_free_is_available_all_zones( $rates, $package ) {
+   $all_free_rates = array();
+   foreach ( $rates as $rate_id => $rate ) {
+      if ( 'free_shipping' === $rate->method_id ) {
+         $all_free_rates[ $rate_id ] = $rate;
+         break;
+      }
+   }
+   if ( empty( $all_free_rates )) {
+      return $rates;
+   } else {
+      return $all_free_rates;
+   } 
+}
+

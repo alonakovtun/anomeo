@@ -41,7 +41,17 @@ if (empty($product) || !$product->is_visible()) {
 	<a href="<?= get_the_permalink(); ?>" class="ak-product-item__link">
 
 		<div class="ak-product-item__image-wrap">
-			<?= woocommerce_get_product_thumbnail('full'); ?>
+			<?php
+			$prd = wc_get_product($post->ID);
+			$attachment_ids = $prd->get_gallery_image_ids();
+			$hover_img      = wp_get_attachment_image_src($attachment_ids[0], $image_size);
+			?>
+			<div class="_first">
+				<img class="product-image" src="<?= get_the_post_thumbnail_url($prd->get_id()); ?>" alt="" />
+			</div>
+			<div class="_second">
+				<img class="product-image" src="<?= wp_get_attachment_url($attachment_ids[0]); ?>" alt="" />
+			</div>
 		</div>
 
 

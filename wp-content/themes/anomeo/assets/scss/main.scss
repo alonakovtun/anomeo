@@ -155,10 +155,6 @@
         @include media-breakpoint-down(sm) {
             right: var(--ak-main-spacing);
         }
-
-        @include media-breakpoint-down(md) {
-            right: calc(var(--ak-main-spacing) - 40px);
-        }
     }
 }
 
@@ -6297,6 +6293,8 @@
                     width: 111px;
                     height: 53px;
 
+                    cursor: pointer;
+
                     @include media-breakpoint-down(sm) {
                         margin-right: 0;
                         height: 50px;
@@ -6580,7 +6578,7 @@
         }
 
         .popular-items-block .button a {
-            padding: 3px 20px 7px !important;
+            padding: 11px 20px 13px !important;
 
             @include media-breakpoint-up(xxl) {
                 padding-top: 10px !important;
@@ -7860,7 +7858,7 @@
                     color: #fff;
                     font-size: 18px;
                     text-transform: uppercase;
-                    padding: 10px 20px;
+                    padding: 14px 20px 13px;
                     border-radius: 22px;
                     background-color: #F89D3F;
                     transition: all .4s;
@@ -10539,6 +10537,20 @@
 }
 
 .home-blocks {
+    
+    // .fullwidth-slider__item{
+    //     overflow: hidden;
+    //     img{
+    //         transform: scale(1);
+    //         transition: transform .6s;
+
+    //         display: block;
+
+    //         &:hover{
+    //             transform: scale(1.05);
+    //         }
+    //     }
+    // }
     .fullwidth-slider__item-description {
         @include media-breakpoint-down(sm) {
             bottom: 82px;
@@ -10546,7 +10558,7 @@
     }
 
     .category-btn {
-        padding: 10px 20px 9px;
+        padding: 14px 20px 13px;
         @include media-breakpoint-up(xxl) {
             padding: 24px 52px 23px;
         }
@@ -11057,6 +11069,57 @@
 
 }
 
+.nohover{
+    a{
+        &:hover{
+            color: #138997!important;
+        }
+    }
+}
+
+.mt20{
+    margin-top: 20px;
+}
+
+.woocommerce-shipping-methods{
+    margin-right: 47px;
+}
+
+._first{
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s;
+
+    &:hover{
+          opacity: 0;
+          visibility: hidden;
+    }
+}
+
+._second{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+    img{
+        height: auto;
+    }
+}
+
+
+.home-blocks .fullwidth-slider__item{
+    position: relative;
+    transform: translateY(75px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  
+  .home-blocks .fullwidth-slider__item.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
 
 
 

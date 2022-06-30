@@ -18,7 +18,7 @@ get_header();
 <section class="error-404 not-found">
 	<div class="content-wrap">
 		<p class="error-title"> ERROR 404 / <? _e('Page not found.', 'anomeo'); ?></p>
-		<p class="error-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+		<p class="error-content"><?php _e('The requested resource was not found on this server.', 'anomeo'); ?></p>
 	</div>
 </section>
 

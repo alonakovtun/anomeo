@@ -32,7 +32,7 @@
             </div>
 
             <div class="log-in__input-data">
-                <p class="log-in__right-mess">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                <p class="log-in__right-mess"><?php _e('Shop with us without registration', 'anomeo')?>
                 </p>
             </div>
 

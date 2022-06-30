@@ -83,7 +83,7 @@ body {
 }
 
 #template_header_image {
-	padding: 50px 0 10px;
+	padding: 40px 0 30px;
 	text-align: center;
 }
 
@@ -92,7 +92,7 @@ body {
 	margin-right: 0;
 	max-width: 260px;
 	width: auto;
-	height: 25px;
+	height: 20px;
 }
 
 #template_footer td {

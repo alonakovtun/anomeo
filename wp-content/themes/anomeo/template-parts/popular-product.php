@@ -9,7 +9,7 @@ if ($items) : ?>
                 <?php foreach ($items as $item) :
                     $permalink = get_permalink($item->ID);
                     $id = wc_get_product($item->ID);
-                    $price = $id->get_price();
+                    $price = $id->get_price_html();
                     $thumbnail         = apply_filters('woocommerce_cart_item_thumbnail', $id->get_image());
                     $title = $item->post_title;
                 ?>
@@ -23,7 +23,17 @@ if ($items) : ?>
                             <a href="<?= $permalink; ?>" class="slider-product__image">
 
                             <a href="<?= $permalink; ?>" class="slider-product__image">
-                                <img src="<?= get_the_post_thumbnail_url($id->get_id()); ?>" alt="<?= the_title(); ?>" />
+                            <?php
+                                $prd = wc_get_product($item->ID);
+                                $attachment_ids = $prd->get_gallery_image_ids();
+                                $hover_img      = wp_get_attachment_image_src($attachment_ids[0], $image_size);
+                                ?>
+                                <div class="_first">
+                                    <img class="product-image" src="<?= get_the_post_thumbnail_url($prd->get_id()); ?>" alt="" />
+                                </div>
+                                <div class="_second">
+                                    <img class="product-image" src="<?= wp_get_attachment_url($attachment_ids[0]); ?>" alt="" />
+                                </div>
 
                                 <div class="tag">
                                     <?php
